@@ -17,22 +17,31 @@
     --border: #e0d4c0;
     --white: #ffffff;
     --danger: #c0392b;
+    --correct: #27ae60;
+    --wrong: #c0392b;
+    --correct-bg: #eaf7f0;
+    --wrong-bg: #fdecea;
+    --free-bg: #f5f0e8;
+    --bronze-bg: #f0e8d8;
+    --silver-bg: #e8ddd0;
+    --gold-bg: #fdf0d0;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
-  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
 
-  /* ── NAV ── */
+  /* ── FIXED NAV ── */
   nav {
     background: var(--ink);
-    padding: 1.1rem 2.5rem;
+    padding: 1rem 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
     top: 0; left: 0; right: 0;
-    z-index: 100;
+    z-index: 1000;
+    height: 62px;
   }
   .nav-logo {
     font-family: 'Syne', sans-serif;
@@ -62,21 +71,28 @@
   }
   .nav-cta:hover { background: var(--mud2) !important; color: white !important; }
 
-  /* ── SECTION 1: HERO ── */
-  .section-hero {
-    min-height: 100vh;
+  /* ── SHARED SECTION BASE ── */
+  .snap-section {
     scroll-snap-align: start;
+    padding-top: 62px;
+  }
+
+  /* ══════════════════════════════
+     SECTION 1 — HERO
+  ══════════════════════════════ */
+  #hero {
+    min-height: 100vh;
     background: var(--ink);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 7rem 2rem 4rem;
+    padding: 62px 2rem 4rem;
     position: relative;
     overflow: hidden;
   }
-  .section-hero::before {
+  #hero::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -89,10 +105,11 @@
     text-transform: uppercase;
     color: var(--ochre);
     margin-bottom: 1.4rem;
-    opacity: 0;
-    animation: fadeUp 0.5s 0.1s ease forwards;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    animation: fadeUp 0.5s 0.1s ease both;
   }
-  .section-hero h1 {
+  #hero h1 {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     font-size: clamp(2.4rem, 6vw, 4.5rem);
@@ -100,14 +117,9 @@
     line-height: 1.08;
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
-    opacity: 0;
-    animation: fadeUp 0.5s 0.2s ease forwards;
+    animation: fadeUp 0.5s 0.2s ease both;
   }
-  .section-hero h1 em {
-    color: var(--ochre);
-    font-style: italic;
-    font-family: 'Lora', serif;
-  }
+  #hero h1 em { color: var(--ochre); font-style: italic; font-family: 'Lora', serif; }
   .hero-sub {
     font-family: 'Lora', serif;
     font-style: italic;
@@ -116,16 +128,14 @@
     max-width: 540px;
     margin: 0 auto 2.5rem;
     line-height: 1.65;
-    opacity: 0;
-    animation: fadeUp 0.5s 0.3s ease forwards;
+    animation: fadeUp 0.5s 0.3s ease both;
   }
   .hero-btns {
     display: flex;
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 0.5s 0.4s ease forwards;
+    animation: fadeUp 0.5s 0.4s ease both;
   }
   .scroll-hint {
     position: absolute;
@@ -136,8 +146,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.4rem;
-    opacity: 0;
-    animation: fadeUp 0.5s 0.8s ease forwards;
+    animation: fadeUp 0.5s 0.8s ease both;
     cursor: pointer;
     text-decoration: none;
   }
@@ -150,17 +159,14 @@
     font-weight: 700;
   }
   .scroll-arrow {
-    width: 24px;
-    height: 24px;
+    width: 22px; height: 22px;
     border-right: 2px solid var(--ochre);
     border-bottom: 2px solid var(--ochre);
     transform: rotate(45deg);
     animation: bounce 1.5s ease-in-out infinite;
   }
-  @keyframes bounce {
-    0%, 100% { transform: rotate(45deg) translateY(0); }
-    50% { transform: rotate(45deg) translateY(4px); }
-  }
+  @keyframes bounce { 0%,100%{transform:rotate(45deg) translateY(0)} 50%{transform:rotate(45deg) translateY(4px)} }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
 
   .btn-primary {
     background: var(--ochre);
@@ -193,24 +199,18 @@
   }
   .btn-ghost:hover { border-color: var(--ochre); color: var(--ochre); transform: translateY(-2px); }
 
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(18px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ── SECTION 2: TRANSLATOR ── */
-  .section-translator {
+  /* ══════════════════════════════
+     SECTION 2 — TRANSLATOR
+  ══════════════════════════════ */
+  #translator {
     height: 100vh;
-    scroll-snap-align: start;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    padding-top: 62px;
   }
-
   .translator-header {
     background: var(--ink);
-    padding: 1.5rem 2rem;
+    padding: 1.2rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -218,34 +218,25 @@
     gap: 1rem;
     flex-shrink: 0;
   }
-  .translator-header-left .eyebrow {
+  .translator-header .eyebrow {
     font-size: 0.65rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--ochre);
     margin-bottom: 0.3rem;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
   }
-  .translator-header-left h2 {
+  .translator-header h2 {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
-    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
     color: var(--cream);
     letter-spacing: -0.02em;
     line-height: 1.1;
   }
-  .translator-header-left h2 em {
-    font-family: 'Lora', serif;
-    font-style: italic;
-    color: var(--ochre);
-  }
-  .translator-header-right {
-    font-size: 0.75rem;
-    color: #c4b09a;
-    text-align: right;
-    line-height: 1.7;
-    font-family: 'DM Sans', sans-serif;
-  }
+  .translator-header h2 em { font-family: 'Lora', serif; font-style: italic; color: var(--ochre); }
+  .translator-header-right { font-size: 0.75rem; color: #c4b09a; text-align: right; line-height: 1.7; }
   .translator-header-right strong { color: var(--ochre); }
 
   .translator-body {
@@ -255,17 +246,15 @@
     overflow: hidden;
     min-height: 0;
   }
-
-  .pane {
+  .t-pane {
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--border);
     height: 100%;
     overflow: hidden;
   }
-  .pane:last-child { border-right: none; }
-
-  .pane-header {
+  .t-pane:last-child { border-right: none; }
+  .t-pane-header {
     padding: 0.85rem 1.5rem;
     border-bottom: 1px solid var(--border);
     display: flex;
@@ -274,7 +263,7 @@
     background: var(--light);
     flex-shrink: 0;
   }
-  .pane-label {
+  .t-pane-label {
     font-size: 0.65rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -282,10 +271,9 @@
     font-family: 'Syne', sans-serif;
     font-weight: 700;
   }
-  .pane-label strong { color: var(--ink); }
-  .char-count { font-size: 0.65rem; color: var(--muted); }
-
-  textarea {
+  .t-pane-label strong { color: var(--ink); }
+  .t-char-count { font-size: 0.65rem; color: var(--muted); }
+  .t-textarea {
     flex: 1;
     width: 100%;
     background: var(--white);
@@ -299,12 +287,10 @@
     outline: none;
     overflow-y: auto;
   }
-  textarea::placeholder { color: #b0a090; }
-  textarea:focus { background: #fffdf8; }
-
-  .output-pane { display: flex; flex-direction: column; background: var(--white); }
-
-  .output-body {
+  .t-textarea::placeholder { color: #b0a090; }
+  .t-textarea:focus { background: #fffdf8; }
+  .t-output-pane { display: flex; flex-direction: column; background: var(--white); }
+  .t-output-body {
     flex: 1;
     padding: 1.5rem;
     font-family: 'DM Sans', sans-serif;
@@ -315,16 +301,8 @@
     white-space: pre-wrap;
     word-break: break-word;
   }
-  .output-body.empty { color: #b0a090; }
-
-  .replaced-word {
-    background: rgba(232,168,56,0.15);
-    color: var(--mud1);
-    border-radius: 3px;
-    padding: 0 3px;
-  }
-
-  .action-bar {
+  .t-output-body.empty { color: #b0a090; }
+  .t-action-bar {
     padding: 1rem 1.5rem;
     border-top: 1px solid var(--border);
     display: flex;
@@ -334,8 +312,7 @@
     background: var(--light);
     flex-shrink: 0;
   }
-
-  .translate-btn {
+  .t-btn {
     padding: 0.7rem 2rem;
     background: var(--ochre);
     color: var(--ink);
@@ -350,10 +327,9 @@
     transition: all 0.15s;
     box-shadow: 0 2px 12px rgba(232,168,56,0.25);
   }
-  .translate-btn:hover:not(:disabled) { background: var(--mud2); color: white; transform: translateY(-1px); }
-  .translate-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-
-  .copy-btn {
+  .t-btn:hover:not(:disabled) { background: var(--mud2); color: white; transform: translateY(-1px); }
+  .t-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .t-btn-outline {
     padding: 0.7rem 1.5rem;
     background: transparent;
     color: var(--ink);
@@ -367,9 +343,8 @@
     cursor: pointer;
     transition: all 0.15s;
   }
-  .copy-btn:hover { border-color: var(--ochre); color: var(--mud1); }
-
-  .clear-btn {
+  .t-btn-outline:hover { border-color: var(--ochre); color: var(--mud1); }
+  .t-btn-clear {
     padding: 0.7rem 1rem;
     background: transparent;
     color: var(--muted);
@@ -380,32 +355,17 @@
     cursor: pointer;
     transition: all 0.15s;
   }
-  .clear-btn:hover { color: var(--danger); border-color: var(--danger); }
-
-  .status {
-    font-size: 0.75rem;
-    color: var(--muted);
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .status.working { color: var(--mud2); }
-  .status.done { color: #2d7a4f; }
-  .status.error { color: var(--danger); }
-
+  .t-btn-clear:hover { color: var(--danger); border-color: var(--danger); }
+  .t-status { font-size: 0.75rem; color: var(--muted); margin-left: auto; display: flex; align-items: center; gap: 0.5rem; }
+  .t-status.working { color: var(--mud2); }
+  .t-status.done { color: #2d7a4f; }
+  .t-status.error { color: var(--danger); }
   .dot-pulse { display: inline-flex; gap: 3px; }
-  .dot-pulse span {
-    width: 4px; height: 4px;
-    border-radius: 50%;
-    background: currentColor;
-    animation: pulse 1.2s ease-in-out infinite;
-  }
+  .dot-pulse span { width: 4px; height: 4px; border-radius: 50%; background: currentColor; animation: pulse 1.2s ease-in-out infinite; }
   .dot-pulse span:nth-child(2) { animation-delay: 0.2s; }
   .dot-pulse span:nth-child(3) { animation-delay: 0.4s; }
-  @keyframes pulse { 0%,80%,100% { opacity: 0.2; transform: scale(0.8); } 40% { opacity: 1; transform: scale(1); } }
-
-  .stats-bar {
+  @keyframes pulse { 0%,80%,100%{opacity:0.2;transform:scale(0.8)} 40%{opacity:1;transform:scale(1)} }
+  .t-stats-bar {
     padding: 0.5rem 1.5rem;
     border-top: 1px solid var(--border);
     display: flex;
@@ -416,8 +376,270 @@
     flex-wrap: wrap;
     flex-shrink: 0;
   }
-  .stat { display: flex; align-items: center; gap: 0.4rem; }
-  .stat-val { color: var(--mud2); font-weight: 500; }
+  .t-stat { display: flex; align-items: center; gap: 0.4rem; }
+  .t-stat-val { color: var(--mud2); font-weight: 500; }
+
+  /* ══════════════════════════════
+     SECTION 3 — QUIZ
+  ══════════════════════════════ */
+  #quiz {
+    min-height: 100vh;
+    background: var(--cream);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid var(--border);
+  }
+  .quiz-inner {
+    width: 100%;
+    max-width: 680px;
+    padding: 3rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .screen { width: 100%; display: none; flex-direction: column; align-items: center; }
+  .screen.active { display: flex; }
+  .start-eyebrow {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ochre);
+    margin-bottom: 1rem;
+  }
+  .start-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 800;
+    color: var(--ink);
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .start-title em { font-style: italic; font-family: 'Lora', serif; color: var(--ochre); }
+  .start-sub {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+  }
+  .start-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .start-card-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .rules { display: flex; flex-direction: column; gap: 0.75rem; text-align: left; }
+  .rule { display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--ink); }
+  .rule-icon {
+    width: 32px; height: 32px;
+    background: var(--light);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; flex-shrink: 0;
+  }
+  .btn-start {
+    background: var(--ochre);
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 20px rgba(232,168,56,0.35);
+  }
+  .btn-start:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,168,56,0.45); }
+  .progress-bar-wrap { width: 100%; height: 6px; background: var(--border); border-radius: 10px; margin: 1.5rem 0 2rem; overflow: hidden; }
+  .progress-bar { height: 100%; background: var(--ochre); border-radius: 10px; transition: width 0.5s cubic-bezier(.4,0,.2,1); }
+  .q-header { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 1.5rem; }
+  .q-counter { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .q-score-live { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: var(--ochre); }
+  .question-card {
+    width: 100%; background: var(--ink); border-radius: 24px;
+    padding: 2.5rem 2rem; margin-bottom: 1.5rem; position: relative; overflow: hidden;
+  }
+  .question-card::before {
+    content: '"'; position: absolute; top: -0.5rem; left: 1.2rem;
+    font-family: 'Lora', serif; font-size: 8rem; color: rgba(232,168,56,0.12);
+    line-height: 1; pointer-events: none;
+  }
+  .q-label { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(232,168,56,0.7); margin-bottom: 0.75rem; }
+  .q-text { font-family: 'Syne', sans-serif; font-size: clamp(1.3rem, 4vw, 1.8rem); font-weight: 800; color: white; line-height: 1.25; }
+  .options { width: 100%; display: flex; flex-direction: column; gap: 0.75rem; }
+  .option-btn {
+    width: 100%; background: white; border: 2px solid var(--border); border-radius: 14px;
+    padding: 1rem 1.2rem; display: flex; align-items: center; gap: 1rem;
+    cursor: pointer; text-align: left; transition: border-color 0.15s, background 0.15s, transform 0.12s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .option-btn:hover:not(:disabled) { border-color: var(--ochre); transform: translateX(4px); background: #fffcf5; }
+  .option-btn:disabled { cursor: default; }
+  .option-btn.dim { opacity: 0.45; }
+  .option-letter {
+    width: 34px; height: 34px; border-radius: 8px; background: var(--light);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 800; color: var(--ink);
+    flex-shrink: 0; transition: background 0.15s, color 0.15s;
+  }
+  .option-text { font-size: 0.95rem; color: var(--ink); line-height: 1.4; }
+  .results-top { margin-top: 2rem; text-align: center; width: 100%; }
+  .score-circle {
+    width: 160px; height: 160px; border-radius: 50%; background: var(--ink);
+    margin: 1.5rem auto; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    box-shadow: 0 12px 40px rgba(68,48,48,0.25);
+  }
+  .score-number { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: var(--ochre); line-height: 1; }
+  .score-label { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+  .score-verdict { font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 5vw, 2.2rem); font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; }
+  .score-sub { font-family: 'Lora', serif; font-style: italic; font-size: 1rem; color: var(--muted); margin-bottom: 2rem; }
+  .results-list { width: 100%; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
+  .result-row { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.8rem 1rem; background: white; border-radius: 12px; border: 1px solid var(--border); }
+  .result-dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+  .result-dot.correct { background: var(--correct); }
+  .result-dot.wrong { background: var(--wrong); }
+  .result-jargon { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--ink); }
+  .result-plain { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--muted); }
+  .results-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .btn-play-again {
+    background: var(--ochre); color: white; font-family: 'Syne', sans-serif;
+    font-size: 0.95rem; font-weight: 700; padding: 0.9rem 2.5rem;
+    border: none; border-radius: 50px; cursor: pointer; letter-spacing: 0.03em;
+    transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 16px rgba(232,168,56,0.3);
+  }
+  .btn-play-again:hover { transform: translateY(-2px); }
+  .btn-share {
+    background: transparent; color: var(--ink); font-family: 'Syne', sans-serif;
+    font-size: 0.95rem; font-weight: 700; padding: 0.9rem 2.5rem;
+    border: 2px solid var(--border); border-radius: 50px; cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .btn-share:hover { border-color: var(--ochre); }
+  .share-copied { font-size: 0.85rem; color: var(--correct); margin-top: 1rem; opacity: 0; transition: opacity 0.3s; }
+  .share-copied.show { opacity: 1; }
+
+  /* ══════════════════════════════
+     SECTION 4 — PRICING
+  ══════════════════════════════ */
+  #pricing {
+    min-height: 100vh;
+    background: var(--light);
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+  .pricing-hero { text-align: center; margin-bottom: 3rem; }
+  .pricing-eyebrow {
+    font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--mud2); font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 1rem;
+  }
+  .pricing-hero h2 {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: -0.02em; margin-bottom: 0.8rem;
+  }
+  .pricing-hero h2 em { font-family: 'Lora', serif; font-style: italic; color: var(--ochre); }
+  .pricing-hero p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+  .toggle-wrap {
+    display: flex; align-items: center; gap: 0.75rem; justify-content: center;
+    margin: 1.5rem 0 2.5rem;
+  }
+  .toggle-label { font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--muted); transition: color 0.2s; }
+  .toggle-label.active { color: var(--ink); }
+  .toggle-switch {
+    width: 48px; height: 26px; background: var(--border); border-radius: 13px;
+    cursor: pointer; position: relative; transition: background 0.2s;
+  }
+  .toggle-switch.on { background: var(--ochre); }
+  .toggle-switch::after {
+    content: ''; position: absolute; top: 3px; left: 3px;
+    width: 20px; height: 20px; border-radius: 50%; background: white;
+    transition: transform 0.2s; box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+  .toggle-switch.on::after { transform: translateX(22px); }
+  .save-badge {
+    background: var(--ochre); color: var(--ink); font-family: 'Syne', sans-serif;
+    font-size: 0.65rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 20px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .cards-section { width: 100%; max-width: 1100px; }
+  .cards-wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; align-items: start; }
+  @media (max-width: 900px) { .cards-wrap { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 540px) { .cards-wrap { grid-template-columns: 1fr; } }
+
+  .card { display: flex; flex-direction: column; align-items: center; }
+  .card-num {
+    width: 52px; height: 52px; border-radius: 50%; background: var(--ochre); color: var(--ink);
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto -26px; position: relative; z-index: 3;
+    box-shadow: 0 4px 16px rgba(232,168,56,0.4); transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover .card-num { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(232,168,56,0.5); }
+  .card-body {
+    width: 100%; border-radius: 20px; padding: 2.5rem 1.5rem 2rem;
+    border: 1.5px solid var(--border); position: relative; overflow: visible;
+  }
+  .card.free .card-body { background: var(--free-bg); border-top: 28px solid var(--free-bg); }
+  .card.bronze .card-body { background: var(--bronze-bg); border-top: 28px solid var(--bronze-bg); }
+  .card.silver .card-body { background: var(--silver-bg); border-top: 28px solid var(--silver-bg); border-color: var(--ochre); border-width: 2px; }
+  .card.gold .card-body { background: var(--gold-bg); border-top: 28px solid var(--gold-bg); border-color: var(--mud2); }
+  .popular-badge {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--ochre); color: var(--ink); font-family: 'Syne', sans-serif;
+    font-weight: 700; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 0.25rem 1rem; border-radius: 20px; white-space: nowrap;
+  }
+  .card-tier { font-family: 'Syne', sans-serif; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ochre); text-align: center; margin-bottom: 0.3rem; }
+  .card.gold .card-tier { color: var(--ink); }
+  .card-name { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800; text-align: center; letter-spacing: -0.02em; margin-bottom: 0.2rem; color: var(--ink); }
+  .card-price { text-align: center; margin-bottom: 0.2rem; }
+  .card-price .amount { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--ink); letter-spacing: -0.03em; }
+  .card-price .period { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--muted); }
+  .card-divider { width: 40px; height: 2px; background: var(--border); margin: 1rem auto; border-radius: 2px; }
+  .card-tagline { font-family: 'Lora', serif; font-size: 0.82rem; font-style: italic; color: var(--muted); text-align: center; line-height: 1.5; margin-bottom: 1.2rem; min-height: 2.5rem; }
+  .card-features { list-style: none; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; line-height: 1.5; color: var(--ink); }
+  .card-features li { display: flex; gap: 0.5rem; align-items: flex-start; padding: 0.35rem 0; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .card-features li:last-child { border-bottom: none; }
+  .check { flex-shrink: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--ochre); color: var(--ink); display: flex; align-items: center; justify-content: center; font-size: 0.55rem; font-weight: 800; margin-top: 1px; }
+  .card-cta {
+    display: block; margin-top: 1.8rem; padding: 0.8rem 1.2rem; text-align: center;
+    font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; border-radius: 8px;
+    cursor: pointer; text-decoration: none; transition: all 0.2s;
+    border: 2px solid var(--ink); background: transparent; color: var(--ink);
+  }
+  .card-cta:hover { background: var(--ink); color: var(--cream); }
+  .card.gold .card-cta { background: var(--ink); border-color: var(--ink); color: var(--cream); }
+  .card.gold .card-cta:hover { background: #2a1f1f; }
+  .footer-note {
+    max-width: 600px; text-align: center; margin-top: 3rem;
+    font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; color: var(--muted); line-height: 1.7;
+  }
+  .faq-link { display: inline-block; margin-top: 0.75rem; color: var(--mud2); font-family: 'Syne', sans-serif; font-style: normal; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; }
+  .faq-link:hover { color: var(--ink); }
 </style>
 </head>
 <body>
@@ -427,20 +649,20 @@
   <a href="#hero" class="nav-logo">Unmuddled</a>
   <div class="nav-links">
     <a href="#translator">Translator</a>
-    <a href="jargon-quiz.html">Quiz</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="pricing.html" class="nav-cta">Get Started</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#pricing" class="nav-cta">Get Started</a>
   </div>
 </nav>
 
-<!-- ── SECTION 1: HERO ── -->
-<section class="section-hero" id="hero">
+<!-- ══ SECTION 1: HERO ══ -->
+<section class="snap-section" id="hero" style="padding-top:0">
   <p class="hero-eyebrow">Plain English for Everyone</p>
   <h1>Stop translating.<br>Start <em>understanding.</em></h1>
   <p class="hero-sub">Corporate jargon is a second language nobody taught you. Unmuddled decodes what's really being said — so you can focus on what actually matters.</p>
   <div class="hero-btns">
     <a href="#translator" class="btn-primary">Try the Translator</a>
-    <a href="jargon-quiz.html" class="btn-ghost">Take the Jargon Quiz</a>
+    <a href="#quiz" class="btn-ghost">Take the Jargon Quiz</a>
   </div>
   <a href="#translator" class="scroll-hint">
     <span>Try it now</span>
@@ -448,11 +670,10 @@
   </a>
 </section>
 
-<!-- ── SECTION 2: TRANSLATOR ── -->
-<section class="section-translator" id="translator">
-
+<!-- ══ SECTION 2: TRANSLATOR ══ -->
+<section class="snap-section" id="translator">
   <div class="translator-header">
-    <div class="translator-header-left">
+    <div>
       <div class="eyebrow">Plain English Translator</div>
       <h2>Paste jargon. Get <em>clarity.</em></h2>
     </div>
@@ -460,46 +681,185 @@
       <strong>314 jargon terms</strong> loaded &nbsp;·&nbsp; AI-powered tense matching
     </div>
   </div>
-
   <div class="translator-body">
-    <div class="pane">
-      <div class="pane-header">
-        <span class="pane-label"><strong>Input</strong> — paste your text</span>
-        <span class="char-count" id="charCount">0 chars</span>
+    <div class="t-pane">
+      <div class="t-pane-header">
+        <span class="t-pane-label"><strong>Input</strong> — paste your text</span>
+        <span class="t-char-count" id="charCount">0 chars</span>
       </div>
-      <textarea id="inputText" placeholder='Paste your business text here...
+      <textarea class="t-textarea" id="inputText" placeholder='Paste your business text here...
 
 e.g. "We need to align on our bandwidth before we can action these deliverables and move the needle on our KPIs going forward."'></textarea>
     </div>
-
-    <div class="pane output-pane">
-      <div class="pane-header">
-        <span class="pane-label"><strong>Output</strong> — plain English</span>
-        <span class="char-count" id="replaceCount">—</span>
+    <div class="t-pane t-output-pane">
+      <div class="t-pane-header">
+        <span class="t-pane-label"><strong>Output</strong> — plain English</span>
+        <span class="t-char-count" id="replaceCount">—</span>
       </div>
-      <div class="output-body empty" id="outputBody">Your translated text will appear here.
+      <div class="t-output-body empty" id="outputBody">Your translated text will appear here.
 
 Highlighted words show what was replaced.</div>
     </div>
   </div>
-
-  <div class="action-bar">
-    <button class="translate-btn" id="translateBtn" onclick="translate()">Translate →</button>
-    <button class="copy-btn" id="copyBtn" onclick="copyOutput()" style="display:none">Copy Text</button>
-    <button class="clear-btn" onclick="clearAll()">Clear</button>
-    <div class="status" id="status"></div>
+  <div class="t-action-bar">
+    <button class="t-btn" id="translateBtn" onclick="doTranslate()">Translate →</button>
+    <button class="t-btn-outline" id="copyBtn" onclick="copyOutput()" style="display:none">Copy Text</button>
+    <button class="t-btn-clear" onclick="clearAll()">Clear</button>
+    <div class="t-status" id="status"></div>
   </div>
-
-  <div class="stats-bar" id="statsBar" style="display:none">
-    <div class="stat">Terms replaced: <span class="stat-val" id="statReplaced">0</span></div>
-    <div class="stat">Words in: <span class="stat-val" id="statWordsIn">0</span></div>
-    <div class="stat">Words out: <span class="stat-val" id="statWordsOut">0</span></div>
-    <div class="stat">Jargon density: <span class="stat-val" id="statDensity">0%</span></div>
+  <div class="t-stats-bar" id="statsBar" style="display:none">
+    <div class="t-stat">Terms replaced: <span class="t-stat-val" id="statReplaced">0</span></div>
+    <div class="t-stat">Words in: <span class="t-stat-val" id="statWordsIn">0</span></div>
+    <div class="t-stat">Words out: <span class="t-stat-val" id="statWordsOut">0</span></div>
+    <div class="t-stat">Jargon density: <span class="t-stat-val" id="statDensity">0%</span></div>
   </div>
+</section>
 
+<!-- ══ SECTION 3: QUIZ ══ -->
+<section class="snap-section" id="quiz">
+  <div class="quiz-inner">
+    <section class="screen active" id="screen-start">
+      <p class="start-eyebrow">Test yourself</p>
+      <h1 class="start-title">How fluent are you<br>in <em>Corporate?</em></h1>
+      <p class="start-sub">5 questions. 4 options. One winner. Challenge a colleague and see who actually knows what your boss is on about.</p>
+      <div class="start-card">
+        <div class="start-card-label">How it works</div>
+        <div class="rules">
+          <div class="rule"><div class="rule-icon">📋</div>5 jargon phrases, picked at random</div>
+          <div class="rule"><div class="rule-icon">🎯</div>Pick the plain-English meaning from 4 options</div>
+          <div class="rule"><div class="rule-icon">💡</div>Find out what it actually means after each answer</div>
+          <div class="rule"><div class="rule-icon">🏆</div>Get your score — then dare someone to beat it</div>
+        </div>
+      </div>
+      <button class="btn-start" onclick="startQuiz()">Let's Go →</button>
+    </section>
+    <section class="screen" id="screen-quiz">
+      <div class="progress-bar-wrap"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
+      <div class="q-header">
+        <span class="q-counter" id="qCounter">Question 1 of 5</span>
+        <span class="q-score-live" id="qScoreLive" style="visibility:hidden">—</span>
+      </div>
+      <div class="question-card">
+        <div class="q-label">What does this mean?</div>
+        <div class="q-text" id="qText">—</div>
+      </div>
+      <div class="options" id="optionsContainer"></div>
+    </section>
+    <section class="screen" id="screen-results">
+      <div class="results-top">
+        <div class="score-circle">
+          <div class="score-number" id="finalScore">—</div>
+          <div class="score-label">OUT OF 5</div>
+        </div>
+        <h2 class="score-verdict" id="scoreVerdict">—</h2>
+        <p class="score-sub" id="scoreSub">—</p>
+      </div>
+      <div class="results-list" id="resultsList"></div>
+      <div class="results-btns">
+        <button class="btn-play-again" onclick="startQuiz()">Play Again</button>
+        <button class="btn-share" onclick="shareScore()">Share My Score 📤</button>
+      </div>
+      <div class="share-copied" id="shareCopied">Copied to clipboard! Go challenge someone 😄</div>
+    </section>
+  </div>
+</section>
+
+<!-- ══ SECTION 4: PRICING ══ -->
+<section class="snap-section" id="pricing">
+  <div class="pricing-hero">
+    <p class="pricing-eyebrow">Simple, honest pricing</p>
+    <h2>Find your <em>level of clarity</em></h2>
+    <p>Start free. Upgrade when you're ready. Every tier is built for real people navigating a jargon-filled world.</p>
+    <div class="toggle-wrap">
+      <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+      <div class="toggle-switch" id="billingToggle" onclick="toggleBilling()"></div>
+      <span class="toggle-label" id="annualLabel">Annual</span>
+      <span class="save-badge">Save 20%</span>
+    </div>
+  </div>
+  <div class="cards-section">
+    <div class="cards-wrap">
+      <div class="card free">
+        <div class="card-num">1</div>
+        <div class="card-body">
+          <div class="card-tier">Tier One</div>
+          <div class="card-name">Free</div>
+          <div class="card-price"><span class="amount">$0</span><br><span class="period">forever</span></div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">Dip your toes in.<br>No card needed.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span>Jargon quizzes — test yourself</li>
+            <li><span class="check">✓</span>First 100 words translated free</li>
+            <li><span class="check">✓</span>Business jargon glossary</li>
+            <li><span class="check">✓</span>Abbreviation & idiom lookups</li>
+          </ul>
+          <a href="#" class="card-cta">Get Started Free</a>
+        </div>
+      </div>
+      <div class="card bronze">
+        <div class="card-num">2</div>
+        <div class="card-body">
+          <div class="card-tier">Tier Two</div>
+          <div class="card-name">Bronze</div>
+          <div class="card-price"><span class="amount" data-monthly="$9" data-annual="$7">$9</span><br><span class="period" id="bronze-period">per month</span></div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">Unlimited translation.<br>No word limits, ever.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span>Everything in Free</li>
+            <li><span class="check">✓</span>Unlimited jargon translation</li>
+            <li><span class="check">✓</span>Copy & paste on site — no limits</li>
+            <li><span class="check">✓</span>Translation history saved</li>
+          </ul>
+          <a href="#" class="card-cta">Start Bronze</a>
+        </div>
+      </div>
+      <div class="card silver">
+        <div class="card-num">3</div>
+        <div class="card-body">
+          <div class="popular-badge">Most Popular</div>
+          <div class="card-tier">Tier Three</div>
+          <div class="card-name">Silver</div>
+          <div class="card-price"><span class="amount" data-monthly="$19" data-annual="$15">$19</span><br><span class="period" id="silver-period">per month</span></div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">For the person who lives<br>in meetings.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span>Everything in Bronze</li>
+            <li><span class="check">✓</span>Slack integration</li>
+            <li><span class="check">✓</span>Action item detection</li>
+            <li><span class="check">✓</span>Post-meeting plain English summary</li>
+          </ul>
+          <a href="#" class="card-cta">Start Silver</a>
+        </div>
+      </div>
+      <div class="card gold">
+        <div class="card-num">4</div>
+        <div class="card-body">
+          <div class="card-tier">Tier Four</div>
+          <div class="card-name">Gold</div>
+          <div class="card-price"><span class="amount" data-monthly="$99" data-annual="$99">$99</span><br><span class="period" id="gold-period">per year</span></div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">Your complete workplace<br>intelligence suite.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span>Everything in Silver</li>
+            <li><span class="check">✓</span>AI tone & mood analysis</li>
+            <li><span class="check">✓</span>Short suggested response</li>
+            <li><span class="check">✓</span>LIVE meeting transcription</li>
+            <li><span class="check">✓</span>Notion integration</li>
+            <li><span class="check">✓</span>CloudScope — visual Gmail inbox</li>
+          </ul>
+          <a href="#" class="card-cta">Go Gold</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-note">
+    <p>All plans include a 14-day money-back guarantee. No questions asked.</p>
+    <a href="#" class="faq-link">Have questions? Read the FAQ →</a>
+  </div>
 </section>
 
 <script>
+// ── TRANSLATOR JS ──
 const JARGON = [{"jargon":"Accounts receivable","plain":"Money owed to a company by its customers"},{"jargon":"Activity based costing","plain":"A costing method that assigns costs based on the activities that drive them"},{"jargon":"Asset-backed security","plain":"A financial security backed by a pool of assets like loans or receivables"},{"jargon":"Actual period","plain":"Stands for actual period \u2014 usually a column name in financial reports"},{"jargon":"Action items","plain":"Tasks to complete"},{"jargon":"Actionable","plain":"Something you can actually do"},{"jargon":"Actuals","plain":"Real numbers, as opposed to estimates"},{"jargon":"Available for sale","plain":"Financial assets not held to maturity and not for active trading"},{"jargon":"Agile","plain":"Flexible, quick to adapt"},{"jargon":"Align","plain":"Agree / get on the same page"},{"jargon":"Alignment","plain":"Everyone agreeing on the plan"},{"jargon":"Anti-money laundering","plain":"Rules and processes to prevent hiding illegally obtained money"},{"jargon":"Accounts payable","plain":"Money a company owes to its suppliers"},{"jargon":"Advance pricing agreement","plain":"A deal with tax authorities fixing how transfer prices are set in advance"},{"jargon":"Average revenue per user","plain":"Total revenue divided by number of users"},{"jargon":"Annual recurring revenues","plain":"Predictable revenue expected every year"},{"jargon":"ASAP","plain":"As soon as possible"},{"jargon":"Accounting standards codification","plain":"The FASB's official system for organising US accounting standards"},{"jargon":"Async","plain":"Not at the same time \u2014 done on your own schedule"},{"jargon":"At the end of the day","plain":"Ultimately / when all is said and done"},{"jargon":"Assets under management","plain":"Total market value of assets a firm manages on behalf of clients"},{"jargon":"Assembled workforce","plain":"The value placed on an existing team of trained employees"},{"jargon":"Balance sheet","plain":"A financial snapshot of assets, liabilities, and equity at a point in time"},{"jargon":"B2B","plain":"Business to business \u2014 selling to other companies"},{"jargon":"B2C","plain":"Business to consumer \u2014 selling directly to individuals"},{"jargon":"Bandwidth","plain":"Time and energy available to take on work"},{"jargon":"Baseline","plain":"The starting point used for comparison"},{"jargon":"Beta coefficient","plain":"A measure of how much a stock moves relative to the market"},{"jargon":"Benchmarking","plain":"Comparing your results to others in the field"},{"jargon":"Base erosion and profit shifting","plain":"Tax strategies that shift profits to low-tax countries"},{"jargon":"Best practice","plain":"The recommended or most effective way to do something"},{"jargon":"Big picture","plain":"The overall view, not the fine details"},{"jargon":"Boil the ocean","plain":"Try to solve everything at once \u2014 usually a bad idea"},{"jargon":"Bill of materials","plain":"A list of all parts and materials needed to make a product"},{"jargon":"Bottom line","plain":"The final result, or the most important point"},{"jargon":"Bottom-up","plain":"Starting from the details and building up to the big picture"},{"jargon":"Brainstorm","plain":"Throw out ideas freely without judging them yet"},{"jargon":"Budgeted period","plain":"Stands for budgeted period \u2014 usually a column name in financial reports"},{"jargon":"Buy-in","plain":"Agreement and support from the people involved"},{"jargon":"Boilerplate","plain":"Standard, reusable text or terms used repeatedly without change"},{"jargon":"Burn rate","plain":"How quickly a company is spending its cash"},{"jargon":"Cadence","plain":"A regular rhythm or schedule for meetings or updates"},{"jargon":"CAGR","plain":"Compound annual growth rate \u2014 average yearly growth over a period"},{"jargon":"Capex","plain":"Capital expenditure \u2014 money spent on long-term assets like equipment or property"},{"jargon":"Capital allocation","plain":"Deciding where to invest or spend money"},{"jargon":"Carry","plain":"The profit share a fund manager earns once investors get their money back"},{"jargon":"Cash flow","plain":"The money moving in and out of a business"},{"jargon":"Circle back","plain":"Follow up / come back to this later"},{"jargon":"Close the loop","plain":"Finish the conversation or update everyone on the outcome"},{"jargon":"Core competency","plain":"What a company does especially well"},{"jargon":"Cost centre","plain":"A department that spends money but doesn\u2019t directly earn revenue"},{"jargon":"Cost of capital","plain":"The return a company must earn to justify its investments"},{"jargon":"Cross-functional","plain":"Involving people from different teams or departments"},{"jargon":"Colour on","plain":"More detail or context on something"},{"jargon":"Competitive landscape","plain":"An overview of who the competitors are and how they compare"},{"jargon":"Compliance","plain":"Following the rules and regulations that apply to your business"},{"jargon":"Contingency","plain":"A backup plan or money set aside for unexpected costs"},{"jargon":"Conversion rate","plain":"The share of people who take the action you want (e.g. buy, sign up)"},{"jargon":"Corporate governance","plain":"The rules and processes for how a company is directed and controlled"},{"jargon":"Cost-benefit analysis","plain":"Comparing the costs and benefits of a decision"},{"jargon":"Customer acquisition cost","plain":"How much it costs to win one new customer"},{"jargon":"Customer lifetime value","plain":"Total revenue a business can expect from one customer over time"},{"jargon":"Cycle time","plain":"How long it takes to complete a process from start to finish"},{"jargon":"Deep dive","plain":"A thorough, detailed look at something"},{"jargon":"Deliverable","plain":"A specific output or result that\u2019s due"},{"jargon":"Due diligence","plain":"Thorough checking and investigation before a deal or decision"},{"jargon":"Downside risk","plain":"The potential for things to go worse than expected"},{"jargon":"Drill down","plain":"Look more closely at the details"},{"jargon":"Drive","plain":"Lead or push forward"},{"jargon":"Dynamic","plain":"Changing, active, or energetic"},{"jargon":"Ecosystem","plain":"The network of companies, people, or tools that interact in a space"},{"jargon":"EBITDA","plain":"Earnings before interest, tax, depreciation, and amortisation \u2014 a measure of operating profit"},{"jargon":"Economies of scale","plain":"Cost savings that come from producing more"},{"jargon":"Elevator pitch","plain":"A short, clear explanation of something \u2014 short enough to say in a lift"},{"jargon":"Empower","plain":"Give someone the authority or tools to do something"},{"jargon":"End-to-end","plain":"Covering the entire process from start to finish"},{"jargon":"Engagement","plain":"How involved or committed someone is \u2014 could be employees, customers, or users"},{"jargon":"Enterprise value","plain":"Total value of a business including debt"},{"jargon":"EPS","plain":"Earnings per share \u2014 profit divided by the number of shares"},{"jargon":"ESG","plain":"Environmental, social, and governance \u2014 non-financial factors used to assess a company"},{"jargon":"Exception reporting","plain":"Only flagging things that fall outside normal ranges"},{"jargon":"Execution","plain":"Getting things done"},{"jargon":"Exit strategy","plain":"A plan for how to leave an investment or business"},{"jargon":"Eyeballs","plain":"The number of people viewing something (e.g. a website or ad)"},{"jargon":"FTE","plain":"Full-time equivalent \u2014 a way of counting staff (e.g. two half-time workers = 1 FTE)"},{"jargon":"Feedback loop","plain":"A process where results are used to improve future actions"},{"jargon":"Finance partner","plain":"A finance person who works closely with a specific business team"},{"jargon":"Fixed costs","plain":"Costs that stay the same regardless of how much you produce"},{"jargon":"Flag","plain":"Highlight or draw attention to something"},{"jargon":"Flywheel","plain":"A self-reinforcing cycle where each success makes the next one easier"},{"jargon":"Forecast","plain":"An estimate of future results based on current data"},{"jargon":"Forward-looking","plain":"Focused on what\u2019s ahead rather than what\u2019s already happened"},{"jargon":"Friction","plain":"Anything that slows down or complicates a process"},{"jargon":"Full-stack","plain":"Covering all parts \u2014 usually used in tech but applied more broadly"},{"jargon":"Functionality","plain":"What something does or is capable of doing"},{"jargon":"Fund manager","plain":"A person or firm that invests money on behalf of others"},{"jargon":"Game changer","plain":"Something that completely changes how things work"},{"jargon":"Gating factor","plain":"The thing holding up progress"},{"jargon":"Governance","plain":"The rules and systems for making decisions and staying accountable"},{"jargon":"Go-to-market","plain":"The plan for how to launch and sell a product"},{"jargon":"Granular","plain":"Very detailed"},{"jargon":"Growth hacking","plain":"Using quick, creative experiments to grow fast"},{"jargon":"Guardrails","plain":"Limits or guidelines that keep things on track"},{"jargon":"Headcount","plain":"The number of employees"},{"jargon":"Hedge","plain":"Reduce risk by taking an offsetting position"},{"jargon":"High-level","plain":"A broad overview without going into detail"},{"jargon":"Holistic","plain":"Looking at everything together, not just individual parts"},{"jargon":"Horizon","plain":"A future time period you\u2019re planning for"},{"jargon":"Human capital","plain":"The skills, knowledge, and experience of your people"},{"jargon":"Ideate","plain":"Come up with ideas"},{"jargon":"Impact","plain":"The effect or result of something"},{"jargon":"Incentivise","plain":"Give someone a reason to do something"},{"jargon":"Incremental","plain":"Small, step-by-step changes or additions"},{"jargon":"Infrastructure","plain":"The underlying systems, tools, or resources everything else relies on"},{"jargon":"Innovation","plain":"Doing something new or doing something better"},{"jargon":"Intellectual property","plain":"Creations of the mind that are legally owned \u2014 patents, trademarks, copyrights"},{"jargon":"Internal rate of return","plain":"IRR \u2014 the expected annual return of an investment"},{"jargon":"Iterate","plain":"Repeat and improve in cycles"},{"jargon":"KPI","plain":"Key performance indicator \u2014 a metric used to track progress toward a goal"},{"jargon":"Key man risk","plain":"The risk that a business depends too much on one person"},{"jargon":"Knock-on effect","plain":"A secondary consequence that follows from a first event"},{"jargon":"Leverage","plain":"Using something (money, relationships, position) to get more out of less"},{"jargon":"Lean","plain":"Cutting waste and focusing only on what adds value"},{"jargon":"Learnings","plain":"Lessons or things you\u2019ve found out"},{"jargon":"Liquidity","plain":"How easily something can be converted to cash"},{"jargon":"Low-hanging fruit","plain":"The easiest wins available"},{"jargon":"Management accounts","plain":"Regular internal financial reports used to run the business"},{"jargon":"Market cap","plain":"The total value of a company\u2019s shares"},{"jargon":"Metrics","plain":"Numbers used to measure something"},{"jargon":"Milestone","plain":"A key point or achievement in a plan"},{"jargon":"Mission critical","plain":"Essential \u2014 if this fails, everything fails"},{"jargon":"Monetise","plain":"Turn something into a source of money"},{"jargon":"Move the needle","plain":"Make a meaningful difference to results"},{"jargon":"MVP","plain":"Minimum viable product \u2014 the simplest version of something that still works"},{"jargon":"Net present value","plain":"NPV \u2014 the current value of future cash flows"},{"jargon":"Net promoter score","plain":"NPS \u2014 a measure of how likely customers are to recommend you"},{"jargon":"Normalise","plain":"Adjust figures to remove unusual or one-off items"},{"jargon":"Objective","plain":"A goal"},{"jargon":"Off-balance sheet","plain":"Assets or liabilities not shown on the main balance sheet"},{"jargon":"Omnichannel","plain":"Reaching customers across multiple channels seamlessly"},{"jargon":"Onboard","plain":"Bring someone new up to speed"},{"jargon":"Operating model","plain":"How an organisation is structured and runs day to day"},{"jargon":"Opex","plain":"Operating expenditure \u2014 the day-to-day costs of running a business"},{"jargon":"Opportunity cost","plain":"What you give up by choosing one option over another"},{"jargon":"Optimise","plain":"Make something as good or efficient as possible"},{"jargon":"Organic growth","plain":"Growth that comes from within \u2014 not from acquisitions"},{"jargon":"Outsource","plain":"Pay an external company to do work instead of doing it yourself"},{"jargon":"Overarching","plain":"Covering everything \u2014 at the highest level"},{"jargon":"P&L","plain":"Profit and loss statement \u2014 a summary of income and expenses"},{"jargon":"Pain point","plain":"A specific problem that causes frustration"},{"jargon":"Paradigm shift","plain":"A fundamental change in how things are done or understood"},{"jargon":"Peel back the onion","plain":"Look more deeply into something to find what\u2019s really going on"},{"jargon":"Pivot","plain":"Change direction \u2014 often used when a strategy isn\u2019t working"},{"jargon":"Portfolio","plain":"A collection of investments, projects, or products"},{"jargon":"Price-to-earnings ratio","plain":"P/E ratio \u2014 how much investors pay per £1 of a company\u2019s earnings"},{"jargon":"Proactive","plain":"Acting before problems arise, rather than reacting to them"},{"jargon":"Productivity","plain":"How much output comes from a given input of time or effort"},{"jargon":"Profit margin","plain":"Profit as a share of revenue"},{"jargon":"Proof of concept","plain":"An early test to show that an idea can work"},{"jargon":"Proprietary","plain":"Something owned exclusively by a company"},{"jargon":"Pull the trigger","plain":"Make the decision and act on it"},{"jargon":"Push back","plain":"Disagree or raise objections"},{"jargon":"Quick win","plain":"A fast, easy result that shows early progress"},{"jargon":"ROI","plain":"Return on investment \u2014 what you get back relative to what you put in"},{"jargon":"Reach out","plain":"Contact someone"},{"jargon":"Realise synergies","plain":"Capture the combined benefit of two things working together"},{"jargon":"Recurring revenue","plain":"Income that comes in regularly and predictably"},{"jargon":"Reforecast","plain":"Update a financial forecast with new information"},{"jargon":"Regulatory","plain":"Relating to the rules and regulations that govern a business"},{"jargon":"Return on equity","plain":"ROE \u2014 how much profit a company generates from shareholders\u2019 money"},{"jargon":"Revenue recognition","plain":"The rules for when and how revenue is recorded"},{"jargon":"Risk appetite","plain":"How much risk an organisation is willing to accept"},{"jargon":"Risk management","plain":"The process of identifying, assessing, and managing risks"},{"jargon":"Roadmap","plain":"A plan showing the steps and timeline for reaching a goal"},{"jargon":"Run rate","plain":"The expected annual result based on current performance"},{"jargon":"Runway","plain":"How long a company can keep going before it runs out of money"},{"jargon":"Scalable","plain":"Able to grow without the costs growing at the same rate"},{"jargon":"Scenario analysis","plain":"Testing what would happen under different assumptions"},{"jargon":"Scope creep","plain":"When a project expands beyond its original plan without proper approval"},{"jargon":"Shareholder value","plain":"The financial return delivered to shareholders"},{"jargon":"Silo","plain":"A team or department that doesn\u2019t share information with others"},{"jargon":"Skin in the game","plain":"Having a personal stake in the outcome"},{"jargon":"Stakeholder","plain":"Anyone with an interest in a decision or outcome"},{"jargon":"Standalone","plain":"Operating on its own, without depending on something else"},{"jargon":"Strategic","plain":"Related to the long-term plan or direction"},{"jargon":"Stress test","plain":"Push a model or plan to its limits to see where it breaks"},{"jargon":"Stretch goal","plain":"An ambitious target that goes beyond what\u2019s comfortable"},{"jargon":"Sunset","plain":"Phase out or shut down something that\u2019s no longer needed"},{"jargon":"Supply chain","plain":"The whole process from raw materials to finished product reaching the customer"},{"jargon":"Synergy","plain":"Two things working together to produce more than they would separately"},{"jargon":"T-shaped","plain":"Having broad general knowledge and deep expertise in one area"},{"jargon":"Take offline","plain":"Discuss this separately, not in the current meeting"},{"jargon":"Takeaways","plain":"The key points or lessons from a meeting or document"},{"jargon":"Tangible","plain":"Real and measurable, not abstract"},{"jargon":"Target operating model","plain":"The ideal future state of how an organisation should run"},{"jargon":"Thought leader","plain":"Someone seen as an expert and influencer in their field"},{"jargon":"Top line","plain":"Total revenue"},{"jargon":"Top-down","plain":"Starting from the big picture and working down to the details"},{"jargon":"Total addressable market","plain":"TAM \u2014 the total revenue available if you captured the whole market"},{"jargon":"Touch base","plain":"Check in briefly"},{"jargon":"Transformation","plain":"A large-scale change in how a business works"},{"jargon":"Transparency","plain":"Being open and clear about what\u2019s happening"},{"jargon":"Triage","plain":"Prioritise and sort by urgency"},{"jargon":"Unlock value","plain":"Release potential that wasn\u2019t being used"},{"jargon":"Utilisation","plain":"How much of something (time, capacity) is being used"},{"jargon":"Value add","plain":"Something that genuinely improves things"},{"jargon":"Value chain","plain":"All the steps involved in creating and delivering a product or service"},{"jargon":"Value creation","plain":"Making something worth more than it was before"},{"jargon":"Value driver","plain":"The things that most affect the value of a business"},{"jargon":"Value proposition","plain":"The reason a customer should choose you over the competition"},{"jargon":"Variable costs","plain":"Costs that go up or down depending on how much you produce"},{"jargon":"Variance","plain":"The difference between what was planned and what actually happened"},{"jargon":"Venture capital","plain":"Money invested in early-stage companies in exchange for equity"},{"jargon":"Vertical","plain":"A specific industry or market segment"},{"jargon":"Visibility","plain":"How clearly you can see what\u2019s going on"},{"jargon":"Waterfall","plain":"A project method where each phase must finish before the next begins"},{"jargon":"Weighted average cost of capital","plain":"WACC \u2014 the blended cost of all the money a company uses"},{"jargon":"Win-win","plain":"A result that benefits everyone involved"},{"jargon":"Working capital","plain":"The money available for day-to-day operations"},{"jargon":"Write-off","plain":"Removing an asset from the books because it has no remaining value"},{"jargon":"Year-on-year","plain":"Comparing this period to the same period last year"},{"jargon":"Zero-based budgeting","plain":"Starting a budget from scratch each time rather than adjusting last year\u2019s"},{"jargon":"30,000-foot view","plain":"The very high-level overview"},{"jargon":"Accounts receivable","plain":"Money customers owe the company but haven\u2019t paid yet"},{"jargon":"Net asset value","plain":"NAV \u2014 total assets minus total liabilities"},{"jargon":"Accruals","plain":"Costs recognised when incurred, not when paid"},{"jargon":"Amortisation","plain":"Spreading the cost of an intangible asset over its useful life"},{"jargon":"Annual general meeting","plain":"AGM \u2014 the yearly meeting where shareholders review company performance"},{"jargon":"Arbitrage","plain":"Profiting from price differences in different markets"},{"jargon":"Audit trail","plain":"A record of all changes or actions taken in a process"},{"jargon":"Back-office","plain":"Internal support functions like finance, HR, and IT"},{"jargon":"Benchmarks","plain":"Standards or points of reference used for comparison"},{"jargon":"Blended rate","plain":"An average rate combining multiple different rates"},{"jargon":"Breakeven","plain":"The point where revenue equals costs \u2014 no profit, no loss"},{"jargon":"Budget variance","plain":"The difference between the budgeted amount and the actual result"},{"jargon":"Bulk billing","plain":"Charging for a large number of items or services at once"},{"jargon":"Capital adequacy","plain":"Having enough capital to absorb losses and meet regulatory requirements"},{"jargon":"Capital markets","plain":"Where companies raise money by issuing shares or bonds"},{"jargon":"Cash conversion cycle","plain":"How long it takes to turn inventory into cash"},{"jargon":"Charge-off","plain":"A debt written off as uncollectable"},{"jargon":"Chart of accounts","plain":"The master list of all categories used to record financial transactions"},{"jargon":"Contra account","plain":"An account that offsets another account\u2019s balance"},{"jargon":"Convertible note","plain":"A loan that converts into equity when certain conditions are met"},{"jargon":"Cost basis","plain":"The original price paid for an asset, used to calculate gains or losses"},{"jargon":"Credit facility","plain":"An agreed borrowing arrangement with a bank"},{"jargon":"Currency risk","plain":"The risk that exchange rate changes will affect your finances"},{"jargon":"Deferred revenue","plain":"Money received before the service or product has been delivered"},{"jargon":"Depreciation","plain":"Spreading the cost of a physical asset over its useful life"},{"jargon":"Dilution","plain":"A reduction in existing shareholders\u2019 ownership when new shares are issued"},{"jargon":"Direct costs","plain":"Costs directly tied to producing a product or service"},{"jargon":"Disbursement","plain":"A payment made out of a fund"},{"jargon":"Discounted cash flow","plain":"DCF \u2014 a method of valuing an investment based on its future cash flows"},{"jargon":"Earnings per share","plain":"EPS \u2014 the company\u2019s profit divided by the number of shares"},{"jargon":"EBIT","plain":"Earnings before interest and tax \u2014 operating profit"},{"jargon":"EBITDA margin","plain":"EBITDA as a percentage of revenue"},{"jargon":"Economic moat","plain":"A durable competitive advantage that protects a company from rivals"},{"jargon":"Equity","plain":"Ownership in a company, or the value left after liabilities are deducted"},{"jargon":"Escrow","plain":"A third party holding funds until certain conditions are met"},{"jargon":"Expense ratio","plain":"The annual cost of running a fund expressed as a percentage of assets"},{"jargon":"Fair value","plain":"The estimated market price at which an asset would change hands"},{"jargon":"Financial modelling","plain":"Building a spreadsheet to forecast a business\u2019s financial performance"},{"jargon":"Fixed asset","plain":"A long-term tangible asset used in operations, like equipment or buildings"},{"jargon":"Float","plain":"Money that has been paid but not yet settled, or shares available to trade"},{"jargon":"Foreign exchange","plain":"The conversion of one currency into another"},{"jargon":"Forward contract","plain":"An agreement to buy or sell something at a set price on a future date"},{"jargon":"Funded debt","plain":"Debt with a maturity of more than one year"},{"jargon":"General ledger","plain":"The master record of all financial transactions"},{"jargon":"Going concern","plain":"A business expected to keep operating for the foreseeable future"},{"jargon":"Goodwill","plain":"The premium paid for a business above the value of its net assets"},{"jargon":"Gross margin","plain":"Revenue minus cost of goods sold, expressed as a percentage"},{"jargon":"Gross profit","plain":"Revenue minus cost of goods sold"},{"jargon":"Growth equity","plain":"Investment in an established company to fund expansion"},{"jargon":"Hard close","plain":"A firm deadline after which no further adjustments are made"},{"jargon":"Hurdle rate","plain":"The minimum return required before a project or investment is approved"},{"jargon":"Impairment","plain":"Writing down an asset when its value falls below its book value"},{"jargon":"Indirect costs","plain":"Costs not directly tied to a product but needed to run the business"},{"jargon":"Interest coverage ratio","plain":"How many times a company can pay its interest from its earnings"},{"jargon":"Interest rate risk","plain":"The risk that changes in interest rates will affect finances"},{"jargon":"Intercompany","plain":"Transactions between entities within the same group"},{"jargon":"Inventory turnover","plain":"How many times inventory is sold and replaced in a period"},{"jargon":"Invoice discounting","plain":"Borrowing against unpaid invoices to improve cash flow"},{"jargon":"Joint venture","plain":"A business arrangement where two parties share ownership and risk"},{"jargon":"Journal entry","plain":"The basic record used to capture a financial transaction"},{"jargon":"Key assumptions","plain":"The inputs that drive a financial model or business plan"},{"jargon":"Leverage ratio","plain":"How much debt a company has relative to its equity or assets"},{"jargon":"Liability","plain":"Money owed or an obligation to pay"},{"jargon":"Line item","plain":"A single entry in a budget or financial statement"},{"jargon":"Loan-to-value","plain":"LTV \u2014 the size of a loan relative to the value of the asset it\u2019s secured against"},{"jargon":"Long position","plain":"Owning an asset with the expectation it will rise in value"},{"jargon":"Mark to market","plain":"Valuing an asset at its current market price rather than its book value"},{"jargon":"Materiality","plain":"Whether a figure is large enough to affect decisions"},{"jargon":"Minority interest","plain":"The share of a subsidiary not owned by the parent company"},{"jargon":"Negative working capital","plain":"When current liabilities exceed current assets \u2014 can be a risk or a business model feature"},{"jargon":"Net debt","plain":"Total debt minus cash and cash equivalents"},{"jargon":"Net income","plain":"Profit after all costs, taxes, and interest have been deducted"},{"jargon":"Net margin","plain":"Net income as a percentage of revenue"},{"jargon":"Non-recurring items","plain":"One-off costs or gains that won\u2019t repeat"},{"jargon":"Off-plan","plain":"Bought or agreed before construction or completion"},{"jargon":"Operating cash flow","plain":"The cash a business generates from its main operations"},{"jargon":"Operating leverage","plain":"The degree to which costs are fixed vs variable \u2014 affects how profits grow with revenue"},{"jargon":"Overhead","plain":"The ongoing costs of running a business not tied to a specific product"},{"jargon":"Payables days","plain":"How long a company takes to pay its suppliers"},{"jargon":"Payback period","plain":"How long it takes to recover the cost of an investment"},{"jargon":"Peer group","plain":"A set of comparable companies used for benchmarking"},{"jargon":"Preferred shares","plain":"Shares with priority over ordinary shares for dividends and in liquidation"},{"jargon":"Premium","plain":"The extra amount paid above a base price or value"},{"jargon":"Present value","plain":"The value today of money to be received in the future"},{"jargon":"Price sensitivity","plain":"How much demand changes when the price changes"},{"jargon":"Private equity","plain":"Investment in companies not listed on a public stock exchange"},{"jargon":"Pro forma","plain":"Financial statements that exclude one-off items or show a hypothetical scenario"},{"jargon":"Profit centre","plain":"A department or unit that both earns revenue and incurs costs"},{"jargon":"Provision","plain":"Money set aside to cover a likely future cost or loss"},{"jargon":"Quick ratio","plain":"A measure of liquidity \u2014 current assets minus inventory, divided by current liabilities"},{"jargon":"Quoted company","plain":"A company whose shares are listed on a stock exchange"},{"jargon":"Realisable value","plain":"The amount you could actually get if you sold an asset today"},{"jargon":"Receivables","plain":"Money owed to the company by customers"},{"jargon":"Reconciliation","plain":"Checking that two sets of records agree with each other"},{"jargon":"Retained earnings","plain":"Profits kept in the business rather than paid out as dividends"},{"jargon":"Return on assets","plain":"ROA \u2014 how efficiently a company generates profit from its assets"},{"jargon":"Return on capital employed","plain":"ROCE \u2014 a measure of how efficiently capital is being used"},{"jargon":"Revenue","plain":"The total money a business brings in before costs"},{"jargon":"Roll forward","plain":"Move figures from one period to the next in a model or ledger"},{"jargon":"Run-rate EBITDA","plain":"Annualised EBITDA adjusted for one-off items"},{"jargon":"Securities","plain":"Financial instruments like shares or bonds"},{"jargon":"Sensitivity analysis","plain":"Testing how results change when you change key assumptions"},{"jargon":"Short position","plain":"Betting that an asset will fall in value"},{"jargon":"Solvency","plain":"Ability to pay all debts over the long term"},{"jargon":"Subordinated debt","plain":"Debt that ranks below other debt in the event of a default"},{"jargon":"Swap","plain":"An agreement to exchange cash flows or liabilities"},{"jargon":"Tax shield","plain":"A reduction in taxable income from allowable deductions"},{"jargon":"Term sheet","plain":"A non-binding outline of the key terms of a deal"},{"jargon":"Top of house","plain":"The whole organisation or group at the highest level"},{"jargon":"Trade payables","plain":"Money owed to suppliers for goods or services received"},{"jargon":"Trade receivables","plain":"Money owed by customers for goods or services delivered"},{"jargon":"Transfer pricing","plain":"Setting prices for transactions between related companies in different countries"},{"jargon":"Treasury","plain":"The function that manages a company\u2019s cash, borrowings, and financial risk"},{"jargon":"Trial balance","plain":"A list of all ledger account balances to check they balance"},{"jargon":"Turnover","plain":"Total revenue (UK usage), or how quickly something is replaced"},{"jargon":"Underwrite","plain":"Take on financial risk in exchange for a fee"},{"jargon":"Unit economics","plain":"The revenue and costs associated with a single unit of a business"},{"jargon":"Unleveraged","plain":"Without debt \u2014 funded entirely by equity"},{"jargon":"Unsecured debt","plain":"Debt not backed by collateral"},{"jargon":"Upside","plain":"The potential for things to go better than expected"},{"jargon":"Vintage","plain":"The year a fund was launched or an investment was made"},{"jargon":"Walk me through","plain":"Explain step by step"},{"jargon":"Warrants","plain":"The right to buy shares at a set price in the future"},{"jargon":"Weighted average","plain":"An average that accounts for the relative importance of each item"},{"jargon":"Working capital cycle","plain":"The time it takes to turn raw materials into cash from sales"},{"jargon":"Write-down","plain":"Reducing the recorded value of an asset"},{"jargon":"Yield","plain":"The income generated by an investment, usually expressed as a percentage"},{"jargon":"Zero-sum","plain":"A situation where one person\u2019s gain is another\u2019s loss"}];
 
 const JARGON_MAP = {};
@@ -522,21 +882,19 @@ inputEl.addEventListener('input', () => {
 });
 
 function setStatus(type, msg) {
-  statusEl.className = 'status ' + type;
+  statusEl.className = 't-status ' + type;
   if (type === 'working') {
     statusEl.innerHTML = msg + ' <div class="dot-pulse"><span></span><span></span><span></span></div>';
-  } else {
-    statusEl.textContent = msg;
-  }
+  } else { statusEl.textContent = msg; }
 }
 
-async function translate() {
+async function doTranslate() {
   const text = inputEl.value.trim();
   if (!text) return;
   translateBtn.disabled = true;
   copyBtn.style.display = 'none';
   statsBar.style.display = 'none';
-  outputEl.className = 'output-body';
+  outputEl.className = 't-output-body';
   outputEl.innerHTML = '';
   setStatus('working', 'Detecting jargon');
   const matches = [];
@@ -552,16 +910,14 @@ async function translate() {
       const afterOk = /[\s\.,;:!\?"'\(\)\-\/]/.test(after) || idx + key.length === lowerText.length;
       if (beforeOk && afterOk) {
         const alreadyCovered = matches.some(m => idx >= m.start && idx + key.length <= m.end);
-        if (!alreadyCovered) {
-          matches.push({ start: idx, end: idx + key.length, original: text.substring(idx, idx + key.length), plain: JARGON_MAP[key] });
-        }
+        if (!alreadyCovered) matches.push({ start: idx, end: idx + key.length, original: text.substring(idx, idx + key.length), plain: JARGON_MAP[key] });
       }
       searchFrom = idx + 1;
     }
   }
   if (matches.length === 0) {
     outputEl.innerHTML = escapeHtml(text);
-    outputEl.className = 'output-body';
+    outputEl.className = 't-output-body';
     plainOutputText = text;
     replaceCountEl.textContent = '0 replacements';
     setStatus('done', 'No jargon found');
@@ -583,7 +939,7 @@ async function translate() {
     const result = data.content?.map(b => b.text || '').join('') || text;
     plainOutputText = result;
     outputEl.innerHTML = escapeHtml(result);
-    outputEl.className = 'output-body';
+    outputEl.className = 't-output-body';
     const wordsIn = text.split(/\s+/).filter(Boolean).length;
     const wordsOut = result.split(/\s+/).filter(Boolean).length;
     document.getElementById('statReplaced').textContent = matches.length;
@@ -622,16 +978,187 @@ function copyOutput() {
 function clearAll() {
   inputEl.value = '';
   outputEl.innerHTML = 'Your translated text will appear here.\n\nHighlighted words show what was replaced.';
-  outputEl.className = 'output-body empty';
+  outputEl.className = 't-output-body empty';
   charCountEl.textContent = '0 chars';
   replaceCountEl.textContent = '—';
   statusEl.textContent = '';
-  statusEl.className = 'status';
+  statusEl.className = 't-status';
   copyBtn.style.display = 'none';
   statsBar.style.display = 'none';
   plainOutputText = '';
 }
-inputEl.addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) translate(); });
+inputEl.addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) doTranslate(); });
+
+// ── QUIZ JS ──
+const QUIZ_JARGON = [
+  {jargon:"Accounts receivable",plain:"Money owed to a company by its customers"},
+  {jargon:"Action items",plain:"Tasks to complete"},
+  {jargon:"Actionable",plain:"Something you can actually do"},
+  {jargon:"Actuals",plain:"Real numbers, as opposed to estimates"},
+  {jargon:"Agile",plain:"Flexible, quick to adapt"},
+  {jargon:"Align",plain:"Agree or get on the same page"},
+  {jargon:"Bandwidth",plain:"Time and energy available to take on work"},
+  {jargon:"Baseline",plain:"The starting point used for comparison"},
+  {jargon:"Benchmarking",plain:"Comparing your results to others in the field"},
+  {jargon:"Best practice",plain:"The recommended or most effective way to do something"},
+  {jargon:"Big picture",plain:"The overall view, not the fine details"},
+  {jargon:"Boil the ocean",plain:"Try to solve everything at once — usually a bad idea"},
+  {jargon:"Bottom line",plain:"The final result, or the most important point"},
+  {jargon:"Brainstorm",plain:"Throw out ideas freely without judging them yet"},
+  {jargon:"Buy-in",plain:"Agreement and support from the people involved"},
+  {jargon:"Burn rate",plain:"How quickly a company is spending its cash"},
+  {jargon:"Cadence",plain:"A regular rhythm or schedule for meetings or updates"},
+  {jargon:"Circle back",plain:"Follow up or come back to this later"},
+  {jargon:"Close the loop",plain:"Finish the conversation or update everyone on the outcome"},
+  {jargon:"Core competency",plain:"What a company does especially well"},
+  {jargon:"Deep dive",plain:"A thorough, detailed look at something"},
+  {jargon:"Deliverable",plain:"A specific output or result that's due"},
+  {jargon:"Due diligence",plain:"Thorough checking and investigation before a deal or decision"},
+  {jargon:"EBITDA",plain:"Earnings before interest, tax, depreciation, and amortisation"},
+  {jargon:"Elevator pitch",plain:"A short, clear explanation — short enough to say in a lift"},
+  {jargon:"Execution",plain:"Getting things done"},
+  {jargon:"Flywheel",plain:"A self-reinforcing cycle where each success makes the next one easier"},
+  {jargon:"Game changer",plain:"Something that completely changes how things work"},
+  {jargon:"Gating factor",plain:"The thing holding up progress"},
+  {jargon:"Go-to-market",plain:"The plan for how to launch and sell a product"},
+  {jargon:"Granular",plain:"Very detailed"},
+  {jargon:"Guardrails",plain:"Limits or guidelines that keep things on track"},
+  {jargon:"High-level",plain:"A broad overview without going into detail"},
+  {jargon:"Ideate",plain:"Come up with ideas"},
+  {jargon:"Iterate",plain:"Repeat and improve in cycles"},
+  {jargon:"KPI",plain:"Key performance indicator — a metric used to track progress"},
+  {jargon:"Leverage",plain:"Using something to get more out of less"},
+  {jargon:"Low-hanging fruit",plain:"The easiest wins available"},
+  {jargon:"Metrics",plain:"Numbers used to measure something"},
+  {jargon:"Milestone",plain:"A key point or achievement in a plan"},
+  {jargon:"Mission critical",plain:"Essential — if this fails, everything fails"},
+  {jargon:"Move the needle",plain:"Make a meaningful difference to results"},
+  {jargon:"MVP",plain:"Minimum viable product — the simplest version that still works"},
+  {jargon:"Pain point",plain:"A specific problem that causes frustration"},
+  {jargon:"Pivot",plain:"Change direction — often used when a strategy isn't working"},
+  {jargon:"Proactive",plain:"Acting before problems arise, rather than reacting to them"},
+  {jargon:"Pull the trigger",plain:"Make the decision and act on it"},
+  {jargon:"Push back",plain:"Disagree or raise objections"},
+  {jargon:"Quick win",plain:"A fast, easy result that shows early progress"},
+  {jargon:"ROI",plain:"Return on investment — what you get back relative to what you put in"},
+  {jargon:"Reach out",plain:"Contact someone"},
+  {jargon:"Roadmap",plain:"A plan showing the steps and timeline for reaching a goal"},
+  {jargon:"Runway",plain:"How long a company can keep going before it runs out of money"},
+  {jargon:"Scalable",plain:"Able to grow without the costs growing at the same rate"},
+  {jargon:"Scope creep",plain:"When a project expands beyond its original plan"},
+  {jargon:"Silo",plain:"A team or department that doesn't share information with others"},
+  {jargon:"Stakeholder",plain:"Anyone with an interest in a decision or outcome"},
+  {jargon:"Synergy",plain:"Two things working together to produce more than separately"},
+  {jargon:"Takeaways",plain:"The key points or lessons from a meeting or document"},
+  {jargon:"Touch base",plain:"Check in briefly"},
+  {jargon:"Triage",plain:"Prioritise and sort by urgency"},
+  {jargon:"Value proposition",plain:"The reason a customer should choose you over the competition"},
+  {jargon:"Win-win",plain:"A result that benefits everyone involved"},
+];
+
+const TOTAL_QS = 5;
+let questions = [], currentQ = 0, score = 0, answered = false, results = [];
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+function pickQuestions() { questions = shuffle(QUIZ_JARGON).slice(0, TOTAL_QS); }
+function getDistractors(correct, all) { return shuffle(all.filter(q => q.jargon !== correct.jargon)).slice(0, 3).map(q => q.plain); }
+
+function startQuiz() {
+  pickQuestions(); currentQ = 0; score = 0; answered = false; results = [];
+  showScreen('screen-quiz'); renderQuestion();
+}
+
+function renderQuestion() {
+  const q = questions[currentQ]; answered = false;
+  document.getElementById('progressBar').style.width = `${(currentQ / TOTAL_QS) * 100}%`;
+  document.getElementById('qCounter').textContent = `Question ${currentQ + 1} of ${TOTAL_QS}`;
+  document.getElementById('qScoreLive').textContent = `${score} correct`;
+  document.getElementById('qText').textContent = q.jargon;
+  const allOptions = shuffle([q.plain, ...getDistractors(q, QUIZ_JARGON)]);
+  const letters = ['A','B','C','D'];
+  const container = document.getElementById('optionsContainer');
+  container.innerHTML = '';
+  allOptions.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = `<div class="option-letter">${letters[i]}</div><div class="option-text">${opt}</div>`;
+    btn.onclick = () => handleAnswer(btn, opt, q.plain, q);
+    container.appendChild(btn);
+  });
+}
+
+function handleAnswer(selectedBtn, selectedText, correctText, q) {
+  if (answered) return; answered = true;
+  const isCorrect = selectedText === correctText;
+  if (isCorrect) score++;
+  results.push({ jargon: q.jargon, plain: q.plain, chosen: selectedText, correct: isCorrect });
+  document.querySelectorAll('.option-btn').forEach(btn => { btn.disabled = true; btn.classList.add('dim'); });
+  selectedBtn.classList.remove('dim');
+  selectedBtn.style.borderColor = 'var(--ochre)';
+  selectedBtn.querySelector('.option-letter').style.background = 'var(--ochre)';
+  selectedBtn.querySelector('.option-letter').style.color = 'white';
+  setTimeout(() => { currentQ++; if (currentQ >= TOTAL_QS) showResults(); else renderQuestion(); }, 900);
+}
+
+function showResults() {
+  document.getElementById('progressBar').style.width = '100%';
+  showScreen('screen-results');
+  document.getElementById('finalScore').textContent = score;
+  const verdicts = [
+    {min:0,max:0,title:"Honestly? Bold.",sub:"Zero out of five. You might want to google your job description."},
+    {min:1,max:1,title:"A for effort.",sub:"One out of five — you've definitely been in at least one meeting."},
+    {min:2,max:2,title:"Getting warmer.",sub:"Two out of five. You nod along convincingly. We respect that."},
+    {min:3,max:3,title:"Not bad at all.",sub:"Three out of five. You could probably survive a board meeting."},
+    {min:4,max:4,title:"Pretty fluent.",sub:"Four out of five. Corporate could have been your first language."},
+    {min:5,max:5,title:"<em>Suspiciously</em> good.",sub:"Perfect score. Are you sure you're not a middle manager in disguise?"},
+  ];
+  const v = verdicts.find(v => score >= v.min && score <= v.max);
+  document.getElementById('scoreVerdict').innerHTML = v.title;
+  document.getElementById('scoreSub').textContent = v.sub;
+  const list = document.getElementById('resultsList');
+  list.innerHTML = '';
+  results.forEach(r => {
+    const row = document.createElement('div');
+    row.className = 'result-row';
+    row.innerHTML = `<div class="result-dot ${r.correct ? 'correct' : 'wrong'}"></div><div style="flex:1"><div class="result-jargon">${r.jargon}</div><div class="result-plain" style="color:${r.correct ? 'var(--correct)' : 'var(--wrong)'};font-size:0.8rem;margin-top:2px">${r.correct ? '✓ ' : '✗ You said: '}${r.correct ? r.plain : r.chosen}</div>${!r.correct ? `<div class="result-plain" style="margin-top:2px">✓ Actually: ${r.plain}</div>` : ''}</div>`;
+    list.appendChild(row);
+  });
+}
+
+function shareScore() {
+  const text = `I got ${score}/5 on the Unmuddled jargon quiz 🏆\nHow fluent are YOU in Corporate? Try it at unmuddled.world`;
+  if (navigator.clipboard) navigator.clipboard.writeText(text).then(() => {
+    const el = document.getElementById('shareCopied');
+    el.className = 'share-copied show';
+    setTimeout(() => el.className = 'share-copied', 3000);
+  });
+}
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+
+// ── PRICING TOGGLE JS ──
+let isAnnual = false;
+function toggleBilling() {
+  isAnnual = !isAnnual;
+  document.getElementById('billingToggle').classList.toggle('on', isAnnual);
+  document.getElementById('monthlyLabel').classList.toggle('active', !isAnnual);
+  document.getElementById('annualLabel').classList.toggle('active', isAnnual);
+  document.querySelectorAll('.amount[data-monthly]').forEach(el => {
+    el.textContent = isAnnual ? el.dataset.annual : el.dataset.monthly;
+  });
+  const period = isAnnual ? 'per year' : 'per month';
+  ['bronze','silver'].forEach(t => {
+    const el = document.getElementById(t+'-period');
+    if (el) el.textContent = period;
+  });
+}
 </script>
 </body>
 </html>

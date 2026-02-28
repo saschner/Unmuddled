@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jargon Quiz — unmuddled.world</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #443030;
+    --ochre: #E8A838;
+    --mud: #C4922A;
+    --cream: #faf8f3;
+    --light: #f5edd8;
+    --muted: #7a6a5a;
+    --border: #e0d4c0;
+    --correct: #4a9e6b;
+    --wrong: #c0392b;
+    --correct-bg: #eaf7f0;
+    --wrong-bg: #fdecea;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* NAV */
+  nav {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    background: white;
+  }
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .logo span { color: var(--ochre); }
+  .nav-badge {
+    background: var(--ochre);
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* MAIN CONTAINER */
+  main {
+    width: 100%;
+    max-width: 680px;
+    padding: 2rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ── SCREENS ── */
+  .screen { width: 100%; display: none; flex-direction: column; align-items: center; }
+  .screen.active { display: flex; }
+
+  /* START SCREEN */
+  .start-eyebrow {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ochre);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .start-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 6vw, 3rem);
+    font-weight: 800;
+    color: var(--ink);
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .start-title em {
+    font-style: italic;
+    font-family: 'Lora', serif;
+    color: var(--ochre);
+  }
+  .start-sub {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.7;
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+  }
+  .start-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .start-card-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .rules {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+  }
+  .rule {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+  .rule-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--light);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .btn-start {
+    background: var(--ochre);
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 20px rgba(232,168,56,0.35);
+  }
+  .btn-start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(232,168,56,0.45);
+  }
+  .btn-start:active { transform: translateY(0); }
+
+  /* QUIZ SCREEN */
+  .progress-bar-wrap {
+    width: 100%;
+    height: 6px;
+    background: var(--border);
+    border-radius: 10px;
+    margin: 1.5rem 0 2rem;
+    overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%;
+    background: var(--ochre);
+    border-radius: 10px;
+    transition: width 0.5s cubic-bezier(.4,0,.2,1);
+  }
+  .q-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .q-counter {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .q-score-live {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--ochre);
+  }
+
+  .question-card {
+    width: 100%;
+    background: var(--ink);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .question-card::before {
+    content: '"';
+    position: absolute;
+    top: -0.5rem;
+    left: 1.2rem;
+    font-family: 'Lora', serif;
+    font-size: 8rem;
+    color: rgba(232,168,56,0.12);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .q-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(232,168,56,0.7);
+    margin-bottom: 0.75rem;
+  }
+  .q-text {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    font-weight: 800;
+    color: white;
+    line-height: 1.25;
+  }
+
+  .options {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .option-btn {
+    width: 100%;
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    padding: 1rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.15s, background 0.15s, transform 0.12s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .option-btn:hover:not(:disabled) {
+    border-color: var(--ochre);
+    transform: translateX(4px);
+    background: #fffcf5;
+  }
+  .option-btn:disabled { cursor: default; }
+  .option-letter {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--ink);
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s;
+  }
+  .option-text {
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+
+  /* Correct / Wrong states */
+  .option-btn.correct {
+    border-color: var(--correct);
+    background: var(--correct-bg);
+    transform: none;
+  }
+  .option-btn.correct .option-letter {
+    background: var(--correct);
+    color: white;
+  }
+  .option-btn.wrong {
+    border-color: var(--wrong);
+    background: var(--wrong-bg);
+    transform: none;
+  }
+  .option-btn.wrong .option-letter {
+    background: var(--wrong);
+    color: white;
+  }
+  .option-btn.dim { opacity: 0.45; }
+
+  /* REVEAL PANEL */
+  .reveal-panel {
+    width: 100%;
+    border-radius: 16px;
+    padding: 1.2rem 1.4rem;
+    margin-top: 0.5rem;
+    display: none;
+    align-items: flex-start;
+    gap: 1rem;
+    animation: slideUp 0.3s ease;
+  }
+  .reveal-panel.show { display: flex; }
+  .reveal-panel.correct-panel { background: var(--correct-bg); border: 1.5px solid var(--correct); }
+  .reveal-panel.wrong-panel { background: var(--wrong-bg); border: 1.5px solid var(--wrong); }
+  .reveal-icon { font-size: 1.4rem; flex-shrink: 0; }
+  .reveal-content {}
+  .reveal-verdict {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .correct-panel .reveal-verdict { color: var(--correct); }
+  .wrong-panel .reveal-verdict { color: var(--wrong); }
+  .reveal-explanation {
+    font-family: 'Lora', serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  .btn-next {
+    background: var(--ochre);
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.9rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    letter-spacing: 0.03em;
+    display: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 16px rgba(232,168,56,0.3);
+  }
+  .btn-next.show { display: block; }
+  .btn-next:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(232,168,56,0.4); }
+
+  /* RESULTS SCREEN */
+  .results-top {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+  .score-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: var(--ink);
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 40px rgba(68,48,48,0.25);
+  }
+  .score-number {
+    font-family: 'Syne', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--ochre);
+    line-height: 1;
+  }
+  .score-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 0.08em;
+  }
+  .score-verdict {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    font-weight: 800;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  .score-verdict em {
+    font-style: italic;
+    font-family: 'Lora', serif;
+    color: var(--ochre);
+  }
+  .score-sub {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  /* Results breakdown */
+  .results-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+  .result-row {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .result-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .result-dot.correct { background: var(--correct); }
+  .result-dot.wrong { background: var(--wrong); }
+  .result-jargon {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ink);
+    min-width: 140px;
+  }
+  .result-plain {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  .results-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btn-play-again {
+    background: var(--ochre);
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.9rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: 0 4px 16px rgba(232,168,56,0.3);
+  }
+  .btn-play-again:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(232,168,56,0.4); }
+  .btn-share {
+    background: white;
+    color: var(--ink);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.9rem 2.5rem;
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .btn-share:hover { border-color: var(--ochre); transform: translateY(-2px); }
+
+  .share-copied {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    color: var(--correct);
+    margin-top: 0.5rem;
+    display: none;
+    text-align: center;
+  }
+  .share-copied.show { display: block; }
+
+  /* Footer */
+  footer {
+    margin-top: auto;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    width: 100%;
+  }
+  footer a { color: var(--ochre); text-decoration: none; }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes pop {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.06); }
+    100% { transform: scale(1); }
+  }
+  .pop { animation: pop 0.3s ease; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">un<span>muddled</span>.world</div>
+  <div class="nav-badge">Jargon Quiz</div>
+</nav>
+
+<main>
+
+  <!-- ── START SCREEN ── -->
+  <section class="screen active" id="screen-start">
+    <p class="start-eyebrow">Test yourself</p>
+    <h1 class="start-title">How fluent are you<br>in <em>Corporate?</em></h1>
+    <p class="start-sub">5 questions. 4 options. One winner. Challenge a colleague and see who actually knows what your boss is on about.</p>
+    <div class="start-card">
+      <div class="start-card-label">How it works</div>
+      <div class="rules">
+        <div class="rule"><div class="rule-icon">📋</div>5 jargon phrases, picked at random</div>
+        <div class="rule"><div class="rule-icon">🎯</div>Pick the plain-English meaning from 4 options</div>
+        <div class="rule"><div class="rule-icon">💡</div>Find out what it actually means after each answer</div>
+        <div class="rule"><div class="rule-icon">🏆</div>Get your score — then dare someone to beat it</div>
+      </div>
+    </div>
+    <button class="btn-start" onclick="startQuiz()">Let's Go →</button>
+  </section>
+
+  <!-- ── QUIZ SCREEN ── -->
+  <section class="screen" id="screen-quiz">
+    <div class="progress-bar-wrap" style="width:100%">
+      <div class="progress-bar" id="progressBar" style="width:0%"></div>
+    </div>
+    <div class="q-header">
+      <span class="q-counter" id="qCounter">Question 1 of 5</span>
+      <span class="q-score-live" id="qScoreLive" style="visibility:hidden">—</span>
+    </div>
+    <div class="question-card">
+      <div class="q-label">What does this mean?</div>
+      <div class="q-text" id="qText">—</div>
+    </div>
+    <div class="options" id="optionsContainer"></div>
+
+  </section>
+
+  <!-- ── RESULTS SCREEN ── -->
+  <section class="screen" id="screen-results">
+    <div class="results-top">
+      <div class="score-circle">
+        <div class="score-number" id="finalScore">—</div>
+        <div class="score-label">OUT OF 5</div>
+      </div>
+      <h2 class="score-verdict" id="scoreVerdict">—</h2>
+      <p class="score-sub" id="scoreSub">—</p>
+    </div>
+    <div class="results-list" id="resultsList"></div>
+    <div class="results-btns">
+      <button class="btn-play-again" onclick="startQuiz()">Play Again</button>
+      <button class="btn-share" onclick="shareScore()">Share My Score 📤</button>
+    </div>
+    <div class="share-copied" id="shareCopied">Copied to clipboard! Go challenge someone 😄</div>
+  </section>
+
+</main>
+
+<footer>
+  <a href="#">unmuddled.world</a> — Plain English for Everyone
+</footer>
+
+<script>
+const JARGON = [
+  {jargon:"Accounts receivable",plain:"Money owed to a company by its customers"},
+  {jargon:"Action items",plain:"Tasks to complete"},
+  {jargon:"Actionable",plain:"Something you can actually do"},
+  {jargon:"Actuals",plain:"Real numbers, as opposed to estimates"},
+  {jargon:"Agile",plain:"Flexible, quick to adapt"},
+  {jargon:"Align",plain:"Agree or get on the same page"},
+  {jargon:"Bandwidth",plain:"Time and energy available to take on work"},
+  {jargon:"Baseline",plain:"The starting point used for comparison"},
+  {jargon:"Benchmarking",plain:"Comparing your results to others in the field"},
+  {jargon:"Best practice",plain:"The recommended or most effective way to do something"},
+  {jargon:"Big picture",plain:"The overall view, not the fine details"},
+  {jargon:"Boil the ocean",plain:"Try to solve everything at once — usually a bad idea"},
+  {jargon:"Bottom line",plain:"The final result, or the most important point"},
+  {jargon:"Brainstorm",plain:"Throw out ideas freely without judging them yet"},
+  {jargon:"Buy-in",plain:"Agreement and support from the people involved"},
+  {jargon:"Burn rate",plain:"How quickly a company is spending its cash"},
+  {jargon:"Cadence",plain:"A regular rhythm or schedule for meetings or updates"},
+  {jargon:"Capex",plain:"Money spent on long-term assets like equipment or property"},
+  {jargon:"Circle back",plain:"Follow up or come back to this later"},
+  {jargon:"Close the loop",plain:"Finish the conversation or update everyone on the outcome"},
+  {jargon:"Core competency",plain:"What a company does especially well"},
+  {jargon:"Cross-functional",plain:"Involving people from different teams or departments"},
+  {jargon:"Deep dive",plain:"A thorough, detailed look at something"},
+  {jargon:"Deliverable",plain:"A specific output or result that's due"},
+  {jargon:"Due diligence",plain:"Thorough checking and investigation before a deal or decision"},
+  {jargon:"Drill down",plain:"Look more closely at the details"},
+  {jargon:"EBITDA",plain:"Earnings before interest, tax, depreciation, and amortisation — a measure of operating profit"},
+  {jargon:"Elevator pitch",plain:"A short, clear explanation of something — short enough to say in a lift"},
+  {jargon:"End-to-end",plain:"Covering the entire process from start to finish"},
+  {jargon:"Execution",plain:"Getting things done"},
+  {jargon:"Feedback loop",plain:"A process where results are used to improve future actions"},
+  {jargon:"Flag",plain:"Highlight or draw attention to something"},
+  {jargon:"Flywheel",plain:"A self-reinforcing cycle where each success makes the next one easier"},
+  {jargon:"Forecast",plain:"An estimate of future results based on current data"},
+  {jargon:"Friction",plain:"Anything that slows down or complicates a process"},
+  {jargon:"Game changer",plain:"Something that completely changes how things work"},
+  {jargon:"Gating factor",plain:"The thing holding up progress"},
+  {jargon:"Go-to-market",plain:"The plan for how to launch and sell a product"},
+  {jargon:"Granular",plain:"Very detailed"},
+  {jargon:"Growth hacking",plain:"Using quick, creative experiments to grow fast"},
+  {jargon:"Guardrails",plain:"Limits or guidelines that keep things on track"},
+  {jargon:"Headcount",plain:"The number of employees"},
+  {jargon:"High-level",plain:"A broad overview without going into detail"},
+  {jargon:"Ideate",plain:"Come up with ideas"},
+  {jargon:"Iterate",plain:"Repeat and improve in cycles"},
+  {jargon:"KPI",plain:"Key performance indicator — a metric used to track progress toward a goal"},
+  {jargon:"Leverage",plain:"Using something to get more out of less"},
+  {jargon:"Lean",plain:"Cutting waste and focusing only on what adds value"},
+  {jargon:"Learnings",plain:"Lessons or things you've found out"},
+  {jargon:"Low-hanging fruit",plain:"The easiest wins available"},
+  {jargon:"Metrics",plain:"Numbers used to measure something"},
+  {jargon:"Milestone",plain:"A key point or achievement in a plan"},
+  {jargon:"Mission critical",plain:"Essential — if this fails, everything fails"},
+  {jargon:"Move the needle",plain:"Make a meaningful difference to results"},
+  {jargon:"MVP",plain:"Minimum viable product — the simplest version of something that still works"},
+  {jargon:"Pain point",plain:"A specific problem that causes frustration"},
+  {jargon:"Paradigm shift",plain:"A fundamental change in how things are done or understood"},
+  {jargon:"Peel back the onion",plain:"Look more deeply into something to find what's really going on"},
+  {jargon:"Pivot",plain:"Change direction — often used when a strategy isn't working"},
+  {jargon:"Proactive",plain:"Acting before problems arise, rather than reacting to them"},
+  {jargon:"Pull the trigger",plain:"Make the decision and act on it"},
+  {jargon:"Push back",plain:"Disagree or raise objections"},
+  {jargon:"Quick win",plain:"A fast, easy result that shows early progress"},
+  {jargon:"ROI",plain:"Return on investment — what you get back relative to what you put in"},
+  {jargon:"Reach out",plain:"Contact someone"},
+  {jargon:"Realise synergies",plain:"Capture the combined benefit of two things working together"},
+  {jargon:"Roadmap",plain:"A plan showing the steps and timeline for reaching a goal"},
+  {jargon:"Runway",plain:"How long a company can keep going before it runs out of money"},
+  {jargon:"Scalable",plain:"Able to grow without the costs growing at the same rate"},
+  {jargon:"Scope creep",plain:"When a project expands beyond its original plan without proper approval"},
+  {jargon:"Silo",plain:"A team or department that doesn't share information with others"},
+  {jargon:"Skin in the game",plain:"Having a personal stake in the outcome"},
+  {jargon:"Stakeholder",plain:"Anyone with an interest in a decision or outcome"},
+  {jargon:"Strategic",plain:"Related to the long-term plan or direction"},
+  {jargon:"Stretch goal",plain:"An ambitious target that goes beyond what's comfortable"},
+  {jargon:"Sunset",plain:"Phase out or shut down something that's no longer needed"},
+  {jargon:"Synergy",plain:"Two things working together to produce more than they would separately"},
+  {jargon:"Take offline",plain:"Discuss this separately, not in the current meeting"},
+  {jargon:"Takeaways",plain:"The key points or lessons from a meeting or document"},
+  {jargon:"Thought leader",plain:"Someone seen as an expert and influencer in their field"},
+  {jargon:"Touch base",plain:"Check in briefly"},
+  {jargon:"Transformation",plain:"A large-scale change in how a business works"},
+  {jargon:"Triage",plain:"Prioritise and sort by urgency"},
+  {jargon:"Unlock value",plain:"Release potential that wasn't being used"},
+  {jargon:"Value add",plain:"Something that genuinely improves things"},
+  {jargon:"Value proposition",plain:"The reason a customer should choose you over the competition"},
+  {jargon:"Visibility",plain:"How clearly you can see what's going on"},
+  {jargon:"Win-win",plain:"A result that benefits everyone involved"},
+  {jargon:"Walk me through",plain:"Explain step by step"},
+  {jargon:"30,000-foot view",plain:"The very high-level overview"},
+  {jargon:"B2B",plain:"Business to business — selling to other companies"},
+  {jargon:"B2C",plain:"Business to consumer — selling directly to individuals"},
+  {jargon:"Colour on",plain:"More detail or context on something"},
+  {jargon:"Ecosystem",plain:"The network of companies, people, or tools that interact in a space"},
+  {jargon:"Empower",plain:"Give someone the authority or tools to do something"},
+  {jargon:"FTE",plain:"Full-time equivalent — a way of counting staff"},
+  {jargon:"Holistic",plain:"Looking at everything together, not just individual parts"},
+  {jargon:"Impact",plain:"The effect or result of something"},
+  {jargon:"Incentivise",plain:"Give someone a reason to do something"},
+  {jargon:"Opex",plain:"Operating expenditure — the day-to-day costs of running a business"},
+  {jargon:"Optimise",plain:"Make something as good or efficient as possible"},
+  {jargon:"Organic growth",plain:"Growth that comes from within, not from acquisitions"},
+  {jargon:"P&L",plain:"Profit and loss statement — a summary of income and expenses"},
+  {jargon:"Recurring revenue",plain:"Income that comes in regularly and predictably"},
+  {jargon:"Variance",plain:"The difference between what was planned and what actually happened"},
+  {jargon:"Zero-sum",plain:"A situation where one person's gain is another's loss"},
+];
+
+const TOTAL_QS = 5;
+let questions = [];
+let currentQ = 0;
+let score = 0;
+let answered = false;
+let results = [];
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function pickQuestions() {
+  const pool = shuffle(JARGON);
+  questions = pool.slice(0, TOTAL_QS);
+}
+
+function getDistractors(correct, all, count = 3) {
+  const others = all.filter(q => q.jargon !== correct.jargon);
+  return shuffle(others).slice(0, count).map(q => q.plain);
+}
+
+function startQuiz() {
+  pickQuestions();
+  currentQ = 0;
+  score = 0;
+  answered = false;
+  results = [];
+  showScreen('screen-quiz');
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = questions[currentQ];
+  answered = false;
+
+  // Progress
+  document.getElementById('progressBar').style.width = `${(currentQ / TOTAL_QS) * 100}%`;
+  document.getElementById('qCounter').textContent = `Question ${currentQ + 1} of ${TOTAL_QS}`;
+  document.getElementById('qScoreLive').textContent = `${score} correct`;
+  document.getElementById('qText').textContent = q.jargon;
+
+  // Build options
+  const distractors = getDistractors(q, JARGON);
+  const allOptions = shuffle([q.plain, ...distractors]);
+  const letters = ['A', 'B', 'C', 'D'];
+
+  const container = document.getElementById('optionsContainer');
+  container.innerHTML = '';
+  allOptions.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = `<div class="option-letter">${letters[i]}</div><div class="option-text">${opt}</div>`;
+    btn.onclick = () => handleAnswer(btn, opt, q.plain, q);
+    container.appendChild(btn);
+  });
+
+  // Hide reveal panel if exists
+  const panel = document.getElementById('revealPanel');
+  if (panel) { panel.className = 'reveal-panel'; panel.style.display = 'none'; }
+}
+
+function handleAnswer(selectedBtn, selectedText, correctText, q) {
+  if (answered) return;
+  answered = true;
+
+  const isCorrect = selectedText === correctText;
+  if (isCorrect) score++;
+
+  results.push({ jargon: q.jargon, plain: q.plain, chosen: selectedText, correct: isCorrect });
+
+  // Highlight only the selected button neutrally — no green/red giveaway
+  const btns = document.querySelectorAll('.option-btn');
+  btns.forEach(btn => {
+    btn.disabled = true;
+    btn.classList.add('dim');
+  });
+  selectedBtn.classList.remove('dim');
+  selectedBtn.style.borderColor = 'var(--ochre)';
+  selectedBtn.querySelector('.option-letter').style.background = 'var(--ochre)';
+  selectedBtn.querySelector('.option-letter').style.color = 'white';
+
+  // Don't reveal score mid-quiz
+
+  // Auto-advance after brief pause so they see the colour flash
+  setTimeout(() => {
+    currentQ++;
+    if (currentQ >= TOTAL_QS) {
+      showResults();
+    } else {
+      renderQuestion();
+    }
+  }, 900);
+}
+
+function nextQuestion() {
+  currentQ++;
+  if (currentQ >= TOTAL_QS) {
+    showResults();
+  } else {
+    renderQuestion();
+  }
+}
+
+function showResults() {
+  document.getElementById('progressBar').style.width = '100%';
+  showScreen('screen-results');
+
+  document.getElementById('finalScore').textContent = score;
+
+  const verdicts = [
+    { min: 0, max: 0, title: 'Honestly? Bold.', sub: 'Zero out of five. You might want to google your job description.' },
+    { min: 1, max: 1, title: 'A for effort.', sub: 'One out of five — you\'ve definitely been in at least one meeting.' },
+    { min: 2, max: 2, title: 'Getting warmer.', sub: 'Two out of five. You nod along convincingly. We respect that.' },
+    { min: 3, max: 3, title: 'Not bad at all.', sub: 'Three out of five. You could probably survive a board meeting.' },
+    { min: 4, max: 4, title: 'Pretty fluent.', sub: 'Four out of five. Corporate could have been your first language.' },
+    { min: 5, max: 5, title: '<em>Suspiciously</em> good.', sub: 'Perfect score. Are you sure you\'re not a middle manager in disguise?' },
+  ];
+
+  const v = verdicts.find(v => score >= v.min && score <= v.max);
+  document.getElementById('scoreVerdict').innerHTML = v.title;
+  document.getElementById('scoreSub').textContent = v.sub;
+
+  // Build results list with full reveals
+  const list = document.getElementById('resultsList');
+  list.innerHTML = '';
+  results.forEach(r => {
+    const row = document.createElement('div');
+    row.className = 'result-row';
+    row.innerHTML = `
+      <div class="result-dot ${r.correct ? 'correct' : 'wrong'}"></div>
+      <div style="flex:1">
+        <div class="result-jargon">${r.jargon}</div>
+        <div class="result-plain" style="color:${r.correct ? 'var(--correct)' : 'var(--wrong)'};font-size:0.8rem;margin-top:2px">
+          ${r.correct ? '✓ ' : '✗ You said: '}${r.correct ? r.plain : r.chosen}
+        </div>
+        ${!r.correct ? `<div class="result-plain" style="margin-top:2px">✓ Actually: ${r.plain}</div>` : ''}
+      </div>
+    `;
+    list.appendChild(row);
+  });
+}
+
+function shareScore() {
+  const text = `I got ${score}/5 on the Unmuddled jargon quiz 🏆\nHow fluent are YOU in Corporate? Try it at unmuddled.world`;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      const el = document.getElementById('shareCopied');
+      el.className = 'share-copied show';
+      setTimeout(() => el.className = 'share-copied', 3000);
+    });
+  }
+}
+
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>

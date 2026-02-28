@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dyslexia Screening Quiz</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e; --paper: #faf8f3; --amber: #e8a838;
+    --amber-light: #fde68a; --rust: #c0392b; --sage: #4a7c59;
+    --muted: #6b6b7e; --border: #ddd8cc;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); min-height: 100vh; }
+  header { padding: 2.5rem 1.5rem 1.8rem; text-align: center; border-bottom: 2px solid var(--border); }
+  .eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem; }
+  h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 700; line-height: 1.2; }
+  h1 em { color: var(--amber); font-style: italic; }
+  .subtitle { margin-top: 0.8rem; font-size: 0.9rem; color: var(--muted); max-width: 520px; margin-inline: auto; line-height: 1.6; }
+  .disclaimer { margin: 1.2rem auto 0; max-width: 540px; font-size: 0.76rem; background: #fff8e1; border-left: 3px solid var(--amber); padding: 0.6rem 0.9rem; color: #7a6000; text-align: left; border-radius: 0 4px 4px 0; }
+  main { max-width: 680px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+  .progress-bar-wrap { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+  .progress-bar { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--amber), #f59e0b); border-radius: 3px; transition: width 0.4s ease; }
+  .progress-label { font-size: 0.8rem; color: var(--muted); white-space: nowrap; min-width: 60px; text-align: right; }
+  .question-card { background: white; border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; transition: border-color 0.2s; }
+  .question-card.answered { border-color: var(--amber); background: #fffdf5; }
+  .q-header { display: flex; gap: 0.8rem; align-items: flex-start; }
+  .q-num { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--amber); font-weight: 700; line-height: 1; min-width: 30px; }
+  .q-meta { flex: 1; }
+  .q-source { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.35rem; }
+  .q-text { font-size: 0.97rem; line-height: 1.55; }
+  .answer-row { display: flex; gap: 0.5rem; margin-top: 1rem; flex-wrap: wrap; }
+  .ans-btn { flex: 1; min-width: 70px; padding: 0.5rem 0.7rem; border: 1.5px solid var(--border); border-radius: 6px; background: white; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--ink); cursor: pointer; transition: all 0.15s ease; text-align: center; }
+  .ans-btn:hover { border-color: var(--amber); background: var(--amber-light); }
+  .ans-btn.sel-yes    { background: var(--amber); border-color: var(--amber); color: white; }
+  .ans-btn.sel-no     { background: var(--ink);   border-color: var(--ink);   color: white; }
+  .ans-btn.sel-always { background: #7c3aed; border-color: #7c3aed; color: white; }
+  .ans-btn.sel-often  { background: var(--amber); border-color: var(--amber); color: white; }
+  .ans-btn.sel-sometimes { background: #0891b2; border-color: #0891b2; color: white; }
+  .ans-btn.sel-rarely { background: var(--sage); border-color: var(--sage); color: white; }
+  .ans-btn.sel-never  { background: var(--ink);  border-color: var(--ink);  color: white; }
+  .ans-btn.sel-above  { background: var(--sage); border-color: var(--sage); color: white; }
+  .ans-btn.sel-average{ background: var(--amber);border-color: var(--amber);color: white; }
+  .ans-btn.sel-below  { background: var(--rust); border-color: var(--rust); color: white; }
+  .submit-area { margin-top: 2rem; text-align: center; }
+  .submit-btn { padding: 0.85rem 2.5rem; background: var(--ink); color: white; border: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500; cursor: pointer; }
+  .submit-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .submit-note { font-size: 0.76rem; color: var(--muted); margin-top: 0.6rem; }
+  #results-wrap { display: none; }
+  .result-score-block { background: white; border: 2px solid var(--ink); border-radius: 16px; padding: 2rem; text-align: center; margin-bottom: 1.5rem; }
+  .result-score-block h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .score-number { font-family: 'Playfair Display', serif; font-size: 4.5rem; font-weight: 700; color: var(--amber); line-height: 1; margin: 0.8rem 0 0.4rem; }
+  .score-label { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.2rem; }
+  .result-band { display: inline-block; padding: 0.45rem 1.2rem; border-radius: 99px; font-weight: 500; font-size: 0.88rem; }
+  .band-low    { background: #d1fae5; color: #065f46; }
+  .band-medium { background: #fef3c7; color: #92400e; }
+  .band-high   { background: #fee2e2; color: #991b1b; }
+  .result-desc { background: white; border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.2rem; line-height: 1.7; font-size: 0.93rem; }
+  .result-desc h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 0.6rem; }
+  .retake-btn { padding: 0.75rem 2rem; background: transparent; color: var(--ink); border: 2px solid var(--ink); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.93rem; cursor: pointer; }
+  .sources-note { margin-top: 1.5rem; font-size: 0.7rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 0.9rem; line-height: 1.6; }
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">Compiled from 8 validated online sources</p>
+  <h1>Dyslexia <em>Screening</em> Quiz</h1>
+  <p class="subtitle">30 questions drawn from multiple peer-referenced and clinical screening tools.</p>
+  <div class="disclaimer">&#9888;&#65039; <strong>Important:</strong> This quiz is for informational purposes only and does not constitute a medical diagnosis. If results suggest risk, please consult a qualified professional.</div>
+</header>
+
+<main>
+  <div id="quiz-form">
+    <div class="progress-bar-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="pbar"></div></div>
+      <div class="progress-label" id="plabel">0 / 30</div>
+    </div>
+    <div id="qwrap">
+
+<div class="question-card" id="c0"><div class="q-header"><div class="q-num">01</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Do you find difficulty in telling left from right?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(0,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(0,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c1"><div class="q-header"><div class="q-num">02</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Is map reading or finding your way to a strange place confusing?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(1,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(1,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c2"><div class="q-header"><div class="q-num">03</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Do you dislike reading aloud?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(2,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(2,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c3"><div class="q-header"><div class="q-num">04</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Do you take longer than you should to read a page of a book?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(3,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(3,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c4"><div class="q-header"><div class="q-num">05</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Do you find it difficult to remember the sense of what you have read?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(4,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(4,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c5"><div class="q-header"><div class="q-num">06</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Is your spelling poor?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(5,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(5,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c6"><div class="q-header"><div class="q-num">07</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Is your handwriting difficult to read?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(6,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(6,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c7"><div class="q-header"><div class="q-num">08</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Do you get confused if you have to speak in public?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(7,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(7,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c8"><div class="q-header"><div class="q-num">09</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Do you find it difficult to take messages on the telephone and pass them on correctly?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(8,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(8,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c9"><div class="q-header"><div class="q-num">10</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">When you have to say a long word, do you sometimes find it difficult to get all the sounds in the right order?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(9,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(9,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c10"><div class="q-header"><div class="q-num">11</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Do you mix up dates and times and miss appointments?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(10,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(10,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c11"><div class="q-header"><div class="q-num">12</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Do you find forms difficult and confusing to complete?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(11,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(11,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c12"><div class="q-header"><div class="q-num">13</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Do you mix up numbers like 95 and 59 when reading prices or addresses?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(12,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(12,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c13"><div class="q-header"><div class="q-num">14</div><div class="q-meta"><div class="q-source">LDHope Adult Dyslexia Test</div><div class="q-text">Did you find it hard to learn your multiplication tables at school?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(13,1,'yes',this)">Yes</button><button class="ans-btn" onclick="ans(13,0,'no',this)">No</button></div></div>
+
+<div class="question-card" id="c14"><div class="q-header"><div class="q-num">15</div><div class="q-meta"><div class="q-source">IDA Adult Reading History Questionnaire (ARHQ)</div><div class="q-text">Do you ever have difficulty remembering people's names or names of places?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(14,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(14,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(14,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(14,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(14,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c15"><div class="q-header"><div class="q-num">16</div><div class="q-meta"><div class="q-source">IDA Adult Reading History Questionnaire (ARHQ)</div><div class="q-text">Do you have difficulty remembering addresses, phone numbers, or dates?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(15,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(15,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(15,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(15,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(15,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c16"><div class="q-header"><div class="q-num">17</div><div class="q-meta"><div class="q-source">IDA Adult Reading History Questionnaire (ARHQ)</div><div class="q-text">Do you have difficulty remembering complex verbal instructions?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(16,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(16,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(16,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(16,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(16,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c17"><div class="q-header"><div class="q-num">18</div><div class="q-meta"><div class="q-source">IDA Adult Reading History Questionnaire (ARHQ)</div><div class="q-text">Do you currently reverse the order of letters or numbers when you read or write?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(17,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(17,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(17,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(17,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(17,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c18"><div class="q-header"><div class="q-num">19</div><div class="q-meta"><div class="q-source">IDA Adult Reading History Questionnaire (ARHQ)</div><div class="q-text">How would you compare your reading speed to others of the same age and education?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(18,0,'above',this)">Above Average</button><button class="ans-btn" onclick="ans(18,1,'average',this)">Average</button><button class="ans-btn" onclick="ans(18,2,'below',this)">Below Average</button></div></div>
+
+<div class="question-card" id="c19"><div class="q-header"><div class="q-num">20</div><div class="q-meta"><div class="q-source">IDA Adult Reading History Questionnaire (ARHQ)</div><div class="q-text">How would you compare your current spelling ability to others of the same age and education?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(19,0,'above',this)">Above Average</button><button class="ans-btn" onclick="ans(19,1,'average',this)">Average</button><button class="ans-btn" onclick="ans(19,2,'below',this)">Below Average</button></div></div>
+
+<div class="question-card" id="c20"><div class="q-header"><div class="q-num">21</div><div class="q-meta"><div class="q-source">IDA Adult Reading History Questionnaire (ARHQ)</div><div class="q-text">How much difficulty did you have learning to read in elementary / primary school?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(20,0,'above',this)">None / Very Little</button><button class="ans-btn" onclick="ans(20,1,'average',this)">Some</button><button class="ans-btn" onclick="ans(20,2,'below',this)">A Great Deal</button></div></div>
+
+<div class="question-card" id="c21"><div class="q-header"><div class="q-num">22</div><div class="q-meta"><div class="q-source">IDA 10-Question Self-Assessment (Bowman &amp; Culotta, 2010)</div><div class="q-text">Do you often confuse similar-looking letters (such as b/d or p/q) when reading or writing?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(21,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(21,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(21,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(21,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(21,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c22"><div class="q-header"><div class="q-num">23</div><div class="q-meta"><div class="q-source">IDA 10-Question Self-Assessment (Bowman &amp; Culotta, 2010)</div><div class="q-text">Do you have difficulty sounding out unfamiliar words or new vocabulary?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(22,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(22,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(22,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(22,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(22,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c23"><div class="q-header"><div class="q-num">24</div><div class="q-meta"><div class="q-source">IDA 10-Question Self-Assessment (Bowman &amp; Culotta, 2010)</div><div class="q-text">Do you struggle to spell the same word consistently — spelling it differently each time?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(23,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(23,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(23,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(23,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(23,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c24"><div class="q-header"><div class="q-num">25</div><div class="q-meta"><div class="q-source">IDA 10-Question Self-Assessment (Bowman &amp; Culotta, 2010)</div><div class="q-text">Do you tend to avoid reading for pleasure because it is tiring or difficult?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(24,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(24,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(24,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(24,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(24,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c25"><div class="q-header"><div class="q-num">26</div><div class="q-meta"><div class="q-source">IDA 10-Question Self-Assessment (Bowman &amp; Culotta, 2010)</div><div class="q-text">Do you frequently lose your place or skip lines when reading?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(25,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(25,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(25,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(25,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(25,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c26"><div class="q-header"><div class="q-num">27</div><div class="q-meta"><div class="q-source">British Dyslexia Association Adult Checklist</div><div class="q-text">Do you have difficulty keeping track of multiple pieces of information at once — for example, while listening and writing at the same time?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(26,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(26,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(26,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(26,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(26,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c27"><div class="q-header"><div class="q-num">28</div><div class="q-meta"><div class="q-source">British Dyslexia Association Adult Checklist</div><div class="q-text">Do you frequently run out of time when completing reading or written tasks?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(27,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(27,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(27,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(27,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(27,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c28"><div class="q-header"><div class="q-num">29</div><div class="q-meta"><div class="q-source">Exceptional Individuals / ADDitude Dyslexia Screener</div><div class="q-text">Do you sometimes find that words or letters appear to move, blur, or look odd on a page?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(28,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(28,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(28,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(28,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(28,0,'never',this)">Never</button></div></div>
+
+<div class="question-card" id="c29"><div class="q-header"><div class="q-num">30</div><div class="q-meta"><div class="q-source">Exceptional Individuals / ADDitude Dyslexia Screener</div><div class="q-text">Do you find it difficult to organise your thoughts into written words, even when you can express them verbally?</div></div></div><div class="answer-row"><button class="ans-btn" onclick="ans(29,4,'always',this)">Always</button><button class="ans-btn" onclick="ans(29,3,'often',this)">Often</button><button class="ans-btn" onclick="ans(29,2,'sometimes',this)">Sometimes</button><button class="ans-btn" onclick="ans(29,1,'rarely',this)">Rarely</button><button class="ans-btn" onclick="ans(29,0,'never',this)">Never</button></div></div>
+
+    </div>
+
+    <div class="submit-area">
+      <button class="submit-btn" id="sbtn" disabled onclick="showResults()">View My Results</button>
+      <p class="submit-note">Answer all 30 questions to see your results</p>
+    </div>
+  </div>
+
+  <div id="results-wrap">
+    <div class="result-score-block">
+      <h2>Your Screening Score</h2>
+      <div class="score-number" id="sdisplay">-</div>
+      <div class="score-label" id="slabel"></div>
+      <span class="result-band" id="rband"></span>
+    </div>
+    <div class="result-desc" id="rdesc"></div>
+    <div style="text-align:center;margin-bottom:1rem;">
+      <button class="retake-btn" onclick="retake()">&#8592; Retake Quiz</button>
+    </div>
+    <div class="sources-note"><strong>Sources:</strong> LDHope Adult Dyslexia Questionnaire (Essential Learning Institute, 1991) &middot; Adult Reading History Questionnaire / ARHQ (IDA &mdash; Lefly &amp; Pennington, 2000) &middot; IDA 10-Question Self-Assessment (Bowman &amp; Culotta, 2010) &middot; Exceptional Individuals Dyslexia Quiz &middot; British Dyslexia Association Adult Checklist &middot; ADDitude Magazine Dyslexia Screener</div>
+  </div>
+</main>
+
+<script>
+var A = new Array(30).fill(null);
+var MAX = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,4,4,4,2,2,2,4,4,4,4,4,4,4,4,4];
+
+function ans(i, score, key, btn) {
+  A[i] = score;
+  var card = document.getElementById('c' + i);
+  var btns = card.querySelectorAll('.ans-btn');
+  for (var x = 0; x < btns.length; x++) btns[x].className = 'ans-btn';
+  btn.className = 'ans-btn sel-' + key;
+  card.className = 'question-card answered';
+  var done = 0;
+  for (var j = 0; j < A.length; j++) if (A[j] !== null) done++;
+  document.getElementById('pbar').style.width = (done / 30 * 100) + '%';
+  document.getElementById('plabel').textContent = done + ' / 30';
+  document.getElementById('sbtn').disabled = done < 30;
+}
+
+function showResults() {
+  var raw = 0, maxP = 0;
+  for (var i = 0; i < 30; i++) { raw += A[i]; maxP += MAX[i]; }
+  var pct = Math.round(raw / maxP * 100);
+  document.getElementById('sdisplay').textContent = pct + '%';
+  document.getElementById('slabel').textContent = 'Raw score: ' + raw + ' / ' + maxP;
+  var band, bc, h3, desc;
+  if (pct < 30) {
+    band = 'Low Indicator'; bc = 'band-low'; h3 = 'Low Likelihood of Dyslexia Traits';
+    desc = 'Your responses suggest few indicators commonly associated with dyslexia. This does not completely rule it out — some people develop strong coping strategies over time. If you have ongoing concerns about reading, writing, or spelling that affect your daily life, consider speaking with a qualified professional for a comprehensive evaluation.';
+  } else if (pct < 60) {
+    band = 'Moderate Indicator'; bc = 'band-medium'; h3 = 'Some Indicators Present — Consider Further Evaluation';
+    desc = 'Your responses suggest a moderate number of traits commonly associated with dyslexia. Dyslexia affects roughly 10-15% of the population and is not related to intelligence. We recommend speaking with a GP, psychologist, or educational specialist who can arrange a formal evaluation. Early identification and appropriate support can make a significant difference.';
+  } else {
+    band = 'High Indicator'; bc = 'band-high'; h3 = 'Many Indicators Present — Professional Evaluation Recommended';
+    desc = 'Your responses suggest a significant number of traits commonly associated with dyslexia. This is not a diagnosis, but the pattern of your answers warrants serious attention. Dyslexia is a specific learning difference — not a reflection of intelligence — and many highly capable people have dyslexia. We strongly encourage you to seek a formal evaluation from a licensed psychologist, educational specialist, or your GP.';
+  }
+  document.getElementById('rband').textContent = band;
+  document.getElementById('rband').className = 'result-band ' + bc;
+  document.getElementById('rdesc').innerHTML = '<h3>' + h3 + '</h3><p>' + desc + '</p>';
+  document.getElementById('quiz-form').style.display = 'none';
+  document.getElementById('results-wrap').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+
+function retake() {
+  A = new Array(30).fill(null);
+  document.getElementById('results-wrap').style.display = 'none';
+  document.getElementById('quiz-form').style.display = 'block';
+  var cards = document.querySelectorAll('.question-card');
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].className = 'question-card';
+    var btns = cards[i].querySelectorAll('.ans-btn');
+    for (var j = 0; j < btns.length; j++) btns[j].className = 'ans-btn';
+  }
+  document.getElementById('pbar').style.width = '0%';
+  document.getElementById('plabel').textContent = '0 / 30';
+  document.getElementById('sbtn').disabled = true;
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>

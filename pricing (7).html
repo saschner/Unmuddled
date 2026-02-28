@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unmuddled — Pricing</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:    #443030;
+    --ochre:  #E8A838;
+    --mud1:   #8B6914;
+    --mud2:   #C4922A;
+    --cream:  #faf8f3;
+    --white:  #ffffff;
+    --muted:  #7a6a5a;
+    --border: #e0d4c0;
+    --free-bg:   #f5f0e8;
+    --bronze-bg: #f0e8d8;
+    --silver-bg: #e8ddd0;
+    --gold-bg:   #fdf0d0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── BLOBS ── */
+  .blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .blob-1 { width: 500px; height: 500px; background: var(--ochre); top: -150px; left: -150px; }
+  .blob-2 { width: 400px; height: 400px; background: var(--mud2); bottom: -100px; right: -100px; }
+  .blob-3 { width: 300px; height: 300px; background: var(--ink); top: 40%; left: 60%; }
+
+  /* ── NAV ── */
+  nav {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 3rem;
+    background: rgba(250,248,243,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+  .logo span { color: var(--ochre); }
+
+  .nav-back {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--ink); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+  }
+
+  .eyebrow {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ochre);
+    margin-bottom: 1rem;
+    animation: fadeUp 0.5s ease both;
+  }
+
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    animation: fadeUp 0.5s 0.1s ease both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    font-family: 'Lora', serif;
+    color: var(--ochre);
+  }
+
+  .hero p {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+    animation: fadeUp 0.5s 0.2s ease both;
+  }
+
+  /* ── BILLING TOGGLE ── */
+  .toggle-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 100px;
+    padding: 0.35rem 0.6rem;
+    margin-bottom: 4rem;
+    animation: fadeUp 0.5s 0.3s ease both;
+  }
+
+  .toggle-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    padding: 0 0.4rem;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .toggle-label.active { color: var(--ink); }
+
+  .toggle-switch {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background: var(--ink);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.3s;
+    flex-shrink: 0;
+  }
+  .toggle-switch::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s;
+  }
+  .toggle-switch.annual::after { transform: translateX(20px); }
+
+  .save-badge {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: var(--ochre);
+    color: var(--ink);
+    padding: 0.15rem 0.5rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+  }
+
+  /* ── CARDS CONTAINER ── */
+  .cards-section {
+    position: relative;
+    z-index: 1;
+    padding: 0 2rem 6rem;
+  }
+
+  .cards-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ── INDIVIDUAL CARD ── */
+  .card {
+    position: relative;
+    flex: 1;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .card:nth-child(1) { animation-delay: 0.1s; }
+  .card:nth-child(2) { animation-delay: 0.2s; }
+  .card:nth-child(3) { animation-delay: 0.3s; }
+  .card:nth-child(4) { animation-delay: 0.4s; }
+
+  /* Number circle */
+  .card-num {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--ochre);
+    color: var(--ink);
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto -26px;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 4px 16px rgba(232,168,56,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card:hover .card-num {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(232,168,56,0.5);
+  }
+
+  /* Card body — pointed bottom shape */
+  .card-body {
+    position: relative;
+    background: var(--free-bg);
+    border: 1.5px solid var(--border);
+    border-radius: 16px 16px 0 0;
+    padding: 3rem 1.5rem 1.8rem;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  /* Pointed bottom */
+  .card-body::after {
+    content: '';
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+    border-top: 28px solid var(--free-bg);
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.06));
+    transition: border-top-color 0.3s;
+  }
+
+  /* Border pointer overlay */
+  .card-body::before {
+    content: '';
+    position: absolute;
+    bottom: -31px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid var(--border);
+    z-index: -1;
+  }
+
+  .card:hover .card-body {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(68,48,48,0.12);
+  }
+
+  /* Per-card colours */
+  .card.bronze .card-body { background: var(--bronze-bg); }
+  .card.bronze .card-body::after { border-top-color: var(--bronze-bg); }
+
+  .card.silver .card-body { background: var(--silver-bg); }
+  .card.silver .card-body::after { border-top-color: var(--silver-bg); }
+
+  .card.gold .card-body {
+    background: var(--gold-bg);
+    border-color: var(--mud1);
+    color: white;
+  }
+  .card.gold .card-body::after { border-top-color: var(--gold-bg); }
+  .card.gold .card-body::before { border-top-color: var(--ochre); }
+  .card.gold .card-num {
+    background: var(--ochre);
+    color: var(--ink);
+    box-shadow: 0 4px 16px rgba(232,168,56,0.4);
+  }
+
+  /* Divider */
+  .card-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--border);
+    margin: 1rem auto;
+    border-radius: 2px;
+  }
+  .card.gold .card-divider { background: var(--border); }
+  .card.gold .card-tier { color: var(--ink); }
+  .card.gold .card-name { color: var(--ink); }
+  .card.gold .card-price .amount { color: var(--ink); }
+  .card.gold .card-price .period { color: var(--muted); }
+  .card.gold .card-tagline { color: var(--muted); }
+  .card.gold .card-features { color: var(--ink); }
+  .card.gold .card-features li { border-bottom-color: rgba(0,0,0,0.08); }
+  .card.gold .card-cta {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--cream);
+  }
+  .card.gold .card-cta:hover {
+    background: #2a1f1f;
+    border-color: #2a1f1f;
+    color: white;
+  }
+
+  .card-tier {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ochre);
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+  .card.gold .card-tier { color: var(--ink); }
+
+  .card-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.2rem;
+  }
+  .card.gold .card-name { color: var(--ink); }
+
+  .card-price {
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+
+  .card-price .amount {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -0.03em;
+  }
+  .card.gold .card-price .amount { color: var(--ink); }
+
+  .card-price .period {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .card.gold .card-price .period { color: var(--muted); }
+
+  .card-tagline {
+    font-family: 'Lora', serif;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--muted);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    min-height: 2.5rem;
+  }
+  .card.gold .card-tagline { color: var(--muted); }
+
+  /* Features list */
+  .card-features {
+    list-style: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  .card.gold .card-features { color: var(--ink); }
+
+  .card-features li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .card.gold .card-features li { border-bottom-color: rgba(0,0,0,0.08); }
+  .card-features li:last-child { border-bottom: none; }
+
+  .check {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--ochre);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 800;
+    margin-top: 1px;
+  }
+
+  /* CTA button */
+  .card-cta {
+    display: block;
+    margin-top: 1.8rem;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 2px solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+  }
+
+  /* cta hover handled above */
+
+  /* Popular badge */
+  .popular-badge {
+    position: absolute;
+    top: -14px;
+    right: 16px;
+    background: var(--ochre);
+    color: var(--ink);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.7rem;
+    border-radius: 100px;
+    box-shadow: 0 2px 8px rgba(232,168,56,0.4);
+  }
+
+  /* ── FOOTER NOTE ── */
+  .footer-note {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 2rem 4rem;
+  }
+
+  .footer-note p {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+
+  .footer-note .faq-link {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 2px solid var(--ochre);
+    padding-bottom: 2px;
+    transition: color 0.2s;
+  }
+
+  /* ── DECORATIVE CORNER BLOBS ── */
+  .corner-blob {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .cards-wrap {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+    .card {
+      max-width: 340px;
+      width: 100%;
+    }
+    nav { padding: 1rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- BACKGROUND BLOBS -->
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="unmuddled-homepage.html" class="logo">un<span>muddled</span>.world</a>
+  <a href="unmuddled-homepage.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="eyebrow">Simple, honest pricing</p>
+  <h1>Find your<br><em>level of clarity</em></h1>
+  <p>Start free. Upgrade when you're ready. Every tier is built for real people navigating a jargon-filled world.</p>
+
+  <div class="toggle-wrap">
+    <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+    <div class="toggle-switch" id="billingToggle" onclick="toggleBilling()"></div>
+    <span class="toggle-label" id="annualLabel">Annual</span>
+    <span class="save-badge">Save 20%</span>
+  </div>
+</section>
+
+<!-- CARDS -->
+<section class="cards-section">
+  <div class="cards-wrap">
+
+    <!-- FREE -->
+    <div class="card free">
+      <div class="card-num">1</div>
+      <div class="card-body">
+        <div class="card-tier">Tier One</div>
+        <div class="card-name">Free</div>
+        <div class="card-price">
+          <span class="amount">$0</span><br>
+          <span class="period">forever</span>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-tagline">Dip your toes in.<br>No card needed.</div>
+        <ul class="card-features">
+          <li><span class="check">✓</span>Jargon quizzes — test yourself</li>
+          <li><span class="check">✓</span>First 100 words translated free</li>
+          <li><span class="check">✓</span>Business jargon glossary</li>
+          <li><span class="check">✓</span>Abbreviation & idiom lookups</li>
+        </ul>
+        <a href="#" class="card-cta">Get Started Free</a>
+      </div>
+    </div>
+
+    <!-- BRONZE -->
+    <div class="card bronze">
+      <div class="card-num">2</div>
+      <div class="card-body">
+        <div class="card-tier">Tier Two</div>
+        <div class="card-name">Bronze</div>
+        <div class="card-price">
+          <span class="amount" data-monthly="$9" data-annual="$7">$9</span><br>
+          <span class="period" id="bronze-period">per month</span>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-tagline">Unlimited translation.<br>No word limits, ever.</div>
+        <ul class="card-features">
+          <li><span class="check">✓</span>Everything in Free</li>
+          <li><span class="check">✓</span>Unlimited jargon translation</li>
+          <li><span class="check">✓</span>Copy & paste on site — no limits</li>
+          <li><span class="check">✓</span>Translation history saved</li>
+        </ul>
+        <a href="#" class="card-cta">Start Bronze</a>
+      </div>
+    </div>
+
+    <!-- SILVER -->
+    <div class="card silver">
+      <div class="card-num">3</div>
+      <div class="card-body">
+        <div class="popular-badge">Most Popular</div>
+        <div class="card-tier">Tier Three</div>
+        <div class="card-name">Silver</div>
+        <div class="card-price">
+          <span class="amount" data-monthly="$19" data-annual="$15">$19</span><br>
+          <span class="period" id="silver-period">per month</span>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-tagline">For the person who lives<br>in meetings.</div>
+        <ul class="card-features">
+          <li><span class="check">✓</span>Everything in Bronze</li>
+          <li><span class="check">✓</span>Slack integration</li>
+          <li><span class="check">✓</span>Action item detection</li>
+          <li><span class="check">✓</span>Post-meeting plain English summary</li>
+        </ul>
+        <a href="#" class="card-cta">Start Silver</a>
+      </div>
+    </div>
+
+    <!-- GOLD -->
+    <div class="card gold">
+      <div class="card-num">4</div>
+      <div class="card-body">
+        <div class="card-tier">Tier Four</div>
+        <div class="card-name">Gold</div>
+        <div class="card-price">
+          <span class="amount" data-monthly="$99" data-annual="$99">$99</span><br>
+          <span class="period" id="gold-period">per year</span>
+        </div>
+        <div class="card-divider"></div>
+        <div class="card-tagline">Your complete workplace<br>intelligence suite.</div>
+        <ul class="card-features">
+          <li><span class="check">✓</span>Everything in Silver</li>
+          <li><span class="check">✓</span>AI tone & mood analysis</li>
+          <li><span class="check">✓</span>Short suggested response</li>
+          <li><span class="check">✓</span>LIVE meeting transcription</li>
+          <li><span class="check">✓</span>Notion integration</li>
+          <li><span class="check">✓</span>CloudScope — visual Gmail inbox</li>
+        </ul>
+        <a href="#" class="card-cta">Go Gold</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER NOTE -->
+<div class="footer-note">
+  <p>All plans include a 14-day money-back guarantee. No questions asked. Because we know what it feels like to take a leap of faith.</p>
+  <a href="#" class="faq-link">Have questions? Read the FAQ →</a>
+</div>
+
+<script>
+  let isAnnual = false;
+
+  function toggleBilling() {
+    isAnnual = !isAnnual;
+    const toggle = document.getElementById('billingToggle');
+    const monthlyLabel = document.getElementById('monthlyLabel');
+    const annualLabel = document.getElementById('annualLabel');
+
+    toggle.classList.toggle('annual', isAnnual);
+    monthlyLabel.classList.toggle('active', !isAnnual);
+    annualLabel.classList.toggle('active', isAnnual);
+
+    // Update prices
+    document.querySelectorAll('.amount[data-monthly]').forEach(el => {
+      el.textContent = isAnnual ? el.dataset.annual : el.dataset.monthly;
+    });
+
+    // Update period labels
+    const period = isAnnual ? 'per month, billed annually' : 'per month';
+    document.getElementById('bronze-period').textContent = period;
+    document.getElementById('silver-period').textContent = period;
+    document.getElementById('gold-period').textContent = isAnnual ? 'per year' : 'per year';
+  }
+</script>
+
+</body>
+</html>

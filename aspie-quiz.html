@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aspie-Quiz (Curated) — Version 5</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e; --paper: #faf8f3; --amber: #e8a838;
+    --amber-light: #fde68a; --rust: #c0392b; --sage: #4a7c59;
+    --muted: #6b6b7e; --border: #ddd8cc; --violet: #7c3aed;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); min-height: 100vh; }
+
+  /* ── HEADER ── */
+  header { padding: 2.5rem 1.5rem 1.8rem; text-align: center; border-bottom: 2px solid var(--border); }
+  .eyebrow { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem; }
+  h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 700; line-height: 1.2; }
+  h1 em { color: var(--amber); font-style: italic; }
+  .subtitle { margin-top: 0.8rem; font-size: 0.9rem; color: var(--muted); max-width: 520px; margin-inline: auto; line-height: 1.6; }
+  .disclaimer { margin: 1.2rem auto 0; max-width: 580px; font-size: 0.76rem; background: #fff8e1; border-left: 3px solid var(--amber); padding: 0.6rem 0.9rem; color: #7a6000; text-align: left; border-radius: 0 4px 4px 0; }
+
+  /* ── MAIN ── */
+  main { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+
+  /* ── PROGRESS ── */
+  .progress-bar-wrap { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+  .progress-bar { flex: 1; height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--amber), #f59e0b); border-radius: 3px; transition: width 0.4s ease; }
+  .progress-label { font-size: 0.8rem; color: var(--muted); white-space: nowrap; min-width: 60px; text-align: right; }
+
+  /* ── DOMAIN SECTION HEADER ── */
+  .domain-header {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-style: italic;
+    margin: 2rem 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .domain-header:first-of-type { margin-top: 0; }
+
+  /* ── QUESTION CARD ── */
+  .question-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 0.75rem;
+    transition: border-color 0.2s;
+  }
+  .question-card.answered { border-color: var(--amber); background: #fffdf5; }
+
+  .q-header { display: flex; gap: 0.8rem; align-items: flex-start; }
+  .q-num { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--amber); font-weight: 700; line-height: 1; min-width: 30px; }
+  .q-meta { flex: 1; }
+  .q-direction { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+  .q-text { font-size: 0.97rem; line-height: 1.55; }
+
+  /* ── RADIO ANSWER ROW ── */
+  .answer-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  .radio-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    flex: 1;
+    min-width: 55px;
+    cursor: pointer;
+  }
+  .radio-option input[type="radio"] {
+    display: none;
+  }
+  .radio-face {
+    width: 100%;
+    min-width: 55px;
+    padding: 0.45rem 0.5rem;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    background: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: center;
+    user-select: none;
+  }
+  .radio-face:hover { border-color: var(--amber); background: var(--amber-light); }
+  input[type="radio"]:checked + .radio-face.style-dk   { background: var(--muted);   border-color: var(--muted);   color: white; }
+  input[type="radio"]:checked + .radio-face.style-0    { background: var(--ink);     border-color: var(--ink);     color: white; }
+  input[type="radio"]:checked + .radio-face.style-1    { background: #0891b2;        border-color: #0891b2;        color: white; }
+  input[type="radio"]:checked + .radio-face.style-2    { background: var(--amber);   border-color: var(--amber);   color: white; }
+
+  /* ── SUBMIT ── */
+  .submit-area { margin-top: 2rem; text-align: center; }
+  .submit-btn { padding: 0.85rem 2.5rem; background: var(--ink); color: white; border: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500; cursor: pointer; }
+  .submit-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  .submit-note { font-size: 0.76rem; color: var(--muted); margin-top: 0.6rem; }
+
+  /* ── RESULTS ── */
+  #results-wrap { display: none; }
+  .result-score-block { background: white; border: 2px solid var(--ink); border-radius: 16px; padding: 2rem; text-align: center; margin-bottom: 1.5rem; }
+  .result-score-block h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .score-number { font-family: 'Playfair Display', serif; font-size: 4.5rem; font-weight: 700; color: var(--amber); line-height: 1; margin: 0.8rem 0 0.4rem; }
+  .score-label { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.2rem; }
+  .result-band { display: inline-block; padding: 0.45rem 1.2rem; border-radius: 99px; font-weight: 500; font-size: 0.88rem; }
+  .band-low    { background: #d1fae5; color: #065f46; }
+  .band-medium { background: #fef3c7; color: #92400e; }
+  .band-high   { background: #fee2e2; color: #991b1b; }
+
+  .result-desc { background: white; border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.2rem; line-height: 1.7; font-size: 0.93rem; }
+  .result-desc h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 0.6rem; }
+
+  /* Domain breakdown */
+  .domain-results { background: white; border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.2rem; }
+  .domain-results h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; margin-bottom: 1rem; }
+  .dr-row { margin-bottom: 1.1rem; }
+  .dr-title { display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 0.35rem; }
+  .dr-title strong { font-weight: 500; }
+  .dr-meter { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; margin-bottom: 0.25rem; }
+  .dr-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+  .fill-low    { background: var(--sage); }
+  .fill-medium { background: var(--amber); }
+  .fill-high   { background: var(--rust); }
+  .dr-note { font-size: 0.75rem; color: var(--muted); }
+
+  .retake-btn { padding: 0.75rem 2rem; background: transparent; color: var(--ink); border: 2px solid var(--ink); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.93rem; cursor: pointer; }
+  .sources-note { margin-top: 1.5rem; font-size: 0.7rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 0.9rem; line-height: 1.6; }
+
+  /* ── SCALE KEY ── */
+  .scale-key { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; margin-bottom: 1.5rem; }
+  .key-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.76rem; color: var(--muted); }
+  .key-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+  .kd-dk { background: var(--muted); }
+  .kd-0  { background: var(--ink); }
+  .kd-1  { background: #0891b2; }
+  .kd-2  { background: var(--amber); }
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">Curated self-reflection tool · Version 5</p>
+  <h1>Aspie <em>Screening</em> Quiz</h1>
+  <p class="subtitle">40 questions across 6 domains, drawn from the Aspie-Quiz curated question set.</p>
+  <div class="disclaimer">&#9888;&#65039; <strong>Important:</strong> This questionnaire is a self-reflection tool and does not constitute a medical diagnosis. Some questions are phrased so that an atypical (autistic / neurodiverse) response is "Yes/Often," and some so that the atypical response is "No/Never." If results are of concern, please consult a qualified professional.</div>
+</header>
+
+<main>
+  <div id="quiz-form">
+    <div class="progress-bar-wrap">
+      <div class="progress-bar"><div class="progress-fill" id="pbar"></div></div>
+      <div class="progress-label" id="plabel">0 / 40</div>
+    </div>
+
+    <div class="scale-key">
+      <div class="key-item"><div class="key-dot kd-dk"></div> ? = Don't Know</div>
+      <div class="key-item"><div class="key-dot kd-0"></div> 0 = No / Never</div>
+      <div class="key-item"><div class="key-dot kd-1"></div> 1 = A Little</div>
+      <div class="key-item"><div class="key-dot kd-2"></div> 2 = Yes / Often</div>
+    </div>
+
+    <div id="qwrap">
+
+      <div class="domain-header">Sensory Experience</div>
+
+      <div class="question-card" id="c0">
+        <div class="q-header">
+          <div class="q-num">01</div>
+          <div class="q-meta">
+            <div class="q-text">Are you bothered by clothes tags or light touch?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q1" value="" data-q="0" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q1" value="0" data-q="0" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q1" value="1" data-q="0" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q1" value="2" data-q="0" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c1">
+        <div class="q-header">
+          <div class="q-num">02</div>
+          <div class="q-meta">
+            <div class="q-text">Are your eyes extra sensitive to strong light and glare?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q2" value="" data-q="1" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q2" value="0" data-q="1" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q2" value="1" data-q="1" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q2" value="2" data-q="1" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c2">
+        <div class="q-header">
+          <div class="q-num">03</div>
+          <div class="q-meta">
+            <div class="q-text">Do you notice odors that other people don't seem to notice?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q3" value="" data-q="2" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q3" value="0" data-q="2" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q3" value="1" data-q="2" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q3" value="2" data-q="2" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c3">
+        <div class="q-header">
+          <div class="q-num">04</div>
+          <div class="q-meta">
+            <div class="q-text">Do you dislike it when people stamp their foot on the floor?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q4" value="" data-q="3" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q4" value="0" data-q="3" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q4" value="1" data-q="3" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q4" value="2" data-q="3" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c4">
+        <div class="q-header">
+          <div class="q-num">05</div>
+          <div class="q-meta">
+            <div class="q-text">Do you have extra sensitive hearing?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q5" value="" data-q="4" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q5" value="0" data-q="4" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q5" value="1" data-q="4" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q5" value="2" data-q="4" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c5">
+        <div class="q-header">
+          <div class="q-num">06</div>
+          <div class="q-meta">
+            <div class="q-text">Are you sensitive to changes in humidity and air pressure?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q6" value="" data-q="5" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q6" value="0" data-q="5" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q6" value="1" data-q="5" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q6" value="2" data-q="5" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c6">
+        <div class="q-header">
+          <div class="q-num">07</div>
+          <div class="q-meta">
+            <div class="q-direction">Reverse scored</div>
+            <div class="q-text">Do you enjoy big events even if they are crowded?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q7" value="" data-q="6" data-score="" data-dir="reverse"><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q7" value="0" data-q="6" data-score="2" data-dir="reverse"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q7" value="1" data-q="6" data-score="1" data-dir="reverse"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q7" value="2" data-q="6" data-score="0" data-dir="reverse"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="domain-header">Social Interpretation</div>
+
+      <div class="question-card" id="c7">
+        <div class="q-header">
+          <div class="q-num">08</div>
+          <div class="q-meta">
+            <div class="q-text">Is it hard for you to see why some things upset people so much?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q8" value="" data-q="7" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q8" value="0" data-q="7" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q8" value="1" data-q="7" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q8" value="2" data-q="7" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c8">
+        <div class="q-header">
+          <div class="q-num">09</div>
+          <div class="q-meta">
+            <div class="q-text">As a teenager, were you unaware of social rules &amp; boundaries unless they were clearly spelled out?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q9" value="" data-q="8" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q9" value="0" data-q="8" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q9" value="1" data-q="8" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q9" value="2" data-q="8" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c9">
+        <div class="q-header">
+          <div class="q-num">10</div>
+          <div class="q-meta">
+            <div class="q-text">Do you find it hard to tell the age of people?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q10" value="" data-q="9" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q10" value="0" data-q="9" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q10" value="1" data-q="9" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q10" value="2" data-q="9" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c10">
+        <div class="q-header">
+          <div class="q-num">11</div>
+          <div class="q-meta">
+            <div class="q-text">Do you fail to understand pop culture or why people jump onto the latest trend?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q11" value="" data-q="10" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q11" value="0" data-q="10" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q11" value="1" data-q="10" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q11" value="2" data-q="10" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c11">
+        <div class="q-header">
+          <div class="q-num">12</div>
+          <div class="q-meta">
+            <div class="q-text">Do you realize hours later that somebody you have a romantic interest for showed interest, and then feel bad about the missed opportunity to connect?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q12" value="" data-q="11" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q12" value="0" data-q="11" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q12" value="1" data-q="11" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q12" value="2" data-q="11" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c12">
+        <div class="q-header">
+          <div class="q-num">13</div>
+          <div class="q-meta">
+            <div class="q-direction">Reverse scored</div>
+            <div class="q-text">Are you good at interpreting facial expressions?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q13" value="" data-q="12" data-score="" data-dir="reverse"><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q13" value="0" data-q="12" data-score="2" data-dir="reverse"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q13" value="1" data-q="12" data-score="1" data-dir="reverse"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q13" value="2" data-q="12" data-score="0" data-dir="reverse"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c13">
+        <div class="q-header">
+          <div class="q-num">14</div>
+          <div class="q-meta">
+            <div class="q-direction">Reverse scored</div>
+            <div class="q-text">Do you recognize a lot of people?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q14" value="" data-q="13" data-score="" data-dir="reverse"><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q14" value="0" data-q="13" data-score="2" data-dir="reverse"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q14" value="1" data-q="13" data-score="1" data-dir="reverse"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q14" value="2" data-q="13" data-score="0" data-dir="reverse"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="domain-header">Communication Style</div>
+
+      <div class="question-card" id="c14">
+        <div class="q-header">
+          <div class="q-num">15</div>
+          <div class="q-meta">
+            <div class="q-text">Do you have difficulty describing &amp; summarising things (for example events, conversations or something you've read)?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q15" value="" data-q="14" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q15" value="0" data-q="14" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q15" value="1" data-q="14" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q15" value="2" data-q="14" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c15">
+        <div class="q-header">
+          <div class="q-num">16</div>
+          <div class="q-meta">
+            <div class="q-text">Is it difficult to pass on messages correctly?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q16" value="" data-q="15" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q16" value="0" data-q="15" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q16" value="1" data-q="15" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q16" value="2" data-q="15" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c16">
+        <div class="q-header">
+          <div class="q-num">17</div>
+          <div class="q-meta">
+            <div class="q-text">Do you tend to say things that are considered socially inappropriate when you are tired, frustrated or when you act naturally?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q17" value="" data-q="16" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q17" value="0" data-q="16" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q17" value="1" data-q="16" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q17" value="2" data-q="16" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c17">
+        <div class="q-header">
+          <div class="q-num">18</div>
+          <div class="q-meta">
+            <div class="q-text">Do you have problems with timing in conversations?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q18" value="" data-q="17" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q18" value="0" data-q="17" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q18" value="1" data-q="17" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q18" value="2" data-q="17" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c18">
+        <div class="q-header">
+          <div class="q-num">19</div>
+          <div class="q-meta">
+            <div class="q-text">Do you tend to wander off the topic when having a conversation?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q19" value="" data-q="18" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q19" value="0" data-q="18" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q19" value="1" data-q="18" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q19" value="2" data-q="18" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c19">
+        <div class="q-header">
+          <div class="q-num">20</div>
+          <div class="q-meta">
+            <div class="q-direction">Reverse scored</div>
+            <div class="q-text">Do you find it easy to describe your feelings?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q20" value="" data-q="19" data-score="" data-dir="reverse"><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q20" value="0" data-q="19" data-score="2" data-dir="reverse"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q20" value="1" data-q="19" data-score="1" data-dir="reverse"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q20" value="2" data-q="19" data-score="0" data-dir="reverse"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c20">
+        <div class="q-header">
+          <div class="q-num">21</div>
+          <div class="q-meta">
+            <div class="q-direction">Reverse scored</div>
+            <div class="q-text">Do you instinctively know when it is your turn to speak when talking on the phone?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q21" value="" data-q="20" data-score="" data-dir="reverse"><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q21" value="0" data-q="20" data-score="2" data-dir="reverse"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q21" value="1" data-q="20" data-score="1" data-dir="reverse"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q21" value="2" data-q="20" data-score="0" data-dir="reverse"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="domain-header">Need for Structure &amp; Predictability</div>
+
+      <div class="question-card" id="c21">
+        <div class="q-header">
+          <div class="q-num">22</div>
+          <div class="q-meta">
+            <div class="q-text">Do you like to create routines for things you've figured out so you don't have to figure it out again?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q22" value="" data-q="21" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q22" value="0" data-q="21" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q22" value="1" data-q="21" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q22" value="2" data-q="21" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c22">
+        <div class="q-header">
+          <div class="q-num">23</div>
+          <div class="q-meta">
+            <div class="q-text">Do you need to prepare yourself mentally before going somewhere?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q23" value="" data-q="22" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q23" value="0" data-q="22" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q23" value="1" data-q="22" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q23" value="2" data-q="22" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c23">
+        <div class="q-header">
+          <div class="q-num">24</div>
+          <div class="q-meta">
+            <div class="q-text">Do you dislike it when people drop by to visit you uninvited?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q24" value="" data-q="23" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q24" value="0" data-q="23" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q24" value="1" data-q="23" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q24" value="2" data-q="23" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c24">
+        <div class="q-header">
+          <div class="q-num">25</div>
+          <div class="q-meta">
+            <div class="q-direction">Reverse scored</div>
+            <div class="q-text">If there is an interruption, can you quickly return to what you were doing before?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q25" value="" data-q="24" data-score="" data-dir="reverse"><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q25" value="0" data-q="24" data-score="2" data-dir="reverse"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q25" value="1" data-q="24" data-score="1" data-dir="reverse"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q25" value="2" data-q="24" data-score="0" data-dir="reverse"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c25">
+        <div class="q-header">
+          <div class="q-num">26</div>
+          <div class="q-meta">
+            <div class="q-direction">Reverse scored</div>
+            <div class="q-text">Do you enjoy travel?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q26" value="" data-q="25" data-score="" data-dir="reverse"><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q26" value="0" data-q="25" data-score="2" data-dir="reverse"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q26" value="1" data-q="25" data-score="1" data-dir="reverse"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q26" value="2" data-q="25" data-score="0" data-dir="reverse"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c26">
+        <div class="q-header">
+          <div class="q-num">27</div>
+          <div class="q-meta">
+            <div class="q-direction">Reverse scored</div>
+            <div class="q-text">Do you have a good sense of time?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q27" value="" data-q="26" data-score="" data-dir="reverse"><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q27" value="0" data-q="26" data-score="2" data-dir="reverse"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q27" value="1" data-q="26" data-score="1" data-dir="reverse"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q27" value="2" data-q="26" data-score="0" data-dir="reverse"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="domain-header">Emotional Processing &amp; Self-Regulation</div>
+
+      <div class="question-card" id="c27">
+        <div class="q-header">
+          <div class="q-num">28</div>
+          <div class="q-meta">
+            <div class="q-text">Do you rock back-&amp;-forth or side-to-side (e.g. for comfort, to calm yourself, when excited or overstimulated)?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q28" value="" data-q="27" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q28" value="0" data-q="27" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q28" value="1" data-q="27" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q28" value="2" data-q="27" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c28">
+        <div class="q-header">
+          <div class="q-num">29</div>
+          <div class="q-meta">
+            <div class="q-text">Do you tap your ears or press your eyes (e.g. when thinking, when stressed or distressed)?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q29" value="" data-q="28" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q29" value="0" data-q="28" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q29" value="1" data-q="28" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q29" value="2" data-q="28" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c29">
+        <div class="q-header">
+          <div class="q-num">30</div>
+          <div class="q-meta">
+            <div class="q-text">Do you enjoy spinning in circles?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q30" value="" data-q="29" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q30" value="0" data-q="29" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q30" value="1" data-q="29" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q30" value="2" data-q="29" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c30">
+        <div class="q-header">
+          <div class="q-num">31</div>
+          <div class="q-meta">
+            <div class="q-text">Do you wring your hands, rub your hands together or twirl your fingers?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q31" value="" data-q="30" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q31" value="0" data-q="30" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q31" value="1" data-q="30" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q31" value="2" data-q="30" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c31">
+        <div class="q-header">
+          <div class="q-num">32</div>
+          <div class="q-meta">
+            <div class="q-text">Do you pace (e.g. when thinking or anxious)?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q32" value="" data-q="31" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q32" value="0" data-q="31" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q32" value="1" data-q="31" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q32" value="2" data-q="31" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c32">
+        <div class="q-header">
+          <div class="q-num">33</div>
+          <div class="q-meta">
+            <div class="q-text">Do you bite your lip, cheek or tongue (e.g. when thinking, when anxious or nervous)?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q33" value="" data-q="32" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q33" value="0" data-q="32" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q33" value="1" data-q="32" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q33" value="2" data-q="32" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c33">
+        <div class="q-header">
+          <div class="q-num">34</div>
+          <div class="q-meta">
+            <div class="q-text">Do you tend to shut down or have a meltdown when stressed or overwhelmed?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q34" value="" data-q="33" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q34" value="0" data-q="33" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q34" value="1" data-q="33" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q34" value="2" data-q="33" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="domain-header">Cognitive / Attention Style</div>
+
+      <div class="question-card" id="c34">
+        <div class="q-header">
+          <div class="q-num">35</div>
+          <div class="q-meta">
+            <div class="q-text">Do you have an avid perseverance in gathering and/or cataloguing information on a topic of interest?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q35" value="" data-q="34" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q35" value="0" data-q="34" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q35" value="1" data-q="34" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q35" value="2" data-q="34" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c35">
+        <div class="q-header">
+          <div class="q-num">36</div>
+          <div class="q-meta">
+            <div class="q-text">Do you notice patterns in things all the time?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q36" value="" data-q="35" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q36" value="0" data-q="35" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q36" value="1" data-q="35" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q36" value="2" data-q="35" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c36">
+        <div class="q-header">
+          <div class="q-num">37</div>
+          <div class="q-meta">
+            <div class="q-text">Do you have an urge to observe the habits of humans and/or animals?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q37" value="" data-q="36" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q37" value="0" data-q="36" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q37" value="1" data-q="36" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q37" value="2" data-q="36" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c37">
+        <div class="q-header">
+          <div class="q-num">38</div>
+          <div class="q-meta">
+            <div class="q-text">Do you find it difficult to engage in a task of no interest to you even if it is important?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q38" value="" data-q="37" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q38" value="0" data-q="37" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q38" value="1" data-q="37" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q38" value="2" data-q="37" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c38">
+        <div class="q-header">
+          <div class="q-num">39</div>
+          <div class="q-meta">
+            <div class="q-text">Are you still fascinated by many of the things you were interested in when you were much younger?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q39" value="" data-q="38" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q39" value="0" data-q="38" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q39" value="1" data-q="38" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q39" value="2" data-q="38" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+      <div class="question-card" id="c39">
+        <div class="q-header">
+          <div class="q-num">40</div>
+          <div class="q-meta">
+            <div class="q-text">Do you tend to get so absorbed by your special interests that you forget or ignore everything else?</div>
+          </div>
+        </div>
+        <div class="answer-row">
+          <label class="radio-option"><input type="radio" name="q40" value="" data-q="39" data-score=""><span class="radio-face style-dk">?</span></label>
+          <label class="radio-option"><input type="radio" name="q40" value="0" data-q="39" data-score="0"><span class="radio-face style-0">0</span></label>
+          <label class="radio-option"><input type="radio" name="q40" value="1" data-q="39" data-score="1"><span class="radio-face style-1">1</span></label>
+          <label class="radio-option"><input type="radio" name="q40" value="2" data-q="39" data-score="2"><span class="radio-face style-2">2</span></label>
+        </div>
+      </div>
+
+    </div><!-- /qwrap -->
+
+    <div class="submit-area">
+      <button class="submit-btn" id="sbtn" disabled onclick="showResults()">View My Results</button>
+      <p class="submit-note" id="submit-note">Answer all 40 questions to see your results</p>
+    </div>
+  </div><!-- /quiz-form -->
+
+  <div id="results-wrap">
+    <div class="result-score-block">
+      <h2>Your Screening Score</h2>
+      <div class="score-number" id="sdisplay">-</div>
+      <div class="score-label" id="slabel"></div>
+      <span class="result-band" id="rband"></span>
+    </div>
+    <div class="result-desc" id="rdesc"></div>
+    <div class="domain-results">
+      <h3>Score by Domain</h3>
+      <div id="domain-breakdown"></div>
+    </div>
+    <div style="text-align:center;margin-bottom:1rem;">
+      <button class="retake-btn" onclick="retake()">&#8592; Retake Quiz</button>
+    </div>
+    <div class="sources-note">
+      <strong>Sources:</strong> Aspie-Quiz (curated set) · Version 5 style · 40 questions across 6 domains: Sensory Experience, Social Interpretation, Communication Style, Need for Structure &amp; Predictability, Emotional Processing &amp; Self-Regulation, Cognitive / Attention Style. "Don't know" responses are not scored. Reverse-coded items are handled automatically. This is a non-diagnostic self-reflection tool.
+    </div>
+  </div>
+</main>
+
+<script>
+  var TOTAL = 40;
+  // Track answered state: null = unanswered, number = scored value
+  var answered = new Array(TOTAL).fill(null);
+  var answeredCount = 0;
+
+  // Domain config: [label, question indices (0-based)]
+  var DOMAINS = [
+    { label: 'Sensory Experience',                    qs: [0,1,2,3,4,5,6]         },
+    { label: 'Social Interpretation',                 qs: [7,8,9,10,11,12,13]     },
+    { label: 'Communication Style',                   qs: [14,15,16,17,18,19,20]  },
+    { label: 'Need for Structure & Predictability',   qs: [21,22,23,24,25,26]     },
+    { label: 'Emotional Processing & Self-Regulation',qs: [27,28,29,30,31,32,33]  },
+    { label: 'Cognitive / Attention Style',           qs: [34,35,36,37,38,39]     }
+  ];
+
+  document.addEventListener('change', function(e) {
+    var input = e.target;
+    if (!input || input.type !== 'radio') return;
+
+    var qi = parseInt(input.getAttribute('data-q'), 10);
+    var scoreAttr = input.getAttribute('data-score');
+
+    var wasAnswered = answered[qi] !== null;
+    answered[qi] = scoreAttr === '' ? null : parseInt(scoreAttr, 10);
+
+    // Update count
+    answeredCount = 0;
+    for (var i = 0; i < TOTAL; i++) { if (answered[i] !== null) answeredCount++; }
+
+    // Update card style
+    var card = document.getElementById('c' + qi);
+    if (answered[qi] !== null) {
+      card.className = 'question-card answered';
+    } else {
+      card.className = 'question-card';
+    }
+
+    // Update progress
+    document.getElementById('pbar').style.width = (answeredCount / TOTAL * 100) + '%';
+    document.getElementById('plabel').textContent = answeredCount + ' / ' + TOTAL;
+
+    // Enable button
+    var btn = document.getElementById('sbtn');
+    var note = document.getElementById('submit-note');
+    btn.disabled = answeredCount < TOTAL;
+    if (answeredCount === TOTAL) {
+      note.textContent = 'All questions answered — ready to view results!';
+    } else {
+      note.textContent = 'Answer all 40 questions to see your results';
+    }
+  });
+
+  function showResults() {
+    // Compute totals
+    var total = 0, maxTotal = 0;
+    for (var i = 0; i < TOTAL; i++) {
+      if (answered[i] !== null) {
+        total += answered[i];
+        maxTotal += 2;
+      }
+    }
+    var pct = maxTotal ? Math.round(total / maxTotal * 100) : 0;
+
+    document.getElementById('sdisplay').textContent = pct + '%';
+    document.getElementById('slabel').textContent = 'Raw score: ' + total + ' / ' + maxTotal + ' (scored items only)';
+
+    var band, bc, h3, desc;
+    if (pct < 33) {
+      band = 'Low Indicator'; bc = 'band-low'; h3 = 'Lower Alignment with Autistic Trait Set';
+      desc = 'Your responses suggest fewer traits commonly associated with autism spectrum profiles. This does not completely rule anything out — many autistic people develop strong coping or masking strategies over time. If you have ongoing concerns about social communication, sensory sensitivity, or daily functioning, consider speaking with a qualified professional.';
+    } else if (pct < 60) {
+      band = 'Moderate Indicator'; bc = 'band-medium'; h3 = 'Some Indicators Present — Consider Further Reflection';
+      desc = 'Your responses suggest a moderate number of traits commonly associated with autism spectrum profiles. Autism is a wide-ranging neurotype, not a limitation of intelligence or character, and many people are not identified until adulthood. We recommend reflecting on your results by domain below, and speaking with a GP, psychologist, or specialist if patterns resonate with your lived experience.';
+    } else {
+      band = 'High Indicator'; bc = 'band-high'; h3 = 'Many Indicators Present — Professional Evaluation Recommended';
+      desc = 'Your responses suggest a significant number of traits commonly associated with autism spectrum profiles. This is not a diagnosis, but the pattern of your answers warrants attention. Autistic people bring unique strengths and perspectives — this is about understanding yourself better. We strongly encourage seeking a formal evaluation from a licensed psychologist, psychiatrist, or your GP.';
+    }
+
+    document.getElementById('rband').textContent = band;
+    document.getElementById('rband').className = 'result-band ' + bc;
+    document.getElementById('rdesc').innerHTML = '<h3>' + h3 + '</h3><p>' + desc + '</p>';
+
+    // Domain breakdown
+    var domainHTML = '';
+    DOMAINS.forEach(function(d) {
+      var ds = 0, dm = 0;
+      d.qs.forEach(function(qi) {
+        if (answered[qi] !== null) { ds += answered[qi]; dm += 2; }
+      });
+      var dp = dm ? Math.round(ds / dm * 100) : 0;
+      var fillClass = dp < 33 ? 'fill-low' : dp < 60 ? 'fill-medium' : 'fill-high';
+      var note = dp < 33 ? 'Lower alignment in this domain.' : dp < 60 ? 'Moderate alignment in this domain.' : 'Higher alignment in this domain.';
+      domainHTML += '<div class="dr-row">' +
+        '<div class="dr-title"><strong>' + d.label + '</strong><span>' + (dm ? ds + ' / ' + dm + ' (' + dp + '%)' : '—') + '</span></div>' +
+        '<div class="dr-meter"><div class="dr-fill ' + fillClass + '" style="width:' + dp + '%"></div></div>' +
+        '<div class="dr-note">' + (dm ? note : 'No scored answers.') + '</div>' +
+        '</div>';
+    });
+    document.getElementById('domain-breakdown').innerHTML = domainHTML;
+
+    document.getElementById('quiz-form').style.display = 'none';
+    document.getElementById('results-wrap').style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+
+  function retake() {
+    answered = new Array(TOTAL).fill(null);
+    answeredCount = 0;
+
+    // Uncheck all radios (select the ? option)
+    for (var i = 1; i <= TOTAL; i++) {
+      var dkRadio = document.querySelector('input[name="q' + i + '"][value=""]');
+      if (dkRadio) dkRadio.checked = true;
+    }
+    // Reset cards
+    var cards = document.querySelectorAll('.question-card');
+    cards.forEach(function(c) { c.className = 'question-card'; });
+
+    document.getElementById('pbar').style.width = '0%';
+    document.getElementById('plabel').textContent = '0 / 40';
+    document.getElementById('sbtn').disabled = true;
+    document.getElementById('submit-note').textContent = 'Answer all 40 questions to see your results';
+    document.getElementById('results-wrap').style.display = 'none';
+    document.getElementById('quiz-form').style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+</script>
+</body>
+</html>

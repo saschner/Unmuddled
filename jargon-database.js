@@ -137,7 +137,7 @@ const JARGON = [
   },
   {
     "jargon": "Action",
-    "plain": "do something about it"
+    "plain": "act on"
   },
   {
     "jargon": "Action items",
@@ -1133,7 +1133,7 @@ const JARGON = [
   },
   {
     "jargon": "Deliverables",
-    "plain": "specific outputs or results that are due"
+    "plain": "goals"
   },
   {
     "jargon": "Delulu",
@@ -2421,11 +2421,11 @@ const JARGON = [
   },
   {
     "jargon": "KPI",
-    "plain": "key performance indicator — a metric used to track progress"
+    "plain": "particular goals"
   },
   {
     "jargon": "KPIs",
-    "plain": "key performance indicators — metrics used to track progress"
+    "plain": "particular goals"
   },
   {
     "jargon": "Labor of love",
@@ -2744,7 +2744,7 @@ const JARGON = [
   },
   {
     "jargon": "Move the needle",
-    "plain": "Make a noticeable difference"
+    "plain": "make progress"
   },
   {
     "jargon": "Moving the goalposts",

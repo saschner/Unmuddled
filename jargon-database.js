@@ -136,6 +136,10 @@ const JARGON = [
     "plain": "a significant weakness"
   },
   {
+    "jargon": "Action",
+    "plain": "do something about it"
+  },
+  {
     "jargon": "Action items",
     "plain": "Tasks to complete"
   },
@@ -1128,6 +1132,10 @@ const JARGON = [
     "plain": "A finished piece of work handed over to someone"
   },
   {
+    "jargon": "Deliverables",
+    "plain": "specific outputs or results that are due"
+  },
+  {
     "jargon": "Delulu",
     "plain": "delusional, but often used affectionately"
   },
@@ -1283,6 +1291,10 @@ const JARGON = [
   {
     "jargon": "Ducks in a row",
     "plain": "Everything organised and in order before proceeding"
+  },
+  {
+    "jargon": "Due diligence",
+    "plain": "thorough checking and investigation before a deal or decision"
   },
   {
     "jargon": "Dumpster fire",
@@ -1548,6 +1560,10 @@ const JARGON = [
     "plain": "suddenly becoming extremely angry"
   },
   {
+    "jargon": "Flywheel",
+    "plain": "a self-reinforcing cycle where each success makes the next one easier"
+  },
+  {
     "jargon": "Follow in someone's footsteps",
     "plain": "following the same path in life as a person else"
   },
@@ -1662,12 +1678,20 @@ const JARGON = [
     "plain": "Start making real progress"
   },
   {
+    "jargon": "Game changer",
+    "plain": "something that completely changes how things work"
+  },
+  {
     "jargon": "Gas / Gassed up",
     "plain": "to hype someone up or be overly confident"
   },
   {
     "jargon": "Gatekeep",
     "plain": "keeping something exclusive or hidden from others"
+  },
+  {
+    "jargon": "Gating factor",
+    "plain": "the thing holding up progress"
   },
   {
     "jargon": "General and administration costs",
@@ -1812,6 +1836,10 @@ const JARGON = [
   {
     "jargon": "Go with the flow",
     "plain": "taking an easygoing attitude and just going along with whatever is happening"
+  },
+  {
+    "jargon": "Go-to-market",
+    "plain": "the plan for how to launch and sell a product"
   },
   {
     "jargon": "GOAT",
@@ -2065,6 +2093,10 @@ const JARGON = [
   {
     "jargon": "Icing on the cake",
     "plain": "it extra and good"
+  },
+  {
+    "jargon": "Ideate",
+    "plain": "come up with ideas"
   },
   {
     "jargon": "Ideation",
@@ -2388,6 +2420,14 @@ const JARGON = [
     "plain": "giving in"
   },
   {
+    "jargon": "KPI",
+    "plain": "key performance indicator — a metric used to track progress"
+  },
+  {
+    "jargon": "KPIs",
+    "plain": "key performance indicators — metrics used to track progress"
+  },
+  {
     "jargon": "Labor of love",
     "plain": "doing it because you love to for the benefit of a person you love"
   },
@@ -2644,6 +2684,10 @@ const JARGON = [
     "abbrev": "M&A"
   },
   {
+    "jargon": "Metrics",
+    "plain": "numbers used to measure something"
+  },
+  {
     "jargon": "Mickey mouse job",
     "plain": "a job that is considered insignificant or useless"
   },
@@ -2658,6 +2702,14 @@ const JARGON = [
   {
     "jargon": "Middle of the road",
     "plain": "a position that is not at either end"
+  },
+  {
+    "jargon": "Milestone",
+    "plain": "a key point or achievement in a plan"
+  },
+  {
+    "jargon": "Mission critical",
+    "plain": "essential — if this fails, everything fails"
   },
   {
     "jargon": "Mom and Pop",
@@ -3219,6 +3271,10 @@ const JARGON = [
     "abbrev": "PPE"
   },
   {
+    "jargon": "Pull the trigger",
+    "plain": "make the decision and act on it"
+  },
+  {
     "jargon": "Pull your chain",
     "plain": "annoying a person in some way"
   },
@@ -3251,6 +3307,10 @@ const JARGON = [
     "jargon": "Purchasing power parity",
     "plain": "A theory comparing currencies based on what they can buy",
     "abbrev": "PPP"
+  },
+  {
+    "jargon": "Push back",
+    "plain": "disagree or raise objections"
   },
   {
     "jargon": "Push the envelope",
@@ -3450,6 +3510,10 @@ const JARGON = [
   {
     "jargon": "Run the numbers",
     "plain": "Perform the financial or data calculations"
+  },
+  {
+    "jargon": "Runway",
+    "plain": "how long a company can keep going before it runs out of money"
   },
   {
     "jargon": "Salty",
@@ -3850,6 +3914,10 @@ const JARGON = [
   {
     "jargon": "Takeaway",
     "plain": "The key point to remember"
+  },
+  {
+    "jargon": "Takeaways",
+    "plain": "the key points or lessons from a meeting or document"
   },
   {
     "jargon": "Talent management",
@@ -4272,6 +4340,10 @@ const JARGON = [
     "plain": "traveling with very little luggage"
   },
   {
+    "jargon": "Triage",
+    "plain": "prioritise and sort by urgency"
+  },
+  {
     "jargon": "Trial balance",
     "plain": "A list of all ledger accounts and their balances at a point in time",
     "abbrev": "TB"
@@ -4480,6 +4552,10 @@ const JARGON = [
   {
     "jargon": "Wild and woolly",
     "plain": "untamed and wild looking"
+  },
+  {
+    "jargon": "Win-win",
+    "plain": "a result that benefits everyone involved"
   },
   {
     "jargon": "Winging it",

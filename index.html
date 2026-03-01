@@ -77,7 +77,90 @@
     border-radius: 6px;
   }
   .nav-cta:hover { background: var(--mud2) !important; color: white !important; }
-
+/* ── HAMBURGER ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 1200;
+  }
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--ochre);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .nav-drawer {
+    display: none;
+    position: fixed;
+    top: 0; right: 0;
+    width: 75vw;
+    max-width: 300px;
+    height: 100vh;
+    background: #2a1f1f;
+    z-index: 1100;
+    padding: 5rem 2rem 2rem;
+    flex-direction: column;
+    gap: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+  }
+  .nav-drawer.open { transform: translateX(0); }
+  .nav-drawer li { list-style: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .nav-drawer li a {
+    display: block;
+    padding: 1.1rem 0;
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-drawer li a:hover { color: var(--ochre); }
+  .nav-drawer .drawer-cta {
+    margin-top: 2rem;
+    background: var(--ochre);
+    color: var(--ink) !important;
+    padding: 0.9rem 1.5rem;
+    border-radius: 6px;
+    text-align: center;
+    display: block;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1050;
+  }
+  .nav-overlay.open { display: block; }
+  @media (max-width: 1024px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-drawer { display: flex; }
+  }
   /* ── SHARED SECTION BASE ── */
   .snap-section {
     scroll-snap-align: start;

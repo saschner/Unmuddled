@@ -660,8 +660,19 @@
     <a href="#pricing">Pricing</a>
     <a href="#pricing" class="nav-cta">Get Started</a>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
+<!-- MOBILE NAV DRAWER -->
+<div class="nav-overlay" id="navOverlay"></div>
+<ul class="nav-drawer" id="navDrawer">
+  <li><a href="#translator" onclick="closeNav()">Translator</a></li>
+  <li><a href="#quiz" onclick="closeNav()">Quiz</a></li>
+  <li><a href="#pricing" onclick="closeNav()">Pricing</a></li>
+  <li><a href="#pricing" class="drawer-cta" onclick="closeNav()">Get Started</a></li>
+</ul>
 <!-- ══ SECTION 1: HERO ══ -->
 <section class="snap-section" id="hero" style="padding-top:0">
   <p class="hero-eyebrow">Plain English for Everyone</p>

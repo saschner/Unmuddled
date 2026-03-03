@@ -6,7 +6,7 @@
 <title>Unmuddled — Plain English for Everyone</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Outfit:wght@300;400&display=block" rel="stylesheet">
 <style>
 @font-face {
   font-family: 'Lora';
@@ -211,8 +211,9 @@
   }
   #hero h1 em { color: var(--ochre); font-style: italic; font-family: 'Lora', serif; }
   .hero-sub {
-    font-family: 'Lora', serif;
-    font-style: italic;
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    font-weight: 300;
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: #c4b09a;
     max-width: 540px;
@@ -756,12 +757,11 @@
   <li><a href="#pricing" onclick="closeNav()">Pricing</a></li>
   <li><a href="#pricing" class="drawer-cta" onclick="closeNav()">Get Started</a></li>
 </ul>
+
 <!-- ══ SECTION 1: HERO ══ -->
 <section class="snap-section" id="hero" style="padding-top:0">
   <p class="hero-eyebrow">Plain English for Everyone</p>
-h1 em { opacity: 0; }
-.fonts-loaded h1 em { opacity: 1; }
-  <H1>Stop Struggling.<br>Start <em>Understanding.</em></H1>
+  <h1>Stop Struggling.<br>Start <em>Understanding.</em></h1>
   <p class="hero-sub">Corporate jargon is a second language nobody taught you. Built for those new to the office, neurodivergent minds, and anyone else who has nodded along pretending they understood.</p>
   <div class="hero-btns">
     <a href="#translator" class="btn-primary">Try the Translator</a>
@@ -790,9 +790,7 @@ h1 em { opacity: 0; }
         <span class="t-pane-label"><strong>Input</strong> — paste your text</span>
         <span class="t-char-count" id="charCount">0 chars</span>
       </div>
-      <textarea class="t-textarea" id="inputText" placeholder='Paste your business text here...'>
-
-    </textarea>
+      <textarea class="t-textarea" id="inputText" placeholder='Paste your business text here...'></textarea>
     </div>
     <div class="t-pane t-output-pane">
       <div class="t-pane-header">
@@ -960,6 +958,7 @@ Highlighted words show what was replaced.</div>
     <a href="#" class="faq-link">Have questions? Read the FAQ →</a>
   </div>
 </section>
+
 <script src="jargon-database.js"></script>
 <script>
 // ── HAMBURGER JS ──
@@ -977,7 +976,8 @@ function closeNav() {
   navDrawer.classList.remove('open');
   navOverlay.classList.remove('open');
 }
-  // ── TRANSLATOR JS ──
+
+// ── TRANSLATOR JS ──
 const JARGON_MAP = {};
 const JARGON = window.JARGON;
 JARGON.forEach(item => { JARGON_MAP[item.jargon.toLowerCase()] = item.plain; });
@@ -1006,7 +1006,7 @@ function setStatus(type, msg) {
 }
 
 async function doTranslate() {
-Object.keys(JARGON_MAP).forEach(k => delete JARGON_MAP[k]);
+  Object.keys(JARGON_MAP).forEach(k => delete JARGON_MAP[k]);
   (window.JARGON || []).forEach(item => { JARGON_MAP[item.jargon.toLowerCase()] = item.plain; });
   const text = inputEl.value.trim();
   if (!text) return;
@@ -1109,7 +1109,7 @@ function clearAll() {
 inputEl.addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) doTranslate(); });
 
 // ── QUIZ JS ──
-  const QUIZ_JARGON_OLD = [
+const QUIZ_JARGON_OLD = [
   {jargon:"Accounts receivable",plain:"Money owed to a company by its customers"},
   {jargon:"Action items",plain:"Tasks to complete"},
   {jargon:"Actionable",plain:"Something you can actually do"},

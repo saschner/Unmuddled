@@ -979,7 +979,7 @@ function closeNav() {
 }
   // ── TRANSLATOR JS ──
 const JARGON_MAP = {};
-const JARGON = window.JARGON || [];
+const JARGON = window.JARGON;
 JARGON.forEach(item => { JARGON_MAP[item.jargon.toLowerCase()] = item.plain; });
 const SORTED_KEYS = Object.keys(JARGON_MAP).sort((a, b) => b.length - a.length);
 
@@ -1006,6 +1006,8 @@ function setStatus(type, msg) {
 }
 
 async function doTranslate() {
+Object.keys(JARGON_MAP).forEach(k => delete JARGON_MAP[k]);
+  (window.JARGON || []).forEach(item => { JARGON_MAP[item.jargon.toLowerCase()] = item.plain; });
   const text = inputEl.value.trim();
   if (!text) return;
   translateBtn.disabled = true;

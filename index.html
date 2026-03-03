@@ -792,7 +792,7 @@ h1 em { opacity: 0; }
       </div>
       <textarea class="t-textarea" id="inputText" placeholder='Paste your business text here...
 
-e.g. "We need to align on our bandwidth before we can action these deliverables and move the needle on our KPIs going forward."'></textarea>
+    </textarea>
     </div>
     <div class="t-pane t-output-pane">
       <div class="t-pane-header">
@@ -979,6 +979,7 @@ function closeNav() {
 }
   // ── TRANSLATOR JS ──
 const JARGON_MAP = {};
+const JARGON = window.JARGON || [];
 JARGON.forEach(item => { JARGON_MAP[item.jargon.toLowerCase()] = item.plain; });
 const SORTED_KEYS = Object.keys(JARGON_MAP).sort((a, b) => b.length - a.length);
 

@@ -1,19 +1,19 @@
 window.JARGON = [
   {
     "jargon": "30,000-foot view",
-    "plain": "Looking at the big picture rather than the detail"
+    "plain": "looking at the big picture rather than the detail"
   },
   {
     "jargon": "30-60-90 day plan",
-    "plain": "A structured goal plan covering a new employee's first three months"
+    "plain": "a structured goal plan covering a new employee's first three months"
   },
   {
     "jargon": "360 feedback",
-    "plain": "Feedback gathered from peers, direct reports, and managers — not just one person"
+    "plain": "feedback gathered from peers, direct reports, and managers — not just one person"
   },
   {
     "jargon": "800-pound gorilla",
-    "plain": "The dominant issue or problem everyone is avoiding"
+    "plain": "the dominant issue or problem everyone is avoiding"
   },
   {
     "jargon": "A bad apple",
@@ -101,26 +101,26 @@ window.JARGON = [
   },
   {
     "jargon": "Above my pay grade",
-    "plain": "Outside my authority or responsibility — someone higher up needs to decide this"
+    "plain": "outside my authority or responsibility — a person higher up needs to decide this"
   },
   {
     "jargon": "Accounting standards codification",
-    "plain": "The FASB's official system for organising US accounting standards",
+    "plain": "the FASB's official system for organising US accounting standards",
     "abbrev": "ASC"
   },
   {
     "jargon": "Accounts payable",
-    "plain": "Money a company owes to its suppliers",
+    "plain": "money a company owes to its suppliers",
     "abbrev": "AP"
   },
   {
     "jargon": "Accounts receivable",
-    "plain": "Money owed to a company by its customers",
+    "plain": "money owed to a company by its customers",
     "abbrev": "AR"
   },
   {
     "jargon": "Accounts receivable",
-    "plain": "Money owed to a company by its customers",
+    "plain": "money owed to a company by its customers",
     "abbrev": "A/R"
   },
   {
@@ -141,11 +141,11 @@ window.JARGON = [
   },
   {
     "jargon": "Action items",
-    "plain": "Tasks to complete"
+    "plain": "tasks to complete"
   },
   {
     "jargon": "Actionable",
-    "plain": "Something you can actually do"
+    "plain": "something you can actually do"
   },
   {
     "jargon": "Actions speak louder than words",
@@ -153,17 +153,17 @@ window.JARGON = [
   },
   {
     "jargon": "Activity based costing",
-    "plain": "A costing method that assigns costs based on the activities that drive them",
+    "plain": "a costing method that assigns costs based on the activities that drive them",
     "abbrev": "ABC"
   },
   {
     "jargon": "Actual period",
-    "plain": "Stands for actual period — usually a column name in financial reports",
+    "plain": "stands for actual period — usually a column name in financial reports",
     "abbrev": "ACT"
   },
   {
     "jargon": "Actuals",
-    "plain": "Real numbers, as opposed to estimates"
+    "plain": "real numbers, as opposed to estimates"
   },
   {
     "jargon": "Add fuel to the fire",
@@ -175,20 +175,20 @@ window.JARGON = [
   },
   {
     "jargon": "Advance pricing agreement",
-    "plain": "A deal with tax authorities fixing how transfer prices are set in advance",
+    "plain": "a deal with tax authorities fixing how transfer prices are set in advance",
     "abbrev": "APA"
   },
   {
     "jargon": "Agile",
-    "plain": "Flexible, quick to adapt"
+    "plain": "flexible, quick to adapt"
   },
   {
     "jargon": "Align",
-    "plain": "Agree / get on the same page"
+    "plain": "agree / get on the same page"
   },
   {
     "jargon": "Alignment",
-    "plain": "Everyone agreeing on the plan"
+    "plain": "everyone agreeing on the plan"
   },
   {
     "jargon": "All bark and no bite",
@@ -224,7 +224,7 @@ window.JARGON = [
   },
   {
     "jargon": "Altman Z-score",
-    "plain": "A formula predicting the likelihood of a company going bankrupt",
+    "plain": "a formula predicting the likelihood of a company going bankrupt",
     "abbrev": "Z-Score"
   },
   {
@@ -241,21 +241,21 @@ window.JARGON = [
   },
   {
     "jargon": "Analysis paralysis",
-    "plain": "Overthinking a decision until nothing gets done"
+    "plain": "overthinking a decision until nothing gets done"
   },
   {
     "jargon": "Annual recurring revenues",
-    "plain": "Predictable revenue expected every year",
+    "plain": "predictable revenue expected every year",
     "abbrev": "ARR"
   },
   {
     "jargon": "Anti-money laundering",
-    "plain": "Rules and processes to prevent hiding illegally obtained money",
+    "plain": "rules and processes to prevent hiding illegally obtained money",
     "abbrev": "AML"
   },
   {
     "jargon": "Applicant tracking system",
-    "plain": "Software used to manage job applications and candidates through hiring",
+    "plain": "software used to manage job applications and candidates through hiring",
     "abbrev": "ATS"
   },
   {
@@ -280,27 +280,27 @@ window.JARGON = [
   },
   {
     "jargon": "ASAP",
-    "plain": "As soon as possible",
+    "plain": "as soon as possible",
     "abbrev": "ASAP"
   },
   {
     "jargon": "Assembled workforce",
-    "plain": "The value placed on an existing team of trained employees",
+    "plain": "the value placed on an existing team of trained employees",
     "abbrev": "AWF"
   },
   {
     "jargon": "Asset-backed security",
-    "plain": "A financial security backed by a pool of assets like loans or receivables",
+    "plain": "a financial security backed by a pool of assets like loans or receivables",
     "abbrev": "ABS"
   },
   {
     "jargon": "Assets under management",
-    "plain": "Total market value of assets a firm manages on behalf of clients",
+    "plain": "total market value of assets a firm manages on behalf of clients",
     "abbrev": "AUM"
   },
   {
     "jargon": "Async",
-    "plain": "Not at the same time — done on your own schedule",
+    "plain": "not at the same time — done on your own schedule",
     "abbrev": "Async"
   },
   {
@@ -321,7 +321,7 @@ window.JARGON = [
   },
   {
     "jargon": "At the end of the day",
-    "plain": "Ultimately / when all is said and done"
+    "plain": "ultimately / when all is said and done"
   },
   {
     "jargon": "Ate / Ate that up",
@@ -329,26 +329,26 @@ window.JARGON = [
   },
   {
     "jargon": "Attrition",
-    "plain": "The gradual reduction of staff through resignations and retirements without immediate replacement"
+    "plain": "the gradual reduction of staff through resignations and retirements without immediate replacement"
   },
   {
     "jargon": "Available for sale",
-    "plain": "Financial assets not held to maturity and not for active trading",
+    "plain": "financial assets not held to maturity and not for active trading",
     "abbrev": "AFS"
   },
   {
     "jargon": "Average revenue per user",
-    "plain": "Total revenue divided by number of users",
+    "plain": "total revenue divided by number of users",
     "abbrev": "ARPU"
   },
   {
     "jargon": "B2B",
-    "plain": "Business to business — selling to other companies",
+    "plain": "business to business — selling to other companies",
     "abbrev": "B2B"
   },
   {
     "jargon": "B2C",
-    "plain": "Business to consumer — selling directly to individuals",
+    "plain": "business to consumer — selling directly to individuals",
     "abbrev": "B2C"
   },
   {
@@ -357,7 +357,7 @@ window.JARGON = [
   },
   {
     "jargon": "Back burner",
-    "plain": "Something deprioritised to be returned to later"
+    "plain": "something deprioritised to be returned to later"
   },
   {
     "jargon": "Back to basics",
@@ -365,7 +365,7 @@ window.JARGON = [
   },
   {
     "jargon": "Back to the drawing board",
-    "plain": "Start over from scratch after something fails"
+    "plain": "start over from scratch after something fails"
   },
   {
     "jargon": "Back to the drawing board",
@@ -373,7 +373,7 @@ window.JARGON = [
   },
   {
     "jargon": "Back-of-the-envelope",
-    "plain": "A rough, quick calculation"
+    "plain": "a rough, quick calculation"
   },
   {
     "jargon": "Backhanded compliment",
@@ -385,25 +385,25 @@ window.JARGON = [
   },
   {
     "jargon": "Balance sheet",
-    "plain": "A financial snapshot showing assets, liabilities, and equity",
+    "plain": "a financial snapshot showing assets, liabilities, and equity",
     "abbrev": "BS"
   },
   {
     "jargon": "Balance sheet",
-    "plain": "A financial snapshot of assets, liabilities, and equity at a point in time",
+    "plain": "a financial snapshot of assets, liabilities, and equity at a point in time",
     "abbrev": "B/S"
   },
   {
     "jargon": "Ballpark figure",
-    "plain": "A rough estimate"
+    "plain": "a rough estimate"
   },
   {
     "jargon": "Bandwidth",
-    "plain": "Time and energy available to take on work"
+    "plain": "time and energy available to take on work"
   },
   {
     "jargon": "Base erosion and profit shifting",
-    "plain": "Tax strategies that shift profits to low-tax countries",
+    "plain": "tax strategies that shift profits to low-tax countries",
     "abbrev": "BEPS"
   },
   {
@@ -412,7 +412,7 @@ window.JARGON = [
   },
   {
     "jargon": "Baseline",
-    "plain": "The starting point used for comparison"
+    "plain": "the starting point used for comparison"
   },
   {
     "jargon": "Be my guest",
@@ -440,7 +440,7 @@ window.JARGON = [
   },
   {
     "jargon": "Benchmarking",
-    "plain": "Comparing your results to others in the field"
+    "plain": "comparing your results to others in the field"
   },
   {
     "jargon": "Bend over backward",
@@ -452,7 +452,7 @@ window.JARGON = [
   },
   {
     "jargon": "Best practice",
-    "plain": "The recommended or most effective way to do something"
+    "plain": "the recommended or most effective way to do something"
   },
   {
     "jargon": "Bestie",
@@ -468,7 +468,7 @@ window.JARGON = [
   },
   {
     "jargon": "Beta coefficient",
-    "plain": "A measure of how much a stock moves relative to the market",
+    "plain": "a measure of how much a stock moves relative to the market",
     "abbrev": "BC"
   },
   {
@@ -489,7 +489,7 @@ window.JARGON = [
   },
   {
     "jargon": "Big picture",
-    "plain": "The overall view, not the fine details"
+    "plain": "the overall view, not the fine details"
   },
   {
     "jargon": "Big wheel",
@@ -497,7 +497,7 @@ window.JARGON = [
   },
   {
     "jargon": "Bill of materials",
-    "plain": "A list of all parts and materials needed to make a product",
+    "plain": "a list of all parts and materials needed to make a product",
     "abbrev": "BOM"
   },
   {
@@ -506,11 +506,11 @@ window.JARGON = [
   },
   {
     "jargon": "Bite off more than you can chew",
-    "plain": "Take on more than you can realistically handle"
+    "plain": "take on more than you can realistically handle"
   },
   {
     "jargon": "Bite the bullet",
-    "plain": "Face a tough situation with courage and just get on with it"
+    "plain": "face a tough situation with courage and just get on with it"
   },
   {
     "jargon": "Bite the bullet",
@@ -526,7 +526,7 @@ window.JARGON = [
   },
   {
     "jargon": "Bleeding edge",
-    "plain": "Even more cutting-edge than leading edge — sometimes riskily so"
+    "plain": "even more cutting-edge than leading edge — sometimes riskily so"
   },
   {
     "jargon": "Blew me away",
@@ -550,23 +550,23 @@ window.JARGON = [
   },
   {
     "jargon": "Blue ocean strategy",
-    "plain": "Creating a new market rather than competing in an existing crowded one"
+    "plain": "creating a new market rather than competing in an existing crowded one"
   },
   {
     "jargon": "Blue-sky thinking",
-    "plain": "Imaginative ideas unconstrained by reality or current resources"
+    "plain": "imaginative ideas unconstrained by reality or current resources"
   },
   {
     "jargon": "Boil the ocean",
-    "plain": "Try to solve everything at once — usually a bad idea"
+    "plain": "try to solve everything at once — usually a bad idea"
   },
   {
     "jargon": "Boilerplate",
-    "plain": "Standard reusable text or terms used repeatedly without change"
+    "plain": "standard reusable text or terms used repeatedly without change"
   },
   {
     "jargon": "Book value",
-    "plain": "A company's asset value according to its balance sheet",
+    "plain": "a company's asset value according to its balance sheet",
     "abbrev": "BV"
   },
   {
@@ -575,7 +575,7 @@ window.JARGON = [
   },
   {
     "jargon": "Boots on the ground",
-    "plain": "People physically present doing the actual work"
+    "plain": "people physically present doing the actual work"
   },
   {
     "jargon": "Bop",
@@ -583,19 +583,19 @@ window.JARGON = [
   },
   {
     "jargon": "Bottom line",
-    "plain": "The final result, or the most important point"
+    "plain": "the final result, or the most important point"
   },
   {
     "jargon": "Bottom-up",
-    "plain": "Starting from the details and building up to the big picture"
+    "plain": "starting from the details and building up to the big picture"
   },
   {
     "jargon": "Brain dump",
-    "plain": "Getting all your thoughts out of your head and onto paper"
+    "plain": "getting all your thoughts out of your head and onto paper"
   },
   {
     "jargon": "Brainstorm",
-    "plain": "Throw out ideas freely without judging them yet"
+    "plain": "throw out ideas freely without judging them yet"
   },
   {
     "jargon": "Bread and butter",
@@ -607,7 +607,7 @@ window.JARGON = [
   },
   {
     "jargon": "Break down silos",
-    "plain": "Remove barriers between departments to improve communication and collaboration"
+    "plain": "remove barriers between departments to improve communication and collaboration"
   },
   {
     "jargon": "Break even",
@@ -631,7 +631,7 @@ window.JARGON = [
   },
   {
     "jargon": "Bring to the table",
-    "plain": "The skills, ideas, or value someone contributes"
+    "plain": "the skills, ideas, or value a person contributes"
   },
   {
     "jargon": "Brownie points",
@@ -639,12 +639,12 @@ window.JARGON = [
   },
   {
     "jargon": "Budgeted period",
-    "plain": "Stands for budgeted period — usually a column name in financial reports",
+    "plain": "stands for budgeted period — usually a column name in financial reports",
     "abbrev": "BUD"
   },
   {
     "jargon": "Burn rate",
-    "plain": "How fast money is being spent"
+    "plain": "how fast money is being spent"
   },
   {
     "jargon": "Burn the candle at both ends",
@@ -652,7 +652,7 @@ window.JARGON = [
   },
   {
     "jargon": "Burn the midnight oil",
-    "plain": "Work very late to meet a deadline"
+    "plain": "work very late to meet a deadline"
   },
   {
     "jargon": "Bury the hatchet",
@@ -680,7 +680,7 @@ window.JARGON = [
   },
   {
     "jargon": "Buy-in",
-    "plain": "Agreement and support from the people involved"
+    "plain": "agreement and support from the people involved"
   },
   {
     "jargon": "By hook or by crook",
@@ -688,7 +688,7 @@ window.JARGON = [
   },
   {
     "jargon": "By the book",
-    "plain": "Following rules and procedures strictly"
+    "plain": "following rules and procedures strictly"
   },
   {
     "jargon": "By the skin of my teeth",
@@ -696,11 +696,11 @@ window.JARGON = [
   },
   {
     "jargon": "C-suite",
-    "plain": "The top executives of a company"
+    "plain": "the top executives of a company"
   },
   {
     "jargon": "Cadence",
-    "plain": "A regular rhythm or schedule"
+    "plain": "a regular rhythm or schedule"
   },
   {
     "jargon": "Call a spade a spade",
@@ -732,17 +732,17 @@ window.JARGON = [
   },
   {
     "jargon": "Capital asset pricing model",
-    "plain": "A model linking expected investment return to risk",
+    "plain": "a model linking expected investment return to risk",
     "abbrev": "CAPM"
   },
   {
     "jargon": "Capital expenditures",
-    "plain": "Money spent on physical assets like equipment or buildings",
+    "plain": "money spent on physical assets like equipment or buildings",
     "abbrev": "CAPEX"
   },
   {
     "jargon": "Capital gain tax",
-    "plain": "Tax paid on profit from selling an asset",
+    "plain": "tax paid on profit from selling an asset",
     "abbrev": "CTG"
   },
   {
@@ -751,27 +751,27 @@ window.JARGON = [
   },
   {
     "jargon": "Cash conversion cycle",
-    "plain": "How long it takes to turn inventory into cash",
+    "plain": "how long it takes to turn inventory into cash",
     "abbrev": "CCC"
   },
   {
     "jargon": "Cash flow",
-    "plain": "Money moving in and out of a business",
+    "plain": "money moving in and out of a business",
     "abbrev": "CF"
   },
   {
     "jargon": "Cash flow from operations",
-    "plain": "Cash generated by a company's core business activities",
+    "plain": "cash generated by a company's core business activities",
     "abbrev": "CFO"
   },
   {
     "jargon": "Cash flow margin",
-    "plain": "Cash flow from operations as a percentage of revenue",
+    "plain": "cash flow from operations as a percentage of revenue",
     "abbrev": "CFM"
   },
   {
     "jargon": "Cash flow return on investment",
-    "plain": "A measure of how well a company generates cash relative to its investment",
+    "plain": "a measure of how well a company generates cash relative to its investment",
     "abbrev": "CFROI"
   },
   {
@@ -808,12 +808,12 @@ window.JARGON = [
   },
   {
     "jargon": "Certified public accountant",
-    "plain": "A licensed accountant who has passed the CPA exam",
+    "plain": "a licensed accountant who has passed the CPA exam",
     "abbrev": "CPA"
   },
   {
     "jargon": "Change management",
-    "plain": "The process of communicating and managing organisational changes"
+    "plain": "the process of communicating and managing organisational changes"
   },
   {
     "jargon": "Charmed life",
@@ -837,15 +837,15 @@ window.JARGON = [
   },
   {
     "jargon": "Churn rate",
-    "plain": "The rate at which customers or employees leave"
+    "plain": "the rate at which customers or employees leave"
   },
   {
     "jargon": "Circle back",
-    "plain": "Follow up on this later"
+    "plain": "follow up on this later"
   },
   {
     "jargon": "Clarity",
-    "plain": "Being clear and easy to understand"
+    "plain": "being clear and easy to understand"
   },
   {
     "jargon": "Clear as mud",
@@ -857,7 +857,7 @@ window.JARGON = [
   },
   {
     "jargon": "Clock watcher",
-    "plain": "An employee who watches the time waiting for the day to end"
+    "plain": "an employee who watches the time waiting for the day to end"
   },
   {
     "jargon": "Close but no cigar",
@@ -865,7 +865,7 @@ window.JARGON = [
   },
   {
     "jargon": "Close the loop",
-    "plain": "Finish what was started / follow up"
+    "plain": "finish what was started / follow up"
   },
   {
     "jargon": "Clown around",
@@ -877,20 +877,16 @@ window.JARGON = [
   },
   {
     "jargon": "Collaborate",
-    "plain": "Work together"
+    "plain": "work together"
   },
   {
     "jargon": "Collateralized debt obligation",
-    "plain": "A complex financial product backed by a pool of loans",
+    "plain": "a complex financial product backed by a pool of loans",
     "abbrev": "CDO"
   },
   {
     "jargon": "Come clean",
     "plain": "telling the truth about it after doing wrong"
-  },
-  {
-    "jargon": "Come clean",
-    "plain": "telling the truth about it when you've done it wrong"
   },
   {
     "jargon": "Come hell or high water",
@@ -910,12 +906,12 @@ window.JARGON = [
   },
   {
     "jargon": "Commercial margin",
-    "plain": "The profit made on sales after direct costs",
+    "plain": "the profit made on sales after direct costs",
     "abbrev": "CM"
   },
   {
     "jargon": "Comparable uncontrolled price",
-    "plain": "A transfer pricing method comparing to similar arm's-length transactions",
+    "plain": "a transfer pricing method comparing to similar arm's-length transactions",
     "abbrev": "CUP"
   },
   {
@@ -924,11 +920,11 @@ window.JARGON = [
   },
   {
     "jargon": "Compliance training",
-    "plain": "Mandatory training covering legal, safety, and policy requirements"
+    "plain": "mandatory training covering legal, safety, and policy requirements"
   },
   {
     "jargon": "Compounded annual growth rate",
-    "plain": "The steady annual growth rate needed to go from one value to another over time",
+    "plain": "the steady annual growth rate needed to go from one value to another over time",
     "abbrev": "CAGR"
   },
   {
@@ -937,12 +933,12 @@ window.JARGON = [
   },
   {
     "jargon": "Contributory asset charges",
-    "plain": "Charges applied to assets that contribute to generating income",
+    "plain": "charges applied to assets that contribute to generating income",
     "abbrev": "CAC"
   },
   {
     "jargon": "Controlled foreign company",
-    "plain": "A foreign subsidiary controlled by a home-country parent for tax purposes",
+    "plain": "a foreign subsidiary controlled by a home-country parent for tax purposes",
     "abbrev": "CFC"
   },
   {
@@ -955,31 +951,31 @@ window.JARGON = [
   },
   {
     "jargon": "Core competency",
-    "plain": "What a person or company is genuinely good at"
+    "plain": "what a person or company is genuinely good at"
   },
   {
     "jargon": "Corporate income tax",
-    "plain": "Tax a company pays on its profits",
+    "plain": "tax a company pays on its profits",
     "abbrev": "CIT"
   },
   {
     "jargon": "Cost of goods sold",
-    "plain": "The direct cost of producing what a company sells",
+    "plain": "the direct cost of producing what a company sells",
     "abbrev": "COGS"
   },
   {
     "jargon": "Cost of products sold",
-    "plain": "Similar to COGS — the cost of the products sold",
+    "plain": "similar to COGS — the cost of the products sold",
     "abbrev": "COPS"
   },
   {
     "jargon": "Cost plus",
-    "plain": "A pricing method that adds a markup on top of costs",
+    "plain": "a pricing method that adds a markup on top of costs",
     "abbrev": "CP"
   },
   {
     "jargon": "Cost plus method",
-    "plain": "A transfer pricing method based on cost plus a margin",
+    "plain": "a transfer pricing method based on cost plus a margin",
     "abbrev": "CPM"
   },
   {
@@ -988,7 +984,7 @@ window.JARGON = [
   },
   {
     "jargon": "Country by country reporting",
-    "plain": "Tax reporting that breaks down a company's financials by each country",
+    "plain": "tax reporting that breaks down a company's financials by each country",
     "abbrev": "CbCr"
   },
   {
@@ -1005,7 +1001,7 @@ window.JARGON = [
   },
   {
     "jargon": "Credit default swap",
-    "plain": "A financial contract that acts like insurance against a borrower defaulting",
+    "plain": "a financial contract that acts like insurance against a borrower defaulting",
     "abbrev": "CDS"
   },
   {
@@ -1022,7 +1018,7 @@ window.JARGON = [
   },
   {
     "jargon": "Cross-functional",
-    "plain": "Involving people from different departments"
+    "plain": "involving people from different departments"
   },
   {
     "jargon": "Curiosity killed the cat",
@@ -1030,17 +1026,17 @@ window.JARGON = [
   },
   {
     "jargon": "Current ratio",
-    "plain": "Current assets divided by current liabilities — a measure of short-term liquidity",
+    "plain": "current assets divided by current liabilities — a measure of short-term liquidity",
     "abbrev": "CR"
   },
   {
     "jargon": "Customer lifetime value",
-    "plain": "The total revenue expected from a customer over their relationship with the business",
+    "plain": "the total revenue expected from a customer over their relationship with the business",
     "abbrev": "LTV"
   },
   {
     "jargon": "Customer relationship management",
-    "plain": "Software and strategies for managing interactions with customers",
+    "plain": "software and strategies for managing interactions with customers",
     "abbrev": "CRM"
   },
   {
@@ -1049,7 +1045,7 @@ window.JARGON = [
   },
   {
     "jargon": "Cut corners",
-    "plain": "Do something the quickest way, often sacrificing quality"
+    "plain": "do something the quickest way, often sacrificing quality"
   },
   {
     "jargon": "Cut the mustard",
@@ -1057,29 +1053,25 @@ window.JARGON = [
   },
   {
     "jargon": "Cut to the chase",
-    "plain": "Skip the preamble and get to the point"
-  },
-  {
-    "jargon": "Cut to the chase",
-    "plain": "getting to the point quickly"
+    "plain": "skip the preamble and get to the point"
   },
   {
     "jargon": "Cutting-edge",
-    "plain": "The most advanced or up-to-date"
+    "plain": "the most advanced or up-to-date"
   },
   {
     "jargon": "Days inventories outstanding",
-    "plain": "Average number of days inventory is held before being sold",
+    "plain": "average number of days inventory is held before being sold",
     "abbrev": "DIO"
   },
   {
     "jargon": "Days payable outstanding",
-    "plain": "Average number of days a company takes to pay its suppliers",
+    "plain": "average number of days a company takes to pay its suppliers",
     "abbrev": "DPO"
   },
   {
     "jargon": "Days sales outstanding",
-    "plain": "Average number of days to collect payment after a sale",
+    "plain": "average number of days to collect payment after a sale",
     "abbrev": "DSO"
   },
   {
@@ -1088,22 +1080,22 @@ window.JARGON = [
   },
   {
     "jargon": "Debt ratio",
-    "plain": "Total debt divided by total assets",
+    "plain": "total debt divided by total assets",
     "abbrev": "DR"
   },
   {
     "jargon": "Debt service coverage ratio",
-    "plain": "A measure of a company's ability to cover its debt payments",
+    "plain": "a measure of a company's ability to cover its debt payments",
     "abbrev": "DSCR"
   },
   {
     "jargon": "Debt to equity ratio",
-    "plain": "How much debt a company uses compared to equity",
+    "plain": "how much debt a company uses compared to equity",
     "abbrev": "D/E"
   },
   {
     "jargon": "Deck",
-    "plain": "A PowerPoint or slides presentation"
+    "plain": "a PowerPoint or slides presentation"
   },
   {
     "jargon": "Ded / Dead",
@@ -1111,7 +1103,7 @@ window.JARGON = [
   },
   {
     "jargon": "Deep dive",
-    "plain": "Look at something in great detail"
+    "plain": "look at something in great detail"
   },
   {
     "jargon": "Deep down",
@@ -1119,17 +1111,17 @@ window.JARGON = [
   },
   {
     "jargon": "Deferred tax assets",
-    "plain": "Tax savings expected to be used in future periods",
+    "plain": "tax savings expected to be used in future periods",
     "abbrev": "DTA"
   },
   {
     "jargon": "Deferred tax liabilities",
-    "plain": "Taxes owed in the future due to timing differences",
+    "plain": "taxes owed in the future due to timing differences",
     "abbrev": "DTL"
   },
   {
     "jargon": "Deliverable",
-    "plain": "A finished piece of work handed over to someone"
+    "plain": "a finished piece of work handed over to a person"
   },
   {
     "jargon": "Deliverables",
@@ -1141,7 +1133,7 @@ window.JARGON = [
   },
   {
     "jargon": "Depreciation and amortization",
-    "plain": "Spreading the cost of assets over their useful life",
+    "plain": "spreading the cost of assets over their useful life",
     "abbrev": "D&A"
   },
   {
@@ -1154,12 +1146,12 @@ window.JARGON = [
   },
   {
     "jargon": "Discount dividend method",
-    "plain": "Values a stock based on expected future dividends",
+    "plain": "values a stock based on expected future dividends",
     "abbrev": "DDM"
   },
   {
     "jargon": "Discounted cash flow",
-    "plain": "A valuation method based on the present value of future cash flows",
+    "plain": "a valuation method based on the present value of future cash flows",
     "abbrev": "DCF"
   },
   {
@@ -1168,15 +1160,15 @@ window.JARGON = [
   },
   {
     "jargon": "Disrupt",
-    "plain": "Fundamentally change how an industry works"
+    "plain": "fundamentally change how an industry works"
   },
   {
     "jargon": "Disruptive",
-    "plain": "Changing how things are done in a big way"
+    "plain": "changing how things are done in a big way"
   },
   {
     "jargon": "Dividend yield",
-    "plain": "Annual dividend as a percentage of share price",
+    "plain": "annual dividend as a percentage of share price",
     "abbrev": "DY"
   },
   {
@@ -1228,21 +1220,21 @@ window.JARGON = [
     "plain": "not liking what's being said even though you acknowledge it could be real"
   },
   {
-    "jargon": "Don’t sweat the small stuff",
+    "jargon": "Don't sweat the small stuff",
     "plain": "do not spend time worrying about insignificant issues"
   },
   {
     "jargon": "Double down",
-    "plain": "Commit even more strongly to a course of action"
+    "plain": "commit even more strongly to a course of action"
   },
   {
     "jargon": "Double tax treaties",
-    "plain": "Agreements between countries to prevent double taxation",
+    "plain": "agreements between countries to prevent double taxation",
     "abbrev": "DTT"
   },
   {
     "jargon": "Double-click on that",
-    "plain": "Look at that more closely"
+    "plain": "look at that more closely"
   },
   {
     "jargon": "Down the tube",
@@ -1258,11 +1250,11 @@ window.JARGON = [
   },
   {
     "jargon": "Drill down",
-    "plain": "Get into the details"
+    "plain": "get into the details"
   },
   {
     "jargon": "Drink the Kool-Aid",
-    "plain": "Blindly follow a company's direction without question"
+    "plain": "blindly follow a company's direction without question"
   },
   {
     "jargon": "Drip",
@@ -1270,7 +1262,7 @@ window.JARGON = [
   },
   {
     "jargon": "Drive",
-    "plain": "Lead or push something forward"
+    "plain": "lead or push something forward"
   },
   {
     "jargon": "Driving her nuts",
@@ -1290,7 +1282,7 @@ window.JARGON = [
   },
   {
     "jargon": "Ducks in a row",
-    "plain": "Everything organised and in order before proceeding"
+    "plain": "everything organised and in order before proceeding"
   },
   {
     "jargon": "Due diligence",
@@ -1298,21 +1290,21 @@ window.JARGON = [
   },
   {
     "jargon": "Dumpster fire",
-    "plain": "A situation that is catastrophically bad"
+    "plain": "a situation that is catastrophically bad"
   },
   {
     "jargon": "Earning after tax",
-    "plain": "Profit remaining after all taxes are paid",
+    "plain": "profit remaining after all taxes are paid",
     "abbrev": "EAT"
   },
   {
     "jargon": "Earnings before interest and taxes",
-    "plain": "Profit before interest and tax costs are deducted",
+    "plain": "profit before interest and tax costs are deducted",
     "abbrev": "EBIT"
   },
   {
     "jargon": "Earnings per share",
-    "plain": "Company profit divided by number of shares",
+    "plain": "company profit divided by number of shares",
     "abbrev": "EPS"
   },
   {
@@ -1333,21 +1325,21 @@ window.JARGON = [
   },
   {
     "jargon": "Eat the frog",
-    "plain": "Tackle the hardest or most unpleasant task first"
+    "plain": "tackle the hardest or most unpleasant task first"
   },
   {
     "jargon": "EBITDA",
-    "plain": "Earnings before interest, taxes, depreciation, and amortisation — a rough measure of profit",
+    "plain": "earnings before interest, taxes, depreciation, and amortisation — a rough measure of profit",
     "abbrev": "EBITDA"
   },
   {
     "jargon": "Economic value added",
-    "plain": "Profit after subtracting the cost of capital",
+    "plain": "profit after subtracting the cost of capital",
     "abbrev": "EVA"
   },
   {
     "jargon": "Ecosystem",
-    "plain": "All the interconnected players in a space"
+    "plain": "all the interconnected players in a space"
   },
   {
     "jargon": "Egg on your face",
@@ -1359,48 +1351,48 @@ window.JARGON = [
   },
   {
     "jargon": "Employee engagement",
-    "plain": "How emotionally committed and motivated an employee is in their work"
+    "plain": "how emotionally committed and motivated an employee is in their work"
   },
   {
     "jargon": "Employee lifecycle",
-    "plain": "The stages an employee goes through from hire to departure"
+    "plain": "the stages an employee goes through from hire to departure"
   },
   {
     "jargon": "Employee stock ownership plan",
-    "plain": "A scheme giving employees ownership stakes in the company",
+    "plain": "a scheme giving employees ownership stakes in the company",
     "abbrev": "ESOP"
   },
   {
     "jargon": "Empower",
-    "plain": "Give someone the tools and authority to act"
+    "plain": "give a person the tools and authority to act"
   },
   {
     "jargon": "End-to-end",
-    "plain": "From start to finish, covering everything",
+    "plain": "from start to finish, covering everything",
     "abbrev": "E2E"
   },
   {
     "jargon": "Engage",
-    "plain": "Get involved with / talk to"
+    "plain": "get involved with / talk to"
   },
   {
     "jargon": "Enterprise resource planning",
-    "plain": "Business management software integrating core company processes",
+    "plain": "business management software integrating core company processes",
     "abbrev": "ERP"
   },
   {
     "jargon": "EOD",
-    "plain": "End of day",
+    "plain": "end of day",
     "abbrev": "EOD"
   },
   {
     "jargon": "EOW",
-    "plain": "End of week",
+    "plain": "end of week",
     "abbrev": "EOW"
   },
   {
     "jargon": "Equity value",
-    "plain": "The total value of a company's shares",
+    "plain": "the total value of a company's shares",
     "abbrev": "EV"
   },
   {
@@ -1409,12 +1401,12 @@ window.JARGON = [
   },
   {
     "jargon": "ETA",
-    "plain": "Estimated time of arrival — when something is expected",
+    "plain": "estimated time of arrival — when something is expected",
     "abbrev": "ETA"
   },
   {
     "jargon": "Evangelize",
-    "plain": "Enthusiastically promote an idea internally"
+    "plain": "enthusiastically promote an idea internally"
   },
   {
     "jargon": "Every cloud has a silver lining",
@@ -1426,7 +1418,7 @@ window.JARGON = [
   },
   {
     "jargon": "Execution",
-    "plain": "Actually doing the work and delivering results"
+    "plain": "actually doing the work and delivering results"
   },
   {
     "jargon": "Extra",
@@ -1438,7 +1430,7 @@ window.JARGON = [
   },
   {
     "jargon": "Fail fast",
-    "plain": "Try things quickly, learn from failure, and move on"
+    "plain": "try things quickly, learn from failure, and move on"
   },
   {
     "jargon": "Fair and square",
@@ -1446,12 +1438,12 @@ window.JARGON = [
   },
   {
     "jargon": "Fair market value",
-    "plain": "The price an asset would sell for in an open market",
+    "plain": "the price an asset would sell for in an open market",
     "abbrev": "FMV"
   },
   {
     "jargon": "Fair value",
-    "plain": "The estimated worth of an asset in a transaction",
+    "plain": "the estimated worth of an asset in a transaction",
     "abbrev": "FV"
   },
   {
@@ -1464,7 +1456,7 @@ window.JARGON = [
   },
   {
     "jargon": "Fast-track",
-    "plain": "Speed something up / prioritize it"
+    "plain": "speed something up / prioritize it"
   },
   {
     "jargon": "Fat cat",
@@ -1492,17 +1484,17 @@ window.JARGON = [
   },
   {
     "jargon": "Financial Accounting Standards Board",
-    "plain": "The US body that sets accounting standards",
+    "plain": "the US body that sets accounting standards",
     "abbrev": "FASB"
   },
   {
     "jargon": "Financial planning and analysis",
-    "plain": "The team or function that handles budgets, forecasts, and analysis",
+    "plain": "the team or function that handles budgets, forecasts, and analysis",
     "abbrev": "FP&A"
   },
   {
     "jargon": "Financial statements",
-    "plain": "Formal reports of a company's financial position and performance",
+    "plain": "formal reports of a company's financial position and performance",
     "abbrev": "FS"
   },
   {
@@ -1515,11 +1507,11 @@ window.JARGON = [
   },
   {
     "jargon": "Fire drill",
-    "plain": "An urgent unexpected task that disrupts normal work"
+    "plain": "an urgent unexpected task that disrupts normal work"
   },
   {
     "jargon": "First in first out",
-    "plain": "Inventory method where oldest stock is used or sold first",
+    "plain": "inventory method where oldest stock is used or sold first",
     "abbrev": "FIFO"
   },
   {
@@ -1532,12 +1524,12 @@ window.JARGON = [
   },
   {
     "jargon": "Fixed charge coverage ratio",
-    "plain": "A measure of a company's ability to cover fixed costs like interest after capital expenditure",
+    "plain": "a measure of a company's ability to cover fixed costs like interest after capital expenditure",
     "abbrev": "FCCR"
   },
   {
     "jargon": "Flag",
-    "plain": "Point something out / raise a concern"
+    "plain": "point something out / raise a concern"
   },
   {
     "jargon": "Flavor of the month",
@@ -1565,7 +1557,7 @@ window.JARGON = [
   },
   {
     "jargon": "Follow in someone's footsteps",
-    "plain": "following the same path in life as a person else"
+    "plain": "following the same path in life as another person"
   },
   {
     "jargon": "FOMO",
@@ -1605,20 +1597,20 @@ window.JARGON = [
   },
   {
     "jargon": "For the long haul",
-    "plain": "Committed for a long period of time"
+    "plain": "committed for a long period of time"
   },
   {
     "jargon": "Forecast",
-    "plain": "An estimate of what's coming"
+    "plain": "an estimate of what's coming"
   },
   {
     "jargon": "Forecast of some category",
-    "plain": "An estimate of a specific financial figure",
+    "plain": "an estimate of a specific financial figure",
     "abbrev": "FCST"
   },
   {
     "jargon": "Foreign exchange",
-    "plain": "Converting one currency to another",
+    "plain": "converting one currency to another",
     "abbrev": "FX"
   },
   {
@@ -1635,12 +1627,12 @@ window.JARGON = [
   },
   {
     "jargon": "Free cash flow",
-    "plain": "Cash left after operating expenses and capital spending",
+    "plain": "cash left after operating expenses and capital spending",
     "abbrev": "FCF"
   },
   {
     "jargon": "Friction",
-    "plain": "Anything that slows things down or causes problems"
+    "plain": "anything that slows things down or causes problems"
   },
   {
     "jargon": "From time to time",
@@ -1648,7 +1640,7 @@ window.JARGON = [
   },
   {
     "jargon": "Full disclosure",
-    "plain": "Declaring a personal connection or conflict of interest upfront"
+    "plain": "declaring a personal connection or conflict of interest upfront"
   },
   {
     "jargon": "Full of crap",
@@ -1660,22 +1652,22 @@ window.JARGON = [
   },
   {
     "jargon": "Full time equivalent",
-    "plain": "A measure of workload equal to one full-time employee",
+    "plain": "a measure of workload equal to one full-time employee",
     "abbrev": "FTE"
   },
   {
     "jargon": "Full year forecast",
-    "plain": "A projection for the entire financial year",
+    "plain": "a projection for the entire financial year",
     "abbrev": "FYF"
   },
   {
     "jargon": "FYI",
-    "plain": "For your information",
+    "plain": "for your information",
     "abbrev": "FYI"
   },
   {
     "jargon": "Gain traction",
-    "plain": "Start making real progress"
+    "plain": "start making real progress"
   },
   {
     "jargon": "Game changer",
@@ -1683,7 +1675,7 @@ window.JARGON = [
   },
   {
     "jargon": "Gas / Gassed up",
-    "plain": "to hype someone up or be overly confident"
+    "plain": "to hype a person up or be overly confident"
   },
   {
     "jargon": "Gatekeep",
@@ -1695,22 +1687,22 @@ window.JARGON = [
   },
   {
     "jargon": "General and administration costs",
-    "plain": "Overhead costs not tied to making products",
+    "plain": "overhead costs not tied to making products",
     "abbrev": "G&A"
   },
   {
     "jargon": "General ledger",
-    "plain": "The master record of all a company's financial transactions",
+    "plain": "the master record of all a company's financial transactions",
     "abbrev": "GL"
   },
   {
     "jargon": "Generally accepted accounting principles",
-    "plain": "The standard accounting rules used in the US",
+    "plain": "the standard accounting rules used in the US",
     "abbrev": "GAAP"
   },
   {
     "jargon": "Generally accepted accounting principles (US)",
-    "plain": "The accounting standards required for US public companies",
+    "plain": "the accounting standards required for US public companies",
     "abbrev": "US GAAP"
   },
   {
@@ -1747,7 +1739,7 @@ window.JARGON = [
   },
   {
     "jargon": "Get the ball rolling",
-    "plain": "Make a start on something"
+    "plain": "make a start on something"
   },
   {
     "jargon": "Get the sack",
@@ -1759,7 +1751,7 @@ window.JARGON = [
   },
   {
     "jargon": "Get your foot in the door",
-    "plain": "Take a first step toward a bigger opportunity"
+    "plain": "take a first step toward a bigger opportunity"
   },
   {
     "jargon": "Getting by",
@@ -1771,7 +1763,7 @@ window.JARGON = [
   },
   {
     "jargon": "Ghosting",
-    "plain": "suddenly cutting off all communication with someone"
+    "plain": "suddenly cutting off all communication with another person"
   },
   {
     "jargon": "Give someone a song and dance",
@@ -1783,7 +1775,7 @@ window.JARGON = [
   },
   {
     "jargon": "Give the green light",
-    "plain": "Give approval for something to proceed"
+    "plain": "give approval for something to proceed"
   },
   {
     "jargon": "Give them the slip",
@@ -1819,11 +1811,11 @@ window.JARGON = [
   },
   {
     "jargon": "Go out of one's way",
-    "plain": "making an extra effort to do it for a person else"
+    "plain": "making an extra effort to do it for another person"
   },
   {
     "jargon": "Go out on a limb",
-    "plain": "putting yourself in a difficult position just to help a person else or assist with it"
+    "plain": "putting yourself in a difficult position just to help another person or assist with it"
   },
   {
     "jargon": "Go south",
@@ -1847,7 +1839,7 @@ window.JARGON = [
   },
   {
     "jargon": "Going viral",
-    "plain": "Content spreading rapidly across the internet"
+    "plain": "content spreading rapidly across the internet"
   },
   {
     "jargon": "Good egg",
@@ -1863,7 +1855,7 @@ window.JARGON = [
   },
   {
     "jargon": "Goods receipt not invoiced",
-    "plain": "Goods received but not yet billed by the supplier",
+    "plain": "goods received but not yet billed by the supplier",
     "abbrev": "GRNI"
   },
   {
@@ -1872,7 +1864,7 @@ window.JARGON = [
   },
   {
     "jargon": "Granular",
-    "plain": "Very detailed"
+    "plain": "very detailed"
   },
   {
     "jargon": "Grasping at straws",
@@ -1896,27 +1888,27 @@ window.JARGON = [
   },
   {
     "jargon": "Gross margin",
-    "plain": "Revenue minus the cost of goods sold",
+    "plain": "revenue minus the cost of goods sold",
     "abbrev": "GM"
   },
   {
     "jargon": "Gross profit",
-    "plain": "Revenue minus the direct cost of producing goods",
+    "plain": "revenue minus the direct cost of producing goods",
     "abbrev": "GP"
   },
   {
     "jargon": "Gross profit margin",
-    "plain": "Gross profit as a percentage of revenue",
+    "plain": "gross profit as a percentage of revenue",
     "abbrev": "GPM"
   },
   {
     "jargon": "GTM",
-    "plain": "Go-to-market — the plan for launching something",
+    "plain": "go-to-market — the plan for launching something",
     "abbrev": "GTM"
   },
   {
     "jargon": "Guardrails",
-    "plain": "Boundaries or limits put in place"
+    "plain": "boundaries or limits put in place"
   },
   {
     "jargon": "Gucci",
@@ -1940,11 +1932,11 @@ window.JARGON = [
   },
   {
     "jargon": "Hard stop",
-    "plain": "A firm, non-negotiable end time for a meeting"
+    "plain": "a firm, non-negotiable end time for a meeting"
   },
   {
     "jargon": "Hardcoded",
-    "plain": "Fixed and not easy to change"
+    "plain": "fixed and not easy to change"
   },
   {
     "jargon": "Haste makes waste",
@@ -1980,11 +1972,11 @@ window.JARGON = [
   },
   {
     "jargon": "Head's up",
-    "plain": "Advance warning that something needs attention"
+    "plain": "advance warning that something needs attention"
   },
   {
     "jargon": "Headcount",
-    "plain": "Number of employees"
+    "plain": "number of employees"
   },
   {
     "jargon": "Hear it on the grapevine",
@@ -1996,7 +1988,7 @@ window.JARGON = [
   },
   {
     "jargon": "Heavy lifting",
-    "plain": "Taking on the hardest, most time-consuming work"
+    "plain": "taking on the hardest, most time-consuming work"
   },
   {
     "jargon": "Heebie Jeebies",
@@ -2004,19 +1996,15 @@ window.JARGON = [
   },
   {
     "jargon": "Helicopter view",
-    "plain": "A high-level overview without the fine detail"
+    "plain": "a high-level overview without the fine detail"
   },
   {
     "jargon": "Herding cats",
-    "plain": "Trying to organise an inherently difficult or uncooperative group"
+    "plain": "trying to organise an inherently difficult or uncooperative group"
   },
   {
     "jargon": "Here and there",
     "plain": "sometimes or in various places"
-  },
-  {
-    "jargon": "High",
-    "plain": "searching everywhere thoroughly"
   },
   {
     "jargon": "High on the hog",
@@ -2024,7 +2012,7 @@ window.JARGON = [
   },
   {
     "jargon": "High-level",
-    "plain": "A general overview, not detailed"
+    "plain": "a general overview, not detailed"
   },
   {
     "jargon": "Hissy fit",
@@ -2048,7 +2036,7 @@ window.JARGON = [
   },
   {
     "jargon": "Hit the ground running",
-    "plain": "Start a new role or project with energy and enthusiasm from day one"
+    "plain": "start a new role or project with energy and enthusiasm from day one"
   },
   {
     "jargon": "Hit the jackpot",
@@ -2072,11 +2060,11 @@ window.JARGON = [
   },
   {
     "jargon": "Holistic",
-    "plain": "Looking at the whole thing, not just parts"
+    "plain": "looking at the whole thing, not just parts"
   },
   {
     "jargon": "Horizon",
-    "plain": "The time period you're planning for"
+    "plain": "the time period you're planning for"
   },
   {
     "jargon": "Horse of a different color",
@@ -2084,7 +2072,7 @@ window.JARGON = [
   },
   {
     "jargon": "Hot desking",
-    "plain": "Sharing unassigned desks in an office on a first-come, first-served basis"
+    "plain": "sharing unassigned desks in an office on a first-come, first-served basis"
   },
   {
     "jargon": "How do you like them apples",
@@ -2100,7 +2088,7 @@ window.JARGON = [
   },
   {
     "jargon": "Ideation",
-    "plain": "Coming up with ideas"
+    "plain": "coming up with ideas"
   },
   {
     "jargon": "Idle hands are the devil's tools",
@@ -2124,12 +2112,12 @@ window.JARGON = [
   },
   {
     "jargon": "Immaterial",
-    "plain": "Too small to significantly affect financial statements",
+    "plain": "too small to significantly affect financial statements",
     "abbrev": "IMM"
   },
   {
     "jargon": "Impact",
-    "plain": "The real-world difference something makes"
+    "plain": "the real-world difference something makes"
   },
   {
     "jargon": "In a nutshell",
@@ -2165,7 +2153,7 @@ window.JARGON = [
   },
   {
     "jargon": "In the black",
-    "plain": "Operating at a profit"
+    "plain": "operating at a profit"
   },
   {
     "jargon": "In the boondocks",
@@ -2181,58 +2169,54 @@ window.JARGON = [
   },
   {
     "jargon": "In the loop",
-    "plain": "Kept informed and up to date on something"
-  },
-  {
-    "jargon": "In the loop",
-    "plain": "aware of what is going on"
+    "plain": "kept informed and up to date on something"
   },
   {
     "jargon": "In the weeds",
-    "plain": "Stuck on fine details instead of the big picture"
+    "plain": "stuck on fine details instead of the big picture"
   },
   {
     "jargon": "Incentivize",
-    "plain": "Give people a reason to do something"
+    "plain": "give people a reason to do something"
   },
   {
     "jargon": "Income statement",
-    "plain": "A report showing revenues, costs, and profit over a period",
+    "plain": "a report showing revenues, costs, and profit over a period",
     "abbrev": "IS"
   },
   {
     "jargon": "Initial public offering",
-    "plain": "When a company first sells shares to the public",
+    "plain": "when a company first sells shares to the public",
     "abbrev": "IPO"
   },
   {
     "jargon": "Intellectual property",
-    "plain": "Creations of the mind protected by law, like patents or trademarks",
+    "plain": "creations of the mind protected by law, like patents or trademarks",
     "abbrev": "IP"
   },
   {
     "jargon": "Intercompany",
-    "plain": "Transactions between entities within the same corporate group",
+    "plain": "transactions between entities within the same corporate group",
     "abbrev": "IC"
   },
   {
     "jargon": "Internal rate of return",
-    "plain": "The growth rate at which an investment breaks even in present value terms",
+    "plain": "the growth rate at which an investment breaks even in present value terms",
     "abbrev": "IRR"
   },
   {
     "jargon": "International accounting standards",
-    "plain": "Accounting rules issued by the IASB",
+    "plain": "accounting rules issued by the IASB",
     "abbrev": "IAS"
   },
   {
     "jargon": "International accounting standards board",
-    "plain": "The global body that issues IFRS accounting standards",
+    "plain": "the global body that issues IFRS accounting standards",
     "abbrev": "IASB"
   },
   {
     "jargon": "International financial reporting standards",
-    "plain": "Global accounting standards issued by the IASB",
+    "plain": "global accounting standards issued by the IASB",
     "abbrev": "IFRS"
   },
   {
@@ -2245,7 +2229,7 @@ window.JARGON = [
   },
   {
     "jargon": "It is what it is",
-    "plain": "Accepting a situation you cannot change"
+    "plain": "accepting a situation you cannot change"
   },
   {
     "jargon": "It takes one to know one",
@@ -2269,7 +2253,7 @@ window.JARGON = [
   },
   {
     "jargon": "Iterate",
-    "plain": "Improve something step by step"
+    "plain": "improve something step by step"
   },
   {
     "jargon": "IYKYK",
@@ -2289,7 +2273,7 @@ window.JARGON = [
   },
   {
     "jargon": "Joint venture",
-    "plain": "A business arrangement where two or more parties pool resources for a project",
+    "plain": "a business arrangement where two or more parties pool resources for a project",
     "abbrev": "JV"
   },
   {
@@ -2306,7 +2290,7 @@ window.JARGON = [
   },
   {
     "jargon": "Jump the shark",
-    "plain": "Reach the point where quality or relevance starts to decline"
+    "plain": "reach the point where quality or relevance starts to decline"
   },
   {
     "jargon": "Jump through hoops",
@@ -2370,12 +2354,12 @@ window.JARGON = [
   },
   {
     "jargon": "Key performance indicator",
-    "plain": "A number used to measure success",
+    "plain": "a number used to measure success",
     "abbrev": "KPI"
   },
   {
     "jargon": "Key takeaway",
-    "plain": "The most important thing to remember"
+    "plain": "the most important thing to remember"
   },
   {
     "jargon": "Keyed up",
@@ -2391,12 +2375,11 @@ window.JARGON = [
   },
   {
     "jargon": "Killing it",
-    "plain": "Performing exceptionally well"
+    "plain": "performing exceptionally well"
   },
   {
     "jargon": "Kit and caboodle",
-    "plain": "everything or all things",
-    "example": "not wanting to be talked to"
+    "plain": "everything or all things"
   },
   {
     "jargon": "Knee Jerk",
@@ -2408,7 +2391,7 @@ window.JARGON = [
   },
   {
     "jargon": "Know your client",
-    "plain": "Due diligence process to verify a customer's identity",
+    "plain": "due diligence process to verify a customer's identity",
     "abbrev": "KYC"
   },
   {
@@ -2433,7 +2416,7 @@ window.JARGON = [
   },
   {
     "jargon": "Ladder up",
-    "plain": "Connect this smaller thing to the bigger goal"
+    "plain": "connect this smaller thing to the bigger goal"
   },
   {
     "jargon": "Laid off",
@@ -2441,7 +2424,7 @@ window.JARGON = [
   },
   {
     "jargon": "Laser focus",
-    "plain": "Extreme, narrow concentration on one specific thing"
+    "plain": "extreme, narrow concentration on one specific thing"
   },
   {
     "jargon": "Last but not least",
@@ -2449,17 +2432,17 @@ window.JARGON = [
   },
   {
     "jargon": "Last financial year",
-    "plain": "The most recently completed financial year",
+    "plain": "the most recently completed financial year",
     "abbrev": "LFY"
   },
   {
     "jargon": "Last in first out",
-    "plain": "Inventory method where the newest stock is used or sold first",
+    "plain": "inventory method where the newest stock is used or sold first",
     "abbrev": "LIFO"
   },
   {
     "jargon": "Last year",
-    "plain": "Stands for last year — usually a column name in reports",
+    "plain": "stands for last year — usually a column name in reports",
     "abbrev": "LY"
   },
   {
@@ -2472,7 +2455,7 @@ window.JARGON = [
   },
   {
     "jargon": "Lean in",
-    "plain": "Commit more fully / get more involved"
+    "plain": "commit more fully / get more involved"
   },
   {
     "jargon": "Learn by rote",
@@ -2480,11 +2463,7 @@ window.JARGON = [
   },
   {
     "jargon": "Learn the ropes",
-    "plain": "Learn how things work in a new role or environment"
-  },
-  {
-    "jargon": "Learn the ropes",
-    "plain": "learning how to do a new job"
+    "plain": "learn how things work in a new role or environment"
   },
   {
     "jargon": "Learned my lesson",
@@ -2520,11 +2499,11 @@ window.JARGON = [
   },
   {
     "jargon": "Leverage",
-    "plain": "Use something to your advantage"
+    "plain": "use something to your advantage"
   },
   {
     "jargon": "Leveraged buyout",
-    "plain": "Acquiring a company using mostly borrowed money",
+    "plain": "acquiring a company using mostly borrowed money",
     "abbrev": "LBO"
   },
   {
@@ -2553,7 +2532,7 @@ window.JARGON = [
   },
   {
     "jargon": "Limited partner",
-    "plain": "A partner whose liability is limited to their investment",
+    "plain": "a partner whose liability is limited to their investment",
     "abbrev": "LP"
   },
   {
@@ -2570,16 +2549,16 @@ window.JARGON = [
   },
   {
     "jargon": "Long shot",
-    "plain": "An attempt with a small chance of success"
+    "plain": "an attempt with a small chance of success"
   },
   {
     "jargon": "Long term",
-    "plain": "Referring to an extended time period, usually over one year",
+    "plain": "referring to an extended time period, usually over one year",
     "abbrev": "LT"
   },
   {
     "jargon": "Long term growth rate",
-    "plain": "The expected rate of growth over the long run",
+    "plain": "the expected rate of growth over the long run",
     "abbrev": "LGR"
   },
   {
@@ -2588,7 +2567,7 @@ window.JARGON = [
   },
   {
     "jargon": "Loop someone in",
-    "plain": "Keep someone informed about what is happening"
+    "plain": "keep a person informed about what is happening"
   },
   {
     "jargon": "Loose cannon",
@@ -2608,11 +2587,11 @@ window.JARGON = [
   },
   {
     "jargon": "Lots of moving parts",
-    "plain": "A complex situation with many interdependencies"
+    "plain": "a complex situation with many interdependencies"
   },
   {
     "jargon": "Low-hanging fruit",
-    "plain": "Easy wins that are quick to achieve"
+    "plain": "easy wins that are quick to achieve"
   },
   {
     "jargon": "Low-key / High-key",
@@ -2680,7 +2659,7 @@ window.JARGON = [
   },
   {
     "jargon": "Mergers and acquisitions",
-    "plain": "Buying, selling, or combining companies",
+    "plain": "buying, selling, or combining companies",
     "abbrev": "M&A"
   },
   {
@@ -2693,7 +2672,7 @@ window.JARGON = [
   },
   {
     "jargon": "Micromanager",
-    "plain": "A boss who excessively monitors and controls every detail of their team's work"
+    "plain": "a boss who excessively monitors and controls every detail of their team's work"
   },
   {
     "jargon": "Mid",
@@ -2721,17 +2700,17 @@ window.JARGON = [
   },
   {
     "jargon": "Month on month growth",
-    "plain": "Growth compared to the previous month",
+    "plain": "growth compared to the previous month",
     "abbrev": "MoM"
   },
   {
     "jargon": "Month to date",
-    "plain": "Figures accumulated from the start of the current month",
+    "plain": "figures accumulated from the start of the current month",
     "abbrev": "MTD"
   },
   {
     "jargon": "Monthly recurring revenues",
-    "plain": "Predictable revenue expected every month",
+    "plain": "predictable revenue expected every month",
     "abbrev": "MRR"
   },
   {
@@ -2740,7 +2719,7 @@ window.JARGON = [
   },
   {
     "jargon": "Move fast and break things",
-    "plain": "Prioritise speed and innovation over caution"
+    "plain": "prioritise speed and innovation over caution"
   },
   {
     "jargon": "Move the needle",
@@ -2748,11 +2727,11 @@ window.JARGON = [
   },
   {
     "jargon": "Moving the goalposts",
-    "plain": "Changing the rules mid-task to make it harder for others"
+    "plain": "changing the rules mid-task to make it harder for others"
   },
   {
     "jargon": "Multi-period excess earning method",
-    "plain": "An intangible asset valuation method based on excess earnings over time",
+    "plain": "an intangible asset valuation method based on excess earnings over time",
     "abbrev": "MPEEM"
   },
   {
@@ -2765,7 +2744,7 @@ window.JARGON = [
   },
   {
     "jargon": "MVP",
-    "plain": "Minimum viable product — the simplest version that can be tested",
+    "plain": "minimum viable product — the simplest version that can be tested",
     "abbrev": "MVP"
   },
   {
@@ -2774,51 +2753,51 @@ window.JARGON = [
   },
   {
     "jargon": "NDA",
-    "plain": "Non-disclosure agreement — a legal promise to keep information private",
+    "plain": "non-disclosure agreement — a legal promise to keep information private",
     "abbrev": "NDA"
   },
   {
     "jargon": "Needle in a haystack",
-    "plain": "Something very difficult to find among many other things"
+    "plain": "something very difficult to find among many other things"
   },
   {
     "jargon": "Net asset value",
-    "plain": "Total assets minus total liabilities",
+    "plain": "total assets minus total liabilities",
     "abbrev": "NAV"
   },
   {
     "jargon": "Net financial position",
-    "plain": "Total debt minus cash — shows net borrowing",
+    "plain": "total debt minus cash — shows net borrowing",
     "abbrev": "NFP"
   },
   {
     "jargon": "Net operating loss",
-    "plain": "A tax loss that can be carried forward to offset future profits",
+    "plain": "a tax loss that can be carried forward to offset future profits",
     "abbrev": "NOL"
   },
   {
     "jargon": "Net operating profit after tax",
-    "plain": "Operating profit after tax, used in valuation models",
+    "plain": "operating profit after tax, used in valuation models",
     "abbrev": "NOPLAT"
   },
   {
     "jargon": "Net present value",
-    "plain": "The current value of future cash flows after discounting",
+    "plain": "the current value of future cash flows after discounting",
     "abbrev": "NPV"
   },
   {
     "jargon": "Net promoting score",
-    "plain": "A measure of how likely customers are to recommend you",
+    "plain": "a measure of how likely customers are to recommend you",
     "abbrev": "NPS"
   },
   {
     "jargon": "Net working capital",
-    "plain": "Current assets minus current liabilities",
+    "plain": "current assets minus current liabilities",
     "abbrev": "NWC"
   },
   {
     "jargon": "Net-net",
-    "plain": "All things considered / the bottom line"
+    "plain": "all things considered / the bottom line"
   },
   {
     "jargon": "Never bite the hand that feeds you",
@@ -2830,7 +2809,7 @@ window.JARGON = [
   },
   {
     "jargon": "Nimble",
-    "plain": "Quick and able to change direction easily"
+    "plain": "quick and able to change direction easily"
   },
   {
     "jargon": "Nip something in the bud",
@@ -2841,16 +2820,8 @@ window.JARGON = [
     "plain": "the most fundamental aspects of it"
   },
   {
-    "jargon": "No",
-    "plain": "easy and simple"
-  },
-  {
     "jargon": "No dice",
     "plain": "not going to happen"
-  },
-  {
-    "jargon": "No pain",
-    "plain": "needing to exert yourself to accomplish things"
   },
   {
     "jargon": "No rhyme or reason",
@@ -2858,12 +2829,12 @@ window.JARGON = [
   },
   {
     "jargon": "Non-performing loan",
-    "plain": "A loan where the borrower has stopped making payments",
+    "plain": "a loan where the borrower has stopped making payments",
     "abbrev": "NPL"
   },
   {
     "jargon": "North Star",
-    "plain": "The main goal everything else points toward"
+    "plain": "the main goal everything else points toward"
   },
   {
     "jargon": "Not a spark of decency",
@@ -2887,7 +2858,7 @@ window.JARGON = [
   },
   {
     "jargon": "NPC",
-    "plain": "non-playable character; someone who seems to lack independent thought or personality"
+    "plain": "non-playable character; a person who seems to lack independent thought or personality"
   },
   {
     "jargon": "Number cruncher",
@@ -2907,11 +2878,11 @@ window.JARGON = [
   },
   {
     "jargon": "Offboarding",
-    "plain": "The structured process of managing an employee's departure from a company"
+    "plain": "the structured process of managing an employee's departure from a company"
   },
   {
     "jargon": "Office drone",
-    "plain": "Someone doing repetitive, mundane work every day"
+    "plain": "a person doing repetitive, mundane work every day"
   },
   {
     "jargon": "Og / OG",
@@ -2919,7 +2890,7 @@ window.JARGON = [
   },
   {
     "jargon": "OKR",
-    "plain": "Objectives and key results — a goal-setting method",
+    "plain": "objectives and key results — a goal-setting method",
     "abbrev": "OKR"
   },
   {
@@ -2948,11 +2919,11 @@ window.JARGON = [
   },
   {
     "jargon": "On the radar",
-    "plain": "Being watched or considered"
+    "plain": "being watched or considered"
   },
   {
     "jargon": "On the same page",
-    "plain": "Everyone sharing the same understanding or agreement"
+    "plain": "everyone sharing the same understanding or agreement"
   },
   {
     "jargon": "On the spot",
@@ -2968,7 +2939,7 @@ window.JARGON = [
   },
   {
     "jargon": "Onboarding",
-    "plain": "The process of integrating a new employee into a company"
+    "plain": "the process of integrating a new employee into a company"
   },
   {
     "jargon": "Once and for all",
@@ -2988,11 +2959,11 @@ window.JARGON = [
   },
   {
     "jargon": "Oomf",
-    "plain": "one Of My Followers (subtweeting someone)"
+    "plain": "one Of My Followers (subtweeting a person)"
   },
   {
     "jargon": "OOO",
-    "plain": "Out of office",
+    "plain": "out of office",
     "abbrev": "OOO"
   },
   {
@@ -3001,33 +2972,33 @@ window.JARGON = [
   },
   {
     "jargon": "Open the kimono",
-    "plain": "Share information that is usually kept private"
+    "plain": "share information that is usually kept private"
   },
   {
     "jargon": "Operating expenses",
-    "plain": "Day-to-day costs of running a business",
+    "plain": "day-to-day costs of running a business",
     "abbrev": "OPEX"
   },
   {
     "jargon": "Operating line of credit",
-    "plain": "A flexible loan for short-term business cash needs",
+    "plain": "a flexible loan for short-term business cash needs",
     "abbrev": "OLC"
   },
   {
     "jargon": "Operationalize",
-    "plain": "Put a plan into actual practice"
+    "plain": "put a plan into actual practice"
   },
   {
     "jargon": "Optics",
-    "plain": "How something looks to others — the public perception of a decision"
+    "plain": "how something looks to others — the public perception of a decision"
   },
   {
     "jargon": "Optimize",
-    "plain": "Make something work as well as possible"
+    "plain": "make something work as well as possible"
   },
   {
     "jargon": "Organic growth",
-    "plain": "Growth that comes from within, not from buying other companies"
+    "plain": "growth that comes from within, not from buying other companies"
   },
   {
     "jargon": "Out of date",
@@ -3043,7 +3014,7 @@ window.JARGON = [
   },
   {
     "jargon": "Out of the box",
-    "plain": "Ready to use as-is, without changes"
+    "plain": "ready to use as-is, without changes"
   },
   {
     "jargon": "Out of the frying pan and into the fire",
@@ -3055,7 +3026,7 @@ window.JARGON = [
   },
   {
     "jargon": "Out on a limb",
-    "plain": "Doing or saying something risky without support"
+    "plain": "doing or saying something risky without support"
   },
   {
     "jargon": "Out on the town",
@@ -3067,20 +3038,20 @@ window.JARGON = [
   },
   {
     "jargon": "Outcome",
-    "plain": "The result of doing something"
+    "plain": "the result of doing something"
   },
   {
     "jargon": "Ownership",
-    "plain": "Taking full responsibility for something"
+    "plain": "taking full responsibility for something"
   },
   {
     "jargon": "P&L",
-    "plain": "Profit and loss — a summary of income and expenses",
+    "plain": "profit and loss — a summary of income and expenses",
     "abbrev": "P&L"
   },
   {
     "jargon": "Pain point",
-    "plain": "A frustration or problem people have"
+    "plain": "a frustration or problem people have"
   },
   {
     "jargon": "Pandora's box",
@@ -3088,11 +3059,11 @@ window.JARGON = [
   },
   {
     "jargon": "Par for the course",
-    "plain": "What is normally expected — the standard outcome"
+    "plain": "what is normally expected — the standard outcome"
   },
   {
     "jargon": "Paradigm shift",
-    "plain": "A fundamental change in how things are done"
+    "plain": "a fundamental change in how things are done"
   },
   {
     "jargon": "Party animal",
@@ -3104,7 +3075,7 @@ window.JARGON = [
   },
   {
     "jargon": "Pay as you earn",
-    "plain": "A system where income tax is deducted from wages before payment",
+    "plain": "a system where income tax is deducted from wages before payment",
     "abbrev": "PAYE"
   },
   {
@@ -3113,7 +3084,7 @@ window.JARGON = [
   },
   {
     "jargon": "Peel back the onion",
-    "plain": "Dig deeper to find what's really going on"
+    "plain": "dig deeper to find what's really going on"
   },
   {
     "jargon": "Peg out",
@@ -3125,15 +3096,15 @@ window.JARGON = [
   },
   {
     "jargon": "People analytics",
-    "plain": "Using data to understand and make decisions about employees"
+    "plain": "using data to understand and make decisions about employees"
   },
   {
     "jargon": "Per my last email",
-    "plain": "Politely pointing out something already addressed in a previous message"
+    "plain": "politely pointing out something already addressed in a previous message"
   },
   {
     "jargon": "Performance review",
-    "plain": "A formal evaluation of an employee's work and progress"
+    "plain": "a formal evaluation of an employee's work and progress"
   },
   {
     "jargon": "Periodi / Periodt",
@@ -3141,7 +3112,7 @@ window.JARGON = [
   },
   {
     "jargon": "Personal income tax",
-    "plain": "Tax individuals pay on their earnings",
+    "plain": "tax individuals pay on their earnings",
     "abbrev": "PIT"
   },
   {
@@ -3162,11 +3133,11 @@ window.JARGON = [
   },
   {
     "jargon": "Piggyback",
-    "plain": "Build on an existing idea rather than starting from scratch"
+    "plain": "build on an existing idea rather than starting from scratch"
   },
   {
     "jargon": "Ping",
-    "plain": "Send a quick message to someone"
+    "plain": "send a quick message to a person"
   },
   {
     "jargon": "Pipe down",
@@ -3178,11 +3149,11 @@ window.JARGON = [
   },
   {
     "jargon": "Pipeline",
-    "plain": "Work or deals that are in progress"
+    "plain": "work or deals that are in progress"
   },
   {
     "jargon": "Pivot",
-    "plain": "Change direction significantly"
+    "plain": "change direction significantly"
   },
   {
     "jargon": "Play devil's advocate",
@@ -3198,7 +3169,7 @@ window.JARGON = [
   },
   {
     "jargon": "POC",
-    "plain": "Proof of concept — a test to show something could work",
+    "plain": "proof of concept — a test to show something could work",
     "abbrev": "POC"
   },
   {
@@ -3211,11 +3182,11 @@ window.JARGON = [
   },
   {
     "jargon": "Preboarding",
-    "plain": "Preparing a new hire before their first day — paperwork, access, welcome messages"
+    "plain": "preparing a new hire before their first day — paperwork, access, welcome messages"
   },
   {
     "jargon": "Present value",
-    "plain": "What a future sum of money is worth today",
+    "plain": "what a future sum of money is worth today",
     "abbrev": "PV"
   },
   {
@@ -3224,17 +3195,17 @@ window.JARGON = [
   },
   {
     "jargon": "Price to book ratio",
-    "plain": "Share price divided by book value per share",
+    "plain": "share price divided by book value per share",
     "abbrev": "P/B"
   },
   {
     "jargon": "Price to earnings ratio",
-    "plain": "Share price divided by earnings per share",
+    "plain": "share price divided by earnings per share",
     "abbrev": "P/E"
   },
   {
     "jargon": "Price to sales ratio",
-    "plain": "Share price divided by revenue per share",
+    "plain": "share price divided by revenue per share",
     "abbrev": "P/S"
   },
   {
@@ -3243,31 +3214,31 @@ window.JARGON = [
   },
   {
     "jargon": "Private equity",
-    "plain": "Investment in companies not listed on a stock exchange",
+    "plain": "investment in companies not listed on a stock exchange",
     "abbrev": "PE"
   },
   {
     "jargon": "Proactive",
-    "plain": "Acting before problems arise, not waiting"
+    "plain": "acting before problems arise, not waiting"
   },
   {
     "jargon": "Profit level indicator",
-    "plain": "A ratio used in transfer pricing to measure profitability",
+    "plain": "a ratio used in transfer pricing to measure profitability",
     "abbrev": "PLI"
   },
   {
     "jargon": "Profit margin",
-    "plain": "Net profit as a percentage of revenue",
+    "plain": "net profit as a percentage of revenue",
     "abbrev": "PM"
   },
   {
     "jargon": "Profit split method",
-    "plain": "A transfer pricing method splitting combined profits between related entities",
+    "plain": "a transfer pricing method splitting combined profits between related entities",
     "abbrev": "PSM"
   },
   {
     "jargon": "Property plant and equipment",
-    "plain": "Long-term physical assets used in operations",
+    "plain": "long-term physical assets used in operations",
     "abbrev": "PPE"
   },
   {
@@ -3288,24 +3259,24 @@ window.JARGON = [
   },
   {
     "jargon": "Pulse check",
-    "plain": "A quick, regular check-in on employee wellbeing or project progress"
+    "plain": "a quick, regular check-in on employee wellbeing or project progress"
   },
   {
     "jargon": "Punch a puppy",
-    "plain": "Do something unpleasant but necessary for the good of the business"
+    "plain": "do something unpleasant but necessary for the good of the business"
   },
   {
     "jargon": "Punt",
-    "plain": "Delay or postpone a decision"
+    "plain": "delay or postpone a decision"
   },
   {
     "jargon": "Purchase price allocation",
-    "plain": "Assigning values to assets and liabilities when a company is acquired",
+    "plain": "assigning values to assets and liabilities when a company is acquired",
     "abbrev": "PPA"
   },
   {
     "jargon": "Purchasing power parity",
-    "plain": "A theory comparing currencies based on what they can buy",
+    "plain": "a theory comparing currencies based on what they can buy",
     "abbrev": "PPP"
   },
   {
@@ -3314,11 +3285,11 @@ window.JARGON = [
   },
   {
     "jargon": "Push the envelope",
-    "plain": "Go beyond what's been done before"
+    "plain": "go beyond what's been done before"
   },
   {
     "jargon": "Put a pin in it",
-    "plain": "Set this aside for now"
+    "plain": "set this aside for now"
   },
   {
     "jargon": "Put on my thinking cap",
@@ -3326,7 +3297,7 @@ window.JARGON = [
   },
   {
     "jargon": "Put out a fire",
-    "plain": "Deal with an urgent unexpected problem"
+    "plain": "deal with an urgent unexpected problem"
   },
   {
     "jargon": "Put someone on the spot",
@@ -3346,17 +3317,17 @@ window.JARGON = [
   },
   {
     "jargon": "Quarter-over-quarter",
-    "plain": "Compared to the previous three-month period",
+    "plain": "compared to the previous three-month period",
     "abbrev": "QoQ"
   },
   {
     "jargon": "Quick ratio",
-    "plain": "A strict measure of short-term liquidity using only the most liquid assets",
+    "plain": "a strict measure of short-term liquidity using only the most liquid assets",
     "abbrev": "QR"
   },
   {
     "jargon": "Quick win",
-    "plain": "Something small that can be done fast to show progress"
+    "plain": "something small that can be done fast to show progress"
   },
   {
     "jargon": "Racking my brain",
@@ -3376,7 +3347,7 @@ window.JARGON = [
   },
   {
     "jargon": "Reach out",
-    "plain": "Contact someone"
+    "plain": "contact a person"
   },
   {
     "jargon": "Real McCoy",
@@ -3384,15 +3355,11 @@ window.JARGON = [
   },
   {
     "jargon": "Reboarding",
-    "plain": "Reintegrating an employee returning from extended leave"
+    "plain": "reintegrating an employee returning from extended leave"
   },
   {
     "jargon": "Red flag",
     "plain": "a sign that acts as a warning"
-  },
-  {
-    "jargon": "Red flag",
-    "plain": "warning sign in a person or situation"
   },
   {
     "jargon": "Red letter day",
@@ -3400,7 +3367,7 @@ window.JARGON = [
   },
   {
     "jargon": "Reinvent the wheel",
-    "plain": "Redo something that already exists and works"
+    "plain": "redo something that already exists and works"
   },
   {
     "jargon": "Rent-free",
@@ -3408,12 +3375,12 @@ window.JARGON = [
   },
   {
     "jargon": "Resale price method",
-    "plain": "A transfer pricing method based on resale price minus a margin",
+    "plain": "a transfer pricing method based on resale price minus a margin",
     "abbrev": "RPM"
   },
   {
     "jargon": "Research and development",
-    "plain": "Work done to create new products or improve existing ones",
+    "plain": "work done to create new products or improve existing ones",
     "abbrev": "R&D"
   },
   {
@@ -3422,36 +3389,36 @@ window.JARGON = [
   },
   {
     "jargon": "Return on assets",
-    "plain": "How efficiently a company uses its assets to generate profit",
+    "plain": "how efficiently a company uses its assets to generate profit",
     "abbrev": "ROA"
   },
   {
     "jargon": "Return on capital employed",
-    "plain": "Profit as a percentage of the capital used to generate it",
+    "plain": "profit as a percentage of the capital used to generate it",
     "abbrev": "ROCE"
   },
   {
     "jargon": "Return on equity",
-    "plain": "Profit as a percentage of shareholders' equity",
+    "plain": "profit as a percentage of shareholders' equity",
     "abbrev": "ROE"
   },
   {
     "jargon": "Return on invested capital",
-    "plain": "How effectively a company uses invested capital to generate profit",
+    "plain": "how effectively a company uses invested capital to generate profit",
     "abbrev": "ROIC"
   },
   {
     "jargon": "Return on sales",
-    "plain": "Operating profit as a percentage of revenue",
+    "plain": "operating profit as a percentage of revenue",
     "abbrev": "ROS"
   },
   {
     "jargon": "Reverse mentoring",
-    "plain": "Younger employees mentoring older ones, often on technology or culture"
+    "plain": "younger employees mentoring older ones, often on technology or culture"
   },
   {
     "jargon": "Risk-adjusted return on capital",
-    "plain": "A performance measure that accounts for the risk taken to generate returns",
+    "plain": "a performance measure that accounts for the risk taken to generate returns",
     "abbrev": "RAROC"
   },
   {
@@ -3460,15 +3427,15 @@ window.JARGON = [
   },
   {
     "jargon": "Roadmap",
-    "plain": "A plan showing what will be done and when"
+    "plain": "a plan showing what will be done and when"
   },
   {
     "jargon": "Robust",
-    "plain": "Strong and reliable"
+    "plain": "strong and reliable"
   },
   {
     "jargon": "ROI",
-    "plain": "Return on investment — what you got back for what you spent",
+    "plain": "return on investment — what you got back for what you spent",
     "abbrev": "ROI"
   },
   {
@@ -3480,10 +3447,6 @@ window.JARGON = [
     "plain": "causing annoyance or irritation"
   },
   {
-    "jargon": "Run",
-    "plain": "common and ordinary"
-  },
-  {
     "jargon": "Run circles around someone",
     "plain": "being more knowledgeable or skilled than a person"
   },
@@ -3493,7 +3456,7 @@ window.JARGON = [
   },
   {
     "jargon": "Run it up the flagpole",
-    "plain": "Share an idea to see how people react before committing"
+    "plain": "share an idea to see how people react before committing"
   },
   {
     "jargon": "Run one's mouth off",
@@ -3505,11 +3468,11 @@ window.JARGON = [
   },
   {
     "jargon": "Run rate",
-    "plain": "What results would be if the current pace continued all year"
+    "plain": "what results would be if the current pace continued all year"
   },
   {
     "jargon": "Run the numbers",
-    "plain": "Perform the financial or data calculations"
+    "plain": "perform the financial or data calculations"
   },
   {
     "jargon": "Runway",
@@ -3525,7 +3488,7 @@ window.JARGON = [
   },
   {
     "jargon": "Sarbanes-Oxley",
-    "plain": "A US law requiring strict financial reporting and internal controls",
+    "plain": "a US law requiring strict financial reporting and internal controls",
     "abbrev": "SOX"
   },
   {
@@ -3542,7 +3505,7 @@ window.JARGON = [
   },
   {
     "jargon": "Scalable",
-    "plain": "Can grow or handle more without breaking down"
+    "plain": "can grow or handle more without breaking down"
   },
   {
     "jargon": "Scapegoat",
@@ -3554,11 +3517,7 @@ window.JARGON = [
   },
   {
     "jargon": "Scope creep",
-    "plain": "When a project quietly grows beyond what was agreed"
-  },
-  {
-    "jargon": "scpilkies",
-    "plain": "feeling restless and wanting to get up and move around"
+    "plain": "when a project quietly grows beyond what was agreed"
   },
   {
     "jargon": "Sea legs",
@@ -3566,11 +3525,11 @@ window.JARGON = [
   },
   {
     "jargon": "Seamless",
-    "plain": "Smooth, with no obvious joins or problems"
+    "plain": "smooth, with no obvious joins or problems"
   },
   {
     "jargon": "Securities and exchange commission",
-    "plain": "The US regulator overseeing securities markets",
+    "plain": "the US regulator overseeing securities markets",
     "abbrev": "SEC"
   },
   {
@@ -3595,7 +3554,7 @@ window.JARGON = [
   },
   {
     "jargon": "Selling general and administrative expenses",
-    "plain": "All costs not directly tied to making a product",
+    "plain": "all costs not directly tied to making a product",
     "abbrev": "SG&A"
   },
   {
@@ -3628,7 +3587,7 @@ window.JARGON = [
   },
   {
     "jargon": "Short term debt",
-    "plain": "Debt that must be repaid within a year",
+    "plain": "debt that must be repaid within a year",
     "abbrev": "STD"
   },
   {
@@ -3645,19 +3604,19 @@ window.JARGON = [
   },
   {
     "jargon": "Sidebar",
-    "plain": "An unplanned off-topic conversation that breaks out during a meeting"
+    "plain": "an unplanned off-topic conversation that breaks out during a meeting"
   },
   {
     "jargon": "Silo",
-    "plain": "A team or department that doesn't share with others"
+    "plain": "a team or department that doesn't share with others"
   },
   {
     "jargon": "Silver bullet",
-    "plain": "A simple fix that magically solves a complex problem"
+    "plain": "a simple fix that magically solves a complex problem"
   },
   {
     "jargon": "Simp",
-    "plain": "someone who does too much for someone they like"
+    "plain": "a person who does too much for a person they like"
   },
   {
     "jargon": "Sit tight",
@@ -3677,7 +3636,7 @@ window.JARGON = [
   },
   {
     "jargon": "Skin in the game",
-    "plain": "Having something personally at stake"
+    "plain": "having something personally at stake"
   },
   {
     "jargon": "Sksksk",
@@ -3685,7 +3644,7 @@ window.JARGON = [
   },
   {
     "jargon": "SLA",
-    "plain": "Service level agreement — a commitment about response times or quality",
+    "plain": "service level agreement — a commitment about response times or quality",
     "abbrev": "SLA"
   },
   {
@@ -3714,7 +3673,7 @@ window.JARGON = [
   },
   {
     "jargon": "Small and medium enterprises",
-    "plain": "Businesses below a certain size threshold",
+    "plain": "businesses below a certain size threshold",
     "abbrev": "SME"
   },
   {
@@ -3735,7 +3694,7 @@ window.JARGON = [
   },
   {
     "jargon": "Software as a service",
-    "plain": "Software delivered over the internet on a subscription basis",
+    "plain": "software delivered over the internet on a subscription basis",
     "abbrev": "SaaS"
   },
   {
@@ -3752,7 +3711,7 @@ window.JARGON = [
   },
   {
     "jargon": "SOW",
-    "plain": "Statement of work — a document spelling out what will be done",
+    "plain": "statement of work — a document spelling out what will be done",
     "abbrev": "SOW"
   },
   {
@@ -3761,7 +3720,7 @@ window.JARGON = [
   },
   {
     "jargon": "Special purpose acquisition company",
-    "plain": "A shell company raised to find and acquire a private business",
+    "plain": "a shell company raised to find and acquire a private business",
     "abbrev": "SPAC"
   },
   {
@@ -3786,7 +3745,7 @@ window.JARGON = [
   },
   {
     "jargon": "Stakeholder",
-    "plain": "Anyone affected by or with an interest in the outcome"
+    "plain": "anyone affected by or with an interest in the outcome"
   },
   {
     "jargon": "Stan",
@@ -3798,7 +3757,7 @@ window.JARGON = [
   },
   {
     "jargon": "Standard operating procedures",
-    "plain": "Documented step-by-step instructions for routine tasks",
+    "plain": "documented step-by-step instructions for routine tasks",
     "abbrev": "SOPs"
   },
   {
@@ -3815,7 +3774,7 @@ window.JARGON = [
   },
   {
     "jargon": "Stock based compensation",
-    "plain": "Paying employees with shares or stock options instead of cash",
+    "plain": "paying employees with shares or stock options instead of cash",
     "abbrev": "SBC"
   },
   {
@@ -3824,11 +3783,11 @@ window.JARGON = [
   },
   {
     "jargon": "Strategic",
-    "plain": "Planned with the bigger goal in mind"
+    "plain": "planned with the bigger goal in mind"
   },
   {
     "jargon": "Streamline",
-    "plain": "Simplify and make more efficient"
+    "plain": "simplify and make more efficient"
   },
   {
     "jargon": "Strike it rich",
@@ -3840,11 +3799,11 @@ window.JARGON = [
   },
   {
     "jargon": "Succession planning",
-    "plain": "Identifying and developing people to fill future leadership roles"
+    "plain": "identifying and developing people to fill future leadership roles"
   },
   {
     "jargon": "Sunsetting",
-    "plain": "Phasing something out gradually"
+    "plain": "phasing something out gradually"
   },
   {
     "jargon": "Sus",
@@ -3852,7 +3811,7 @@ window.JARGON = [
   },
   {
     "jargon": "Sustainable growth rate",
-    "plain": "Maximum growth a company can achieve without additional external financing",
+    "plain": "maximum growth a company can achieve without additional external financing",
     "abbrev": "SGR"
   },
   {
@@ -3865,15 +3824,15 @@ window.JARGON = [
   },
   {
     "jargon": "Sync up",
-    "plain": "Reconnect and realign briefly with a colleague or team"
+    "plain": "reconnect and realign briefly with a colleague or team"
   },
   {
     "jargon": "Synergy",
-    "plain": "When working together produces better results than working apart"
+    "plain": "when working together produces better results than working apart"
   },
   {
     "jargon": "Table that",
-    "plain": "Put it aside for now (US) / bring it up for discussion (UK)"
+    "plain": "put it aside for now (US) / bring it up for discussion (UK)"
   },
   {
     "jargon": "Take a rain check",
@@ -3889,7 +3848,7 @@ window.JARGON = [
   },
   {
     "jargon": "Take it offline",
-    "plain": "Discuss this separately, not in this meeting"
+    "plain": "discuss this separately, not in this meeting"
   },
   {
     "jargon": "Take it with a grain of salt/a pinch of salt",
@@ -3913,7 +3872,7 @@ window.JARGON = [
   },
   {
     "jargon": "Takeaway",
-    "plain": "The key point to remember"
+    "plain": "the key point to remember"
   },
   {
     "jargon": "Takeaways",
@@ -3921,7 +3880,7 @@ window.JARGON = [
   },
   {
     "jargon": "Talent management",
-    "plain": "Identifying, hiring, developing, and retaining the right people"
+    "plain": "identifying, hiring, developing, and retaining the right people"
   },
   {
     "jargon": "Talk someone's ear off",
@@ -3949,17 +3908,17 @@ window.JARGON = [
   },
   {
     "jargon": "Tax amortization benefit",
-    "plain": "The tax saving from amortising an intangible asset",
+    "plain": "the tax saving from amortising an intangible asset",
     "abbrev": "TAB"
   },
   {
     "jargon": "TBC",
-    "plain": "To be confirmed",
+    "plain": "to be confirmed",
     "abbrev": "TBC"
   },
   {
     "jargon": "TBD",
-    "plain": "To be decided",
+    "plain": "to be decided",
     "abbrev": "TBD"
   },
   {
@@ -3968,21 +3927,17 @@ window.JARGON = [
   },
   {
     "jargon": "Term loan",
-    "plain": "A bank loan with a fixed repayment schedule",
+    "plain": "a bank loan with a fixed repayment schedule",
     "abbrev": "TL"
   },
   {
     "jargon": "Terminal value",
-    "plain": "The value of a business beyond the forecast period",
+    "plain": "the value of a business beyond the forecast period",
     "abbrev": "TV"
   },
   {
     "jargon": "That hit the spot",
     "plain": "exactly what was desired or needed, especially with regard to food or drink"
-  },
-  {
-    "jargon": "That is to say",
-    "plain": "a person has a very small appetite"
   },
   {
     "jargon": "That ship has sailed",
@@ -4110,11 +4065,11 @@ window.JARGON = [
   },
   {
     "jargon": "Thought leader",
-    "plain": "Someone seen as an expert who shapes how others think"
+    "plain": "a person seen as an expert who shapes how others think"
   },
   {
     "jargon": "Thought shower",
-    "plain": "Generating a burst of ideas together — an alternative to brainstorm"
+    "plain": "generating a burst of ideas together — an alternative to brainstorm"
   },
   {
     "jargon": "Through thick and thin",
@@ -4122,7 +4077,7 @@ window.JARGON = [
   },
   {
     "jargon": "Throughput",
-    "plain": "How much gets done in a given time"
+    "plain": "how much gets done in a given time"
   },
   {
     "jargon": "Throw a curveball/Throw a curve",
@@ -4130,19 +4085,15 @@ window.JARGON = [
   },
   {
     "jargon": "Throw in the towel",
-    "plain": "Admit defeat and stop trying"
+    "plain": "admit defeat and stop trying"
   },
   {
     "jargon": "Throw it at the wall and see what sticks",
-    "plain": "Try various approaches and keep whatever works"
-  },
-  {
-    "jargon": "Throws / Throwing",
-    "plain": "to deliberately lose or mess up"
+    "plain": "try various approaches and keep whatever works"
   },
   {
     "jargon": "Tiger team",
-    "plain": "A specialist group assembled to tackle a specific problem"
+    "plain": "a specialist group assembled to tackle a specific problem"
   },
   {
     "jargon": "Tighten your belt (or belt",
@@ -4290,15 +4241,11 @@ window.JARGON = [
   },
   {
     "jargon": "Top line",
-    "plain": "Total revenue"
+    "plain": "total revenue"
   },
   {
     "jargon": "Touch base",
-    "plain": "Check in briefly"
-  },
-  {
-    "jargon": "Touch base",
-    "plain": "getting in contact with a person"
+    "plain": "check in briefly"
   },
   {
     "jargon": "Touch grass",
@@ -4306,7 +4253,7 @@ window.JARGON = [
   },
   {
     "jargon": "Town hall",
-    "plain": "A company-wide meeting open to all employees"
+    "plain": "a company-wide meeting open to all employees"
   },
   {
     "jargon": "Toxic",
@@ -4314,26 +4261,26 @@ window.JARGON = [
   },
   {
     "jargon": "Traction",
-    "plain": "Early signs that something is working"
+    "plain": "early signs that something is working"
   },
   {
     "jargon": "Trailing twelve months",
-    "plain": "The most recent twelve-month period, used as a performance measure",
+    "plain": "the most recent twelve-month period, used as a performance measure",
     "abbrev": "TTM"
   },
   {
     "jargon": "Transactional net margin method",
-    "plain": "A transfer pricing method comparing net profit margins",
+    "plain": "a transfer pricing method comparing net profit margins",
     "abbrev": "TNMM"
   },
   {
     "jargon": "Transfer pricing",
-    "plain": "Setting prices for transactions between related companies in different countries",
+    "plain": "setting prices for transactions between related companies in different countries",
     "abbrev": "TP"
   },
   {
     "jargon": "Transparency",
-    "plain": "Being open and honest about what's happening"
+    "plain": "being open and honest about what's happening"
   },
   {
     "jargon": "Travel light",
@@ -4345,12 +4292,12 @@ window.JARGON = [
   },
   {
     "jargon": "Trial balance",
-    "plain": "A list of all ledger accounts and their balances at a point in time",
+    "plain": "a list of all ledger accounts and their balances at a point in time",
     "abbrev": "TB"
   },
   {
     "jargon": "Trim the fat",
-    "plain": "Remove unnecessary costs, people, or steps from a process"
+    "plain": "remove unnecessary costs, people, or steps from a process"
   },
   {
     "jargon": "Troubled waters",
@@ -4394,7 +4341,7 @@ window.JARGON = [
   },
   {
     "jargon": "Unpack",
-    "plain": "Look at this more carefully and break it down"
+    "plain": "look at this more carefully and break it down"
   },
   {
     "jargon": "Up a blind alley",
@@ -4406,11 +4353,11 @@ window.JARGON = [
   },
   {
     "jargon": "Up to speed",
-    "plain": "Familiar with the current situation or information"
+    "plain": "familiar with the current situation or information"
   },
   {
     "jargon": "Uplift",
-    "plain": "An improvement or increase"
+    "plain": "an improvement or increase"
   },
   {
     "jargon": "Upset the apple cart",
@@ -4418,33 +4365,33 @@ window.JARGON = [
   },
   {
     "jargon": "Use case",
-    "plain": "A specific situation where something is useful"
+    "plain": "a specific situation where something is useful"
   },
   {
     "jargon": "Utilize",
-    "plain": "Use"
+    "plain": "use"
   },
   {
     "jargon": "Value add",
-    "plain": "Something that makes things better or more worthwhile"
+    "plain": "something that makes things better or more worthwhile"
   },
   {
     "jargon": "Value added tax",
-    "plain": "A tax added at each stage of production and collected at the point of sale",
+    "plain": "a tax added at each stage of production and collected at the point of sale",
     "abbrev": "VAT"
   },
   {
     "jargon": "Value proposition",
-    "plain": "The reason someone should choose you over others"
+    "plain": "the reason a person should choose you over others"
   },
   {
     "jargon": "Venture capital",
-    "plain": "Funding provided to early-stage companies with high growth potential",
+    "plain": "funding provided to early-stage companies with high growth potential",
     "abbrev": "VC"
   },
   {
     "jargon": "Vertical",
-    "plain": "A specific industry or market segment"
+    "plain": "a specific industry or market segment"
   },
   {
     "jargon": "Vibe / Vibing",
@@ -4452,11 +4399,11 @@ window.JARGON = [
   },
   {
     "jargon": "Visibility",
-    "plain": "How well something can be seen or understood"
+    "plain": "how well something can be seen or understood"
   },
   {
     "jargon": "Voluntold",
-    "plain": "Told to volunteer for something — not actually optional"
+    "plain": "told to volunteer for something — not actually optional"
   },
   {
     "jargon": "Wallflower",
@@ -4476,7 +4423,7 @@ window.JARGON = [
   },
   {
     "jargon": "Watercooler",
-    "plain": "Informal social conversation between colleagues"
+    "plain": "informal social conversation between colleagues"
   },
   {
     "jargon": "We see eye to eye",
@@ -4488,12 +4435,12 @@ window.JARGON = [
   },
   {
     "jargon": "Weighted average cost of capital",
-    "plain": "The average rate a company is expected to pay to finance its assets",
+    "plain": "the average rate a company is expected to pay to finance its assets",
     "abbrev": "WACC"
   },
   {
     "jargon": "Weighted average return on assets",
-    "plain": "The average return across all assets, weighted by their value",
+    "plain": "the average return across all assets, weighted by their value",
     "abbrev": "WARA"
   },
   {
@@ -4506,12 +4453,12 @@ window.JARGON = [
   },
   {
     "jargon": "WFH",
-    "plain": "Working from home",
+    "plain": "working from home",
     "abbrev": "WFH"
   },
   {
     "jargon": "Wheelhouse",
-    "plain": "Someone's area of expertise or comfort zone"
+    "plain": "a person's area of expertise or comfort zone"
   },
   {
     "jargon": "When it rains, it pours",
@@ -4527,11 +4474,11 @@ window.JARGON = [
   },
   {
     "jargon": "Whiteboarding",
-    "plain": "Brainstorming and mapping ideas using a physical or virtual whiteboard"
+    "plain": "brainstorming and mapping ideas using a physical or virtual whiteboard"
   },
   {
     "jargon": "Whitespace",
-    "plain": "An untapped opportunity or gap in the market"
+    "plain": "an untapped opportunity or gap in the market"
   },
   {
     "jargon": "Whitewash",
@@ -4563,7 +4510,7 @@ window.JARGON = [
   },
   {
     "jargon": "Wins",
-    "plain": "Successes, big or small"
+    "plain": "successes, big or small"
   },
   {
     "jargon": "With bells on",
@@ -4571,7 +4518,7 @@ window.JARGON = [
   },
   {
     "jargon": "Withholding tax",
-    "plain": "Tax deducted at source before income is paid out",
+    "plain": "tax deducted at source before income is paid out",
     "abbrev": "WHT"
   },
   {
@@ -4580,25 +4527,25 @@ window.JARGON = [
   },
   {
     "jargon": "Wordsmithing",
-    "plain": "Carefully tweaking the exact wording"
+    "plain": "carefully tweaking the exact wording"
   },
   {
     "jargon": "Work in progress",
-    "plain": "Goods or projects started but not yet complete",
+    "plain": "goods or projects started but not yet complete",
     "abbrev": "WIP"
   },
   {
     "jargon": "Workflow",
-    "plain": "The steps followed to get work done"
+    "plain": "the steps followed to get work done"
   },
   {
     "jargon": "Working capital",
-    "plain": "Current assets minus current liabilities — funds available for day-to-day operations",
+    "plain": "current assets minus current liabilities — funds available for day-to-day operations",
     "abbrev": "WC"
   },
   {
     "jargon": "Workshop",
-    "plain": "A working session to solve a problem together"
+    "plain": "a working session to solve a problem together"
   },
   {
     "jargon": "Wouldn't be caught dead",
@@ -4614,12 +4561,12 @@ window.JARGON = [
   },
   {
     "jargon": "Year to date",
-    "plain": "Figures accumulated from the start of the financial year",
+    "plain": "figures accumulated from the start of the financial year",
     "abbrev": "YTD"
   },
   {
     "jargon": "Year-over-year",
-    "plain": "Compared to the same time last year",
+    "plain": "compared to the same time last year",
     "abbrev": "YoY"
   },
   {
@@ -4628,7 +4575,7 @@ window.JARGON = [
   },
   {
     "jargon": "Yield to maturity",
-    "plain": "The total return expected on a bond if held until it matures",
+    "plain": "the total return expected on a bond if held until it matures",
     "abbrev": "YTM"
   },
   {
@@ -4669,11 +4616,11 @@ window.JARGON = [
   },
   {
     "jargon": "Zero in on",
-    "plain": "Focus closely on one specific thing"
+    "plain": "focus closely on one specific thing"
   },
   {
     "jargon": "Zero-based budgeting",
-    "plain": "A budgeting method where every expense must be justified from scratch each period",
+    "plain": "a budgeting method where every expense must be justified from scratch each period",
     "abbrev": "ZBB"
   },
   {
@@ -4686,11 +4633,7 @@ window.JARGON = [
   },
   {
     "jargon": "Light a fire under your ass",
-    "plain": "pressure someone to hurry up and take action immediately"
-  },
-  {
-    "jargon": "Throw in the towel",
-    "plain": "give up or admit defeat on something"
+    "plain": "pressure a person to hurry up and take action immediately"
   },
   {
     "jargon": "Crack the whip",
@@ -4710,15 +4653,11 @@ window.JARGON = [
   },
   {
     "jargon": "Feet to the fire",
-    "plain": "hold someone strictly accountable for results"
+    "plain": "hold a person strictly accountable for results"
   },
   {
     "jargon": "Step on it",
     "plain": "hurry up and go faster"
-  },
-  {
-    "jargon": "Get a move on",
-    "plain": "start moving or working faster"
   },
   {
     "jargon": "No time to waste",
@@ -4810,11 +4749,7 @@ window.JARGON = [
   },
   {
     "jargon": "That's above my pay grade",
-    "plain": "that decision is for someone more senior to make, not me"
-  },
-  {
-    "jargon": "Take it offline",
-    "plain": "discuss that privately or separately, not in this meeting"
+    "plain": "that decision is for a person more senior to make, not me"
   },
   {
     "jargon": "That's a separate workstream",
@@ -4823,14 +4758,6 @@ window.JARGON = [
   {
     "jargon": "Not on my radar",
     "plain": "that is not something I am currently aware of or tracking"
-  },
-  {
-    "jargon": "That ship has sailed",
-    "plain": "that opportunity or option is no longer available"
-  },
-  {
-    "jargon": "Water under the bridge",
-    "plain": "something that happened in the past and should no longer be a concern"
   },
   {
     "jargon": "That's a moot point",
@@ -4842,7 +4769,7 @@ window.JARGON = [
   },
   {
     "jargon": "Punt on that",
-    "plain": "avoid making a decision now and defer it to someone else or a later time"
+    "plain": "avoid making a decision now and defer it to another person or a later time"
   },
   {
     "jargon": "You've got a lot of potential",
@@ -4886,7 +4813,7 @@ window.JARGON = [
   },
   {
     "jargon": "Throw someone under the bus",
-    "plain": "blame someone else for a mistake to avoid getting in trouble yourself"
+    "plain": "blame another person for a mistake to avoid getting in trouble yourself"
   },
   {
     "jargon": "Cover your ass",
@@ -4894,27 +4821,19 @@ window.JARGON = [
   },
   {
     "jargon": "Watch your back",
-    "plain": "be careful because someone may be trying to harm your position or reputation"
+    "plain": "be careful because a person may be trying to harm your position or reputation"
   },
   {
     "jargon": "Stab in the back",
-    "plain": "betray someone who trusted you"
+    "plain": "betray a person who trusted you"
   },
   {
     "jargon": "Rock the boat",
     "plain": "cause trouble or upset the current stable situation"
   },
   {
-    "jargon": "Ruffle feathers",
-    "plain": "upset or annoy people by doing something controversial"
-  },
-  {
     "jargon": "Step on toes",
-    "plain": "intrude on someone else's responsibilities or territory"
-  },
-  {
-    "jargon": "Play hardball",
-    "plain": "act in an aggressive and uncompromising way to get what you want"
+    "plain": "intrude on another person's responsibilities or territory"
   },
   {
     "jargon": "Play politics",
@@ -4941,20 +4860,12 @@ window.JARGON = [
     "plain": "a conflict over who controls or is responsible for a particular area"
   },
   {
-    "jargon": "Boil the ocean",
-    "plain": "try to do something impossibly large or comprehensive"
-  },
-  {
     "jargon": "Drinking the Kool-Aid",
     "plain": "blindly accepting and believing what leadership says without questioning it"
   },
   {
     "jargon": "Echo chamber",
     "plain": "an environment where everyone agrees with each other and no new ideas enter"
-  },
-  {
-    "jargon": "Cut to the chase",
-    "plain": "stop wasting time and get to the main point immediately"
   },
   {
     "jargon": "Talk in circles",
@@ -4977,10 +4888,6 @@ window.JARGON = [
     "plain": "let's examine that idea or statement more carefully and in detail"
   },
   {
-    "jargon": "Drill down",
-    "plain": "examine something in much more specific detail"
-  },
-  {
     "jargon": "Zoom out",
     "plain": "step back and look at the bigger picture instead of the details"
   },
@@ -4989,52 +4896,16 @@ window.JARGON = [
     "plain": "make sure everyone has the same baseline understanding before continuing"
   },
   {
-    "jargon": "Hard stop",
-    "plain": "a firm end time for a meeting that cannot be extended"
-  },
-  {
-    "jargon": "Touch base",
-    "plain": "make brief contact with someone to share a quick update"
-  },
-  {
     "jargon": "Loop in",
-    "plain": "include someone in a conversation or email chain who wasn't included before"
-  },
-  {
-    "jargon": "Reach out",
-    "plain": "contact someone to start a conversation or get information"
-  },
-  {
-    "jargon": "Circle back",
-    "plain": "return to a topic or person at a later time"
+    "plain": "include a person in a conversation or email chain who wasn't included before"
   },
   {
     "jargon": "Ping me",
     "plain": "send me a quick message to get my attention"
   },
   {
-    "jargon": "Put a pin in it",
-    "plain": "pause discussion on a topic to come back to it later"
-  },
-  {
     "jargon": "Take this to the next level",
     "plain": "improve or advance something significantly beyond where it is now"
-  },
-  {
-    "jargon": "Move the needle",
-    "plain": "make a noticeable change or improvement in a result"
-  },
-  {
-    "jargon": "Gain traction",
-    "plain": "start making real progress or getting positive results"
-  },
-  {
-    "jargon": "Get the ball rolling",
-    "plain": "start a process or activity that will continue on its own"
-  },
-  {
-    "jargon": "Hit the ground running",
-    "plain": "start something with full energy and momentum from the very beginning"
   },
   {
     "jargon": "Run with it",
@@ -5053,56 +4924,16 @@ window.JARGON = [
     "plain": "a detailed plan showing the steps needed to reach a goal over time"
   },
   {
-    "jargon": "North star",
-    "plain": "the single most important goal that guides all decisions"
-  },
-  {
     "jargon": "Boil it down",
     "plain": "simplify something complex into its most essential parts"
-  },
-  {
-    "jargon": "Peel back the onion",
-    "plain": "examine something layer by layer to understand what's really underneath"
-  },
-  {
-    "jargon": "30,000-foot view",
-    "plain": "a high-level overview of a situation without going into details"
-  },
-  {
-    "jargon": "In the weeds",
-    "plain": "focused on minor details to the point of losing sight of the bigger picture"
   },
   {
     "jargon": "Connect the dots",
     "plain": "link separate pieces of information together to understand the full picture"
   },
   {
-    "jargon": "Move fast and break things",
-    "plain": "prioritize speed and innovation over caution and perfection"
-  },
-  {
-    "jargon": "Fail fast",
-    "plain": "test ideas quickly so you can learn from failure early and cheaply"
-  },
-  {
-    "jargon": "Iterate",
-    "plain": "improve something by making a series of small repeated changes based on feedback"
-  },
-  {
-    "jargon": "Pivot",
-    "plain": "make a significant change in strategy or direction"
-  },
-  {
     "jargon": "Scale",
     "plain": "grow a business or system to handle significantly more volume or customers"
-  },
-  {
-    "jargon": "Disrupt",
-    "plain": "fundamentally change an industry by introducing a new approach"
-  },
-  {
-    "jargon": "Go-to-market",
-    "plain": "the strategy for launching a product and reaching customers"
   },
   {
     "jargon": "Land and expand",
@@ -5115,10 +4946,6 @@ window.JARGON = [
   {
     "jargon": "Pave the runway",
     "plain": "create the conditions needed for something to succeed before it launches"
-  },
-  {
-    "jargon": "Skin in the game",
-    "plain": "having a personal stake in the outcome of something"
   },
   {
     "jargon": "Right-size",
@@ -5145,36 +4972,12 @@ window.JARGON = [
     "plain": "gradually reduce activity and bring something to a close"
   },
   {
-    "jargon": "Double down",
-    "plain": "increase commitment to something, especially when others are pulling back"
-  },
-  {
     "jargon": "Hedge your bets",
     "plain": "reduce risk by supporting multiple options at the same time"
   },
   {
-    "jargon": "In the black",
-    "plain": "making a profit or having a positive bank balance"
-  },
-  {
     "jargon": "In the red",
     "plain": "losing money or having a negative bank balance"
-  },
-  {
-    "jargon": "Bottom line",
-    "plain": "the final profit or loss figure, or the most important point"
-  },
-  {
-    "jargon": "Top line",
-    "plain": "total revenue before any costs are subtracted"
-  },
-  {
-    "jargon": "Burn rate",
-    "plain": "the speed at which a company is spending its cash reserves"
-  },
-  {
-    "jargon": "Runway",
-    "plain": "the amount of time a company can operate before running out of money"
   },
   {
     "jargon": "Move the goalposts",
@@ -5189,16 +4992,8 @@ window.JARGON = [
     "plain": "an activity or factor that directly generates income for the business"
   },
   {
-    "jargon": "Low-hanging fruit",
-    "plain": "the easiest and most immediate opportunities available"
-  },
-  {
     "jargon": "Return on investment",
     "plain": "the financial benefit gained compared to the cost of something"
-  },
-  {
-    "jargon": "Value add",
-    "plain": "something that provides extra benefit beyond what is normally expected"
   },
   {
     "jargon": "Margin",
@@ -5209,24 +5004,8 @@ window.JARGON = [
     "plain": "the ongoing business costs that are not directly tied to making a product"
   },
   {
-    "jargon": "Ballpark figure",
-    "plain": "a rough estimate that is approximately correct"
-  },
-  {
     "jargon": "Order of magnitude",
     "plain": "roughly ten times larger or smaller than something else"
-  },
-  {
-    "jargon": "Bite the bullet",
-    "plain": "do something unpleasant that you have been avoiding because it is necessary"
-  },
-  {
-    "jargon": "Bite off more than you can chew",
-    "plain": "take on more work or responsibility than you are able to handle"
-  },
-  {
-    "jargon": "Jump the gun",
-    "plain": "act too soon before everything is ready"
   },
   {
     "jargon": "Take a calculated risk",
@@ -5267,10 +5046,6 @@ window.JARGON = [
   {
     "jargon": "Cut through the red tape",
     "plain": "bypass or eliminate bureaucratic obstacles to get something done faster"
-  },
-  {
-    "jargon": "Pull the trigger",
-    "plain": "make a final decision and take action"
   },
   {
     "jargon": "On the fence",
@@ -5317,16 +5092,8 @@ window.JARGON = [
     "plain": "formally process the departure of an employee or customer"
   },
   {
-    "jargon": "Headcount",
-    "plain": "the total number of employees in a company or department"
-  },
-  {
     "jargon": "Bench strength",
     "plain": "the quality and readiness of employees available to step into key roles"
-  },
-  {
-    "jargon": "Pipeline",
-    "plain": "the pool of qualified candidates being considered for a job"
   },
   {
     "jargon": "Talent pool",
@@ -5359,14 +5126,6 @@ window.JARGON = [
   {
     "jargon": "Guru",
     "plain": "an expert who is highly respected for their deep knowledge in a field"
-  },
-  {
-    "jargon": "Deliverable",
-    "plain": "a specific item or result that must be produced and handed over"
-  },
-  {
-    "jargon": "Milestone",
-    "plain": "a significant point or event that marks progress in a project"
   },
   {
     "jargon": "Action item",
@@ -5445,18 +5204,6 @@ window.JARGON = [
     "plain": "choose which disagreements are worth fighting over and let others go"
   },
   {
-    "jargon": "Know which way the wind is blowing",
-    "plain": "be aware of how a situation is developing so you can act accordingly"
-  },
-  {
-    "jargon": "Between a rock and a hard place",
-    "plain": "facing a situation where all options are difficult or unpleasant"
-  },
-  {
-    "jargon": "Burn the midnight oil",
-    "plain": "work very late into the night"
-  },
-  {
     "jargon": "Go the extra mile",
     "plain": "make more effort than is required"
   },
@@ -5501,10 +5248,6 @@ window.JARGON = [
     "plain": "demonstrate the behavior you want others to follow through your own actions"
   },
   {
-    "jargon": "Agile",
-    "plain": "a flexible approach to project management that emphasizes short cycles and fast feedback"
-  },
-  {
     "jargon": "Sprint",
     "plain": "a short, fixed period of focused work on specific tasks"
   },
@@ -5517,44 +5260,16 @@ window.JARGON = [
     "plain": "the accumulated problems caused by taking shortcuts in past coding decisions"
   },
   {
-    "jargon": "Bandwidth",
-    "plain": "the capacity someone has to take on additional work"
-  },
-  {
     "jargon": "Stack",
     "plain": "the combination of technologies used to build a product"
-  },
-  {
-    "jargon": "Scalable",
-    "plain": "capable of growing or expanding without losing quality or efficiency"
   },
   {
     "jargon": "Frictionless",
     "plain": "easy to use or navigate without unnecessary obstacles"
   },
   {
-    "jargon": "Seamless",
-    "plain": "happening smoothly without any obvious joins or interruptions"
-  },
-  {
-    "jargon": "Bleeding edge",
-    "plain": "using the most advanced and newest technology available, often before it is fully tested"
-  },
-  {
-    "jargon": "Out of the box",
-    "plain": "available immediately without requiring any special setup or customization"
-  },
-  {
     "jargon": "Under the hood",
     "plain": "the internal workings of a system that most users never see"
-  },
-  {
-    "jargon": "Pain point",
-    "plain": "a specific problem that customers or users repeatedly experience"
-  },
-  {
-    "jargon": "Use case",
-    "plain": "a specific situation in which a product or feature would be useful"
   },
   {
     "jargon": "Edge case",
@@ -5609,24 +5324,8 @@ window.JARGON = [
     "plain": "the degree to which users actively interact with a product or content"
   },
   {
-    "jargon": "Organic growth",
-    "plain": "business growth that comes from existing resources rather than paid advertising"
-  },
-  {
     "jargon": "Virality",
     "plain": "the tendency of content or a product to spread rapidly through sharing"
-  },
-  {
-    "jargon": "Thought leader",
-    "plain": "a person recognized as an authority and innovator in a particular field"
-  },
-  {
-    "jargon": "Ecosystem",
-    "plain": "a network of companies, products, and services that work together"
-  },
-  {
-    "jargon": "Value proposition",
-    "plain": "the specific benefit a product offers that makes customers choose it"
   },
   {
     "jargon": "Competitive advantage",
@@ -5637,32 +5336,12 @@ window.JARGON = [
     "plain": "a durable advantage that protects a company from competition"
   },
   {
-    "jargon": "Traction",
-    "plain": "evidence that a business idea is working and gaining real-world momentum"
-  },
-  {
     "jargon": "Proof of concept",
     "plain": "a demonstration that an idea is technically feasible"
   },
   {
-    "jargon": "Cut corners",
-    "plain": "do something carelessly or incompletely to save time or money"
-  },
-  {
-    "jargon": "By the book",
-    "plain": "strictly following all the rules and procedures"
-  },
-  {
     "jargon": "Bend the rules",
     "plain": "allow an exception to the normal rules"
-  },
-  {
-    "jargon": "Jump through hoops",
-    "plain": "complete many difficult or annoying tasks just to achieve something"
-  },
-  {
-    "jargon": "Reinvent the wheel",
-    "plain": "waste time creating something from scratch that already exists"
   },
   {
     "jargon": "Behind the scenes",
@@ -5674,11 +5353,7 @@ window.JARGON = [
   },
   {
     "jargon": "Back seat driver",
-    "plain": "someone who constantly gives unwanted advice or criticism to the person in charge"
-  },
-  {
-    "jargon": "Call the shots",
-    "plain": "be the person who makes all the important decisions"
+    "plain": "a person who constantly gives unwanted advice or criticism to the person in charge"
   },
   {
     "jargon": "At the helm",
@@ -5689,10 +5364,6 @@ window.JARGON = [
     "plain": "guide an organization or project in the right direction"
   },
   {
-    "jargon": "Weather the storm",
-    "plain": "survive a difficult period without giving up"
-  },
-  {
     "jargon": "In deep water",
     "plain": "in a difficult situation that is hard to escape from"
   },
@@ -5701,24 +5372,12 @@ window.JARGON = [
     "plain": "succeed or fail entirely on your own without any help"
   },
   {
-    "jargon": "On thin ice",
-    "plain": "in a risky situation where any mistake could cause serious problems"
-  },
-  {
     "jargon": "Get the lay of the land",
     "plain": "understand the current situation before taking action"
   },
   {
     "jargon": "Have a lot on your plate",
     "plain": "be dealing with many responsibilities or problems at the same time"
-  },
-  {
-    "jargon": "Off the top of my head",
-    "plain": "saying something from memory without looking it up"
-  },
-  {
-    "jargon": "Back to the drawing board",
-    "plain": "start over from the beginning after a plan has failed"
   },
   {
     "jargon": "Think on your feet",
@@ -5751,10 +5410,6 @@ window.JARGON = [
   {
     "jargon": "Get the green light",
     "plain": "receive approval or permission to proceed"
-  },
-  {
-    "jargon": "In the loop",
-    "plain": "included in communications and kept informed about what is happening"
   },
   {
     "jargon": "Out of the loop",
@@ -5801,10 +5456,6 @@ window.JARGON = [
     "plain": "the detailed, practical facts of a situation"
   },
   {
-    "jargon": "In a nutshell",
-    "plain": "summarized briefly and concisely"
-  },
-  {
     "jargon": "Ballpark",
     "plain": "a rough approximate range or estimate"
   },
@@ -5845,10 +5496,6 @@ window.JARGON = [
     "plain": "a target that goes well beyond what is normally expected"
   },
   {
-    "jargon": "Quick win",
-    "plain": "a small achievement that can be accomplished rapidly and shows early progress"
-  },
-  {
     "jargon": "Low-effort, high-impact",
     "plain": "requiring minimal work but producing significant results"
   },
@@ -5886,15 +5533,11 @@ window.JARGON = [
   },
   {
     "jargon": "Pick up the slack",
-    "plain": "do the work that someone else is failing to do"
+    "plain": "do the work that another person is failing to do"
   },
   {
     "jargon": "Carry the weight",
     "plain": "bear the majority of the responsibility or workload"
-  },
-  {
-    "jargon": "Heavy lifting",
-    "plain": "the most difficult or labor-intensive part of a task"
   },
   {
     "jargon": "Legwork",
@@ -5911,18 +5554,6 @@ window.JARGON = [
   {
     "jargon": "Light at the end of the tunnel",
     "plain": "a sign that a difficult situation will soon improve or end"
-  },
-  {
-    "jargon": "Open a can of worms",
-    "plain": "accidentally create a complicated new set of problems"
-  },
-  {
-    "jargon": "On the same page",
-    "plain": "having the same understanding or agreement about something"
-  },
-  {
-    "jargon": "Run it up the flagpole",
-    "plain": "share an idea with others to see how they respond to it"
   },
   {
     "jargon": "Back of the envelope",
@@ -5993,14 +5624,6 @@ window.JARGON = [
     "plain": "using the most advanced technology currently available"
   },
   {
-    "jargon": "Game changer",
-    "plain": "something that fundamentally alters the way a situation develops"
-  },
-  {
-    "jargon": "Paradigm shift",
-    "plain": "a fundamental change in the basic approach or assumption in a field"
-  },
-  {
     "jargon": "Own your mistakes",
     "plain": "take full personal responsibility for errors you made"
   },
@@ -6018,7 +5641,7 @@ window.JARGON = [
   },
   {
     "jargon": "Pass the buck",
-    "plain": "shift responsibility to someone else instead of handling it yourself"
+    "plain": "shift responsibility to another person instead of handling it yourself"
   },
   {
     "jargon": "The buck stops here",
@@ -6030,7 +5653,7 @@ window.JARGON = [
   },
   {
     "jargon": "Hold accountable",
-    "plain": "make sure someone answers for their actions or results"
+    "plain": "make sure a person answers for their actions or results"
   },
   {
     "jargon": "On your watch",
@@ -6070,11 +5693,7 @@ window.JARGON = [
   },
   {
     "jargon": "Best and final offer",
-    "plain": "the last offer someone is willing to make in a negotiation"
-  },
-  {
-    "jargon": "Win-win",
-    "plain": "a situation or agreement where all parties involved benefit"
+    "plain": "the last offer a person is willing to make in a negotiation"
   },
   {
     "jargon": "Zero-sum game",
@@ -6162,11 +5781,11 @@ window.JARGON = [
   },
   {
     "jargon": "Go to bat for someone",
-    "plain": "defend or advocate strongly for someone who needs support"
+    "plain": "defend or advocate strongly for a person who needs support"
   },
   {
     "jargon": "Have someone's back",
-    "plain": "support and defend someone when they are under pressure"
+    "plain": "support and defend a person when they are under pressure"
   },
   {
     "jargon": "Take someone under your wing",
@@ -6174,19 +5793,15 @@ window.JARGON = [
   },
   {
     "jargon": "Groom someone for a role",
-    "plain": "deliberately prepare and develop someone to take on a future position"
+    "plain": "deliberately prepare and develop a person to take on a future position"
   },
   {
     "jargon": "Delegate",
     "plain": "assign tasks and authority to others rather than doing everything yourself"
   },
   {
-    "jargon": "Empower",
-    "plain": "give someone the authority and confidence to make decisions independently"
-  },
-  {
     "jargon": "Micromanage",
-    "plain": "control every small detail of someone else's work to an excessive degree"
+    "plain": "control every small detail of another person's work to an excessive degree"
   },
   {
     "jargon": "Hands-off",
@@ -6206,11 +5821,11 @@ window.JARGON = [
   },
   {
     "jargon": "Pick up the baton",
-    "plain": "take over responsibility from someone who has handed it off"
+    "plain": "take over responsibility from a person who has handed it off"
   },
   {
     "jargon": "Hand off the baton",
-    "plain": "transfer responsibility for something to someone else"
+    "plain": "transfer responsibility for something to another person"
   },
   {
     "jargon": "Change is coming",
@@ -6361,20 +5976,8 @@ window.JARGON = [
     "plain": "the process of capturing what customers want, need, and expect"
   },
   {
-    "jargon": "Ghosting",
-    "plain": "suddenly stopping all communication with someone without explanation"
-  },
-  {
     "jargon": "Gaslight",
-    "plain": "manipulate someone into questioning their own memory or perception of events"
-  },
-  {
-    "jargon": "Toxic",
-    "plain": "describing an environment or behavior that is harmful to people's wellbeing"
-  },
-  {
-    "jargon": "FOMO",
-    "plain": "fear of missing out on something important that others are experiencing"
+    "plain": "manipulate a person into questioning their own memory or perception of events"
   },
   {
     "jargon": "TLDR",
@@ -6393,14 +5996,6 @@ window.JARGON = [
     "plain": "an assessment of the general mood or atmosphere of a group"
   },
   {
-    "jargon": "Unpack",
-    "plain": "carefully examine and explain all the elements of something complex"
-  },
-  {
-    "jargon": "Optics",
-    "plain": "how something appears to outside observers, regardless of the reality"
-  },
-  {
     "jargon": "Optics issue",
     "plain": "a situation that looks bad publicly even if it isn't actually wrong"
   },
@@ -6409,16 +6004,8 @@ window.JARGON = [
     "plain": "the story or explanation that shapes how people understand a situation"
   },
   {
-    "jargon": "Lean in",
-    "plain": "commit fully and enthusiastically to something instead of holding back"
-  },
-  {
     "jargon": "Laser focused",
     "plain": "concentrating exclusively on a single goal without any distraction"
-  },
-  {
-    "jargon": "Deep dive",
-    "plain": "conduct a thorough and detailed investigation of a topic"
   },
   {
     "jargon": "Unpack the data",
@@ -6445,32 +6032,8 @@ window.JARGON = [
     "plain": "explain what you mean in more detail"
   },
   {
-    "jargon": "Baseline",
-    "plain": "the minimum standard or starting point used for comparison"
-  },
-  {
     "jargon": "Benchmark",
     "plain": "a standard or reference point against which things are measured"
-  },
-  {
-    "jargon": "KPI",
-    "plain": "a key metric used to evaluate success in reaching a specific goal"
-  },
-  {
-    "jargon": "OKR",
-    "plain": "a goal-setting framework pairing an objective with measurable key results"
-  },
-  {
-    "jargon": "Synergy",
-    "plain": "the combined effect of working together that exceeds what each could achieve alone"
-  },
-  {
-    "jargon": "Leverage",
-    "plain": "use something to maximum advantage"
-  },
-  {
-    "jargon": "Actionable",
-    "plain": "specific enough to act on immediately"
   },
   {
     "jargon": "Impactful",
@@ -6481,20 +6044,8 @@ window.JARGON = [
     "plain": "an approach that can grow efficiently to handle much larger volume"
   },
   {
-    "jargon": "Robust",
-    "plain": "strong and unlikely to break or fail under pressure or unusual conditions"
-  },
-  {
     "jargon": "Holistic approach",
     "plain": "considering all aspects of a situation together rather than in isolation"
-  },
-  {
-    "jargon": "End-to-end",
-    "plain": "covering the entire process from start to finish without gaps"
-  },
-  {
-    "jargon": "Mission critical",
-    "plain": "absolutely essential to the success or survival of something"
   },
   {
     "jargon": "Business critical",
@@ -6573,10 +6124,6 @@ window.JARGON = [
     "plain": "a tool that defines who is Responsible, Accountable, Consulted, and Informed for tasks"
   },
   {
-    "jargon": "Stakeholder",
-    "plain": "anyone who has an interest in or is affected by the outcome of a project"
-  },
-  {
     "jargon": "Sign off",
     "plain": "give official approval for something to proceed"
   },
@@ -6591,10 +6138,6 @@ window.JARGON = [
   {
     "jargon": "Proof point",
     "plain": "a specific piece of evidence that supports a broader claim or argument"
-  },
-  {
-    "jargon": "Run rate",
-    "plain": "the current level of a metric projected forward to estimate annual performance"
   },
   {
     "jargon": "Year over year",
@@ -6646,15 +6189,11 @@ window.JARGON = [
   },
   {
     "jargon": "Small pond",
-    "plain": "a limited environment where even modest ability makes someone stand out"
+    "plain": "a limited environment where even modest ability makes a person stand out"
   },
   {
     "jargon": "Brass",
     "plain": "the senior leaders or executives of an organization"
-  },
-  {
-    "jargon": "C-suite",
-    "plain": "the group of most senior executives of a company"
   },
   {
     "jargon": "Corner office",
@@ -6671,9 +6210,5 @@ window.JARGON = [
   {
     "jargon": "Steep learning curve",
     "plain": "a situation that requires a lot of effort to learn quickly"
-  },
-  {
-    "jargon": "Up to speed",
-    "plain": "fully informed and current with the latest information"
   }
 ];

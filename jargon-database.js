@@ -4683,5 +4683,1997 @@ const JARGON = [
   {
     "jargon": "💯 / Hundo",
     "plain": "100%, completely agree, authentic, keeping it real"
+  },
+  {
+    "jargon": "Light a fire under your ass",
+    "plain": "pressure someone to hurry up and take action immediately"
+  },
+  {
+    "jargon": "Throw in the towel",
+    "plain": "give up or admit defeat on something"
+  },
+  {
+    "jargon": "Crack the whip",
+    "plain": "use authority to force people to work harder or faster"
+  },
+  {
+    "jargon": "We're bleeding time",
+    "plain": "we are wasting valuable time that we can't afford to lose"
+  },
+  {
+    "jargon": "Against the clock",
+    "plain": "working as fast as possible because time is running out"
+  },
+  {
+    "jargon": "Down to the wire",
+    "plain": "reaching the very last moment before a deadline"
+  },
+  {
+    "jargon": "Feet to the fire",
+    "plain": "hold someone strictly accountable for results"
+  },
+  {
+    "jargon": "Step on it",
+    "plain": "hurry up and go faster"
+  },
+  {
+    "jargon": "Get a move on",
+    "plain": "start moving or working faster"
+  },
+  {
+    "jargon": "No time to waste",
+    "plain": "we need to start immediately without any delay"
+  },
+  {
+    "jargon": "On borrowed time",
+    "plain": "continuing to exist or function when it should have stopped already"
+  },
+  {
+    "jargon": "Race against time",
+    "plain": "trying to finish something before a deadline runs out"
+  },
+  {
+    "jargon": "Clock is ticking",
+    "plain": "time is running out and there is pressure to act"
+  },
+  {
+    "jargon": "You need to own this",
+    "plain": "take full personal responsibility for this task or outcome"
+  },
+  {
+    "jargon": "I need you to step up",
+    "plain": "perform at a higher level or take on more responsibility"
+  },
+  {
+    "jargon": "You need more bandwidth for this",
+    "plain": "you need to free up time and mental capacity to handle this properly"
+  },
+  {
+    "jargon": "Manage up better",
+    "plain": "communicate more proactively with your manager so they're not surprised"
+  },
+  {
+    "jargon": "You're not being a team player",
+    "plain": "you are prioritizing yourself over the group's needs"
+  },
+  {
+    "jargon": "I need more from you",
+    "plain": "your current performance or effort is not meeting expectations"
+  },
+  {
+    "jargon": "You need to be more proactive",
+    "plain": "stop waiting to be told what to do and start anticipating needs"
+  },
+  {
+    "jargon": "Show more initiative",
+    "plain": "take action on your own without waiting to be asked"
+  },
+  {
+    "jargon": "Think outside the box",
+    "plain": "approach a problem creatively instead of using the usual methods"
+  },
+  {
+    "jargon": "You need to align with the vision",
+    "plain": "your approach or attitude is not matching what leadership wants"
+  },
+  {
+    "jargon": "Raise the bar",
+    "plain": "set higher standards or expectations than before"
+  },
+  {
+    "jargon": "You're leaving things on the table",
+    "plain": "you are not using all of your potential or available opportunities"
+  },
+  {
+    "jargon": "You need skin in the game",
+    "plain": "you need to have a personal stake in the outcome to be taken seriously"
+  },
+  {
+    "jargon": "Punch above your weight",
+    "plain": "achieve more than expected given your size or resources"
+  },
+  {
+    "jargon": "Let's table that",
+    "plain": "set that topic aside for now and not discuss it further today"
+  },
+  {
+    "jargon": "That's not in scope",
+    "plain": "that task or idea is outside the boundaries of what we agreed to work on"
+  },
+  {
+    "jargon": "We'll revisit that",
+    "plain": "we may discuss that again someday but probably not soon"
+  },
+  {
+    "jargon": "Park that idea",
+    "plain": "set that idea aside temporarily so we can continue with the main discussion"
+  },
+  {
+    "jargon": "That's above my pay grade",
+    "plain": "that decision is for someone more senior to make, not me"
+  },
+  {
+    "jargon": "Take it offline",
+    "plain": "discuss that privately or separately, not in this meeting"
+  },
+  {
+    "jargon": "That's a separate workstream",
+    "plain": "that belongs in a different project or team, not this one"
+  },
+  {
+    "jargon": "Not on my radar",
+    "plain": "that is not something I am currently aware of or tracking"
+  },
+  {
+    "jargon": "That ship has sailed",
+    "plain": "that opportunity or option is no longer available"
+  },
+  {
+    "jargon": "Water under the bridge",
+    "plain": "something that happened in the past and should no longer be a concern"
+  },
+  {
+    "jargon": "That's a moot point",
+    "plain": "that point no longer matters because the situation has changed"
+  },
+  {
+    "jargon": "Kick it down the road",
+    "plain": "delay making a decision or dealing with something until later"
+  },
+  {
+    "jargon": "Punt on that",
+    "plain": "avoid making a decision now and defer it to someone else or a later time"
+  },
+  {
+    "jargon": "You've got a lot of potential",
+    "plain": "you are not performing well now but might improve later"
+  },
+  {
+    "jargon": "I have high expectations of you",
+    "plain": "i am watching your performance closely and expect you not to disappoint"
+  },
+  {
+    "jargon": "I know you can do better",
+    "plain": "your current work is disappointing and needs to improve"
+  },
+  {
+    "jargon": "Keep up the good work",
+    "plain": "continue doing what you are doing at the current level"
+  },
+  {
+    "jargon": "You're on the right track",
+    "plain": "your approach is generally correct but may need more work"
+  },
+  {
+    "jargon": "Good effort",
+    "plain": "your work was acceptable but not exceptional"
+  },
+  {
+    "jargon": "That shows promise",
+    "plain": "this early work looks like it could eventually be good"
+  },
+  {
+    "jargon": "I appreciate your passion",
+    "plain": "i acknowledge your enthusiasm but it may not be enough on its own"
+  },
+  {
+    "jargon": "You bring a lot of energy",
+    "plain": "you are enthusiastic, but implied that energy alone isn't sufficient"
+  },
+  {
+    "jargon": "Interesting perspective",
+    "plain": "i heard what you said but I may not agree with it"
+  },
+  {
+    "jargon": "Throw someone under the bus",
+    "plain": "blame someone else for a mistake to avoid getting in trouble yourself"
+  },
+  {
+    "jargon": "Cover your ass",
+    "plain": "protect yourself from blame by documenting or being careful"
+  },
+  {
+    "jargon": "Watch your back",
+    "plain": "be careful because someone may be trying to harm your position or reputation"
+  },
+  {
+    "jargon": "Stab in the back",
+    "plain": "betray someone who trusted you"
+  },
+  {
+    "jargon": "Rock the boat",
+    "plain": "cause trouble or upset the current stable situation"
+  },
+  {
+    "jargon": "Ruffle feathers",
+    "plain": "upset or annoy people by doing something controversial"
+  },
+  {
+    "jargon": "Step on toes",
+    "plain": "intrude on someone else's responsibilities or territory"
+  },
+  {
+    "jargon": "Play hardball",
+    "plain": "act in an aggressive and uncompromising way to get what you want"
+  },
+  {
+    "jargon": "Play politics",
+    "plain": "manipulate people or situations for personal advantage at work"
+  },
+  {
+    "jargon": "Flex your muscles",
+    "plain": "demonstrate your power or authority to intimidate others"
+  },
+  {
+    "jargon": "Pull rank",
+    "plain": "use your higher position to force others to comply"
+  },
+  {
+    "jargon": "Jockey for position",
+    "plain": "compete aggressively for a more powerful or favorable role"
+  },
+  {
+    "jargon": "Power play",
+    "plain": "an action taken to gain control or advantage over others"
+  },
+  {
+    "jargon": "Turf war",
+    "plain": "a conflict over who controls or is responsible for a particular area"
+  },
+  {
+    "jargon": "Boil the ocean",
+    "plain": "try to do something impossibly large or comprehensive"
+  },
+  {
+    "jargon": "Drinking the Kool-Aid",
+    "plain": "blindly accepting and believing what leadership says without questioning it"
+  },
+  {
+    "jargon": "Echo chamber",
+    "plain": "an environment where everyone agrees with each other and no new ideas enter"
+  },
+  {
+    "jargon": "Cut to the chase",
+    "plain": "stop wasting time and get to the main point immediately"
+  },
+  {
+    "jargon": "Talk in circles",
+    "plain": "keep discussing without making any progress or reaching a conclusion"
+  },
+  {
+    "jargon": "Elephant in the room",
+    "plain": "an obvious problem everyone knows about but nobody wants to address"
+  },
+  {
+    "jargon": "Talk past each other",
+    "plain": "fail to communicate because each person is focused on different things"
+  },
+  {
+    "jargon": "Get everyone on the same page",
+    "plain": "make sure all people involved have the same information and understanding"
+  },
+  {
+    "jargon": "Let's unpack that",
+    "plain": "let's examine that idea or statement more carefully and in detail"
+  },
+  {
+    "jargon": "Drill down",
+    "plain": "examine something in much more specific detail"
+  },
+  {
+    "jargon": "Zoom out",
+    "plain": "step back and look at the bigger picture instead of the details"
+  },
+  {
+    "jargon": "Level set",
+    "plain": "make sure everyone has the same baseline understanding before continuing"
+  },
+  {
+    "jargon": "Hard stop",
+    "plain": "a firm end time for a meeting that cannot be extended"
+  },
+  {
+    "jargon": "Touch base",
+    "plain": "make brief contact with someone to share a quick update"
+  },
+  {
+    "jargon": "Loop in",
+    "plain": "include someone in a conversation or email chain who wasn't included before"
+  },
+  {
+    "jargon": "Reach out",
+    "plain": "contact someone to start a conversation or get information"
+  },
+  {
+    "jargon": "Circle back",
+    "plain": "return to a topic or person at a later time"
+  },
+  {
+    "jargon": "Ping me",
+    "plain": "send me a quick message to get my attention"
+  },
+  {
+    "jargon": "Put a pin in it",
+    "plain": "pause discussion on a topic to come back to it later"
+  },
+  {
+    "jargon": "Take this to the next level",
+    "plain": "improve or advance something significantly beyond where it is now"
+  },
+  {
+    "jargon": "Move the needle",
+    "plain": "make a noticeable change or improvement in a result"
+  },
+  {
+    "jargon": "Gain traction",
+    "plain": "start making real progress or getting positive results"
+  },
+  {
+    "jargon": "Get the ball rolling",
+    "plain": "start a process or activity that will continue on its own"
+  },
+  {
+    "jargon": "Hit the ground running",
+    "plain": "start something with full energy and momentum from the very beginning"
+  },
+  {
+    "jargon": "Run with it",
+    "plain": "take an idea or project and develop it independently without needing further direction"
+  },
+  {
+    "jargon": "On my plate",
+    "plain": "currently my responsibility to handle"
+  },
+  {
+    "jargon": "Full plate",
+    "plain": "already having more work or responsibilities than one can easily handle"
+  },
+  {
+    "jargon": "Road map",
+    "plain": "a detailed plan showing the steps needed to reach a goal over time"
+  },
+  {
+    "jargon": "North star",
+    "plain": "the single most important goal that guides all decisions"
+  },
+  {
+    "jargon": "Boil it down",
+    "plain": "simplify something complex into its most essential parts"
+  },
+  {
+    "jargon": "Peel back the onion",
+    "plain": "examine something layer by layer to understand what's really underneath"
+  },
+  {
+    "jargon": "30,000-foot view",
+    "plain": "a high-level overview of a situation without going into details"
+  },
+  {
+    "jargon": "In the weeds",
+    "plain": "focused on minor details to the point of losing sight of the bigger picture"
+  },
+  {
+    "jargon": "Connect the dots",
+    "plain": "link separate pieces of information together to understand the full picture"
+  },
+  {
+    "jargon": "Move fast and break things",
+    "plain": "prioritize speed and innovation over caution and perfection"
+  },
+  {
+    "jargon": "Fail fast",
+    "plain": "test ideas quickly so you can learn from failure early and cheaply"
+  },
+  {
+    "jargon": "Iterate",
+    "plain": "improve something by making a series of small repeated changes based on feedback"
+  },
+  {
+    "jargon": "Pivot",
+    "plain": "make a significant change in strategy or direction"
+  },
+  {
+    "jargon": "Scale",
+    "plain": "grow a business or system to handle significantly more volume or customers"
+  },
+  {
+    "jargon": "Disrupt",
+    "plain": "fundamentally change an industry by introducing a new approach"
+  },
+  {
+    "jargon": "Go-to-market",
+    "plain": "the strategy for launching a product and reaching customers"
+  },
+  {
+    "jargon": "Land and expand",
+    "plain": "start with a small deal and then grow the relationship over time"
+  },
+  {
+    "jargon": "Crawl, walk, run",
+    "plain": "start something slowly and simply before scaling up to full speed"
+  },
+  {
+    "jargon": "Pave the runway",
+    "plain": "create the conditions needed for something to succeed before it launches"
+  },
+  {
+    "jargon": "Skin in the game",
+    "plain": "having a personal stake in the outcome of something"
+  },
+  {
+    "jargon": "Right-size",
+    "plain": "adjust something to be the appropriate size or scale for its purpose"
+  },
+  {
+    "jargon": "Sunset",
+    "plain": "phase out or discontinue a product, service, or process"
+  },
+  {
+    "jargon": "Spin up",
+    "plain": "create or launch something new quickly"
+  },
+  {
+    "jargon": "Spin off",
+    "plain": "create a new independent company or project from part of an existing one"
+  },
+  {
+    "jargon": "Ramp up",
+    "plain": "increase the speed, scale, or intensity of something"
+  },
+  {
+    "jargon": "Wind down",
+    "plain": "gradually reduce activity and bring something to a close"
+  },
+  {
+    "jargon": "Double down",
+    "plain": "increase commitment to something, especially when others are pulling back"
+  },
+  {
+    "jargon": "Hedge your bets",
+    "plain": "reduce risk by supporting multiple options at the same time"
+  },
+  {
+    "jargon": "In the black",
+    "plain": "making a profit or having a positive bank balance"
+  },
+  {
+    "jargon": "In the red",
+    "plain": "losing money or having a negative bank balance"
+  },
+  {
+    "jargon": "Bottom line",
+    "plain": "the final profit or loss figure, or the most important point"
+  },
+  {
+    "jargon": "Top line",
+    "plain": "total revenue before any costs are subtracted"
+  },
+  {
+    "jargon": "Burn rate",
+    "plain": "the speed at which a company is spending its cash reserves"
+  },
+  {
+    "jargon": "Runway",
+    "plain": "the amount of time a company can operate before running out of money"
+  },
+  {
+    "jargon": "Move the goalposts",
+    "plain": "change the requirements or expectations after work has already begun"
+  },
+  {
+    "jargon": "Cost center",
+    "plain": "a department that spends money but does not directly generate revenue"
+  },
+  {
+    "jargon": "Revenue driver",
+    "plain": "an activity or factor that directly generates income for the business"
+  },
+  {
+    "jargon": "Low-hanging fruit",
+    "plain": "the easiest and most immediate opportunities available"
+  },
+  {
+    "jargon": "Return on investment",
+    "plain": "the financial benefit gained compared to the cost of something"
+  },
+  {
+    "jargon": "Value add",
+    "plain": "something that provides extra benefit beyond what is normally expected"
+  },
+  {
+    "jargon": "Margin",
+    "plain": "the difference between revenue and costs, expressed as profit"
+  },
+  {
+    "jargon": "Overhead",
+    "plain": "the ongoing business costs that are not directly tied to making a product"
+  },
+  {
+    "jargon": "Ballpark figure",
+    "plain": "a rough estimate that is approximately correct"
+  },
+  {
+    "jargon": "Order of magnitude",
+    "plain": "roughly ten times larger or smaller than something else"
+  },
+  {
+    "jargon": "Bite the bullet",
+    "plain": "do something unpleasant that you have been avoiding because it is necessary"
+  },
+  {
+    "jargon": "Bite off more than you can chew",
+    "plain": "take on more work or responsibility than you are able to handle"
+  },
+  {
+    "jargon": "Jump the gun",
+    "plain": "act too soon before everything is ready"
+  },
+  {
+    "jargon": "Take a calculated risk",
+    "plain": "make a decision knowing there is a chance of failure but the odds are acceptable"
+  },
+  {
+    "jargon": "Put all your eggs in one basket",
+    "plain": "rely entirely on one option instead of spreading your risk"
+  },
+  {
+    "jargon": "Cover all bases",
+    "plain": "make sure every possibility or risk is addressed"
+  },
+  {
+    "jargon": "Play it safe",
+    "plain": "choose the cautious option to avoid risk"
+  },
+  {
+    "jargon": "Roll the dice",
+    "plain": "take a chance on something uncertain"
+  },
+  {
+    "jargon": "On the line",
+    "plain": "at risk of being lost or damaged"
+  },
+  {
+    "jargon": "Raise a red flag",
+    "plain": "identify and point out a potential problem or warning sign"
+  },
+  {
+    "jargon": "Green light",
+    "plain": "give approval to proceed with something"
+  },
+  {
+    "jargon": "Red tape",
+    "plain": "excessive bureaucratic rules and procedures that slow things down"
+  },
+  {
+    "jargon": "Cut through the red tape",
+    "plain": "bypass or eliminate bureaucratic obstacles to get something done faster"
+  },
+  {
+    "jargon": "Pull the trigger",
+    "plain": "make a final decision and take action"
+  },
+  {
+    "jargon": "On the fence",
+    "plain": "undecided or uncommitted about something"
+  },
+  {
+    "jargon": "No-brainer",
+    "plain": "a decision that is so obviously correct it requires no thought"
+  },
+  {
+    "jargon": "Culture fit",
+    "plain": "a person's compatibility with the values and behaviors of a company"
+  },
+  {
+    "jargon": "Add value",
+    "plain": "contribute something meaningful and useful to a team or project"
+  },
+  {
+    "jargon": "Go above and beyond",
+    "plain": "do significantly more than what is expected or required"
+  },
+  {
+    "jargon": "Give 110 percent",
+    "plain": "put in maximum effort, even beyond what seems possible"
+  },
+  {
+    "jargon": "Bring your A-game",
+    "plain": "perform at the absolute best of your ability"
+  },
+  {
+    "jargon": "Wear many hats",
+    "plain": "perform many different roles or responsibilities at the same time"
+  },
+  {
+    "jargon": "Get buy-in",
+    "plain": "persuade others to agree with and support an idea or decision"
+  },
+  {
+    "jargon": "Onboard",
+    "plain": "introduce and integrate a new employee or customer into a system or company"
+  },
+  {
+    "jargon": "Offboard",
+    "plain": "formally process the departure of an employee or customer"
+  },
+  {
+    "jargon": "Headcount",
+    "plain": "the total number of employees in a company or department"
+  },
+  {
+    "jargon": "Bench strength",
+    "plain": "the quality and readiness of employees available to step into key roles"
+  },
+  {
+    "jargon": "Pipeline",
+    "plain": "the pool of qualified candidates being considered for a job"
+  },
+  {
+    "jargon": "Talent pool",
+    "plain": "the group of available skilled workers that a company can hire from"
+  },
+  {
+    "jargon": "Fast tracker",
+    "plain": "an employee who is being considered for rapid promotion"
+  },
+  {
+    "jargon": "High performer",
+    "plain": "an employee who consistently delivers results above expectations"
+  },
+  {
+    "jargon": "Top talent",
+    "plain": "the most skilled and desirable employees in a field"
+  },
+  {
+    "jargon": "Key player",
+    "plain": "a person who is essential to the success of a team or project"
+  },
+  {
+    "jargon": "Rockstar",
+    "plain": "an exceptionally talented or high-performing employee"
+  },
+  {
+    "jargon": "Ninja",
+    "plain": "a highly skilled expert in a particular area"
+  },
+  {
+    "jargon": "Guru",
+    "plain": "an expert who is highly respected for their deep knowledge in a field"
+  },
+  {
+    "jargon": "Deliverable",
+    "plain": "a specific item or result that must be produced and handed over"
+  },
+  {
+    "jargon": "Milestone",
+    "plain": "a significant point or event that marks progress in a project"
+  },
+  {
+    "jargon": "Action item",
+    "plain": "a specific task that must be completed as a result of a meeting or decision"
+  },
+  {
+    "jargon": "Follow through",
+    "plain": "complete something that was started or promised"
+  },
+  {
+    "jargon": "Drop the ball",
+    "plain": "fail to complete something that was expected of you"
+  },
+  {
+    "jargon": "Fumble",
+    "plain": "make a mistake in handling something important"
+  },
+  {
+    "jargon": "Slip through the cracks",
+    "plain": "be accidentally overlooked or forgotten in a process"
+  },
+  {
+    "jargon": "Fall short",
+    "plain": "fail to reach a goal or expectation"
+  },
+  {
+    "jargon": "Miss the mark",
+    "plain": "fail to achieve what was intended or expected"
+  },
+  {
+    "jargon": "On track",
+    "plain": "progressing as planned without any significant problems"
+  },
+  {
+    "jargon": "Off the rails",
+    "plain": "no longer functioning properly or following the expected plan"
+  },
+  {
+    "jargon": "Course correct",
+    "plain": "recognize that something is going wrong and change direction to fix it"
+  },
+  {
+    "jargon": "Keep the lights on",
+    "plain": "maintain basic operations just enough to keep functioning"
+  },
+  {
+    "jargon": "Move mountains",
+    "plain": "accomplish something extremely difficult through great effort"
+  },
+  {
+    "jargon": "Knock it out of the park",
+    "plain": "perform exceptionally well and exceed all expectations"
+  },
+  {
+    "jargon": "Slam dunk",
+    "plain": "something that is certain to succeed or a very easy win"
+  },
+  {
+    "jargon": "Hit it out of the park",
+    "plain": "achieve something with outstanding results"
+  },
+  {
+    "jargon": "Nail it",
+    "plain": "complete something perfectly or exactly as intended"
+  },
+  {
+    "jargon": "Crush it",
+    "plain": "perform at an exceptionally high level"
+  },
+  {
+    "jargon": "Read the room",
+    "plain": "notice and respond appropriately to the mood and reactions of people around you"
+  },
+  {
+    "jargon": "Pick your battles",
+    "plain": "choose which disagreements are worth fighting over and let others go"
+  },
+  {
+    "jargon": "Know which way the wind is blowing",
+    "plain": "be aware of how a situation is developing so you can act accordingly"
+  },
+  {
+    "jargon": "Between a rock and a hard place",
+    "plain": "facing a situation where all options are difficult or unpleasant"
+  },
+  {
+    "jargon": "Burn the midnight oil",
+    "plain": "work very late into the night"
+  },
+  {
+    "jargon": "Go the extra mile",
+    "plain": "make more effort than is required"
+  },
+  {
+    "jargon": "Pull your weight",
+    "plain": "do your fair share of the work as part of a team"
+  },
+  {
+    "jargon": "Slack off",
+    "plain": "put in less effort than expected or required"
+  },
+  {
+    "jargon": "Coast",
+    "plain": "continue at a comfortable pace without putting in real effort"
+  },
+  {
+    "jargon": "Phone it in",
+    "plain": "do something with minimal effort, giving the impression of working without really trying"
+  },
+  {
+    "jargon": "Phoning it in",
+    "plain": "going through the motions of work without real effort or engagement"
+  },
+  {
+    "jargon": "Rise to the occasion",
+    "plain": "perform well in a challenging or important situation"
+  },
+  {
+    "jargon": "Put your money where your mouth is",
+    "plain": "back up what you say with real action or resources"
+  },
+  {
+    "jargon": "Walk the talk",
+    "plain": "actually do what you say you are going to do"
+  },
+  {
+    "jargon": "Practice what you preach",
+    "plain": "behave according to the same principles you tell others to follow"
+  },
+  {
+    "jargon": "Lead by example",
+    "plain": "demonstrate the behavior you want others to follow through your own actions"
+  },
+  {
+    "jargon": "Agile",
+    "plain": "a flexible approach to project management that emphasizes short cycles and fast feedback"
+  },
+  {
+    "jargon": "Sprint",
+    "plain": "a short, fixed period of focused work on specific tasks"
+  },
+  {
+    "jargon": "Ship it",
+    "plain": "release or launch something to users or the public"
+  },
+  {
+    "jargon": "Tech debt",
+    "plain": "the accumulated problems caused by taking shortcuts in past coding decisions"
+  },
+  {
+    "jargon": "Bandwidth",
+    "plain": "the capacity someone has to take on additional work"
+  },
+  {
+    "jargon": "Stack",
+    "plain": "the combination of technologies used to build a product"
+  },
+  {
+    "jargon": "Scalable",
+    "plain": "capable of growing or expanding without losing quality or efficiency"
+  },
+  {
+    "jargon": "Frictionless",
+    "plain": "easy to use or navigate without unnecessary obstacles"
+  },
+  {
+    "jargon": "Seamless",
+    "plain": "happening smoothly without any obvious joins or interruptions"
+  },
+  {
+    "jargon": "Bleeding edge",
+    "plain": "using the most advanced and newest technology available, often before it is fully tested"
+  },
+  {
+    "jargon": "Out of the box",
+    "plain": "available immediately without requiring any special setup or customization"
+  },
+  {
+    "jargon": "Under the hood",
+    "plain": "the internal workings of a system that most users never see"
+  },
+  {
+    "jargon": "Pain point",
+    "plain": "a specific problem that customers or users repeatedly experience"
+  },
+  {
+    "jargon": "Use case",
+    "plain": "a specific situation in which a product or feature would be useful"
+  },
+  {
+    "jargon": "Edge case",
+    "plain": "an unusual situation that falls outside normal expected behavior"
+  },
+  {
+    "jargon": "Minimum viable product",
+    "plain": "the simplest version of a product that can be tested with real users"
+  },
+  {
+    "jargon": "Product-market fit",
+    "plain": "the degree to which a product satisfies a strong market demand"
+  },
+  {
+    "jargon": "Freemium",
+    "plain": "a business model where basic features are free but advanced ones cost money"
+  },
+  {
+    "jargon": "Stickiness",
+    "plain": "the quality that keeps users coming back to a product repeatedly"
+  },
+  {
+    "jargon": "Churn",
+    "plain": "the rate at which customers stop using a product or cancel a subscription"
+  },
+  {
+    "jargon": "Upsell",
+    "plain": "persuade an existing customer to buy a more expensive or upgraded version"
+  },
+  {
+    "jargon": "Cross-sell",
+    "plain": "persuade an existing customer to buy a related or complementary product"
+  },
+  {
+    "jargon": "Conversion",
+    "plain": "the act of turning a potential customer into an actual paying customer"
+  },
+  {
+    "jargon": "Funnel",
+    "plain": "the series of steps a potential customer goes through before making a purchase"
+  },
+  {
+    "jargon": "Top of funnel",
+    "plain": "the stage where potential customers first become aware of your product"
+  },
+  {
+    "jargon": "Retention",
+    "plain": "the ability to keep customers using your product over time"
+  },
+  {
+    "jargon": "Engagement",
+    "plain": "the degree to which users actively interact with a product or content"
+  },
+  {
+    "jargon": "Organic growth",
+    "plain": "business growth that comes from existing resources rather than paid advertising"
+  },
+  {
+    "jargon": "Virality",
+    "plain": "the tendency of content or a product to spread rapidly through sharing"
+  },
+  {
+    "jargon": "Thought leader",
+    "plain": "a person recognized as an authority and innovator in a particular field"
+  },
+  {
+    "jargon": "Ecosystem",
+    "plain": "a network of companies, products, and services that work together"
+  },
+  {
+    "jargon": "Value proposition",
+    "plain": "the specific benefit a product offers that makes customers choose it"
+  },
+  {
+    "jargon": "Competitive advantage",
+    "plain": "a quality or feature that gives a company superiority over its rivals"
+  },
+  {
+    "jargon": "Moat",
+    "plain": "a durable advantage that protects a company from competition"
+  },
+  {
+    "jargon": "Traction",
+    "plain": "evidence that a business idea is working and gaining real-world momentum"
+  },
+  {
+    "jargon": "Proof of concept",
+    "plain": "a demonstration that an idea is technically feasible"
+  },
+  {
+    "jargon": "Cut corners",
+    "plain": "do something carelessly or incompletely to save time or money"
+  },
+  {
+    "jargon": "By the book",
+    "plain": "strictly following all the rules and procedures"
+  },
+  {
+    "jargon": "Bend the rules",
+    "plain": "allow an exception to the normal rules"
+  },
+  {
+    "jargon": "Jump through hoops",
+    "plain": "complete many difficult or annoying tasks just to achieve something"
+  },
+  {
+    "jargon": "Reinvent the wheel",
+    "plain": "waste time creating something from scratch that already exists"
+  },
+  {
+    "jargon": "Behind the scenes",
+    "plain": "happening privately or without public visibility"
+  },
+  {
+    "jargon": "In the driver's seat",
+    "plain": "in control of a situation"
+  },
+  {
+    "jargon": "Back seat driver",
+    "plain": "someone who constantly gives unwanted advice or criticism to the person in charge"
+  },
+  {
+    "jargon": "Call the shots",
+    "plain": "be the person who makes all the important decisions"
+  },
+  {
+    "jargon": "At the helm",
+    "plain": "in a position of control or leadership"
+  },
+  {
+    "jargon": "Steer the ship",
+    "plain": "guide an organization or project in the right direction"
+  },
+  {
+    "jargon": "Weather the storm",
+    "plain": "survive a difficult period without giving up"
+  },
+  {
+    "jargon": "In deep water",
+    "plain": "in a difficult situation that is hard to escape from"
+  },
+  {
+    "jargon": "Sink or swim",
+    "plain": "succeed or fail entirely on your own without any help"
+  },
+  {
+    "jargon": "On thin ice",
+    "plain": "in a risky situation where any mistake could cause serious problems"
+  },
+  {
+    "jargon": "Get the lay of the land",
+    "plain": "understand the current situation before taking action"
+  },
+  {
+    "jargon": "Have a lot on your plate",
+    "plain": "be dealing with many responsibilities or problems at the same time"
+  },
+  {
+    "jargon": "Off the top of my head",
+    "plain": "saying something from memory without looking it up"
+  },
+  {
+    "jargon": "Back to the drawing board",
+    "plain": "start over from the beginning after a plan has failed"
+  },
+  {
+    "jargon": "Think on your feet",
+    "plain": "respond quickly and make good decisions without time to prepare"
+  },
+  {
+    "jargon": "Up in the air",
+    "plain": "still uncertain and not yet decided"
+  },
+  {
+    "jargon": "Keep your head above water",
+    "plain": "manage to survive or cope with a difficult or overwhelming situation"
+  },
+  {
+    "jargon": "Bite the hand that feeds you",
+    "plain": "act badly toward the person or organization that supports or employs you"
+  },
+  {
+    "jargon": "Look the other way",
+    "plain": "pretend not to notice a problem or wrongdoing"
+  },
+  {
+    "jargon": "Turn a blind eye",
+    "plain": "deliberately ignore something that you know is wrong"
+  },
+  {
+    "jargon": "On the same wavelength",
+    "plain": "thinking in a similar way and understanding each other easily"
+  },
+  {
+    "jargon": "Get the green light",
+    "plain": "receive approval or permission to proceed"
+  },
+  {
+    "jargon": "In the loop",
+    "plain": "included in communications and kept informed about what is happening"
+  },
+  {
+    "jargon": "Out of the loop",
+    "plain": "not informed about what is happening in a situation"
+  },
+  {
+    "jargon": "Behind the eight ball",
+    "plain": "in a difficult or disadvantaged position"
+  },
+  {
+    "jargon": "Get up to speed",
+    "plain": "become informed or current with the latest information on something"
+  },
+  {
+    "jargon": "On the back burner",
+    "plain": "given low priority and not currently being actively worked on"
+  },
+  {
+    "jargon": "Front burner",
+    "plain": "given high priority and actively being worked on"
+  },
+  {
+    "jargon": "A moving target",
+    "plain": "a goal or requirement that keeps changing making it hard to achieve"
+  },
+  {
+    "jargon": "Shift the goalposts",
+    "plain": "change what is required or expected after work has already started"
+  },
+  {
+    "jargon": "Raise the stakes",
+    "plain": "increase the level of risk or importance of a situation"
+  },
+  {
+    "jargon": "Talk shop",
+    "plain": "discuss work-related topics informally, especially outside of work"
+  },
+  {
+    "jargon": "Brass tacks",
+    "plain": "the most basic and fundamental details of a situation"
+  },
+  {
+    "jargon": "Nitty-gritty",
+    "plain": "the detailed, practical facts of a situation"
+  },
+  {
+    "jargon": "In a nutshell",
+    "plain": "summarized briefly and concisely"
+  },
+  {
+    "jargon": "Ballpark",
+    "plain": "a rough approximate range or estimate"
+  },
+  {
+    "jargon": "On the nose",
+    "plain": "exactly right or perfectly accurate"
+  },
+  {
+    "jargon": "A long shot",
+    "plain": "something unlikely to succeed but worth trying"
+  },
+  {
+    "jargon": "An uphill battle",
+    "plain": "a difficult struggle where the odds are against you"
+  },
+  {
+    "jargon": "In the trenches",
+    "plain": "doing difficult, demanding work at the most basic level of an organization"
+  },
+  {
+    "jargon": "Battle-tested",
+    "plain": "proven to work well under difficult or stressful conditions"
+  },
+  {
+    "jargon": "A tall order",
+    "plain": "a request or requirement that is very difficult to fulfill"
+  },
+  {
+    "jargon": "Wearing thin",
+    "plain": "becoming less effective, convincing, or tolerated over time"
+  },
+  {
+    "jargon": "Buy time",
+    "plain": "do something to delay a deadline or create more time to solve a problem"
+  },
+  {
+    "jargon": "Stretch goal",
+    "plain": "a target that goes well beyond what is normally expected"
+  },
+  {
+    "jargon": "Quick win",
+    "plain": "a small achievement that can be accomplished rapidly and shows early progress"
+  },
+  {
+    "jargon": "Low-effort, high-impact",
+    "plain": "requiring minimal work but producing significant results"
+  },
+  {
+    "jargon": "Move fast",
+    "plain": "prioritize speed of execution over caution or perfection"
+  },
+  {
+    "jargon": "Stand your ground",
+    "plain": "refuse to back down from your position despite pressure from others"
+  },
+  {
+    "jargon": "Dig in your heels",
+    "plain": "stubbornly refuse to change your position"
+  },
+  {
+    "jargon": "Bridge the gap",
+    "plain": "reduce or eliminate the difference between two things"
+  },
+  {
+    "jargon": "Close the gap",
+    "plain": "reduce the distance or difference between two positions or outcomes"
+  },
+  {
+    "jargon": "Widen the gap",
+    "plain": "increase the difference or distance between two things"
+  },
+  {
+    "jargon": "In sync",
+    "plain": "working together smoothly and in agreement"
+  },
+  {
+    "jargon": "Out of sync",
+    "plain": "not working together smoothly or not in agreement"
+  },
+  {
+    "jargon": "Pick up the slack",
+    "plain": "do the work that someone else is failing to do"
+  },
+  {
+    "jargon": "Carry the weight",
+    "plain": "bear the majority of the responsibility or workload"
+  },
+  {
+    "jargon": "Heavy lifting",
+    "plain": "the most difficult or labor-intensive part of a task"
+  },
+  {
+    "jargon": "Legwork",
+    "plain": "the necessary but tedious preliminary work needed before a project can begin"
+  },
+  {
+    "jargon": "Groundwork",
+    "plain": "the basic preparation needed before something can begin"
+  },
+  {
+    "jargon": "Pave the way",
+    "plain": "create the conditions that make it easier for something to happen"
+  },
+  {
+    "jargon": "Light at the end of the tunnel",
+    "plain": "a sign that a difficult situation will soon improve or end"
+  },
+  {
+    "jargon": "Open a can of worms",
+    "plain": "accidentally create a complicated new set of problems"
+  },
+  {
+    "jargon": "On the same page",
+    "plain": "having the same understanding or agreement about something"
+  },
+  {
+    "jargon": "Run it up the flagpole",
+    "plain": "share an idea with others to see how they respond to it"
+  },
+  {
+    "jargon": "Back of the envelope",
+    "plain": "a quick, rough calculation done without detailed analysis"
+  },
+  {
+    "jargon": "Rule of thumb",
+    "plain": "a general principle based on experience rather than exact calculation"
+  },
+  {
+    "jargon": "Moving parts",
+    "plain": "different elements of a complex situation that all affect each other"
+  },
+  {
+    "jargon": "In flux",
+    "plain": "in a state of continuous change and uncertainty"
+  },
+  {
+    "jargon": "Set in stone",
+    "plain": "permanently fixed and unable to be changed"
+  },
+  {
+    "jargon": "On the horizon",
+    "plain": "expected to happen in the near future"
+  },
+  {
+    "jargon": "Down the road",
+    "plain": "at some point in the future"
+  },
+  {
+    "jargon": "From the ground up",
+    "plain": "starting completely from the beginning with nothing already in place"
+  },
+  {
+    "jargon": "From scratch",
+    "plain": "starting fresh with no existing work or materials to build on"
+  },
+  {
+    "jargon": "Go back to basics",
+    "plain": "return to the most fundamental principles or methods"
+  },
+  {
+    "jargon": "Keep it simple",
+    "plain": "avoid unnecessary complexity and stick to straightforward approaches"
+  },
+  {
+    "jargon": "Bells and whistles",
+    "plain": "extra features that are impressive but not essential to the core function"
+  },
+  {
+    "jargon": "Quick and dirty",
+    "plain": "done rapidly with minimum effort, accepting lower quality for speed"
+  },
+  {
+    "jargon": "Done is better than perfect",
+    "plain": "it's more important to complete something than to endlessly improve it"
+  },
+  {
+    "jargon": "Best of breed",
+    "plain": "the best available product or solution in a particular category"
+  },
+  {
+    "jargon": "Fit for purpose",
+    "plain": "good enough to accomplish the specific task it is intended for"
+  },
+  {
+    "jargon": "State of the art",
+    "plain": "using the most advanced technology currently available"
+  },
+  {
+    "jargon": "Game changer",
+    "plain": "something that fundamentally alters the way a situation develops"
+  },
+  {
+    "jargon": "Paradigm shift",
+    "plain": "a fundamental change in the basic approach or assumption in a field"
+  },
+  {
+    "jargon": "Own your mistakes",
+    "plain": "take full personal responsibility for errors you made"
+  },
+  {
+    "jargon": "Fall on your sword",
+    "plain": "take responsibility for a failure even at personal cost"
+  },
+  {
+    "jargon": "Take the heat",
+    "plain": "accept criticism or blame for something that went wrong"
+  },
+  {
+    "jargon": "Take the fall",
+    "plain": "be blamed or punished for something, sometimes on behalf of others"
+  },
+  {
+    "jargon": "Pass the buck",
+    "plain": "shift responsibility to someone else instead of handling it yourself"
+  },
+  {
+    "jargon": "The buck stops here",
+    "plain": "i am the person who accepts final responsibility"
+  },
+  {
+    "jargon": "Point fingers",
+    "plain": "blame others instead of accepting responsibility"
+  },
+  {
+    "jargon": "Hold accountable",
+    "plain": "make sure someone answers for their actions or results"
+  },
+  {
+    "jargon": "On your watch",
+    "plain": "happening during the period when you are responsible"
+  },
+  {
+    "jargon": "At the table",
+    "plain": "participating in an important discussion or negotiation"
+  },
+  {
+    "jargon": "Seat at the table",
+    "plain": "the right to participate in important decisions or discussions"
+  },
+  {
+    "jargon": "Come to the table",
+    "plain": "arrive at a negotiation willing to participate in good faith"
+  },
+  {
+    "jargon": "Lay your cards on the table",
+    "plain": "be completely open and honest about your position"
+  },
+  {
+    "jargon": "Show your hand",
+    "plain": "reveal your true plans or intentions before you are ready"
+  },
+  {
+    "jargon": "Play your cards right",
+    "plain": "act carefully and strategically to take advantage of a situation"
+  },
+  {
+    "jargon": "Sweeten the deal",
+    "plain": "make an offer more attractive by adding additional benefits"
+  },
+  {
+    "jargon": "Walk away from the table",
+    "plain": "end negotiations because an acceptable agreement cannot be reached"
+  },
+  {
+    "jargon": "Best and final offer",
+    "plain": "the last offer someone is willing to make in a negotiation"
+  },
+  {
+    "jargon": "Win-win",
+    "plain": "a situation or agreement where all parties involved benefit"
+  },
+  {
+    "jargon": "Zero-sum game",
+    "plain": "a situation where one person's gain is exactly equal to another person's loss"
+  },
+  {
+    "jargon": "Give and take",
+    "plain": "a process of compromise where both sides make concessions"
+  },
+  {
+    "jargon": "Hard sell",
+    "plain": "an aggressive and persistent sales approach that pressures people to buy"
+  },
+  {
+    "jargon": "Soft sell",
+    "plain": "a gentle, low-pressure approach to selling that focuses on educating the buyer"
+  },
+  {
+    "jargon": "Cold call",
+    "plain": "contact a potential customer who has had no prior relationship with you"
+  },
+  {
+    "jargon": "Warm lead",
+    "plain": "a potential customer who has already shown some interest in your product"
+  },
+  {
+    "jargon": "Qualify a lead",
+    "plain": "determine whether a potential customer is likely to actually buy"
+  },
+  {
+    "jargon": "Close a deal",
+    "plain": "successfully complete a sale or agreement"
+  },
+  {
+    "jargon": "Lose a deal",
+    "plain": "fail to complete a sale that seemed likely"
+  },
+  {
+    "jargon": "Deal breaker",
+    "plain": "a condition that is so unacceptable it will end the negotiation entirely"
+  },
+  {
+    "jargon": "Deal maker",
+    "plain": "a condition or quality that makes an agreement very likely to succeed"
+  },
+  {
+    "jargon": "Shake on it",
+    "plain": "informally agree to something as if shaking hands"
+  },
+  {
+    "jargon": "Put it in writing",
+    "plain": "formalize an agreement by documenting it officially"
+  },
+  {
+    "jargon": "Sign on the dotted line",
+    "plain": "officially agree to or accept something by signing a document"
+  },
+  {
+    "jargon": "Set the tone",
+    "plain": "establish the standard of behavior and culture for others to follow"
+  },
+  {
+    "jargon": "Paint a picture",
+    "plain": "describe a vision or scenario vividly and convincingly"
+  },
+  {
+    "jargon": "Bring people along",
+    "plain": "help others understand and accept a change or new direction"
+  },
+  {
+    "jargon": "Get alignment",
+    "plain": "ensure that all relevant people agree on the direction and approach"
+  },
+  {
+    "jargon": "Command the room",
+    "plain": "hold the complete attention and respect of everyone in a meeting"
+  },
+  {
+    "jargon": "Drive the agenda",
+    "plain": "control what topics are discussed and in what order"
+  },
+  {
+    "jargon": "Champion an idea",
+    "plain": "actively promote and defend an idea to get it approved and implemented"
+  },
+  {
+    "jargon": "Go to bat for someone",
+    "plain": "defend or advocate strongly for someone who needs support"
+  },
+  {
+    "jargon": "Have someone's back",
+    "plain": "support and defend someone when they are under pressure"
+  },
+  {
+    "jargon": "Take someone under your wing",
+    "plain": "mentor and guide a less experienced person"
+  },
+  {
+    "jargon": "Groom someone for a role",
+    "plain": "deliberately prepare and develop someone to take on a future position"
+  },
+  {
+    "jargon": "Delegate",
+    "plain": "assign tasks and authority to others rather than doing everything yourself"
+  },
+  {
+    "jargon": "Empower",
+    "plain": "give someone the authority and confidence to make decisions independently"
+  },
+  {
+    "jargon": "Micromanage",
+    "plain": "control every small detail of someone else's work to an excessive degree"
+  },
+  {
+    "jargon": "Hands-off",
+    "plain": "allowing others to work independently without close supervision or interference"
+  },
+  {
+    "jargon": "Hands-on",
+    "plain": "directly involved in the detailed work rather than just overseeing others"
+  },
+  {
+    "jargon": "Stay in your lane",
+    "plain": "focus on your own area of responsibility and not interfere with others"
+  },
+  {
+    "jargon": "Know your lane",
+    "plain": "understand what your role and responsibilities are and act accordingly"
+  },
+  {
+    "jargon": "Pick up the baton",
+    "plain": "take over responsibility from someone who has handed it off"
+  },
+  {
+    "jargon": "Hand off the baton",
+    "plain": "transfer responsibility for something to someone else"
+  },
+  {
+    "jargon": "Change is coming",
+    "plain": "significant transformation in the organization is about to happen"
+  },
+  {
+    "jargon": "Shake things up",
+    "plain": "make significant and disruptive changes to improve a stagnant situation"
+  },
+  {
+    "jargon": "Rip off the bandaid",
+    "plain": "deal with a painful situation quickly rather than prolonging the discomfort"
+  },
+  {
+    "jargon": "Boil the frog",
+    "plain": "make changes so gradually that nobody notices until it is too late to react"
+  },
+  {
+    "jargon": "Status quo",
+    "plain": "the current situation or state of affairs as it exists right now"
+  },
+  {
+    "jargon": "Disrupt the status quo",
+    "plain": "challenge and change the existing way things are done"
+  },
+  {
+    "jargon": "Culture shift",
+    "plain": "a fundamental change in the shared values and behaviors of an organization"
+  },
+  {
+    "jargon": "Change agent",
+    "plain": "a person who actively promotes and leads organizational change"
+  },
+  {
+    "jargon": "Early adopter",
+    "plain": "a person who starts using a new product or accepts a new idea before most others"
+  },
+  {
+    "jargon": "Laggard",
+    "plain": "a person who is slow to adopt new ideas or technologies"
+  },
+  {
+    "jargon": "Resistance to change",
+    "plain": "the tendency of people or organizations to oppose new ideas or processes"
+  },
+  {
+    "jargon": "Transformation",
+    "plain": "a complete and fundamental change in the form or nature of something"
+  },
+  {
+    "jargon": "Burn out",
+    "plain": "become completely exhausted from sustained overwork and stress"
+  },
+  {
+    "jargon": "Overwhelmed",
+    "plain": "having too much to deal with at once to be able to cope effectively"
+  },
+  {
+    "jargon": "Stretched thin",
+    "plain": "having too many responsibilities and not enough capacity to handle them all"
+  },
+  {
+    "jargon": "Run ragged",
+    "plain": "become exhausted from constant work and activity without adequate rest"
+  },
+  {
+    "jargon": "Recharge",
+    "plain": "rest and recover energy after a period of intense work or stress"
+  },
+  {
+    "jargon": "Check out",
+    "plain": "mentally disengage from work or a situation"
+  },
+  {
+    "jargon": "Disengage",
+    "plain": "lose interest, motivation, and active participation in work"
+  },
+  {
+    "jargon": "Engaged",
+    "plain": "actively involved and enthusiastic about your work"
+  },
+  {
+    "jargon": "Mentally checked in",
+    "plain": "fully present and focused on what is happening right now"
+  },
+  {
+    "jargon": "Work-life balance",
+    "plain": "the equilibrium between time spent on professional work and personal life"
+  },
+  {
+    "jargon": "Hustle culture",
+    "plain": "a work environment that glorifies constant overwork and extreme productivity"
+  },
+  {
+    "jargon": "Grind",
+    "plain": "sustained hard work done consistently over a long period of time"
+  },
+  {
+    "jargon": "Grind it out",
+    "plain": "push through difficult and exhausting work to reach a goal"
+  },
+  {
+    "jargon": "Client-facing",
+    "plain": "directly interacting with or visible to customers"
+  },
+  {
+    "jargon": "White glove service",
+    "plain": "an exceptionally high level of personalized care and attention for customers"
+  },
+  {
+    "jargon": "Churn a client",
+    "plain": "lose a client who cancels their contract or stops doing business with you"
+  },
+  {
+    "jargon": "Land a client",
+    "plain": "successfully acquire a new client or customer"
+  },
+  {
+    "jargon": "Retain a client",
+    "plain": "keep a client continuing to do business with you over time"
+  },
+  {
+    "jargon": "Client success",
+    "plain": "ensuring that clients achieve the outcomes they want using your product"
+  },
+  {
+    "jargon": "Account management",
+    "plain": "the ongoing management of relationships with existing clients"
+  },
+  {
+    "jargon": "Escalation",
+    "plain": "the process of raising a problem to a higher level of authority to get it resolved"
+  },
+  {
+    "jargon": "Net Promoter Score",
+    "plain": "a measure of how likely customers are to recommend your product to others"
+  },
+  {
+    "jargon": "Customer journey",
+    "plain": "the complete sequence of experiences a customer has with your company"
+  },
+  {
+    "jargon": "Touch point",
+    "plain": "any point of contact between a customer and a company"
+  },
+  {
+    "jargon": "Voice of the customer",
+    "plain": "the process of capturing what customers want, need, and expect"
+  },
+  {
+    "jargon": "Ghosting",
+    "plain": "suddenly stopping all communication with someone without explanation"
+  },
+  {
+    "jargon": "Gaslight",
+    "plain": "manipulate someone into questioning their own memory or perception of events"
+  },
+  {
+    "jargon": "Toxic",
+    "plain": "describing an environment or behavior that is harmful to people's wellbeing"
+  },
+  {
+    "jargon": "FOMO",
+    "plain": "fear of missing out on something important that others are experiencing"
+  },
+  {
+    "jargon": "TLDR",
+    "plain": "a brief summary of a long piece of text"
+  },
+  {
+    "jargon": "Pivot hard",
+    "plain": "make a dramatic and decisive change in direction"
+  },
+  {
+    "jargon": "Hyper-focused",
+    "plain": "concentrating intensely on a single task to the exclusion of everything else"
+  },
+  {
+    "jargon": "Vibe check",
+    "plain": "an assessment of the general mood or atmosphere of a group"
+  },
+  {
+    "jargon": "Unpack",
+    "plain": "carefully examine and explain all the elements of something complex"
+  },
+  {
+    "jargon": "Optics",
+    "plain": "how something appears to outside observers, regardless of the reality"
+  },
+  {
+    "jargon": "Optics issue",
+    "plain": "a situation that looks bad publicly even if it isn't actually wrong"
+  },
+  {
+    "jargon": "Narrative",
+    "plain": "the story or explanation that shapes how people understand a situation"
+  },
+  {
+    "jargon": "Lean in",
+    "plain": "commit fully and enthusiastically to something instead of holding back"
+  },
+  {
+    "jargon": "Laser focused",
+    "plain": "concentrating exclusively on a single goal without any distraction"
+  },
+  {
+    "jargon": "Deep dive",
+    "plain": "conduct a thorough and detailed investigation of a topic"
+  },
+  {
+    "jargon": "Unpack the data",
+    "plain": "carefully examine and explain what the data is showing"
+  },
+  {
+    "jargon": "At a high level",
+    "plain": "looking at the overall picture without going into specific details"
+  },
+  {
+    "jargon": "Blue sky thinking",
+    "plain": "imaginative and unrestricted thinking without practical limitations"
+  },
+  {
+    "jargon": "Boil down to",
+    "plain": "ultimately be reducible to a single essential point or factor"
+  },
+  {
+    "jargon": "Double click on that",
+    "plain": "examine a specific point in much more detail"
+  },
+  {
+    "jargon": "Unpack that",
+    "plain": "explain what you mean in more detail"
+  },
+  {
+    "jargon": "Baseline",
+    "plain": "the minimum standard or starting point used for comparison"
+  },
+  {
+    "jargon": "Benchmark",
+    "plain": "a standard or reference point against which things are measured"
+  },
+  {
+    "jargon": "KPI",
+    "plain": "a key metric used to evaluate success in reaching a specific goal"
+  },
+  {
+    "jargon": "OKR",
+    "plain": "a goal-setting framework pairing an objective with measurable key results"
+  },
+  {
+    "jargon": "Synergy",
+    "plain": "the combined effect of working together that exceeds what each could achieve alone"
+  },
+  {
+    "jargon": "Leverage",
+    "plain": "use something to maximum advantage"
+  },
+  {
+    "jargon": "Actionable",
+    "plain": "specific enough to act on immediately"
+  },
+  {
+    "jargon": "Impactful",
+    "plain": "having a strong or significant effect on something"
+  },
+  {
+    "jargon": "Scalable solution",
+    "plain": "an approach that can grow efficiently to handle much larger volume"
+  },
+  {
+    "jargon": "Robust",
+    "plain": "strong and unlikely to break or fail under pressure or unusual conditions"
+  },
+  {
+    "jargon": "Holistic approach",
+    "plain": "considering all aspects of a situation together rather than in isolation"
+  },
+  {
+    "jargon": "End-to-end",
+    "plain": "covering the entire process from start to finish without gaps"
+  },
+  {
+    "jargon": "Mission critical",
+    "plain": "absolutely essential to the success or survival of something"
+  },
+  {
+    "jargon": "Business critical",
+    "plain": "essential for the continued functioning of the business"
+  },
+  {
+    "jargon": "Table stakes",
+    "plain": "the minimum requirements needed just to be considered a viable option"
+  },
+  {
+    "jargon": "Crunch time",
+    "plain": "a period of intense pressure to complete work before a deadline"
+  },
+  {
+    "jargon": "Bottleneck",
+    "plain": "a point in a process that slows down the entire operation"
+  },
+  {
+    "jargon": "Bandwidth issue",
+    "plain": "a lack of available time or mental capacity to take on more work"
+  },
+  {
+    "jargon": "Capacity planning",
+    "plain": "the process of determining how much work a team can realistically handle"
+  },
+  {
+    "jargon": "Resource constrained",
+    "plain": "limited by a lack of money, people, or time needed to do the work"
+  },
+  {
+    "jargon": "Headwinds",
+    "plain": "external forces or conditions that make progress more difficult"
+  },
+  {
+    "jargon": "Tailwinds",
+    "plain": "external forces or conditions that help drive growth or progress"
+  },
+  {
+    "jargon": "Macro environment",
+    "plain": "the broad external economic and political conditions affecting a business"
+  },
+  {
+    "jargon": "Market dynamics",
+    "plain": "the forces of supply and demand that affect prices and behavior in a market"
+  },
+  {
+    "jargon": "Bear case",
+    "plain": "the pessimistic scenario for how a business or market might perform"
+  },
+  {
+    "jargon": "Bull case",
+    "plain": "the optimistic scenario for how a business or market might perform"
+  },
+  {
+    "jargon": "Haircut",
+    "plain": "a reduction applied to the value of something, usually as a discount or penalty"
+  },
+  {
+    "jargon": "Hockey stick growth",
+    "plain": "a growth pattern that is flat for a long time then suddenly rises very steeply"
+  },
+  {
+    "jargon": "Inflection point",
+    "plain": "a critical moment when a significant change begins to occur"
+  },
+  {
+    "jargon": "Forcing function",
+    "plain": "a condition or constraint that compels a particular action or outcome"
+  },
+  {
+    "jargon": "Swim lane",
+    "plain": "the defined area of responsibility assigned to a specific person or team"
+  },
+  {
+    "jargon": "RACI matrix",
+    "plain": "a tool that defines who is Responsible, Accountable, Consulted, and Informed for tasks"
+  },
+  {
+    "jargon": "Stakeholder",
+    "plain": "anyone who has an interest in or is affected by the outcome of a project"
+  },
+  {
+    "jargon": "Sign off",
+    "plain": "give official approval for something to proceed"
+  },
+  {
+    "jargon": "Greenfield",
+    "plain": "a new project or opportunity with no existing constraints or legacy to work around"
+  },
+  {
+    "jargon": "Brownfield",
+    "plain": "a project that must work within or improve upon an existing system or structure"
+  },
+  {
+    "jargon": "Proof point",
+    "plain": "a specific piece of evidence that supports a broader claim or argument"
+  },
+  {
+    "jargon": "Run rate",
+    "plain": "the current level of a metric projected forward to estimate annual performance"
+  },
+  {
+    "jargon": "Year over year",
+    "plain": "comparing performance in one period to the same period in the previous year"
+  },
+  {
+    "jargon": "Quarter over quarter",
+    "plain": "comparing performance in one quarter to the immediately preceding quarter"
+  },
+  {
+    "jargon": "Benchmark against",
+    "plain": "compare your performance to that of a specific reference standard"
+  },
+  {
+    "jargon": "Fast follower",
+    "plain": "a company that quickly copies successful innovations made by others"
+  },
+  {
+    "jargon": "First mover advantage",
+    "plain": "the benefit gained by being the first company to enter a new market"
+  },
+  {
+    "jargon": "Commoditized",
+    "plain": "describing a product that has become so common that price is the only differentiator"
+  },
+  {
+    "jargon": "Differentiated",
+    "plain": "having unique features or qualities that distinguish it from competitors"
+  },
+  {
+    "jargon": "Category creator",
+    "plain": "a company that invents an entirely new market category rather than competing in an existing one"
+  },
+  {
+    "jargon": "Land grab",
+    "plain": "a rapid push to acquire as much market share as possible before competitors"
+  },
+  {
+    "jargon": "Greenlight",
+    "plain": "approve something to proceed"
+  },
+  {
+    "jargon": "Hardball",
+    "plain": "aggressive, uncompromising tactics in a negotiation or competition"
+  },
+  {
+    "jargon": "Big fish",
+    "plain": "an important or powerful person in a particular field or organization"
+  },
+  {
+    "jargon": "Small pond",
+    "plain": "a limited environment where even modest ability makes someone stand out"
+  },
+  {
+    "jargon": "Brass",
+    "plain": "the senior leaders or executives of an organization"
+  },
+  {
+    "jargon": "C-suite",
+    "plain": "the group of most senior executives of a company"
+  },
+  {
+    "jargon": "Corner office",
+    "plain": "a metaphor for a position of power and prestige within a company"
+  },
+  {
+    "jargon": "Glass ceiling",
+    "plain": "an invisible barrier that prevents certain people from advancing beyond a certain level"
+  },
+  {
+    "jargon": "Fast track",
+    "plain": "an accelerated path to advancement or goal achievement"
+  },
+  {
+    "jargon": "Steep learning curve",
+    "plain": "a situation that requires a lot of effort to learn quickly"
+  },
+  {
+    "jargon": "Up to speed",
+    "plain": "fully informed and current with the latest information"
   }
 ];

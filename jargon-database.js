@@ -1,4 +1,4 @@
-const JARGON = [
+window.JARGON = [
   {
     "jargon": "30,000-foot view",
     "plain": "Looking at the big picture rather than the detail"

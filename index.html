@@ -1211,7 +1211,29 @@ Highlighted words show what was replaced.</div>
   </div>
   <div class="brain-scroll-hint" id="brain-scroll-hint">▼ &nbsp; Your tips are ready</div>
 </section>
-<script src="jargon-database.js"></script>
+<!-- ══ SECTION 6: TIPS ══ -->
+<section class="snap-section" id="tips-section">
+  <div class="tips-inner">
+    <div class="tips-placeholder" id="tips-placeholder">
+      <div class="placeholder-icon">☝️</div>
+      <p class="placeholder-text">Select a profile above to see your tips</p>
+    </div>
+    <div id="tips-content" style="display:none">
+      <div class="tips-header">
+        <div class="tips-abbr" id="tips-abbr"></div>
+        <div class="tips-title-group">
+          <div class="tips-fullname" id="tips-fullname"></div>
+          <div class="tips-subtitle" id="tips-subtitle"></div>
+        </div>
+      </div>
+      <div class="tips-grid" id="tips-grid"></div>
+      <div class="tips-cta">
+        <button class="btn-assess" id="btn-to-assess" onclick="scrollToAssessment()">Take the Assessment →</button>
+      </div>
+    </div>
+  </div>
+</section>
+  <script src="jargon-database.js"></script>
 <script>
 // ── HAMBURGER JS ──
 const hamburger = document.getElementById('hamburger');

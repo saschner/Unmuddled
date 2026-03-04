@@ -1288,6 +1288,298 @@ Highlighted words show what was replaced.</div>
 </section>
   <script src="jargon-database.js"></script>
 <script>
+// ── ASSESSMENT DATA ──
+var PROFILES = {
+  adhd: {
+    abbr: 'ADHD',
+    fullname: 'Attention Deficit Hyperactivity Disorder — Tips for Success',
+    subtitle: 'Your brain runs fast. These tips help you harness it at work.',
+    tips: [
+      { label: 'Structure your day', text: 'Break tasks into small, timed chunks. A 25-minute focus sprint followed by a 5-minute break works well for many ADHD brains.' },
+      { label: 'Write everything down', text: 'Do not trust your memory for deadlines or instructions. Keep a single notebook or app open at all times and capture tasks the moment they arrive.' },
+      { label: 'Use body doubling', text: 'Working alongside someone else — even on a video call — can dramatically improve focus. You are not being distracted; you are regulating.' },
+      { label: 'Name your distractions', text: 'When a random thought interrupts your work, write it in a "parking lot" list and return to it later. This clears the mental tab without losing the thought.' },
+      { label: 'Request written follow-ups', text: 'It is completely reasonable to ask colleagues to follow up meetings or instructions in writing. "Can you drop me a quick email summary?" is a professional request.' },
+      { label: 'Find your peak window', text: 'Identify the time of day your focus is sharpest and protect it fiercely for your most demanding work. Admin and meetings can fill the rest.' }
+    ],
+    assessEyebrow: 'ADHD Self-Reflection',
+    assessTitle: 'How does <em class="adhd">ADHD</em> show up for you?',
+    assessSubtitle: '18 questions · Conners Adult ADHD Rating Scale · Takes about 3 minutes',
+    sources: 'Based on the Conners Adult ADHD Rating Scale (CAARS). Scored: None=0, Mild=1, Moderate=3, Severe=5.',
+    questionType: 'adhd',
+    domains: [
+      { label: 'Inattention', qs: [0,1,2,3,4,5,6,7,8] },
+      { label: 'Hyperactivity / Impulsivity', qs: [9,10,11,12,13,14,15,16,17] }
+    ],
+    questions: [
+      'I have difficulty keeping my attention on work or tasks',
+      'I make careless mistakes when I have to work on a boring project',
+      'I have difficulty concentrating on what people say to me, even when they are speaking directly to me',
+      'I have trouble finishing the final details of a project, once the challenging parts have been done',
+      'I have difficulty getting things in order when I have to do a task that requires organisation',
+      'When I have a task that requires a lot of thinking, I avoid it or put it off',
+      'I misplace or have difficulty finding things at home or at work',
+      'I am easily distracted by things around me',
+      'I forget things I have to do during the day',
+      'I fidget with my hands or feet or squirm in my seat',
+      'I feel restless inside even if I am sitting still',
+      'I have difficulty relaxing when I have free time',
+      'I talk too much in social situations',
+      'I blurt out answers before questions have been finished',
+      'I have difficulty waiting my turn',
+      'I interrupt others when they are busy',
+      'I act impulsively without thinking about consequences',
+      'I leave tasks unfinished and move on to something new'
+    ]
+  },
+  dys: {
+    abbr: 'Dyslexia',
+    fullname: 'Dyslexia — Tips for Success',
+    subtitle: 'Your brain processes language differently. That is a difference, not a deficit.',
+    tips: [
+      { label: 'Use text-to-speech', text: 'Most phones and computers have built-in text-to-speech. Listening to emails and documents while reading along can significantly reduce reading fatigue.' },
+      { label: 'Ask for documents in advance', text: 'Requesting meeting materials ahead of time gives you the processing space others take for granted. This is a reasonable workplace accommodation to ask for.' },
+      { label: 'Dictate first, edit later', text: 'Speech-to-text tools like voice notes let you get your ideas down without the friction of spelling. Draft verbally, then tidy up the text.' },
+      { label: 'Choose your font', text: 'Sans-serif fonts like Arial are generally easier to read. If you can change document fonts for yourself, do it every time.' },
+      { label: 'Read in chunks', text: 'Cover text you have not yet reached with your hand or a piece of paper. Reducing the visual load on a page can make reading significantly faster.' },
+      { label: 'Own it with confidence', text: 'Dyslexia is strongly linked with creative thinking, big-picture vision, and problem-solving. You are not behind — you process the world differently.' }
+    ],
+    assessEyebrow: 'Dyslexia Self-Reflection',
+    assessTitle: 'How does <em class="dys">Dyslexia</em> show up for you?',
+    assessSubtitle: '14 questions · Reading, writing and processing patterns · Takes about 2 minutes',
+    sources: 'Based on common adult dyslexia screening indicators. Scored: No=0, Sometimes=1, Yes=2.',
+    questionType: 'asd',
+    domains: [
+      { label: 'Reading & Decoding', qs: [0,1,2,3,4] },
+      { label: 'Writing & Spelling', qs: [5,6,7,8] },
+      { label: 'Processing & Memory', qs: [9,10,11,12,13] }
+    ],
+    questions: [
+      'I read more slowly than most people, even when I am trying hard',
+      'I have to re-read sentences or paragraphs to understand them',
+      'I mix up letters that look similar, such as b and d, or p and q',
+      'I find it hard to read aloud without stumbling over words',
+      'I lose my place easily when reading a long piece of text',
+      'My spelling is inconsistent — I may spell the same word differently on the same page',
+      'I have difficulty putting my thoughts into written words, even when I know what I want to say',
+      'I find proofreading my own work difficult — I miss errors others would catch easily',
+      'I avoid writing tasks when I can, or feel anxious about written work',
+      'I struggle to remember sequences of letters, numbers, or instructions in the correct order',
+      'I confuse left and right more often than most people',
+      'I find it hard to listen and take notes at the same time',
+      'I have difficulty with tasks that require reading and thinking simultaneously',
+      'I often know a word but cannot retrieve it quickly when speaking or writing'
+    ]
+  },
+  asd: {
+    abbr: 'ASD',
+    fullname: 'Autism Spectrum Disorder — Tips for Success',
+    subtitle: 'Your brain notices more. These tips help you navigate environments designed for others.',
+    tips: [
+      { label: 'Request explicit instructions', text: 'It is always acceptable to ask for written, step-by-step instructions. Asking for clarity is professional, not a weakness.' },
+      { label: 'Prepare for transitions', text: 'Unexpected changes are harder when your brain prefers predictability. Whenever possible, review your schedule the night before and build in transition time.' },
+      { label: 'Create sensory control', text: 'Noise-cancelling headphones, a consistent desk setup, and a preferred mug are not quirks — they are tools. Use whatever helps you regulate your environment.' },
+      { label: 'Script conversations in advance', text: 'Preparing phrases for common work situations reduces the live cognitive load. Scripting is a professional skill, not a cheat.' },
+      { label: 'Decode jargon literally', text: 'Corporate language is deliberately vague. You are right to find it confusing. Use Unmuddled to translate it instantly.' },
+      { label: 'Name your communication style', text: 'Saying "I communicate best in writing" or "I prefer direct feedback" is increasingly valued. You do not need to disclose a diagnosis to advocate for how you work best.' }
+    ],
+    assessEyebrow: 'ASD Self-Reflection',
+    assessTitle: 'How does <em class="asd">ASD</em> show up for you?',
+    assessSubtitle: '18 questions across 3 areas · Takes about 3 minutes',
+    sources: 'Based on common adult ASD screening indicators. Scored: No=0, Sometimes=1, Yes=2.',
+    questionType: 'asd',
+    domains: [
+      { label: 'Social Communication', qs: [0,1,2,3,4,5] },
+      { label: 'Sensory & Routine', qs: [6,7,8,9,10,11] },
+      { label: 'Patterns & Focus', qs: [12,13,14,15,16,17] }
+    ],
+    questions: [
+      'I find it hard to understand what people mean when they speak figuratively or use idioms',
+      'I have difficulty reading facial expressions or body language',
+      'I find social small talk difficult or pointless',
+      'I tend to take what people say very literally',
+      'I struggle to know when it is my turn to speak in a conversation',
+      'I have been told I speak in a way that feels blunt or too direct',
+      'I am easily overwhelmed by loud or busy environments',
+      'I have strong preferences about how my workspace or belongings are arranged',
+      'Unexpected changes to plans cause me significant distress',
+      'I need more recovery time after social events than most people seem to',
+      'Certain textures, sounds, or lights bother me more than they bother others',
+      'I find rigid routines helpful and comforting',
+      'I have one or more topics I can discuss in great detail for a very long time',
+      'I notice patterns and details that others tend to miss',
+      'I prefer to follow a clear, consistent process rather than improvising',
+      'I find it hard to engage with tasks I do not find interesting, even important ones',
+      'I have a strong sense of fairness and become upset when rules are not applied consistently',
+      'I have been told my interests are unusually intense or narrow'
+    ]
+  }
+};
+
+var currentProfile = null;
+var assessAnswered = [];
+var assessAnsweredCount = 0;
+
+function selectProfile(profile) {
+  currentProfile = profile;
+  document.querySelectorAll('.figure-card').forEach(function(c) { c.classList.remove('selected'); });
+  document.querySelector('.figure-card.' + profile).classList.add('selected');
+  document.getElementById('brain-scroll-hint').classList.add('visible');
+  buildTips(profile);
+  buildAssessment(profile);
+  setTimeout(function() {
+    document.getElementById('tips-section').scrollIntoView({ behavior: 'smooth' });
+  }, 300);
+}
+
+function buildTips(profile) {
+  var data = PROFILES[profile];
+  document.getElementById('tips-placeholder').style.display = 'none';
+  document.getElementById('tips-content').style.display = 'block';
+  var abbr = document.getElementById('tips-abbr');
+  abbr.textContent = data.abbr;
+  abbr.className = 'tips-abbr ' + profile;
+  document.getElementById('tips-fullname').textContent = data.fullname;
+  document.getElementById('tips-subtitle').textContent = data.subtitle;
+  var grid = document.getElementById('tips-grid');
+  grid.innerHTML = '';
+  data.tips.forEach(function(tip, i) {
+    grid.innerHTML += '<div class="tip-card ' + profile + '" style="animation-delay:' + (i * 0.07) + 's">' +
+      '<div class="tip-num ' + profile + '">' + (i + 1) + '</div>' +
+      '<div class="tip-text"><strong class="' + profile + '">' + tip.label + '</strong>' + tip.text + '</div>' +
+      '</div>';
+  });
+  var btn = document.getElementById('btn-to-assess');
+  btn.className = 'btn-assess ' + profile;
+}
+
+function buildAssessment(profile) {
+  var data = PROFILES[profile];
+  var total = data.questions.length;
+  assessAnswered = new Array(total).fill(null);
+  assessAnsweredCount = 0;
+  document.getElementById('assessment-placeholder').style.display = 'none';
+  document.getElementById('assessment-content').style.display = 'block';
+  var eyebrow = document.getElementById('assess-eyebrow');
+  eyebrow.textContent = data.assessEyebrow;
+  eyebrow.className = 'assessment-eyebrow ' + profile;
+  document.getElementById('assess-title').innerHTML = data.assessTitle;
+  document.getElementById('assess-subtitle').textContent = data.assessSubtitle;
+  var pf = document.getElementById('assess-progress-fill');
+  pf.className = 'assess-progress-fill ' + profile;
+  pf.style.width = '0%';
+  document.getElementById('assess-progress-label').textContent = '0 / ' + total;
+  var btn = document.getElementById('btn-submit-assess');
+  btn.disabled = true;
+  btn.className = 'btn-submit-assess ' + profile;
+  document.getElementById('submit-note-assess').textContent = 'Answer all ' + total + ' questions to see your results';
+  var wrap = document.getElementById('questions-wrap');
+  wrap.innerHTML = '';
+  data.questions.forEach(function(qtext, qi) {
+    var qnum = String(qi + 1).padStart(2, '0');
+    var answerHTML = '';
+    if (data.questionType === 'adhd') {
+      answerHTML = '<div class="a-row">' +
+        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="0"><span class="radio-face r-none">None</span></label>' +
+        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="1"><span class="radio-face r-mild">Mild</span></label>' +
+        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="3"><span class="radio-face r-mod">Moderate</span></label>' +
+        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="5"><span class="radio-face r-sev">Severe</span></label>' +
+        '</div>';
+    } else {
+      answerHTML = '<div class="a-row">' +
+        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="0"><span class="radio-face r-no">No</span></label>' +
+        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="1"><span class="radio-face r-som">Sometimes</span></label>' +
+        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="2"><span class="radio-face r-yes">Yes</span></label>' +
+        '</div>';
+    }
+    wrap.innerHTML += '<div class="q-card" id="aqcard-' + qi + '"><div class="q-row"><div class="q-number ' + profile + '">' + qnum + '</div><div class="q-text">' + qtext + '</div></div>' + answerHTML + '</div>';
+  });
+}
+
+document.addEventListener('change', function(e) {
+  if (!e.target || e.target.type !== 'radio' || !e.target.getAttribute('data-aqi')) return;
+  var input = e.target;
+  var qi = parseInt(input.getAttribute('data-aqi'), 10);
+  var score = parseInt(input.getAttribute('data-ascore'), 10);
+  var total = PROFILES[currentProfile].questions.length;
+  var wasNull = assessAnswered[qi] === null;
+  assessAnswered[qi] = score;
+  if (wasNull) assessAnsweredCount++;
+  var card = document.getElementById('aqcard-' + qi);
+  if (card) card.className = 'q-card answered ' + currentProfile;
+  var pct = Math.round(assessAnsweredCount / total * 100);
+  document.getElementById('assess-progress-fill').style.width = pct + '%';
+  document.getElementById('assess-progress-label').textContent = assessAnsweredCount + ' / ' + total;
+  var btn = document.getElementById('btn-submit-assess');
+  btn.disabled = assessAnsweredCount < total;
+  if (assessAnsweredCount === total) {
+    document.getElementById('submit-note-assess').textContent = 'All done — ready to see your results!';
+  }
+});
+
+function scrollToAssessment() {
+  document.getElementById('assessment-section').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showAssessResults() {
+  var data = PROFILES[currentProfile];
+  var total = data.questions.length;
+  var maxScore = data.questionType === 'adhd' ? total * 5 : total * 2;
+  var rawScore = assessAnswered.reduce(function(a, b) { return a + (b || 0); }, 0);
+  var pct = Math.round(rawScore / maxScore * 100);
+  document.getElementById('results-placeholder').style.display = 'none';
+  document.getElementById('results-content').style.display = 'block';
+  var pName = document.getElementById('res-profile-name');
+  pName.textContent = data.abbr;
+  pName.className = 'results-profile-name ' + currentProfile;
+  var scoreEl = document.getElementById('res-score');
+  scoreEl.textContent = pct + '%';
+  scoreEl.className = 'score-big ' + currentProfile;
+  document.getElementById('res-raw').textContent = 'Raw score: ' + rawScore + ' / ' + maxScore;
+  var band, bc, h3, desc;
+  if (pct < 34) {
+    band = 'Lower Alignment'; bc = 'band-low'; h3 = 'Fewer indicators in this profile';
+    desc = 'Your responses suggest fewer traits commonly associated with this profile. Many neurodivergent people develop strong coping strategies that mask their traits in a questionnaire. If aspects of your experience feel unaddressed here, consider exploring the other profiles or speaking with a professional.';
+  } else if (pct < 60) {
+    band = 'Moderate Alignment'; bc = 'band-medium'; h3 = 'Some indicators present — worth reflecting on';
+    desc = 'Your responses suggest a moderate number of traits associated with this profile. Many adults are not identified until their 30s or 40s. Review the breakdown below to see which areas scored highest, and consider applying the workplace tips above in your day-to-day.';
+  } else {
+    band = 'Higher Alignment'; bc = 'band-high'; h3 = 'A significant number of indicators present';
+    desc = 'Your responses suggest many traits associated with this profile. This is not a diagnosis — it is a starting point for understanding yourself better. Consider speaking with your GP or a specialist for a formal assessment if this resonates.';
+  }
+  var bandEl = document.getElementById('res-band');
+  bandEl.textContent = band;
+  bandEl.className = 'assess-result-band ' + bc;
+  document.getElementById('res-desc').innerHTML = '<h3>' + h3 + '</h3><p>' + desc + '</p>';
+  var domHTML = '';
+  data.domains.forEach(function(domain) {
+    var ds = 0, dm = 0;
+    domain.qs.forEach(function(qi) {
+      if (assessAnswered[qi] !== null) {
+        ds += assessAnswered[qi];
+        dm += (data.questionType === 'adhd' ? 5 : 2);
+      }
+    });
+    var dp = dm ? Math.round(ds / dm * 100) : 0;
+    var fillClass = dp < 34 ? 'fill-low' : dp < 60 ? 'fill-medium' : 'fill-high';
+    domHTML += '<div class="dr-row"><div class="dr-title"><span>' + domain.label + '</span><span>' + dp + '%</span></div><div class="dr-meter"><div class="dr-fill ' + fillClass + '" style="width:' + dp + '%"></div></div></div>';
+  });
+  document.getElementById('domain-breakdown').innerHTML = domHTML;
+  document.getElementById('res-sources').textContent = data.sources;
+  setTimeout(function() {
+    document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+  }, 150);
+}
+
+function retakeAssessment() {
+  if (!currentProfile) return;
+  buildAssessment(currentProfile);
+  document.getElementById('results-placeholder').style.display = 'block';
+  document.getElementById('results-content').style.display = 'none';
+  document.getElementById('assessment-section').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+  <script>
 // ── HAMBURGER JS ──
 const hamburger = document.getElementById('hamburger');
 const navDrawer = document.getElementById('navDrawer');

@@ -1124,7 +1124,93 @@ Highlighted words show what was replaced.</div>
     <a href="#" class="faq-link">Have questions? Read the FAQ →</a>
   </div>
 </section>
-
+<!-- ══ SECTION 5: WHICH BRAIN ARE YOU? ══ -->
+<section class="snap-section" id="which-brain">
+  <div class="brain-header">
+    <p class="brain-eyebrow">Self-reflection tool</p>
+    <h1 class="brain-title">Which brain<br>are <em>you?</em></h1>
+    <p class="brain-sub">Select the profile that feels most like you. Your tips and assessment will appear instantly.</p>
+  </div>
+  <div class="figures-row">
+    <div class="figure-card adhd" onclick="selectProfile('adhd')">
+      <div class="figure-svg-wrap">
+        <div class="figure-glow"></div>
+        <svg class="figure-svg" viewBox="0 0 110 160" fill="none">
+          <circle cx="55" cy="28" r="20" fill="none" stroke="#E8A838" stroke-width="2.5"/>
+          <path d="M35 22 Q40 8 55 10 Q70 8 75 22" stroke="#E8A838" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="47" cy="25" r="2.5" fill="#E8A838"/>
+          <circle cx="63" cy="25" r="2.5" fill="#E8A838"/>
+          <path d="M47 33 Q55 39 63 33" stroke="#E8A838" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M35 28 Q30 28 30 33 Q30 38 35 38" stroke="#E8A838" stroke-width="2" fill="none"/>
+          <path d="M75 28 Q80 28 80 33 Q80 38 75 38" stroke="#E8A838" stroke-width="2" fill="none"/>
+          <path d="M55 48 L55 105" stroke="#E8A838" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M30 62 Q42 52 55 50 Q68 52 80 62" stroke="#E8A838" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M31 63 L15 82 L22 85" stroke="#E8A838" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M79 63 L95 75 L90 82" stroke="#E8A838" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M55 105 L42 145" stroke="#E8A838" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M55 105 L68 145" stroke="#E8A838" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M42 145 L35 147" stroke="#E8A838" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M68 145 L75 147" stroke="#E8A838" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="figure-label">ADHD</div>
+      <div class="figure-sublabel">Attention</div>
+    </div>
+    <div class="figure-card dys" onclick="selectProfile('dys')">
+      <div class="figure-svg-wrap">
+        <div class="figure-glow"></div>
+        <svg class="figure-svg" viewBox="0 0 110 160" fill="none">
+          <circle cx="55" cy="28" r="20" fill="none" stroke="#4A9CC7" stroke-width="2.5"/>
+          <path d="M35 22 Q37 5 55 7 Q73 5 75 22" stroke="#4A9CC7" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M35 28 Q33 40 35 50" stroke="#4A9CC7" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M75 28 Q77 40 75 50" stroke="#4A9CC7" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="47" cy="25" r="2.5" fill="#4A9CC7"/>
+          <circle cx="63" cy="25" r="2.5" fill="#4A9CC7"/>
+          <path d="M47 33 Q55 39 63 33" stroke="#4A9CC7" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M35 28 Q30 28 30 33 Q30 38 35 38" stroke="#4A9CC7" stroke-width="2" fill="none"/>
+          <path d="M75 28 Q80 28 80 33 Q80 38 75 38" stroke="#4A9CC7" stroke-width="2" fill="none"/>
+          <path d="M55 48 L55 105" stroke="#4A9CC7" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M30 62 Q42 52 55 50 Q68 52 80 62" stroke="#4A9CC7" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M31 63 L18 85" stroke="#4A9CC7" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M79 63 L88 80 L82 90" stroke="#4A9CC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="10" y="83" width="14" height="18" rx="2" stroke="#4A9CC7" stroke-width="1.5" fill="none"/>
+          <line x1="17" y1="83" x2="17" y2="101" stroke="#4A9CC7" stroke-width="1"/>
+          <path d="M55 105 L42 145" stroke="#4A9CC7" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M55 105 L68 145" stroke="#4A9CC7" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M42 145 L35 147" stroke="#4A9CC7" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M68 145 L75 147" stroke="#4A9CC7" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="figure-label">Dyslexia</div>
+      <div class="figure-sublabel">Reading</div>
+    </div>
+    <div class="figure-card asd" onclick="selectProfile('asd')">
+      <div class="figure-svg-wrap">
+        <div class="figure-glow"></div>
+        <svg class="figure-svg" viewBox="0 0 110 160" fill="none">
+          <circle cx="55" cy="28" r="20" fill="none" stroke="#2B7A4B" stroke-width="2.5"/>
+          <path d="M36 18 Q45 8 55 9 Q65 8 74 18" stroke="#2B7A4B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="47" cy="25" r="2.5" fill="#2B7A4B"/>
+          <circle cx="63" cy="25" r="2.5" fill="#2B7A4B"/>
+          <path d="M47 33 Q55 39 63 33" stroke="#2B7A4B" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M35 28 Q30 28 30 33 Q30 38 35 38" stroke="#2B7A4B" stroke-width="2" fill="none"/>
+          <path d="M75 28 Q80 28 80 33 Q80 38 75 38" stroke="#2B7A4B" stroke-width="2" fill="none"/>
+          <path d="M55 48 L55 105" stroke="#2B7A4B" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M32 60 Q42 52 55 50 Q68 52 78 60" stroke="#2B7A4B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M32 61 L25 88 L32 90" stroke="#2B7A4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M78 61 L85 88 L78 90" stroke="#2B7A4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M55 105 L42 145" stroke="#2B7A4B" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M55 105 L68 145" stroke="#2B7A4B" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M42 145 L35 147" stroke="#2B7A4B" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M68 145 L75 147" stroke="#2B7A4B" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="figure-label">ASD</div>
+      <div class="figure-sublabel">Autism Spectrum</div>
+    </div>
+  </div>
+  <div class="brain-scroll-hint" id="brain-scroll-hint">▼ &nbsp; Your tips are ready</div>
+</section>
 <script src="jargon-database.js"></script>
 <script>
 // ── HAMBURGER JS ──

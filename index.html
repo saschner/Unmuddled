@@ -1259,6 +1259,33 @@ Highlighted words show what was replaced.</div>
     </div>
   </div>
 </section>
+<!-- ══ SECTION 8: RESULTS ══ -->
+<section class="snap-section" id="results-section">
+  <div class="results-inner">
+    <div class="results-placeholder" id="results-placeholder">
+      <p class="placeholder-text" style="color:rgba(255,255,255,0.25);font-family:'Syne',sans-serif;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;text-align:center;margin-top:1rem;">Your results will appear here</p>
+    </div>
+    <div id="results-content" style="display:none">
+      <p class="results-eyebrow">Your Results</p>
+      <div class="results-score-block">
+        <div class="results-profile-name" id="res-profile-name"></div>
+        <div class="score-big" id="res-score"></div>
+        <div class="score-raw" id="res-raw"></div>
+        <span class="assess-result-band" id="res-band"></span>
+      </div>
+      <div class="results-desc" id="res-desc"></div>
+      <div class="domain-results">
+        <h3>Score by Area</h3>
+        <div id="domain-breakdown"></div>
+      </div>
+      <div class="results-actions">
+        <button class="btn-retake" onclick="retakeAssessment()">← Retake</button>
+        <a href="#translator" class="btn-primary">Try the Translator →</a>
+      </div>
+      <div class="assess-sources" id="res-sources"></div>
+    </div>
+  </div>
+</section>
   <script src="jargon-database.js"></script>
 <script>
 // ── HAMBURGER JS ──

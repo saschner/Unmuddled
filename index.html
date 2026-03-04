@@ -1233,6 +1233,32 @@ Highlighted words show what was replaced.</div>
     </div>
   </div>
 </section>
+<!-- ══ SECTION 7: ASSESSMENT ══ -->
+<section class="snap-section" id="assessment-section">
+  <div class="assessment-inner">
+    <div class="assessment-placeholder" id="assessment-placeholder">
+      <div class="placeholder-icon">📋</div>
+      <p class="placeholder-text">Complete your tips first, then come back for your assessment</p>
+    </div>
+    <div id="assessment-content" style="display:none">
+      <div>
+        <p class="assessment-eyebrow" id="assess-eyebrow"></p>
+        <h2 class="assessment-title" id="assess-title"></h2>
+        <p class="assessment-subtitle" id="assess-subtitle"></p>
+        <div class="disclaimer-bar">This is a self-reflection tool, not a medical diagnosis. If results concern you, speak with a qualified professional.</div>
+      </div>
+      <div class="assess-progress-wrap">
+        <div class="assess-progress-bar"><div class="assess-progress-fill" id="assess-progress-fill"></div></div>
+        <div class="assess-progress-label" id="assess-progress-label">0 / 0</div>
+      </div>
+      <div id="questions-wrap"></div>
+      <div style="text-align:center">
+        <button class="btn-submit-assess" id="btn-submit-assess" disabled onclick="showAssessResults()">View My Results</button>
+        <p class="submit-note-assess" id="submit-note-assess">Answer all questions to see your results</p>
+      </div>
+    </div>
+  </div>
+</section>
   <script src="jargon-database.js"></script>
 <script>
 // ── HAMBURGER JS ──

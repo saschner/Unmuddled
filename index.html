@@ -713,7 +713,7 @@
   .tip-text strong.adhd { color: var(--mud1); }
   .tip-text strong.dys  { color: #2d6e8e; }
   .tip-text strong.asd  { color: #2B7A4B; }
-  .tips-cta { margin-top: 2rem; text-align: center; }
+  .tips-cta { margin-top: 2rem; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
   .btn-assess { display: inline-block; padding: 0.9rem 2.5rem; font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; }
   .btn-assess.adhd { background: var(--ochre); color: var(--ink); }
   .btn-assess.adhd:hover { background: var(--mud2); color: white; }
@@ -721,6 +721,8 @@
   .btn-assess.dys:hover  { background: #2d6e8e; }
   .btn-assess.asd  { background: #2B7A4B; color: white; }
   .btn-assess.asd:hover  { background: #1d5535; }
+  .btn-none { display: inline-block; padding: 0.9rem 2rem; font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: 2px solid var(--border); border-radius: 6px; cursor: pointer; background: transparent; color: var(--muted); transition: all 0.2s; }
+  .btn-none:hover { border-color: var(--ink); color: var(--ink); }
 
   #assessment-section { min-height: 100vh; background: #f5f1e8; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 5rem 2rem 3rem; }
   .assessment-inner { max-width: 720px; width: 100%; margin: 0 auto; }
@@ -1069,6 +1071,9 @@ Highlighted words show what was replaced.</div>
     </div>
   </div>
   <div class="brain-scroll-hint" id="brain-scroll-hint">▼ &nbsp; Your tips are ready</div>
+  <div style="text-align:center; margin-top:1.5rem;">
+    <button class="btn-none" onclick="['tips-section','assessment-section','results-section'].forEach(function(id){document.getElementById(id).style.display='none'});document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">Skip to Pricing →</button>
+  </div>
 </section>
 <!-- ══ SECTION 6: TIPS ══ -->
 <section class="snap-section" id="tips-section">
@@ -1087,6 +1092,7 @@ Highlighted words show what was replaced.</div>
       </div>
       <div class="tips-grid" id="tips-grid"></div>
       <div class="tips-cta">
+        <button class="btn-none" onclick="['tips-section','assessment-section','results-section'].forEach(function(id){document.getElementById(id).style.display='none'});document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">None of these</button>
         <button class="btn-assess" id="btn-to-assess" onclick="scrollToAssessment()">Take the Assessment →</button>
       </div>
     </div>

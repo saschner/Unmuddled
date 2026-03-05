@@ -3,11 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unmuddled — Plain English for Everyone</title><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Unmuddled — Plain English for Everyone</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1144,6 +1139,121 @@ Highlighted words show what was replaced.</div>
   </div>
 </section>
 
+<!-- ══ SECTION 8: PRICING ══ -->
+<section class="snap-section" id="pricing">
+  <div class="pricing-hero">
+    <p class="pricing-eyebrow">Simple, honest pricing</p>
+    <h2>Find your <em>level</em></h2>
+    <p>Start free. Upgrade when you're ready. No pressure, no jargon.</p>
+  </div>
+  <div class="toggle-wrap">
+    <span class="toggle-label active" id="toggle-monthly">Monthly</span>
+    <div class="toggle-switch" id="billing-toggle" onclick="toggleBilling()"></div>
+    <span class="toggle-label" id="toggle-annual">Annual</span>
+    <span class="save-badge">Save 20%</span>
+  </div>
+  <div class="cards-section">
+    <div class="cards-wrap">
+
+      <!-- FREE -->
+      <div class="card free">
+        <div class="card-num">1</div>
+        <div class="card-body">
+          <div class="card-tier">Free</div>
+          <div class="card-name">Try It</div>
+          <div class="card-price"><span class="amount">$0</span></div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">No credit card. No catch.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span>First 100 words translated</li>
+            <li><span class="check">✓</span>Jargon quiz (5 questions)</li>
+            <li><span class="check">✓</span>Business jargon glossary</li>
+            <li><span class="check">✓</span>Abbreviation lookups</li>
+            <li><span class="check">✓</span>Profile tips (ADHD, Dyslexia, ASD)</li>
+          </ul>
+          <a href="#translator" class="card-cta">Start Free</a>
+        </div>
+      </div>
+
+      <!-- BRONZE -->
+      <div class="card bronze">
+        <div class="card-num">2</div>
+        <div class="card-body">
+          <div class="card-tier">Bronze</div>
+          <div class="card-name">Unlimited</div>
+          <div class="card-price">
+            <span class="amount" id="bronze-amount">$9</span>
+            <span class="period" id="bronze-period">per month</span>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">Everything unlimited. No word caps.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span>Everything in Free</li>
+            <li><span class="check">✓</span>Unlimited jargon translation</li>
+            <li><span class="check">✓</span>No word limits</li>
+            <li><span class="check">✓</span>Translation history saved</li>
+            <li><span class="check">✓</span>Idiom lookups</li>
+          </ul>
+          <a href="#" class="card-cta">Get Bronze</a>
+        </div>
+      </div>
+
+      <!-- SILVER -->
+      <div class="card silver">
+        <div class="card-num">3</div>
+        <div class="card-body">
+          <div class="popular-badge">Most Popular</div>
+          <div class="card-tier">Silver</div>
+          <div class="card-name">Pro</div>
+          <div class="card-price">
+            <span class="amount" id="silver-amount">$19</span>
+            <span class="period" id="silver-period">per month</span>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">For people who live in meetings.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span>Everything in Bronze</li>
+            <li><span class="check">✓</span>Post-meeting plain English summaries</li>
+            <li><span class="check">✓</span>Slack integration</li>
+            <li><span class="check">✓</span>Action item detection</li>
+            <li><span class="check">✓</span>Priority support</li>
+          </ul>
+          <a href="#" class="card-cta">Get Silver</a>
+        </div>
+      </div>
+
+      <!-- GOLD -->
+      <div class="card gold">
+        <div class="card-num">4</div>
+        <div class="card-body">
+          <div class="card-tier">Gold</div>
+          <div class="card-name">Full Stack</div>
+          <div class="card-price">
+            <span class="amount">$99</span>
+            <span class="period">per year</span>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">The whole toolkit. Including CloudScope.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span>Everything in Silver</li>
+            <li><span class="check">✓</span>AI tone &amp; mood analysis</li>
+            <li><span class="check">✓</span>Suggested replies</li>
+            <li><span class="check">✓</span>Colleague communication notes</li>
+            <li><span class="check">✓</span>Notion integration</li>
+            <li><span class="check">✓</span>CloudScope — visual Gmail inbox</li>
+          </ul>
+          <a href="#" class="card-cta">Get Gold</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <p class="footer-note">
+    All plans include a 14-day money-back guarantee. No contracts, cancel anytime.<br>
+    <a href="#" class="faq-link">Questions? See the FAQ →</a>
+  </p>
+</section>
+
 <script src="jargon-database.js"></script>
 <script>
 // ── ASSESSMENT DATA ──
@@ -1376,6 +1486,10 @@ document.addEventListener('change', function(e) {
 });
 
 function scrollToAssessment() {
+  if (!currentProfile) {
+    document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
   document.getElementById('assessment-section').scrollIntoView({ behavior: 'smooth' });
 }
 

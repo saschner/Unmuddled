@@ -77,7 +77,8 @@
     border-radius: 6px;
   }
   .nav-cta:hover { background: var(--mud2) !important; color: white !important; }
-/* ── HAMBURGER ── */
+
+  /* ── HAMBURGER ── */
   .hamburger {
     display: none;
     flex-direction: column;
@@ -161,17 +162,11 @@
     .hamburger { display: flex; }
     .nav-drawer { display: flex; }
   }
+
   /* ── SHARED SECTION BASE ── */
   .snap-section {
     scroll-snap-align: start;
     padding-top: 62px;
-  }
-
-  /* Hidden until a profile is selected */
-  #tips-section,
-  #assessment-section,
-  #results-section {
-    display: none;
   }
 
   /* ══════════════════════════════
@@ -336,7 +331,6 @@
   .translator-header h2 em { font-family: 'Lora', serif; font-style: italic; color: var(--ochre); }
   .translator-header-right { font-size: 0.75rem; color: #c4b09a; text-align: right; line-height: 1.7; }
   .translator-header-right strong { color: var(--ochre); }
-
   .translator-body {
     flex: 1;
     display: grid;
@@ -361,97 +355,46 @@
     background: var(--light);
     flex-shrink: 0;
   }
-  .t-pane-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-  }
+  .t-pane-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); font-family: 'Syne', sans-serif; font-weight: 700; }
   .t-pane-label strong { color: var(--ink); }
   .t-char-count { font-size: 0.65rem; color: var(--muted); }
   .t-textarea {
-    flex: 1;
-    width: 100%;
-    background: var(--white);
-    border: none;
-    resize: none;
-    padding: 1.5rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.92rem;
-    line-height: 1.75;
-    color: var(--ink);
-    outline: none;
-    overflow-y: auto;
+    flex: 1; width: 100%; background: var(--white); border: none; resize: none;
+    padding: 1.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.92rem;
+    line-height: 1.75; color: var(--ink); outline: none; overflow-y: auto;
   }
   .t-textarea::placeholder { color: #b0a090; }
   .t-textarea:focus { background: #fffdf8; }
   .t-output-pane { display: flex; flex-direction: column; background: var(--white); }
   .t-output-body {
-    flex: 1;
-    padding: 1.5rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.92rem;
-    line-height: 1.75;
-    color: var(--ink);
-    overflow-y: auto;
-    white-space: pre-wrap;
-    word-break: break-word;
+    flex: 1; padding: 1.5rem; font-family: 'DM Sans', sans-serif; font-size: 0.92rem;
+    line-height: 1.75; color: var(--ink); overflow-y: auto; white-space: pre-wrap; word-break: break-word;
   }
   .t-output-body.empty { color: #b0a090; }
   .t-action-bar {
-    padding: 1rem 1.5rem;
-    border-top: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    background: var(--light);
-    flex-shrink: 0;
+    padding: 1rem 1.5rem; border-top: 1px solid var(--border);
+    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+    background: var(--light); flex-shrink: 0;
   }
   .t-btn {
-    padding: 0.7rem 2rem;
-    background: var(--ochre);
-    color: var(--ink);
-    border: none;
-    border-radius: 8px;
-    font-family: 'Syne', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.15s;
+    padding: 0.7rem 2rem; background: var(--ochre); color: var(--ink); border: none;
+    border-radius: 8px; font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all 0.15s;
     box-shadow: 0 2px 12px rgba(232,168,56,0.25);
   }
   .t-btn:hover:not(:disabled) { background: var(--mud2); color: white; transform: translateY(-1px); }
   .t-btn:disabled { opacity: 0.5; cursor: not-allowed; }
   .t-btn-outline {
-    padding: 0.7rem 1.5rem;
-    background: transparent;
-    color: var(--ink);
-    border: 1.5px solid var(--border);
-    border-radius: 8px;
-    font-family: 'Syne', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.15s;
+    padding: 0.7rem 1.5rem; background: transparent; color: var(--ink);
+    border: 1.5px solid var(--border); border-radius: 8px; font-family: 'Syne', sans-serif;
+    font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    cursor: pointer; transition: all 0.15s;
   }
   .t-btn-outline:hover { border-color: var(--ochre); color: var(--mud1); }
   .t-btn-clear {
-    padding: 0.7rem 1rem;
-    background: transparent;
-    color: var(--muted);
-    border: 1.5px solid var(--border);
-    border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: all 0.15s;
+    padding: 0.7rem 1rem; background: transparent; color: var(--muted);
+    border: 1.5px solid var(--border); border-radius: 8px; font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem; cursor: pointer; transition: all 0.15s;
   }
   .t-btn-clear:hover { color: var(--danger); border-color: var(--danger); }
   .t-status { font-size: 0.75rem; color: var(--muted); margin-left: auto; display: flex; align-items: center; gap: 0.5rem; }
@@ -464,15 +407,9 @@
   .dot-pulse span:nth-child(3) { animation-delay: 0.4s; }
   @keyframes pulse { 0%,80%,100%{opacity:0.2;transform:scale(0.8)} 40%{opacity:1;transform:scale(1)} }
   .t-stats-bar {
-    padding: 0.5rem 1.5rem;
-    border-top: 1px solid var(--border);
-    display: flex;
-    gap: 1.5rem;
-    font-size: 0.68rem;
-    color: var(--muted);
-    background: var(--cream);
-    flex-wrap: wrap;
-    flex-shrink: 0;
+    padding: 0.5rem 1.5rem; border-top: 1px solid var(--border);
+    display: flex; gap: 1.5rem; font-size: 0.68rem; color: var(--muted);
+    background: var(--cream); flex-wrap: wrap; flex-shrink: 0;
   }
   .t-stat { display: flex; align-items: center; gap: 0.4rem; }
   .t-stat-val { color: var(--mud2); font-weight: 500; }
@@ -480,134 +417,39 @@
   /* ══════════════════════════════
      SECTION 3 — QUIZ
   ══════════════════════════════ */
-  #quiz {
-    min-height: 100vh;
-    background: var(--cream);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-top: 1px solid var(--border);
-  }
-  .quiz-inner {
-    width: 100%;
-    max-width: 680px;
-    padding: 3rem 1.5rem 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  #quiz { min-height: 100vh; background: var(--cream); display: flex; flex-direction: column; align-items: center; border-top: 1px solid var(--border); }
+  .quiz-inner { width: 100%; max-width: 680px; padding: 3rem 1.5rem 4rem; display: flex; flex-direction: column; align-items: center; }
   .screen { width: 100%; display: none; flex-direction: column; align-items: center; }
   .screen.active { display: flex; }
-  .start-eyebrow {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ochre);
-    margin-bottom: 1rem;
-  }
-  .start-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 6vw, 3rem);
-    font-weight: 800;
-    color: var(--ink);
-    text-align: center;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-  }
+  .start-eyebrow { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ochre); margin-bottom: 1rem; }
+  .start-title { font-family: 'Syne', sans-serif; font-size: clamp(2rem, 6vw, 3rem); font-weight: 800; color: var(--ink); text-align: center; line-height: 1.1; margin-bottom: 1rem; }
   .start-title em { font-style: italic; font-family: 'Lora', serif; color: var(--ochre); }
-  .start-sub {
-    font-family: 'Lora', serif;
-    font-size: 1.05rem;
-    color: var(--muted);
-    text-align: center;
-    line-height: 1.7;
-    max-width: 480px;
-    margin-bottom: 2.5rem;
-  }
-  .start-card {
-    background: white;
-    border: 1.5px solid var(--border);
-    border-radius: 20px;
-    padding: 2rem;
-    width: 100%;
-    max-width: 460px;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  .start-card-label {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 1rem;
-  }
+  .start-sub { font-family: 'Lora', serif; font-size: 1.05rem; color: var(--muted); text-align: center; line-height: 1.7; max-width: 480px; margin-bottom: 2.5rem; }
+  .start-card { background: white; border: 1.5px solid var(--border); border-radius: 20px; padding: 2rem; width: 100%; max-width: 460px; margin-bottom: 2rem; text-align: center; }
+  .start-card-label { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
   .rules { display: flex; flex-direction: column; gap: 0.75rem; text-align: left; }
   .rule { display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--ink); }
-  .rule-icon {
-    width: 32px; height: 32px;
-    background: var(--light);
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1rem; flex-shrink: 0;
-  }
-  .btn-start {
-    background: var(--ochre);
-    color: white;
-    font-family: 'Syne', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 1rem 3rem;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    letter-spacing: 0.03em;
-    transition: transform 0.15s, box-shadow 0.15s;
-    box-shadow: 0 4px 20px rgba(232,168,56,0.35);
-  }
+  .rule-icon { width: 32px; height: 32px; background: var(--light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .btn-start { background: var(--ochre); color: white; font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; padding: 1rem 3rem; border: none; border-radius: 50px; cursor: pointer; letter-spacing: 0.03em; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 20px rgba(232,168,56,0.35); }
   .btn-start:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(232,168,56,0.45); }
   .progress-bar-wrap { width: 100%; height: 6px; background: var(--border); border-radius: 10px; margin: 1.5rem 0 2rem; overflow: hidden; }
   .progress-bar { height: 100%; background: var(--ochre); border-radius: 10px; transition: width 0.5s cubic-bezier(.4,0,.2,1); }
   .q-header { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 1.5rem; }
   .q-counter { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
   .q-score-live { font-family: 'Syne', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; color: var(--ochre); }
-  .question-card {
-    width: 100%; background: var(--ink); border-radius: 24px;
-    padding: 2.5rem 2rem; margin-bottom: 1.5rem; position: relative; overflow: hidden;
-  }
-  .question-card::before {
-    content: '"'; position: absolute; top: -0.5rem; left: 1.2rem;
-    font-family: 'Lora', serif; font-size: 8rem; color: rgba(232,168,56,0.12);
-    line-height: 1; pointer-events: none;
-  }
+  .question-card { width: 100%; background: var(--ink); border-radius: 24px; padding: 2.5rem 2rem; margin-bottom: 1.5rem; position: relative; overflow: hidden; }
+  .question-card::before { content: '"'; position: absolute; top: -0.5rem; left: 1.2rem; font-family: 'Lora', serif; font-size: 8rem; color: rgba(232,168,56,0.12); line-height: 1; pointer-events: none; }
   .q-label { font-family: 'Syne', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(232,168,56,0.7); margin-bottom: 0.75rem; }
   .q-text { font-family: 'Syne', sans-serif; font-size: clamp(1.3rem, 4vw, 1.8rem); font-weight: 800; color: white; line-height: 1.25; }
   .options { width: 100%; display: flex; flex-direction: column; gap: 0.75rem; }
-  .option-btn {
-    width: 100%; background: white; border: 2px solid var(--border); border-radius: 14px;
-    padding: 1rem 1.2rem; display: flex; align-items: center; gap: 1rem;
-    cursor: pointer; text-align: left; transition: border-color 0.15s, background 0.15s, transform 0.12s;
-    font-family: 'DM Sans', sans-serif;
-  }
+  .option-btn { width: 100%; background: white; border: 2px solid var(--border); border-radius: 14px; padding: 1rem 1.2rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; text-align: left; transition: border-color 0.15s, background 0.15s, transform 0.12s; font-family: 'DM Sans', sans-serif; }
   .option-btn:hover:not(:disabled) { border-color: var(--ochre); transform: translateX(4px); background: #fffcf5; }
   .option-btn:disabled { cursor: default; }
   .option-btn.dim { opacity: 0.45; }
-  .option-letter {
-    width: 34px; height: 34px; border-radius: 8px; background: var(--light);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 800; color: var(--ink);
-    flex-shrink: 0; transition: background 0.15s, color 0.15s;
-  }
+  .option-letter { width: 34px; height: 34px; border-radius: 8px; background: var(--light); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 800; color: var(--ink); flex-shrink: 0; transition: background 0.15s, color 0.15s; }
   .option-text { font-size: 0.95rem; color: var(--ink); line-height: 1.4; }
   .results-top { margin-top: 2rem; text-align: center; width: 100%; }
-  .score-circle {
-    width: 160px; height: 160px; border-radius: 50%; background: var(--ink);
-    margin: 1.5rem auto; display: flex; flex-direction: column; align-items: center; justify-content: center;
-    box-shadow: 0 12px 40px rgba(68,48,48,0.25);
-  }
+  .score-circle { width: 160px; height: 160px; border-radius: 50%; background: var(--ink); margin: 1.5rem auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 12px 40px rgba(68,48,48,0.25); }
   .score-number { font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800; color: var(--ochre); line-height: 1; }
   .score-label { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
   .score-verdict { font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 5vw, 2.2rem); font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; }
@@ -620,25 +462,15 @@
   .result-jargon { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--ink); }
   .result-plain { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--muted); }
   .results-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-  .btn-play-again {
-    background: var(--ochre); color: white; font-family: 'Syne', sans-serif;
-    font-size: 0.95rem; font-weight: 700; padding: 0.9rem 2.5rem;
-    border: none; border-radius: 50px; cursor: pointer; letter-spacing: 0.03em;
-    transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 16px rgba(232,168,56,0.3);
-  }
+  .btn-play-again { background: var(--ochre); color: white; font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; padding: 0.9rem 2.5rem; border: none; border-radius: 50px; cursor: pointer; letter-spacing: 0.03em; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 16px rgba(232,168,56,0.3); }
   .btn-play-again:hover { transform: translateY(-2px); }
-  .btn-share {
-    background: transparent; color: var(--ink); font-family: 'Syne', sans-serif;
-    font-size: 0.95rem; font-weight: 700; padding: 0.9rem 2.5rem;
-    border: 2px solid var(--border); border-radius: 50px; cursor: pointer;
-    transition: border-color 0.15s;
-  }
+  .btn-share { background: transparent; color: var(--ink); font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; padding: 0.9rem 2.5rem; border: 2px solid var(--border); border-radius: 50px; cursor: pointer; transition: border-color 0.15s; }
   .btn-share:hover { border-color: var(--ochre); }
   .share-copied { font-size: 0.85rem; color: var(--correct); margin-top: 1rem; opacity: 0; transition: opacity 0.3s; }
   .share-copied.show { opacity: 1; }
 
   /* ══════════════════════════════
-     SECTIONS 5-8 — ASSESSMENT
+     SECTION 4 — WHICH BRAIN
   ══════════════════════════════ */
   #which-brain {
     min-height: 100vh;
@@ -669,147 +501,25 @@
   .figures-row { display: flex; gap: clamp(1.5rem, 4vw, 4rem); justify-content: center; align-items: flex-end; flex-wrap: wrap; }
   .figure-card { display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: transform 0.3s ease; padding: 1rem; border-radius: 20px; border: 2px solid transparent; min-width: 140px; }
   .figure-card:hover { transform: translateY(-6px); }
-  .figure-card.selected.adhd { border-color: rgba(232,168,56,0.4); background: rgba(232,168,56,0.06); }
-  .figure-card.selected.dys  { border-color: rgba(74,156,199,0.4); background: rgba(74,156,199,0.06); }
-  .figure-card.selected.asd  { border-color: rgba(43,122,75,0.4);  background: rgba(43,122,75,0.06); }
+  .figure-card.adhd:hover { border-color: rgba(232,168,56,0.4); background: rgba(232,168,56,0.06); }
+  .figure-card.dys:hover  { border-color: rgba(74,156,199,0.4); background: rgba(74,156,199,0.06); }
+  .figure-card.asd:hover  { border-color: rgba(43,122,75,0.4);  background: rgba(43,122,75,0.06); }
   .figure-svg-wrap { position: relative; width: 90px; height: 200px; margin-bottom: 1rem; }
   .figure-glow { position: absolute; inset: -20px; border-radius: 50%; opacity: 0; transition: opacity 0.4s ease; filter: blur(25px); }
   .figure-card.adhd:hover .figure-glow { background: var(--ochre); opacity: 0.2; }
   .figure-card.dys:hover  .figure-glow { background: #4A9CC7; opacity: 0.18; }
   .figure-card.asd:hover  .figure-glow { background: #2B7A4B; opacity: 0.18; }
-  .figure-card.selected.adhd .figure-glow { background: var(--ochre); opacity: 0.35; }
-  .figure-card.selected.dys  .figure-glow { background: #4A9CC7; opacity: 0.3; }
-  .figure-card.selected.asd  .figure-glow { background: #2B7A4B; opacity: 0.3; }
   .figure-svg { width: 100%; height: 100%; position: relative; z-index: 1; }
   .figure-label { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: rgba(255,255,255,0.5); transition: color 0.3s; text-align: center; }
-  .figure-card.selected.adhd .figure-label { color: var(--ochre); }
-  .figure-card.selected.dys  .figure-label { color: #4A9CC7; }
-  .figure-card.selected.asd  .figure-label { color: #4acc80; }
+  .figure-card.adhd:hover .figure-label { color: var(--ochre); }
+  .figure-card.dys:hover  .figure-label { color: #4A9CC7; }
+  .figure-card.asd:hover  .figure-label { color: #4acc80; }
   .figure-sublabel { font-size: 0.7rem; color: rgba(255,255,255,0.3); margin-top: 0.2rem; text-align: center; letter-spacing: 0.05em; text-transform: uppercase; }
-  .brain-scroll-hint { text-align: center; margin-top: 2.5rem; font-family: 'Syne', sans-serif; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.2); opacity: 0; transition: opacity 0.5s ease; }
-  .brain-scroll-hint.visible { opacity: 1; animation: bounce 1.5s ease-in-out infinite; }
+  .brain-cta-row { text-align: center; margin-top: 2.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-none { display: inline-block; padding: 0.9rem 2rem; font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: 2px solid rgba(255,255,255,0.15); border-radius: 6px; cursor: pointer; background: transparent; color: rgba(255,255,255,0.4); transition: all 0.2s; text-decoration: none; }
+  .btn-none:hover { border-color: rgba(255,255,255,0.4); color: rgba(255,255,255,0.7); }
 
-  #tips-section { min-height: 100vh; background: var(--cream); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 5rem 2rem 3rem; }
-  .tips-inner { max-width: 780px; width: 100%; margin: 0 auto; }
-  .tips-placeholder, .assessment-placeholder, .results-placeholder { text-align: center; padding: 4rem 2rem; }
-  .placeholder-icon { font-size: 3rem; margin-bottom: 1rem; opacity: 0.3; }
-  .placeholder-text { font-family: 'Syne', sans-serif; font-size: 0.9rem; color: var(--muted); letter-spacing: 0.05em; }
-  .tips-header { display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 2px solid var(--border); }
-  .tips-abbr { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(3rem, 8vw, 5rem); line-height: 1; letter-spacing: -0.04em; }
-  .tips-abbr.adhd { color: var(--ochre); }
-  .tips-abbr.dys  { color: #4A9CC7; }
-  .tips-abbr.asd  { color: #2B7A4B; }
-  .tips-title-group { flex: 1; padding-top: 0.5rem; }
-  .tips-fullname { font-family: 'Syne', sans-serif; font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 700; color: var(--ink); margin-bottom: 0.3rem; }
-  .tips-subtitle { font-family: 'Lora', serif; font-style: italic; font-size: 0.95rem; color: var(--muted); }
-  .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; }
-  .tip-card { background: white; border: 1.5px solid var(--border); border-radius: 12px; padding: 1.3rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; animation: fadeUp 0.4s ease both; }
-  .tip-card.adhd:hover { border-color: var(--ochre); }
-  .tip-card.dys:hover  { border-color: #4A9CC7; }
-  .tip-card.asd:hover  { border-color: #2B7A4B; }
-  .tip-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; line-height: 1; flex-shrink: 0; min-width: 2rem; }
-  .tip-num.adhd { color: var(--ochre); }
-  .tip-num.dys  { color: #4A9CC7; }
-  .tip-num.asd  { color: #2B7A4B; }
-  .tip-text { font-size: 0.92rem; line-height: 1.65; color: var(--ink); }
-  .tip-text strong { font-weight: 600; display: block; margin-bottom: 0.2rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
-  .tip-text strong.adhd { color: var(--mud1); }
-  .tip-text strong.dys  { color: #2d6e8e; }
-  .tip-text strong.asd  { color: #2B7A4B; }
-  .tips-cta { margin-top: 2rem; display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-  .btn-assess { display: inline-block; padding: 0.9rem 2.5rem; font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: none; border-radius: 6px; cursor: pointer; transition: background 0.2s; }
-  .btn-assess.adhd { background: var(--ochre); color: var(--ink); }
-  .btn-assess.adhd:hover { background: var(--mud2); color: white; }
-  .btn-assess.dys  { background: #4A9CC7; color: white; }
-  .btn-assess.dys:hover  { background: #2d6e8e; }
-  .btn-assess.asd  { background: #2B7A4B; color: white; }
-  .btn-assess.asd:hover  { background: #1d5535; }
-  .btn-none { display: inline-block; padding: 0.9rem 2rem; font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: 2px solid var(--border); border-radius: 6px; cursor: pointer; background: transparent; color: var(--muted); transition: all 0.2s; }
-  .btn-none:hover { border-color: var(--ink); color: var(--ink); }
-
-  #assessment-section { min-height: 100vh; background: #f5f1e8; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 5rem 2rem 3rem; }
-  .assessment-inner { max-width: 720px; width: 100%; margin: 0 auto; }
-  .assessment-eyebrow { font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 0.6rem; }
-  .assessment-eyebrow.adhd { color: var(--ochre); }
-  .assessment-eyebrow.dys  { color: #4A9CC7; }
-  .assessment-eyebrow.asd  { color: #2B7A4B; }
-  .assessment-title { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-  .assessment-title em.adhd { color: var(--ochre); font-style: italic; font-family: 'Lora', serif; }
-  .assessment-title em.dys  { color: #4A9CC7; font-style: italic; font-family: 'Lora', serif; }
-  .assessment-title em.asd  { color: #2B7A4B; font-style: italic; font-family: 'Lora', serif; }
-  .assessment-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.6; }
-  .disclaimer-bar { font-size: 0.76rem; background: #fff8e1; border-left: 3px solid var(--ochre); padding: 0.6rem 0.9rem; color: #7a6000; border-radius: 0 4px 4px 0; margin-bottom: 1.5rem; line-height: 1.5; }
-  .assess-progress-wrap { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
-  .assess-progress-bar { flex: 1; height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
-  .assess-progress-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; width: 0%; }
-  .assess-progress-fill.adhd { background: linear-gradient(90deg, var(--ochre), #f59e0b); }
-  .assess-progress-fill.dys  { background: linear-gradient(90deg, #4A9CC7, #2d6e8e); }
-  .assess-progress-fill.asd  { background: linear-gradient(90deg, #2B7A4B, #1d5535); }
-  .assess-progress-label { font-family: 'Syne', sans-serif; font-size: 0.78rem; color: var(--muted); min-width: 55px; text-align: right; }
-  .q-card { background: white; border: 1.5px solid var(--border); border-radius: 10px; padding: 1rem 1.3rem; margin-bottom: 0.6rem; transition: border-color 0.2s; }
-  .q-card.answered.adhd { border-color: var(--ochre); background: #fffdf5; }
-  .q-card.answered.dys  { border-color: #4A9CC7; background: #f0f8ff; }
-  .q-card.answered.asd  { border-color: #2B7A4B; background: #f0fff5; }
-  .q-row { display: flex; gap: 0.8rem; align-items: flex-start; }
-  .q-number { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; line-height: 1.3; min-width: 26px; }
-  .q-number.adhd { color: var(--ochre); }
-  .q-number.dys  { color: #4A9CC7; }
-  .q-number.asd  { color: #2B7A4B; }
-  .q-text { font-size: 0.9rem; line-height: 1.55; flex: 1; padding-top: 0.1rem; color: var(--ink); }
-  #assessment-section .q-text { color: var(--ink); }
-  .a-row { display: flex; gap: 0.4rem; margin-top: 0.8rem; flex-wrap: wrap; }
-  .radio-opt { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 55px; cursor: pointer; }
-  .radio-opt input[type="radio"] { display: none; }
-  .radio-face { width: 100%; padding: 0.4rem 0.3rem; border: 1.5px solid var(--border); border-radius: 6px; background: white; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--ink); cursor: pointer; transition: all 0.15s; text-align: center; user-select: none; }
-  input[type="radio"]:checked + .radio-face.r-none { background: var(--ink); border-color: var(--ink); color: white; }
-  input[type="radio"]:checked + .radio-face.r-mild { background: #0891b2; border-color: #0891b2; color: white; }
-  input[type="radio"]:checked + .radio-face.r-mod  { background: var(--ochre); border-color: var(--ochre); color: var(--ink); }
-  input[type="radio"]:checked + .radio-face.r-sev  { background: #c0392b; border-color: #c0392b; color: white; }
-  input[type="radio"]:checked + .radio-face.r-no   { background: var(--ink); border-color: var(--ink); color: white; }
-  input[type="radio"]:checked + .radio-face.r-som  { background: #0891b2; border-color: #0891b2; color: white; }
-  input[type="radio"]:checked + .radio-face.r-yes  { background: #2B7A4B; border-color: #2B7A4B; color: white; }
-  .btn-submit-assess { padding: 0.85rem 2.5rem; border: none; border-radius: 8px; font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.05em; cursor: pointer; transition: background 0.2s; margin-top: 1.5rem; }
-  .btn-submit-assess:disabled { opacity: 0.3; cursor: not-allowed; background: var(--border); color: var(--muted); }
-  .btn-submit-assess.adhd:not(:disabled) { background: var(--ochre); color: var(--ink); }
-  .btn-submit-assess.dys:not(:disabled)  { background: #4A9CC7; color: white; }
-  .btn-submit-assess.asd:not(:disabled)  { background: #2B7A4B; color: white; }
-  .submit-note-assess { font-size: 0.76rem; color: var(--muted); margin-top: 0.5rem; }
-
-  #results-section { min-height: 100vh; background: #3b2f1e; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 5rem 2rem 3rem; position: relative; overflow: hidden; }
-  #results-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(232,168,56,0.08) 0%, transparent 60%); pointer-events: none; }
-  .results-inner { max-width: 680px; width: 100%; margin: 0 auto; position: relative; }
-  .results-eyebrow { font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ochre); margin-bottom: 1rem; text-align: center; }
-  .results-score-block { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; text-align: center; margin-bottom: 1.5rem; }
-  .results-profile-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem; }
-  .results-profile-name.adhd { color: var(--ochre); }
-  .results-profile-name.dys  { color: #4A9CC7; }
-  .results-profile-name.asd  { color: #4acc80; }
-  .score-big { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(3.5rem, 10vw, 6rem); line-height: 1; margin-bottom: 0.3rem; }
-  .score-big.adhd { color: var(--ochre); }
-  .score-big.dys  { color: #4A9CC7; }
-  .score-big.asd  { color: #4acc80; }
-  .score-raw { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-bottom: 1.2rem; }
-  .assess-result-band { display: inline-block; padding: 0.4rem 1.2rem; border-radius: 99px; font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; }
-  .band-low    { background: rgba(43,122,75,0.2);  color: #4acc80; border: 1px solid rgba(43,122,75,0.3); }
-  .band-medium { background: rgba(232,168,56,0.2); color: var(--ochre); border: 1px solid rgba(232,168,56,0.3); }
-  .band-high   { background: rgba(192,57,43,0.2);  color: #e88080; border: 1px solid rgba(192,57,43,0.3); }
-  .results-desc { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.2rem; }
-  .results-desc h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: #faf8f3; margin-bottom: 0.6rem; }
-  .results-desc p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
-  .domain-results { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.2rem; }
-  .domain-results h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
-  .dr-row { margin-bottom: 1rem; }
-  .dr-title { display: flex; justify-content: space-between; font-size: 0.82rem; color: rgba(255,255,255,0.7); margin-bottom: 0.3rem; }
-  .dr-meter { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
-  .dr-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
-  .fill-low    { background: #4acc80; }
-  .fill-medium { background: var(--ochre); }
-  .fill-high   { background: #e88080; }
-  .results-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
-  .btn-retake { padding: 0.75rem 1.8rem; background: transparent; color: rgba(255,255,255,0.6); border: 1.5px solid rgba(255,255,255,0.2); border-radius: 6px; font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.05em; cursor: pointer; transition: all 0.2s; }
-  .btn-retake:hover { border-color: rgba(255,255,255,0.5); color: white; }
-  .assess-sources { font-size: 0.7rem; color: rgba(255,255,255,0.25); border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; margin-top: 1rem; line-height: 1.6; text-align: center; }
-/* ══ PRICING ══ */
+  /* ══ PRICING ══ */
   #pricing { min-height: 100vh; background: var(--light); border-top: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; padding: 4rem 2rem; }
   .pricing-hero { text-align: center; margin-bottom: 3rem; }
   .pricing-eyebrow { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--mud2); font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 1rem; }
@@ -866,6 +576,7 @@
   <div class="nav-links">
     <a href="#translator">Translator</a>
     <a href="#quiz">Fun Quiz</a>
+    <a href="#which-brain">Brain Types</a>
     <a href="#pricing">Pricing</a>
     <a href="#pricing" class="nav-cta">Get Started</a>
   </div>
@@ -879,6 +590,7 @@
 <ul class="nav-drawer" id="navDrawer">
   <li><a href="#translator" onclick="closeNav()">Translator</a></li>
   <li><a href="#quiz" onclick="closeNav()">Quiz</a></li>
+  <li><a href="#which-brain" onclick="closeNav()">Brain Types</a></li>
   <li><a href="#pricing" onclick="closeNav()">Pricing</a></li>
   <li><a href="#pricing" class="drawer-cta" onclick="closeNav()">Get Started</a></li>
 </ul>
@@ -989,48 +701,35 @@ Highlighted words show what was replaced.</div>
     </section>
   </div>
 </section>
-<!-- ══ SECTION 5: WHICH BRAIN ARE YOU? ══ -->
+
+<!-- ══ SECTION 4: WHICH BRAIN ARE YOU? ══ -->
 <section class="snap-section" id="which-brain">
   <div class="brain-header">
     <p class="brain-eyebrow">Self-reflection tool</p>
     <h1 class="brain-title">Which brain<br>are <em>you?</em></h1>
-    <p class="brain-sub">Select the profile that feels most like you. Your tips and assessment will appear instantly.</p>
+    <p class="brain-sub">Select the profile that feels most like you to get your tips and self-assessment.</p>
   </div>
   <div class="figures-row">
-    <div class="figure-card adhd" onclick="selectProfile('adhd')">
+    <div class="figure-card adhd" onclick="window.location.href='adhd-tips.html'">
       <div class="figure-svg-wrap">
         <div class="figure-glow"></div>
-        <!-- ADHD: slim female, ochre top, brown shoulder-length hair -->
         <svg class="figure-svg" viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- shoulder-length hair behind head -->
           <path d="M22 36 Q18 50 20 75 Q26 80 30 78 Q28 55 30 38Z" fill="#7a4a2a"/>
           <path d="M58 36 Q62 50 60 75 Q54 80 50 78 Q52 55 50 38Z" fill="#7a4a2a"/>
-          <!-- head -->
           <ellipse cx="40" cy="28" rx="16" ry="18" fill="#f5c5a3" stroke="#d4956e" stroke-width="1"/>
-          <!-- hair top over head -->
           <path d="M24 22 Q25 6 40 5 Q55 6 56 22 Q55 12 40 11 Q25 12 24 22Z" fill="#7a4a2a"/>
-          <!-- ear left -->
           <ellipse cx="24" cy="29" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- ear right -->
           <ellipse cx="56" cy="29" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- eyes -->
           <circle cx="34" cy="26" r="2.5" fill="#4a2c10"/>
           <circle cx="46" cy="26" r="2.5" fill="#4a2c10"/>
           <circle cx="35" cy="25" r="0.8" fill="white"/>
           <circle cx="47" cy="25" r="0.8" fill="white"/>
-          <!-- smile -->
           <path d="M34 33 Q40 38 46 33" stroke="#c07050" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <!-- neck -->
           <rect x="36" y="44" width="8" height="8" rx="2" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- torso: ochre top, slim -->
           <path d="M27 52 Q22 56 16 68 L14 92 L22 93 L25 76 L25 112 L55 112 L55 76 L58 93 L66 92 L64 68 Q58 56 53 52 Q47 50 40 50 Q33 50 27 52Z" fill="#E8A838" stroke="#c4892a" stroke-width="0.8"/>
-          <!-- left hand: teardrop hanging down -->
           <path d="M13 90 Q9 93 10 98 Q11 102 14 102 Q17 102 18 98 Q19 93 15 90 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- right hand -->
           <path d="M67 90 Q63 93 64 98 Q65 102 68 102 Q71 102 72 98 Q73 93 69 90 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- jeans slim legs -->
           <path d="M25 112 L23 168 L37 169 L40 142 L43 169 L57 168 L55 112Z" fill="#3a4a6a" stroke="#2a3550" stroke-width="0.8"/>
-          <!-- shoes -->
           <path d="M18 168 Q18 173 28 174 Q36 174 37 169 L23 168Z" fill="#6b3c1e"/>
           <path d="M43 169 Q44 174 52 174 Q62 173 62 168 L57 168Z" fill="#6b3c1e"/>
         </svg>
@@ -1038,37 +737,25 @@ Highlighted words show what was replaced.</div>
       <div class="figure-label">ADHD</div>
       <div class="figure-sublabel">Attention</div>
     </div>
-    <div class="figure-card dys" onclick="selectProfile('dys')">
+    <div class="figure-card dys" onclick="window.location.href='dyslexia-tips.html'">
       <div class="figure-svg-wrap">
         <div class="figure-glow"></div>
-        <!-- Dyslexia: slim male, sky blue top, short brown hair -->
         <svg class="figure-svg" viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- head -->
           <ellipse cx="40" cy="26" rx="15" ry="17" fill="#f5c5a3" stroke="#d4956e" stroke-width="1"/>
-          <!-- short hair top -->
           <path d="M25 20 Q26 5 40 4 Q54 5 55 20 Q52 10 40 9 Q28 10 25 20Z" fill="#6b3c1e"/>
-          <!-- side hair flick -->
           <path d="M25 18 Q22 14 26 10 Q28 8 30 12" fill="#6b3c1e"/>
-          <!-- ears -->
           <ellipse cx="25" cy="27" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
           <ellipse cx="55" cy="27" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- eyes -->
           <circle cx="34" cy="24" r="2.5" fill="#4a2c10"/>
           <circle cx="46" cy="24" r="2.5" fill="#4a2c10"/>
           <circle cx="35" cy="23" r="0.8" fill="white"/>
           <circle cx="47" cy="23" r="0.8" fill="white"/>
-          <!-- gentle smile -->
           <path d="M34 31 Q40 36 46 31" stroke="#c07050" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <!-- neck -->
           <rect x="36" y="41" width="8" height="8" rx="2" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- torso: sky blue, slightly broader shoulders for male -->
           <path d="M25 49 Q18 54 13 66 L11 90 L20 92 L23 74 L23 110 L57 110 L57 74 L60 92 L69 90 L67 66 Q62 54 55 49 Q48 47 40 47 Q32 47 25 49Z" fill="#4A9CC7" stroke="#2d7aa0" stroke-width="0.8"/>
-          <!-- hands: teardrop hanging down -->
           <path d="M10 88 Q6 91 7 96 Q8 100 11 100 Q14 100 15 96 Q16 91 12 88 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
           <path d="M70 88 Q66 91 67 96 Q68 100 71 100 Q74 100 75 96 Q76 91 72 88 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- slim jeans -->
           <path d="M23 110 L21 168 L36 169 L40 142 L44 169 L59 168 L57 110Z" fill="#3a4a6a" stroke="#2a3550" stroke-width="0.8"/>
-          <!-- shoes -->
           <path d="M16 168 Q15 173 27 174 Q35 174 36 169 L21 168Z" fill="#6b3c1e"/>
           <path d="M44 169 Q45 174 53 174 Q65 173 64 168 L59 168Z" fill="#6b3c1e"/>
         </svg>
@@ -1076,38 +763,26 @@ Highlighted words show what was replaced.</div>
       <div class="figure-label">Dyslexia</div>
       <div class="figure-sublabel">Reading</div>
     </div>
-    <div class="figure-card asd" onclick="selectProfile('asd')">
+    <div class="figure-card asd" onclick="window.location.href='asd-tips.html'">
       <div class="figure-svg-wrap">
         <div class="figure-glow"></div>
-        <!-- ASD: slim female, green top, chin-length bob hair -->
         <svg class="figure-svg" viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- bob hair behind head -->
           <path d="M24 34 Q20 48 22 68 Q27 72 30 70 Q28 52 30 36Z" fill="#5a3018"/>
           <path d="M56 34 Q60 48 58 68 Q53 72 50 70 Q52 52 50 36Z" fill="#5a3018"/>
-          <!-- head -->
           <ellipse cx="40" cy="28" rx="16" ry="18" fill="#f5c5a3" stroke="#d4956e" stroke-width="1"/>
-          <!-- hair top -->
           <path d="M24 22 Q25 7 40 6 Q55 7 56 22 Q54 12 40 11 Q26 12 24 22Z" fill="#5a3018"/>
-          <!-- ears -->
           <ellipse cx="24" cy="29" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
           <ellipse cx="56" cy="29" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- eyes -->
           <circle cx="34" cy="26" r="2.5" fill="#4a2c10"/>
           <circle cx="46" cy="26" r="2.5" fill="#4a2c10"/>
           <circle cx="35" cy="25" r="0.8" fill="white"/>
           <circle cx="47" cy="25" r="0.8" fill="white"/>
-          <!-- smile -->
           <path d="M34 33 Q40 38 46 33" stroke="#c07050" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <!-- neck -->
           <rect x="36" y="44" width="8" height="8" rx="2" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- torso: green top, slim -->
           <path d="M27 52 Q22 56 16 68 L14 92 L22 93 L25 76 L25 112 L55 112 L55 76 L58 93 L66 92 L64 68 Q58 56 53 52 Q47 50 40 50 Q33 50 27 52Z" fill="#2B7A4B" stroke="#1d5535" stroke-width="0.8"/>
-          <!-- hands: teardrop hanging down -->
           <path d="M13 90 Q9 93 10 98 Q11 102 14 102 Q17 102 18 98 Q19 93 15 90 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
           <path d="M67 90 Q63 93 64 98 Q65 102 68 102 Q71 102 72 98 Q73 93 69 90 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <!-- slim jeans -->
           <path d="M25 112 L23 168 L37 169 L40 142 L43 169 L57 168 L55 112Z" fill="#3a4a6a" stroke="#2a3550" stroke-width="0.8"/>
-          <!-- shoes -->
           <path d="M18 168 Q18 173 28 174 Q36 174 37 169 L23 168Z" fill="#6b3c1e"/>
           <path d="M43 169 Q44 174 52 174 Q62 173 62 168 L57 168Z" fill="#6b3c1e"/>
         </svg>
@@ -1116,90 +791,12 @@ Highlighted words show what was replaced.</div>
       <div class="figure-sublabel">Autism Spectrum</div>
     </div>
   </div>
-  <div class="brain-scroll-hint" id="brain-scroll-hint">▼ &nbsp; Your tips are ready</div>
-  <div style="text-align:center; margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
-    <button class="btn-none" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">None of these</button>
-    <button class="btn-assess" id="btn-hero-assess" onclick="scrollToAssessment()">Take the Assessment →</button>
-  </div>
-</section>
-<!-- ══ SECTION 6: TIPS ══ -->
-<section class="snap-section" id="tips-section">
-  <div class="tips-inner">
-    <div class="tips-placeholder" id="tips-placeholder">
-      <div class="placeholder-icon">☝️</div>
-      <p class="placeholder-text">Select a profile above to see your tips</p>
-    </div>
-    <div id="tips-content" style="display:none">
-      <div class="tips-header">
-        <div class="tips-abbr" id="tips-abbr"></div>
-        <div class="tips-title-group">
-          <div class="tips-fullname" id="tips-fullname"></div>
-          <div class="tips-subtitle" id="tips-subtitle"></div>
-        </div>
-      </div>
-      <div class="tips-grid" id="tips-grid"></div>
-      <div class="tips-cta">
-        <button class="btn-none" onclick="['tips-section','assessment-section','results-section'].forEach(function(id){document.getElementById(id).style.display='none'});document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">None of these</button>
-        <button class="btn-assess" id="btn-to-assess" onclick="scrollToAssessment()">Take the Assessment →</button>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ══ SECTION 7: ASSESSMENT ══ -->
-<section class="snap-section" id="assessment-section">
-  <div class="assessment-inner">
-    <div class="assessment-placeholder" id="assessment-placeholder">
-      <div class="placeholder-icon">📋</div>
-      <p class="placeholder-text">Complete your tips first, then come back for your assessment</p>
-    </div>
-    <div id="assessment-content" style="display:none">
-      <div>
-        <p class="assessment-eyebrow" id="assess-eyebrow"></p>
-        <h2 class="assessment-title" id="assess-title"></h2>
-        <p class="assessment-subtitle" id="assess-subtitle"></p>
-        <div class="disclaimer-bar">This is a self-reflection tool, not a medical diagnosis. If results concern you, speak with a qualified professional.</div>
-      </div>
-      <div class="assess-progress-wrap">
-        <div class="assess-progress-bar"><div class="assess-progress-fill" id="assess-progress-fill"></div></div>
-        <div class="assess-progress-label" id="assess-progress-label">0 / 0</div>
-      </div>
-      <div id="questions-wrap"></div>
-      <div style="text-align:center">
-        <button class="btn-submit-assess" id="btn-submit-assess" disabled onclick="showAssessResults()">View My Results</button>
-        <p class="submit-note-assess" id="submit-note-assess">Answer all questions to see your results</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ══ SECTION 8: RESULTS ══ -->
-<section class="snap-section" id="results-section">
-  <div class="results-inner">
-    <div class="results-placeholder" id="results-placeholder">
-      <p class="placeholder-text" style="color:rgba(255,255,255,0.25);font-family:'Syne',sans-serif;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;text-align:center;margin-top:1rem;">Your results will appear here</p>
-    </div>
-    <div id="results-content" style="display:none">
-      <p class="results-eyebrow">Your Results</p>
-      <div class="results-score-block">
-        <div class="results-profile-name" id="res-profile-name"></div>
-        <div class="score-big" id="res-score"></div>
-        <div class="score-raw" id="res-raw"></div>
-        <span class="assess-result-band" id="res-band"></span>
-      </div>
-      <div class="results-desc" id="res-desc"></div>
-      <div class="domain-results">
-        <h3>Score by Area</h3>
-        <div id="domain-breakdown"></div>
-      </div>
-      <div class="results-actions">
-        <button class="btn-retake" onclick="retakeAssessment()">← Retake</button>
-        <a href="#translator" class="btn-primary">Try the Translator →</a>
-      </div>
-      <div class="assess-sources" id="res-sources"></div>
-    </div>
+  <div class="brain-cta-row">
+    <a href="#pricing" class="btn-none">None of these</a>
   </div>
 </section>
 
-<!-- ══ SECTION 8: PRICING ══ -->
+<!-- ══ SECTION 5: PRICING ══ -->
 <section class="snap-section" id="pricing">
   <div class="pricing-hero">
     <p class="pricing-eyebrow">Simple, honest pricing</p>
@@ -1214,8 +811,6 @@ Highlighted words show what was replaced.</div>
   </div>
   <div class="cards-section">
     <div class="cards-wrap">
-
-      <!-- FREE -->
       <div class="card free">
         <div class="card-num">1</div>
         <div class="card-body">
@@ -1234,8 +829,6 @@ Highlighted words show what was replaced.</div>
           <a href="#translator" class="card-cta">Start Free</a>
         </div>
       </div>
-
-      <!-- BRONZE -->
       <div class="card bronze">
         <div class="card-num">2</div>
         <div class="card-body">
@@ -1257,11 +850,9 @@ Highlighted words show what was replaced.</div>
           <a href="#" class="card-cta">Get Bronze</a>
         </div>
       </div>
-
-      <!-- SILVER -->
       <div class="card silver">
         <div class="card-num">3</div>
-        <div class="card-body"><BR>
+        <div class="card-body"><br>
           <div class="popular-badge">Most Popular</div>
           <div class="card-tier">Silver</div>
           <div class="card-name">Pro</div>
@@ -1281,8 +872,6 @@ Highlighted words show what was replaced.</div>
           <a href="#" class="card-cta">Get Silver</a>
         </div>
       </div>
-
-      <!-- GOLD -->
       <div class="card gold">
         <div class="card-num">4</div>
         <div class="card-body">
@@ -1305,318 +894,16 @@ Highlighted words show what was replaced.</div>
           <a href="#" class="card-cta">Get Gold</a>
         </div>
       </div>
-
     </div>
   </div>
   <p class="footer-note">All plans include a 14-day money-back guarantee. No contracts, cancel anytime.<br>
     Get in touch to discuss custom enterprise solutions tailored for your business needs.
-    
     <a href="#" class="faq-link">Questions? See the FAQ →</a>
   </p>
 </section>
 
 <script src="jargon-database.js"></script>
 <script>
-// ── ASSESSMENT DATA ──
-var PROFILES = {
-  adhd: {
-    abbr: 'ADHD',
-    fullname: 'Attention Deficit Hyperactivity Disorder — Tips for Success',
-    subtitle: 'Your brain runs fast. These tips help you harness it at work.',
-    tips: [
-      { label: 'Structure your day', text: 'Break tasks into small, timed chunks. A 25-minute focus sprint followed by a 5-minute break works well for many ADHD brains.' },
-      { label: 'Write everything down', text: 'Do not trust your memory for deadlines or instructions. Keep a single notebook or app open at all times and capture tasks the moment they arrive.' },
-      { label: 'Use body doubling', text: 'Working alongside someone else — even on a video call — can dramatically improve focus. You are not being distracted; you are regulating.' },
-      { label: 'Name your distractions', text: 'When a random thought interrupts your work, write it in a "parking lot" list and return to it later. This clears the mental tab without losing the thought.' },
-      { label: 'Request written follow-ups', text: 'It is completely reasonable to ask colleagues to follow up meetings or instructions in writing. "Can you drop me a quick email summary?" is a professional request.' },
-      { label: 'Find your peak window', text: 'Identify the time of day your focus is sharpest and protect it fiercely for your most demanding work. Admin and meetings can fill the rest.' }
-    ],
-    assessEyebrow: 'ADHD Self-Reflection',
-    assessTitle: 'How does <em class="adhd">ADHD</em> show up for you?',
-    assessSubtitle: '18 questions · Conners Adult ADHD Rating Scale · Takes about 3 minutes',
-    sources: 'Based on the Conners Adult ADHD Rating Scale (CAARS). Scored: None=0, Mild=1, Moderate=3, Severe=5.',
-    questionType: 'adhd',
-    domains: [
-      { label: 'Inattention', qs: [0,1,2,3,4,5,6,7,8] },
-      { label: 'Hyperactivity / Impulsivity', qs: [9,10,11,12,13,14,15,16,17] }
-    ],
-    questions: [
-      'I have difficulty keeping my attention on work or tasks',
-      'I make careless mistakes when I have to work on a boring project',
-      'I have difficulty concentrating on what people say to me, even when they are speaking directly to me',
-      'I have trouble finishing the final details of a project, once the challenging parts have been done',
-      'I have difficulty getting things in order when I have to do a task that requires organisation',
-      'When I have a task that requires a lot of thinking, I avoid it or put it off',
-      'I misplace or have difficulty finding things at home or at work',
-      'I am easily distracted by things around me',
-      'I forget things I have to do during the day',
-      'I fidget with my hands or feet or squirm in my seat',
-      'I feel restless inside even if I am sitting still',
-      'I have difficulty relaxing when I have free time',
-      'I talk too much in social situations',
-      'I blurt out answers before questions have been finished',
-      'I have difficulty waiting my turn',
-      'I interrupt others when they are busy',
-      'I act impulsively without thinking about consequences',
-      'I leave tasks unfinished and move on to something new'
-    ]
-  },
-  dys: {
-    abbr: 'Dyslexia',
-    fullname: 'Dyslexia — Tips for Success',
-    subtitle: 'Your brain processes language differently. That is a difference, not a deficit.',
-    tips: [
-      { label: 'Use text-to-speech', text: 'Most phones and computers have built-in text-to-speech. Listening to emails and documents while reading along can significantly reduce reading fatigue.' },
-      { label: 'Ask for documents in advance', text: 'Requesting meeting materials ahead of time gives you the processing space others take for granted. This is a reasonable workplace accommodation to ask for.' },
-      { label: 'Dictate first, edit later', text: 'Speech-to-text tools like voice notes let you get your ideas down without the friction of spelling. Draft verbally, then tidy up the text.' },
-      { label: 'Choose your font', text: 'Sans-serif fonts like Arial are generally easier to read. If you can change document fonts for yourself, do it every time.' },
-      { label: 'Read in chunks', text: 'Cover text you have not yet reached with your hand or a piece of paper. Reducing the visual load on a page can make reading significantly faster.' },
-      { label: 'Own it with confidence', text: 'Dyslexia is strongly linked with creative thinking, big-picture vision, and problem-solving. You are not behind — you process the world differently.' }
-    ],
-    assessEyebrow: 'Dyslexia Self-Reflection',
-    assessTitle: 'How does <em class="dys">Dyslexia</em> show up for you?',
-    assessSubtitle: '14 questions · Reading, writing and processing patterns · Takes about 2 minutes',
-    sources: 'Based on common adult dyslexia screening indicators. Scored: No=0, Sometimes=1, Yes=2.',
-    questionType: 'asd',
-    domains: [
-      { label: 'Reading & Decoding', qs: [0,1,2,3,4] },
-      { label: 'Writing & Spelling', qs: [5,6,7,8] },
-      { label: 'Processing & Memory', qs: [9,10,11,12,13] }
-    ],
-    questions: [
-      'I read more slowly than most people, even when I am trying hard',
-      'I have to re-read sentences or paragraphs to understand them',
-      'I mix up letters that look similar, such as b and d, or p and q',
-      'I find it hard to read aloud without stumbling over words',
-      'I lose my place easily when reading a long piece of text',
-      'My spelling is inconsistent — I may spell the same word differently on the same page',
-      'I have difficulty putting my thoughts into written words, even when I know what I want to say',
-      'I find proofreading my own work difficult — I miss errors others would catch easily',
-      'I avoid writing tasks when I can, or feel anxious about written work',
-      'I struggle to remember sequences of letters, numbers, or instructions in the correct order',
-      'I confuse left and right more often than most people',
-      'I find it hard to listen and take notes at the same time',
-      'I have difficulty with tasks that require reading and thinking simultaneously',
-      'I often know a word but cannot retrieve it quickly when speaking or writing'
-    ]
-  },
-  asd: {
-    abbr: 'ASD',
-    fullname: 'Autism Spectrum Disorder — Tips for Success',
-    subtitle: 'Your brain notices more. These tips help you navigate environments designed for others.',
-    tips: [
-      { label: 'Request explicit instructions', text: 'It is always acceptable to ask for written, step-by-step instructions. Asking for clarity is professional, not a weakness.' },
-      { label: 'Prepare for transitions', text: 'Unexpected changes are harder when your brain prefers predictability. Whenever possible, review your schedule the night before and build in transition time.' },
-      { label: 'Create sensory control', text: 'Noise-cancelling headphones, a consistent desk setup, and a preferred mug are not quirks — they are tools. Use whatever helps you regulate your environment.' },
-      { label: 'Script conversations in advance', text: 'Preparing phrases for common work situations reduces the live cognitive load. Scripting is a professional skill, not a cheat.' },
-      { label: 'Decode jargon literally', text: 'Corporate language is deliberately vague. You are right to find it confusing. Use Unmuddled to translate it instantly.' },
-      { label: 'Name your communication style', text: 'Saying "I communicate best in writing" or "I prefer direct feedback" is increasingly valued. You do not need to disclose a diagnosis to advocate for how you work best.' }
-    ],
-    assessEyebrow: 'ASD Self-Reflection',
-    assessTitle: 'How does <em class="asd">ASD</em> show up for you?',
-    assessSubtitle: '18 questions across 3 areas · Takes about 3 minutes',
-    sources: 'Based on common adult ASD screening indicators. Scored: No=0, Sometimes=1, Yes=2.',
-    questionType: 'asd',
-    domains: [
-      { label: 'Social Communication', qs: [0,1,2,3,4,5] },
-      { label: 'Sensory & Routine', qs: [6,7,8,9,10,11] },
-      { label: 'Patterns & Focus', qs: [12,13,14,15,16,17] }
-    ],
-    questions: [
-      'I find it hard to understand what people mean when they speak figuratively or use idioms',
-      'I have difficulty reading facial expressions or body language',
-      'I find social small talk difficult or pointless',
-      'I tend to take what people say very literally',
-      'I struggle to know when it is my turn to speak in a conversation',
-      'I have been told I speak in a way that feels blunt or too direct',
-      'I am easily overwhelmed by loud or busy environments',
-      'I have strong preferences about how my workspace or belongings are arranged',
-      'Unexpected changes to plans cause me significant distress',
-      'I need more recovery time after social events than most people seem to',
-      'Certain textures, sounds, or lights bother me more than they bother others',
-      'I find rigid routines helpful and comforting',
-      'I have one or more topics I can discuss in great detail for a very long time',
-      'I notice patterns and details that others tend to miss',
-      'I prefer to follow a clear, consistent process rather than improvising',
-      'I find it hard to engage with tasks I do not find interesting, even important ones',
-      'I have a strong sense of fairness and become upset when rules are not applied consistently',
-      'I have been told my interests are unusually intense or narrow'
-    ]
-  }
-};
-
-var currentProfile = null;
-var assessAnswered = [];
-var assessAnsweredCount = 0;
-
-function selectProfile(profile) {
-  currentProfile = profile;
-  // Reveal the sections that are hidden until a profile is chosen
-  ['tips-section', 'assessment-section', 'results-section'].forEach(function(id) {
-    document.getElementById(id).style.display = 'flex';
-  });
-  document.querySelectorAll('.figure-card').forEach(function(c) { c.classList.remove('selected'); });
-  document.querySelector('.figure-card.' + profile).classList.add('selected');
-  document.getElementById('brain-scroll-hint').classList.add('visible');
-  buildTips(profile);
-  buildAssessment(profile);
-  setTimeout(function() {
-    document.getElementById('tips-section').scrollIntoView({ behavior: 'smooth' });
-  }, 300);
-}
-
-function buildTips(profile) {
-  var data = PROFILES[profile];
-  document.getElementById('tips-placeholder').style.display = 'none';
-  document.getElementById('tips-content').style.display = 'block';
-  var abbr = document.getElementById('tips-abbr');
-  abbr.textContent = data.abbr;
-  abbr.className = 'tips-abbr ' + profile;
-  document.getElementById('tips-fullname').textContent = data.fullname;
-  document.getElementById('tips-subtitle').textContent = data.subtitle;
-  var grid = document.getElementById('tips-grid');
-  grid.innerHTML = '';
-  data.tips.forEach(function(tip, i) {
-    grid.innerHTML += '<div class="tip-card ' + profile + '" style="animation-delay:' + (i * 0.07) + 's">' +
-      '<div class="tip-num ' + profile + '">' + (i + 1) + '</div>' +
-      '<div class="tip-text"><strong class="' + profile + '">' + tip.label + '</strong>' + tip.text + '</div>' +
-      '</div>';
-  });
-  var btn = document.getElementById('btn-to-assess');
-  btn.className = 'btn-assess ' + profile;
-}
-
-function buildAssessment(profile) {
-  var data = PROFILES[profile];
-  var total = data.questions.length;
-  assessAnswered = new Array(total).fill(null);
-  assessAnsweredCount = 0;
-  document.getElementById('assessment-placeholder').style.display = 'none';
-  document.getElementById('assessment-content').style.display = 'block';
-  var eyebrow = document.getElementById('assess-eyebrow');
-  eyebrow.textContent = data.assessEyebrow;
-  eyebrow.className = 'assessment-eyebrow ' + profile;
-  document.getElementById('assess-title').innerHTML = data.assessTitle;
-  document.getElementById('assess-subtitle').textContent = data.assessSubtitle;
-  var pf = document.getElementById('assess-progress-fill');
-  pf.className = 'assess-progress-fill ' + profile;
-  pf.style.width = '0%';
-  document.getElementById('assess-progress-label').textContent = '0 / ' + total;
-  var btn = document.getElementById('btn-submit-assess');
-  btn.disabled = true;
-  btn.className = 'btn-submit-assess ' + profile;
-  document.getElementById('submit-note-assess').textContent = 'Answer all ' + total + ' questions to see your results';
-  var wrap = document.getElementById('questions-wrap');
-  wrap.innerHTML = '';
-  data.questions.forEach(function(qtext, qi) {
-    var qnum = String(qi + 1).padStart(2, '0');
-    var answerHTML = '';
-    if (data.questionType === 'adhd') {
-      answerHTML = '<div class="a-row">' +
-        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="0"><span class="radio-face r-none">None</span></label>' +
-        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="1"><span class="radio-face r-mild">Mild</span></label>' +
-        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="3"><span class="radio-face r-mod">Moderate</span></label>' +
-        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="5"><span class="radio-face r-sev">Severe</span></label>' +
-        '</div>';
-    } else {
-      answerHTML = '<div class="a-row">' +
-        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="0"><span class="radio-face r-no">No</span></label>' +
-        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="1"><span class="radio-face r-som">Sometimes</span></label>' +
-        '<label class="radio-opt"><input type="radio" name="aq' + qi + '" data-aqi="' + qi + '" data-ascore="2"><span class="radio-face r-yes">Yes</span></label>' +
-        '</div>';
-    }
-    wrap.innerHTML += '<div class="q-card" id="aqcard-' + qi + '"><div class="q-row"><div class="q-number ' + profile + '">' + qnum + '</div><div class="q-text">' + qtext + '</div></div>' + answerHTML + '</div>';
-  });
-}
-
-document.addEventListener('change', function(e) {
-  if (!e.target || e.target.type !== 'radio' || !e.target.getAttribute('data-aqi')) return;
-  var input = e.target;
-  var qi = parseInt(input.getAttribute('data-aqi'), 10);
-  var score = parseInt(input.getAttribute('data-ascore'), 10);
-  var total = PROFILES[currentProfile].questions.length;
-  var wasNull = assessAnswered[qi] === null;
-  assessAnswered[qi] = score;
-  if (wasNull) assessAnsweredCount++;
-  var card = document.getElementById('aqcard-' + qi);
-  if (card) card.className = 'q-card answered ' + currentProfile;
-  var pct = Math.round(assessAnsweredCount / total * 100);
-  document.getElementById('assess-progress-fill').style.width = pct + '%';
-  document.getElementById('assess-progress-label').textContent = assessAnsweredCount + ' / ' + total;
-  var btn = document.getElementById('btn-submit-assess');
-  btn.disabled = assessAnsweredCount < total;
-  if (assessAnsweredCount === total) {
-    document.getElementById('submit-note-assess').textContent = 'All done — ready to see your results!';
-  }
-});
-
-function scrollToAssessment() {
-  if (!currentProfile) {
-    document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
-    return;
-  }
-  document.getElementById('assessment-section').scrollIntoView({ behavior: 'smooth' });
-}
-
-function showAssessResults() {
-  var data = PROFILES[currentProfile];
-  var total = data.questions.length;
-  var maxScore = data.questionType === 'adhd' ? total * 5 : total * 2;
-  var rawScore = assessAnswered.reduce(function(a, b) { return a + (b || 0); }, 0);
-  var pct = Math.round(rawScore / maxScore * 100);
-  document.getElementById('results-placeholder').style.display = 'none';
-  document.getElementById('results-content').style.display = 'block';
-  var pName = document.getElementById('res-profile-name');
-  pName.textContent = data.abbr;
-  pName.className = 'results-profile-name ' + currentProfile;
-  var scoreEl = document.getElementById('res-score');
-  scoreEl.textContent = pct + '%';
-  scoreEl.className = 'score-big ' + currentProfile;
-  document.getElementById('res-raw').textContent = 'Raw score: ' + rawScore + ' / ' + maxScore;
-  var band, bc, h3, desc;
-  if (pct < 34) {
-    band = 'Lower Alignment'; bc = 'band-low'; h3 = 'Fewer indicators in this profile';
-    desc = 'Your responses suggest fewer traits commonly associated with this profile. Many neurodivergent people develop strong coping strategies that mask their traits in a questionnaire. If aspects of your experience feel unaddressed here, consider exploring the other profiles or speaking with a professional.';
-  } else if (pct < 60) {
-    band = 'Moderate Alignment'; bc = 'band-medium'; h3 = 'Some indicators present — worth reflecting on';
-    desc = 'Your responses suggest a moderate number of traits associated with this profile. Many adults are not identified until their 30s or 40s. Review the breakdown below to see which areas scored highest, and consider applying the workplace tips above in your day-to-day.';
-  } else {
-    band = 'Higher Alignment'; bc = 'band-high'; h3 = 'A significant number of indicators present';
-    desc = 'Your responses suggest many traits associated with this profile. This is not a diagnosis — it is a starting point for understanding yourself better. Consider speaking with your GP or a specialist for a formal assessment if this resonates.';
-  }
-  var bandEl = document.getElementById('res-band');
-  bandEl.textContent = band;
-  bandEl.className = 'assess-result-band ' + bc;
-  document.getElementById('res-desc').innerHTML = '<h3>' + h3 + '</h3><p>' + desc + '</p>';
-  var domHTML = '';
-  data.domains.forEach(function(domain) {
-    var ds = 0, dm = 0;
-    domain.qs.forEach(function(qi) {
-      if (assessAnswered[qi] !== null) {
-        ds += assessAnswered[qi];
-        dm += (data.questionType === 'adhd' ? 5 : 2);
-      }
-    });
-    var dp = dm ? Math.round(ds / dm * 100) : 0;
-    var fillClass = dp < 34 ? 'fill-low' : dp < 60 ? 'fill-medium' : 'fill-high';
-    domHTML += '<div class="dr-row"><div class="dr-title"><span>' + domain.label + '</span><span>' + dp + '%</span></div><div class="dr-meter"><div class="dr-fill ' + fillClass + '" style="width:' + dp + '%"></div></div></div>';
-  });
-  document.getElementById('domain-breakdown').innerHTML = domHTML;
-  document.getElementById('res-sources').textContent = data.sources;
-  setTimeout(function() {
-    document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
-  }, 150);
-}
-
-function retakeAssessment() {
-  if (!currentProfile) return;
-  buildAssessment(currentProfile);
-  document.getElementById('results-placeholder').style.display = 'block';
-  document.getElementById('results-content').style.display = 'none';
-  document.getElementById('assessment-section').scrollIntoView({ behavior: 'smooth' });
-}
-</script>
-  <script>
 // ── HAMBURGER JS ──
 const hamburger = document.getElementById('hamburger');
 const navDrawer = document.getElementById('navDrawer');
@@ -1765,72 +1052,7 @@ function clearAll() {
 inputEl.addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) doTranslate(); });
 
 // ── QUIZ JS ──
-const QUIZ_JARGON_OLD = [
-  {jargon:"Accounts receivable",plain:"Money owed to a company by its customers"},
-  {jargon:"Action items",plain:"Tasks to complete"},
-  {jargon:"Actionable",plain:"Something you can actually do"},
-  {jargon:"Actuals",plain:"Real numbers, as opposed to estimates"},
-  {jargon:"Agile",plain:"Flexible, quick to adapt"},
-  {jargon:"Align",plain:"Agree or get on the same page"},
-  {jargon:"Bandwidth",plain:"Time and energy available to take on work"},
-  {jargon:"Baseline",plain:"The starting point used for comparison"},
-  {jargon:"Benchmarking",plain:"Comparing your results to others in the field"},
-  {jargon:"Best practice",plain:"The recommended or most effective way to do something"},
-  {jargon:"Big picture",plain:"The overall view, not the fine details"},
-  {jargon:"Boil the ocean",plain:"Try to solve everything at once — usually a bad idea"},
-  {jargon:"Bottom line",plain:"The final result, or the most important point"},
-  {jargon:"Brainstorm",plain:"Throw out ideas freely without judging them yet"},
-  {jargon:"Buy-in",plain:"Agreement and support from the people involved"},
-  {jargon:"Burn rate",plain:"How quickly a company is spending its cash"},
-  {jargon:"Cadence",plain:"A regular rhythm or schedule for meetings or updates"},
-  {jargon:"Circle back",plain:"Follow up or come back to this later"},
-  {jargon:"Close the loop",plain:"Finish the conversation or update everyone on the outcome"},
-  {jargon:"Core competency",plain:"What a company does especially well"},
-  {jargon:"Deep dive",plain:"A thorough, detailed look at something"},
-  {jargon:"Deliverable",plain:"A specific output or result that's due"},
-  {jargon:"Due diligence",plain:"Thorough checking and investigation before a deal or decision"},
-  {jargon:"EBITDA",plain:"Earnings before interest, tax, depreciation, and amortisation"},
-  {jargon:"Elevator pitch",plain:"A short, clear explanation — short enough to say in a lift"},
-  {jargon:"Execution",plain:"Getting things done"},
-  {jargon:"Flywheel",plain:"A self-reinforcing cycle where each success makes the next one easier"},
-  {jargon:"Game changer",plain:"Something that completely changes how things work"},
-  {jargon:"Gating factor",plain:"The thing holding up progress"},
-  {jargon:"Go-to-market",plain:"The plan for how to launch and sell a product"},
-  {jargon:"Granular",plain:"Very detailed"},
-  {jargon:"Guardrails",plain:"Limits or guidelines that keep things on track"},
-  {jargon:"High-level",plain:"A broad overview without going into detail"},
-  {jargon:"Ideate",plain:"Come up with ideas"},
-  {jargon:"Iterate",plain:"Repeat and improve in cycles"},
-  {jargon:"KPI",plain:"Key performance indicator — a metric used to track progress"},
-  {jargon:"Leverage",plain:"Using something to get more out of less"},
-  {jargon:"Low-hanging fruit",plain:"The easiest wins available"},
-  {jargon:"Metrics",plain:"Numbers used to measure something"},
-  {jargon:"Milestone",plain:"A key point or achievement in a plan"},
-  {jargon:"Mission critical",plain:"Essential — if this fails, everything fails"},
-  {jargon:"Move the needle",plain:"Make a meaningful difference to results"},
-  {jargon:"MVP",plain:"Minimum viable product — the simplest version that still works"},
-  {jargon:"Pain point",plain:"A specific problem that causes frustration"},
-  {jargon:"Pivot",plain:"Change direction — often used when a strategy isn't working"},
-  {jargon:"Proactive",plain:"Acting before problems arise, rather than reacting to them"},
-  {jargon:"Pull the trigger",plain:"Make the decision and act on it"},
-  {jargon:"Push back",plain:"Disagree or raise objections"},
-  {jargon:"Quick win",plain:"A fast, easy result that shows early progress"},
-  {jargon:"ROI",plain:"Return on investment — what you get back relative to what you put in"},
-  {jargon:"Reach out",plain:"Contact someone"},
-  {jargon:"Roadmap",plain:"A plan showing the steps and timeline for reaching a goal"},
-  {jargon:"Runway",plain:"How long a company can keep going before it runs out of money"},
-  {jargon:"Scalable",plain:"Able to grow without the costs growing at the same rate"},
-  {jargon:"Scope creep",plain:"When a project expands beyond its original plan"},
-  {jargon:"Silo",plain:"A team or department that doesn't share information with others"},
-  {jargon:"Stakeholder",plain:"Anyone with an interest in a decision or outcome"},
-  {jargon:"Synergy",plain:"Two things working together to produce more than separately"},
-  {jargon:"Takeaways",plain:"The key points or lessons from a meeting or document"},
-  {jargon:"Touch base",plain:"Check in briefly"},
-  {jargon:"Triage",plain:"Prioritise and sort by urgency"},
-  {jargon:"Value proposition",plain:"The reason a customer should choose you over the competition"},
-  {jargon:"Win-win",plain:"A result that benefits everyone involved"},
-];
-
+const QUIZ_JARGON = window.JARGON || [];
 const TOTAL_QS = 5;
 let questions = [], currentQ = 0, score = 0, answered = false, results = [];
 
@@ -1922,12 +1144,9 @@ function showScreen(id) {
 let isAnnual = false;
 function toggleBilling() {
   isAnnual = !isAnnual;
-  document.getElementById('billingToggle').classList.toggle('on', isAnnual);
-  document.getElementById('monthlyLabel').classList.toggle('active', !isAnnual);
-  document.getElementById('annualLabel').classList.toggle('active', isAnnual);
-  document.querySelectorAll('.amount[data-monthly]').forEach(el => {
-    el.textContent = isAnnual ? el.dataset.annual : el.dataset.monthly;
-  });
+  document.getElementById('billing-toggle').classList.toggle('on', isAnnual);
+  document.getElementById('toggle-monthly').classList.toggle('active', !isAnnual);
+  document.getElementById('toggle-annual').classList.toggle('active', isAnnual);
   const period = isAnnual ? 'per year' : 'per month';
   ['bronze','silver'].forEach(t => {
     const el = document.getElementById(t+'-period');

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADHD — Tips for Success | Unmuddled</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Outfit:wght@300;400&display=block" rel="stylesheet">
+<style>
+  :root {
+    --ink: #443030;
+    --ochre: #E8A838;
+    --mud1: #8B6914;
+    --mud2: #C4922A;
+    --cream: #faf8f3;
+    --light: #f5edd8;
+    --muted: #7a6a5a;
+    --border: #e0d4c0;
+    --white: #ffffff;
+    --profile: var(--ochre);
+    --profile-dark: var(--mud1);
+    --profile-hover: var(--mud2);
+    --correct: #27ae60;
+    --wrong: #c0392b;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    background: var(--ink);
+    padding: 1rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    height: 62px;
+  }
+  .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.35rem; color: var(--ochre); text-decoration: none; letter-spacing: -0.02em; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { color: #d4c4b0; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.08em; font-family: 'Syne', sans-serif; font-weight: 700; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--ochre); }
+  .nav-cta { background: var(--ochre) !important; color: var(--ink) !important; padding: 0.5rem 1.2rem; border-radius: 6px; }
+  .nav-back { color: rgba(255,255,255,0.5) !important; font-size: 0.75rem !important; }
+  .nav-back:hover { color: var(--ochre) !important; }
+  @media (max-width: 600px) { .nav-links { gap: 1rem; } .nav-links .nav-cta { display: none; } }
+
+  /* PAGE WRAPPER */
+  .page { padding-top: 62px; }
+
+  /* ── TIPS SECTION ── */
+  #tips {
+    min-height: 100vh;
+    background: var(--cream);
+    padding: 4rem 2rem 5rem;
+  }
+  .tips-inner { max-width: 780px; width: 100%; margin: 0 auto; }
+
+  .tips-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--border);
+  }
+  .tips-abbr {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(3rem, 8vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--profile);
+  }
+  .tips-title-group { flex: 1; padding-top: 0.5rem; }
+  .tips-fullname { font-family: 'Syne', sans-serif; font-size: clamp(1rem, 2.5vw, 1.3rem); font-weight: 700; color: var(--ink); margin-bottom: 0.3rem; }
+  .tips-subtitle { font-family: 'Lora', serif; font-style: italic; font-size: 0.95rem; color: var(--muted); }
+
+  .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; }
+  .tip-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 1.3rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    animation: fadeUp 0.4s ease both;
+    transition: border-color 0.2s;
+  }
+  .tip-card:hover { border-color: var(--profile); }
+  .tip-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem; line-height: 1; flex-shrink: 0; min-width: 2rem; color: var(--profile); }
+  .tip-text { font-size: 0.92rem; line-height: 1.65; color: var(--ink); }
+  .tip-text strong { font-weight: 600; display: block; margin-bottom: 0.2rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--profile-dark); }
+
+  .tips-cta {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn-assess {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: var(--profile);
+    color: var(--ink);
+    transition: background 0.2s;
+    text-decoration: none;
+  }
+  .btn-assess:hover { background: var(--profile-hover); color: white; }
+  .btn-back {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    background: transparent;
+    color: var(--muted);
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  .btn-back:hover { border-color: var(--ink); color: var(--ink); }
+
+  @keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+
+  /* ── ASSESSMENT SECTION ── */
+  #assessment {
+    min-height: 100vh;
+    background: #f5f1e8;
+    padding: 4rem 2rem 5rem;
+    border-top: 2px solid var(--border);
+  }
+  .assessment-inner { max-width: 720px; width: 100%; margin: 0 auto; }
+  .assessment-eyebrow { font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--profile); margin-bottom: 0.6rem; }
+  .assessment-title { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+  .assessment-title em { color: var(--profile); font-style: italic; font-family: 'Lora', serif; }
+  .assessment-subtitle { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.6; }
+  .disclaimer-bar { font-size: 0.76rem; background: #fff8e1; border-left: 3px solid var(--ochre); padding: 0.6rem 0.9rem; color: #7a6000; border-radius: 0 4px 4px 0; margin-bottom: 1.5rem; line-height: 1.5; }
+  .assess-progress-wrap { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .assess-progress-bar { flex: 1; height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
+  .assess-progress-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; width: 0%; background: linear-gradient(90deg, var(--ochre), #f59e0b); }
+  .assess-progress-label { font-family: 'Syne', sans-serif; font-size: 0.78rem; color: var(--muted); min-width: 55px; text-align: right; }
+  .q-card { background: white; border: 1.5px solid var(--border); border-radius: 10px; padding: 1rem 1.3rem; margin-bottom: 0.6rem; transition: border-color 0.2s; }
+  .q-card.answered { border-color: var(--profile); background: #fffdf5; }
+  .q-row { display: flex; gap: 0.8rem; align-items: flex-start; }
+  .q-number { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; line-height: 1.3; min-width: 26px; color: var(--profile); }
+  .q-text { font-size: 0.9rem; line-height: 1.55; flex: 1; padding-top: 0.1rem; color: var(--ink); }
+  .a-row { display: flex; gap: 0.4rem; margin-top: 0.8rem; flex-wrap: wrap; }
+  .radio-opt { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 55px; cursor: pointer; }
+  .radio-opt input[type="radio"] { display: none; }
+  .radio-face { width: 100%; padding: 0.4rem 0.3rem; border: 1.5px solid var(--border); border-radius: 6px; background: white; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--ink); cursor: pointer; transition: all 0.15s; text-align: center; user-select: none; }
+  input[type="radio"]:checked + .radio-face.r-none { background: var(--ink); border-color: var(--ink); color: white; }
+  input[type="radio"]:checked + .radio-face.r-mild { background: #0891b2; border-color: #0891b2; color: white; }
+  input[type="radio"]:checked + .radio-face.r-mod  { background: var(--ochre); border-color: var(--ochre); color: var(--ink); }
+  input[type="radio"]:checked + .radio-face.r-sev  { background: #c0392b; border-color: #c0392b; color: white; }
+  .submit-area { text-align: center; margin-top: 1.5rem; }
+  .btn-submit { padding: 0.85rem 2.5rem; border: none; border-radius: 8px; font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.05em; cursor: pointer; transition: background 0.2s; background: var(--profile); color: var(--ink); }
+  .btn-submit:disabled { opacity: 0.3; cursor: not-allowed; background: var(--border); color: var(--muted); }
+  .btn-submit:not(:disabled):hover { background: var(--profile-hover); color: white; }
+  .submit-note { font-size: 0.76rem; color: var(--muted); margin-top: 0.5rem; }
+
+  /* ── RESULTS SECTION ── */
+  #results {
+    min-height: 100vh;
+    background: #3b2f1e;
+    padding: 4rem 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+    display: none;
+  }
+  #results::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(232,168,56,0.08) 0%, transparent 60%); pointer-events: none; }
+  .results-inner { max-width: 680px; width: 100%; margin: 0 auto; position: relative; }
+  .results-eyebrow { font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ochre); margin-bottom: 1rem; text-align: center; }
+  .results-score-block { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; text-align: center; margin-bottom: 1.5rem; }
+  .results-profile-name { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ochre); margin-bottom: 1rem; }
+  .score-big { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(3.5rem, 10vw, 6rem); line-height: 1; color: var(--ochre); margin-bottom: 0.3rem; }
+  .score-raw { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-bottom: 1.2rem; }
+  .assess-result-band { display: inline-block; padding: 0.4rem 1.2rem; border-radius: 99px; font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; }
+  .band-low    { background: rgba(43,122,75,0.2);  color: #4acc80; border: 1px solid rgba(43,122,75,0.3); }
+  .band-medium { background: rgba(232,168,56,0.2); color: var(--ochre); border: 1px solid rgba(232,168,56,0.3); }
+  .band-high   { background: rgba(192,57,43,0.2);  color: #e88080; border: 1px solid rgba(192,57,43,0.3); }
+  .results-desc { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.2rem; }
+  .results-desc h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1rem; color: #faf8f3; margin-bottom: 0.6rem; }
+  .results-desc p { font-size: 0.88rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+  .domain-results { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.2rem; }
+  .domain-results h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.9rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; }
+  .dr-row { margin-bottom: 1rem; }
+  .dr-title { display: flex; justify-content: space-between; font-size: 0.82rem; color: rgba(255,255,255,0.7); margin-bottom: 0.3rem; }
+  .dr-meter { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+  .dr-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
+  .fill-low    { background: #4acc80; }
+  .fill-medium { background: var(--ochre); }
+  .fill-high   { background: #e88080; }
+  .results-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+  .btn-retake { padding: 0.75rem 1.8rem; background: transparent; color: rgba(255,255,255,0.6); border: 1.5px solid rgba(255,255,255,0.2); border-radius: 6px; font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.05em; cursor: pointer; transition: all 0.2s; }
+  .btn-retake:hover { border-color: rgba(255,255,255,0.5); color: white; }
+  .btn-primary { display: inline-block; padding: 0.75rem 1.8rem; background: var(--ochre); color: var(--ink); border-radius: 6px; font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; transition: background 0.2s; }
+  .btn-primary:hover { background: var(--mud2); color: white; }
+  .assess-sources { font-size: 0.7rem; color: rgba(255,255,255,0.25); border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1rem; margin-top: 1rem; line-height: 1.6; text-align: center; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Unmuddled</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-back">← Back</a>
+    <a href="index.html#translator">Translator</a>
+    <a href="index.html#quiz">Quiz</a>
+    <a href="index.html#pricing" class="nav-cta">Get Started</a>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- ── TIPS ── -->
+  <section id="tips">
+    <div class="tips-inner">
+      <div class="tips-header">
+        <div class="tips-abbr">ADHD</div>
+        <div class="tips-title-group">
+          <div class="tips-fullname">Attention Deficit Hyperactivity Disorder — Tips for Success</div>
+          <div class="tips-subtitle">Your brain runs fast. These tips help you harness it at work.</div>
+        </div>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card" style="animation-delay:0s">
+          <div class="tip-num">1</div>
+          <div class="tip-text"><strong>Structure your day</strong>Break tasks into small, timed chunks. A 25-minute focus sprint followed by a 5-minute break works well for many ADHD brains.</div>
+        </div>
+        <div class="tip-card" style="animation-delay:0.07s">
+          <div class="tip-num">2</div>
+          <div class="tip-text"><strong>Write everything down</strong>Do not trust your memory for deadlines or instructions. Keep a single notebook or app open at all times and capture tasks the moment they arrive.</div>
+        </div>
+        <div class="tip-card" style="animation-delay:0.14s">
+          <div class="tip-num">3</div>
+          <div class="tip-text"><strong>Use body doubling</strong>Working alongside someone else — even on a video call — can dramatically improve focus. You are not being distracted; you are regulating.</div>
+        </div>
+        <div class="tip-card" style="animation-delay:0.21s">
+          <div class="tip-num">4</div>
+          <div class="tip-text"><strong>Name your distractions</strong>When a random thought interrupts your work, write it in a "parking lot" list and return to it later. This clears the mental tab without losing the thought.</div>
+        </div>
+        <div class="tip-card" style="animation-delay:0.28s">
+          <div class="tip-num">5</div>
+          <div class="tip-text"><strong>Request written follow-ups</strong>It is completely reasonable to ask colleagues to follow up meetings or instructions in writing. "Can you drop me a quick email summary?" is a professional request.</div>
+        </div>
+        <div class="tip-card" style="animation-delay:0.35s">
+          <div class="tip-num">6</div>
+          <div class="tip-text"><strong>Find your peak window</strong>Identify the time of day your focus is sharpest and protect it fiercely for your most demanding work. Admin and meetings can fill the rest.</div>
+        </div>
+      </div>
+      <div class="tips-cta">
+        <a href="index.html" class="btn-back">← Choose a different profile</a>
+        <a href="#assessment" class="btn-assess">Take the Assessment →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ASSESSMENT ── -->
+  <section id="assessment">
+    <div class="assessment-inner">
+      <p class="assessment-eyebrow">ADHD Self-Reflection</p>
+      <h2 class="assessment-title">How does <em>ADHD</em> show up for you?</h2>
+      <p class="assessment-subtitle">18 questions · Conners Adult ADHD Rating Scale · Takes about 3 minutes</p>
+      <div class="disclaimer-bar">This is a self-reflection tool, not a medical diagnosis. If results concern you, speak with a qualified professional.</div>
+      <div class="assess-progress-wrap">
+        <div class="assess-progress-bar"><div class="assess-progress-fill" id="progressFill"></div></div>
+        <div class="assess-progress-label" id="progressLabel">0 / 18</div>
+      </div>
+      <div id="questionsWrap"></div>
+      <div class="submit-area">
+        <button class="btn-submit" id="btnSubmit" disabled onclick="showResults()">View My Results</button>
+        <p class="submit-note" id="submitNote">Answer all 18 questions to see your results</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RESULTS ── -->
+  <section id="results">
+    <div class="results-inner">
+      <p class="results-eyebrow">Your Results</p>
+      <div class="results-score-block">
+        <div class="results-profile-name">ADHD</div>
+        <div class="score-big" id="resPct">—</div>
+        <div class="score-raw" id="resRaw"></div>
+        <span class="assess-result-band" id="resBand"></span>
+      </div>
+      <div class="results-desc" id="resDesc"></div>
+      <div class="domain-results">
+        <h3>Score by Area</h3>
+        <div id="domainBreakdown"></div>
+      </div>
+      <div class="results-actions">
+        <button class="btn-retake" onclick="retake()">← Retake</button>
+        <a href="index.html#translator" class="btn-primary">Try the Translator →</a>
+      </div>
+      <div class="assess-sources">Based on the Conners Adult ADHD Rating Scale (CAARS). Scored: None=0, Mild=1, Moderate=3, Severe=5. This is not a diagnostic tool.</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+var QUESTIONS = [
+  'I have difficulty keeping my attention on work or tasks',
+  'I make careless mistakes when I have to work on a boring project',
+  'I have difficulty concentrating on what people say to me, even when they are speaking directly to me',
+  'I have trouble finishing the final details of a project, once the challenging parts have been done',
+  'I have difficulty getting things in order when I have to do a task that requires organisation',
+  'When I have a task that requires a lot of thinking, I avoid it or put it off',
+  'I misplace or have difficulty finding things at home or at work',
+  'I am easily distracted by things around me',
+  'I forget things I have to do during the day',
+  'I fidget with my hands or feet or squirm in my seat',
+  'I feel restless inside even if I am sitting still',
+  'I have difficulty relaxing when I have free time',
+  'I talk too much in social situations',
+  'I blurt out answers before questions have been finished',
+  'I have difficulty waiting my turn',
+  'I interrupt others when they are busy',
+  'I act impulsively without thinking about consequences',
+  'I leave tasks unfinished and move on to something new'
+];
+
+var DOMAINS = [
+  { label: 'Inattention', qs: [0,1,2,3,4,5,6,7,8] },
+  { label: 'Hyperactivity / Impulsivity', qs: [9,10,11,12,13,14,15,16,17] }
+];
+
+var TOTAL = QUESTIONS.length;
+var answered = new Array(TOTAL).fill(null);
+var answeredCount = 0;
+
+// Build questions
+var wrap = document.getElementById('questionsWrap');
+QUESTIONS.forEach(function(q, i) {
+  var num = String(i + 1).padStart(2, '0');
+  wrap.innerHTML += '<div class="q-card" id="qcard-' + i + '">' +
+    '<div class="q-row"><div class="q-number">' + num + '</div><div class="q-text">' + q + '</div></div>' +
+    '<div class="a-row">' +
+    '<label class="radio-opt"><input type="radio" name="q' + i + '" data-qi="' + i + '" data-score="0"><span class="radio-face r-none">None</span></label>' +
+    '<label class="radio-opt"><input type="radio" name="q' + i + '" data-qi="' + i + '" data-score="1"><span class="radio-face r-mild">Mild</span></label>' +
+    '<label class="radio-opt"><input type="radio" name="q' + i + '" data-qi="' + i + '" data-score="3"><span class="radio-face r-mod">Moderate</span></label>' +
+    '<label class="radio-opt"><input type="radio" name="q' + i + '" data-qi="' + i + '" data-score="5"><span class="radio-face r-sev">Severe</span></label>' +
+    '</div></div>';
+});
+
+document.addEventListener('change', function(e) {
+  var input = e.target;
+  if (!input || input.type !== 'radio' || input.getAttribute('data-qi') === null) return;
+  var qi = parseInt(input.getAttribute('data-qi'), 10);
+  var score = parseInt(input.getAttribute('data-score'), 10);
+  var wasNull = answered[qi] === null;
+  answered[qi] = score;
+  if (wasNull) answeredCount++;
+  document.getElementById('qcard-' + qi).className = 'q-card answered';
+  var pct = Math.round(answeredCount / TOTAL * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressLabel').textContent = answeredCount + ' / ' + TOTAL;
+  document.getElementById('btnSubmit').disabled = answeredCount < TOTAL;
+  if (answeredCount === TOTAL) document.getElementById('submitNote').textContent = 'All done — ready to see your results!';
+});
+
+function showResults() {
+  var maxScore = TOTAL * 5;
+  var rawScore = answered.reduce(function(a, b) { return a + (b || 0); }, 0);
+  var pct = Math.round(rawScore / maxScore * 100);
+
+  document.getElementById('resPct').textContent = pct + '%';
+  document.getElementById('resRaw').textContent = 'Raw score: ' + rawScore + ' / ' + maxScore;
+
+  var band, bc, h3, desc;
+  if (pct < 34) {
+    band = 'Lower Alignment'; bc = 'band-low'; h3 = 'Fewer indicators in this profile';
+    desc = 'Your responses suggest fewer traits commonly associated with ADHD. Many people develop strong coping strategies that mask their traits in a questionnaire. If aspects of your experience feel unaddressed here, consider exploring the other profiles or speaking with a professional.';
+  } else if (pct < 60) {
+    band = 'Moderate Alignment'; bc = 'band-medium'; h3 = 'Some indicators present — worth reflecting on';
+    desc = 'Your responses suggest a moderate number of traits associated with ADHD. Many adults are not identified until their 30s or 40s. Review the breakdown below to see which areas scored highest, and consider applying the workplace tips above in your day-to-day.';
+  } else {
+    band = 'Higher Alignment'; bc = 'band-high'; h3 = 'A significant number of indicators present';
+    desc = 'Your responses suggest many traits associated with ADHD. This is not a diagnosis — it is a starting point for understanding yourself better. Consider speaking with your GP or a specialist for a formal assessment if this resonates.';
+  }
+
+  document.getElementById('resBand').textContent = band;
+  document.getElementById('resBand').className = 'assess-result-band ' + bc;
+  document.getElementById('resDesc').innerHTML = '<h3>' + h3 + '</h3><p>' + desc + '</p>';
+
+  var domHTML = '';
+  DOMAINS.forEach(function(domain) {
+    var ds = 0, dm = 0;
+    domain.qs.forEach(function(qi) {
+      if (answered[qi] !== null) { ds += answered[qi]; dm += 5; }
+    });
+    var dp = dm ? Math.round(ds / dm * 100) : 0;
+    var fillClass = dp < 34 ? 'fill-low' : dp < 60 ? 'fill-medium' : 'fill-high';
+    domHTML += '<div class="dr-row"><div class="dr-title"><span>' + domain.label + '</span><span>' + dp + '%</span></div><div class="dr-meter"><div class="dr-fill ' + fillClass + '" style="width:' + dp + '%"></div></div></div>';
+  });
+  document.getElementById('domainBreakdown').innerHTML = domHTML;
+
+  var resultsSection = document.getElementById('results');
+  resultsSection.style.display = 'block';
+  setTimeout(function() { resultsSection.scrollIntoView({ behavior: 'smooth' }); }, 150);
+}
+
+function retake() {
+  answered = new Array(TOTAL).fill(null);
+  answeredCount = 0;
+  document.querySelectorAll('input[type="radio"]').forEach(function(r) { r.checked = false; });
+  document.querySelectorAll('.q-card').forEach(function(c) { c.className = 'q-card'; });
+  document.getElementById('progressFill').style.width = '0%';
+  document.getElementById('progressLabel').textContent = '0 / ' + TOTAL;
+  document.getElementById('btnSubmit').disabled = true;
+  document.getElementById('submitNote').textContent = 'Answer all ' + TOTAL + ' questions to see your results';
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('assessment').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

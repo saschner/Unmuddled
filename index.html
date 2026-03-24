@@ -472,27 +472,28 @@
   /* ══════════════════════════════
      SECTION 4 — EXPERIENCE TYPE  
   ══════════════════════════════ */
-  #which-experience  {
-    min-height: 100vh;
-    background: #3b2f1e;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 2rem 3rem;
-    position: relative;
-    overflow: hidden;
-  }
-  #which-experience::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse at 20% 60%, rgba(232,168,56,0.12) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 30%, rgba(74,156,199,0.08) 0%, transparent 45%),
-      radial-gradient(ellipse at 50% 90%, rgba(43,122,75,0.08) 0%, transparent 40%);
-    pointer-events: none;
-  }
+#experience-type {
+  min-height: 100vh;
+  background: #3b2f1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 2rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#experience-type::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 60%, rgba(232,168,56,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 30%, rgba(74,156,199,0.08) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 90%, rgba(43,122,75,0.08) 0%, transparent 40%);
+  pointer-events: none;
+}
   .experience-header { text-align: center; margin-bottom: 3rem; position: relative; }
   .experience-eyebrow { font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ochre); margin-bottom: 1rem; }
   .experience-title { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; color: #faf8f3; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1rem; }
@@ -704,7 +705,7 @@
 <!-- ══ SECTION 4: WHICH EXPERIENCE ARE YOU HAVING? ══ -->
 <section class="snap-section" id="experience-type">
   <div class="experience-header">
-    <p class="experience-eyebrow">Self-reflection tool</p>
+    <p class="experience-eyebrow"><BR>Self-reflection tool</p>
     <h1 class="experience-title">Which experience<br>are <EM>YOU</EM> having?</h1>
     <p class="experience-sub">Select the profile that feels most like you to get your tips and self-assessment quiz.</p>
   </div>

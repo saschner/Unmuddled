@@ -49,9 +49,21 @@ nav {
   z-index: 1000;
   height: 62px;
 }
-<div class="logo">
-  <span class="un">un</span><span class="muddled">muddled</span><span class="dotworld">.world</span>
-</div>
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 28px;              /* fixes tiny */
+  letter-spacing: 0;            /* kills spacing */
+  white-space: nowrap;
+  text-decoration: none;        /* kills underline */
+  color: #443030;
+}
+
+/* remove link styling if it's wrapped in <a> */
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
 .nav-logo:visited,
 .nav-logo:hover,
 .nav-logo:active {

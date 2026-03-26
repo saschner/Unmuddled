@@ -38,45 +38,70 @@
   html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
   /* ── FIXED NAV ── */
-  nav {
-    background: var(--ink);
-    padding: 1rem 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 1000;
-    height: 62px;
-  }
-  .nav-logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 1.35rem;
-    color: var(--ochre);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-   
-  } 
-  .nav-links { display: flex; gap: 2rem; align-items: center; }
-  .nav-links a {
-    color: #d4c4b0;
-    text-decoration: none;
-    font-size: 0.82rem;
-    letter-spacing: 0.08em;
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--ochre); }
-  .nav-cta {
-    background: var(--ochre) !important;
-    color: var(--ink) !important;
-    padding: 0.5rem 1.2rem;
-    border-radius: 6px;
-  }
-  .nav-cta:hover { background: var(--mud2) !important; color: white !important; }
+nav {
+  background: var(--ink);
+  padding: 1rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  height: 62px;
+}
+
+.nav-logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--ochre);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.nav-logo:visited,
+.nav-logo:hover,
+.nav-logo:active {
+  color: var(--ochre);
+  text-decoration: none;
+}
+
+.nav-logo span {
+  color: inherit;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #d4c4b0;
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--ochre);
+}
+
+.nav-cta {
+  background: var(--ochre) !important;
+  color: var(--ink) !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+}
+
+.nav-cta:hover {
+  background: var(--mud2) !important;
+  color: white !important;
+}
 
   /* ── HAMBURGER ── */
   .hamburger {

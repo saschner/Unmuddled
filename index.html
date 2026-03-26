@@ -37,7 +37,24 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
 
+.logo .un {
+  color: #443030;
+}
+
+.logo .muddled {
+  color: #E8A838;
+}
+
+.logo .dotworld {
+  color: #7a6a5a;
+  font-weight: 500;
+}
   /* ── FIXED NAV ── */
   nav {
     background: var(--ink);
@@ -572,8 +589,9 @@
 <body>
 
 <!-- FIXED NAV -->
-<nav>
-  <a href="#hero" class="nav-logo">Unmuddled</a>
+<nav><a href="#hero" class="nav-logo" aria-label="Unmuddled home">
+  <span class="logo-un">un</span><span class="logo-muddled">muddled</span><span class="logo-dotworld">.world</span>
+</a>
   <div class="nav-links">
     <a href="#translator">Jargon Translator</a>
     <a href="#quiz">Fun Jargon Quiz</a>

@@ -38,83 +38,51 @@
   html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
   /* ── FIXED NAV ── */
-nav {
-  background: var(--ink);
-  padding: 1rem 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  height: 72px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  margin-left: auto;
-}
-.logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 28px;              /* fixes tiny */
-  letter-spacing: 0;            /* kills spacing */
-  white-space: nowrap;
-  text-decoration: none;        /* kills underline */
-  color: #443030;
-}
-
-/* remove link styling if it's wrapped in <a> */
-.logo a {
-  text-decoration: none;
-}
-.nav-logo:visited,
-.nav-logo:hover,
-.nav-logo:active {
-  text-decoration: none;
-}
+/* ── NAV ── */
+  nav {
+    background: var(--ink);
+    padding: 1.1rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.35rem;
+    color: var(--ochre);
+    text-decoration: none;
+    letter-spacing: -0.03em;
+  }
 .logo-un {
-  color: rgba(217,132,68,0.55);
+  color: #d96544;
 }
-.logo-main {
-  color: #E8A838;
-  font-weight: 800;
-}
+
 .logo-ext {
-  color: rgba(217,132,68,0.55);
-  font-size: 0.9em;
+  color: #d96544;
 }
-.nav-links a {
-  color: #d4c4b0;
-  text-decoration: none;
-  font-size: 0.82rem;
-  letter-spacing: 0.00em;
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: var(--ochre);
-}
-
-.nav-cta {
-  background: var(--ochre) !important;
-  color: var(--ink) !important;
-  padding: 0.5rem 1.2rem;
-  border-radius: 6px;
-}
-
-.nav-cta:hover {
-  background: var(--mud2) !important;
-  color: white !important;
-}
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a {
+    color: #d4c4b0;
+    text-decoration: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ochre); }
+  .nav-cta {
+    background: var(--ochre) !important;
+    color: var(--ink) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+  }
+  .nav-cta:hover { background: var(--mud2) !important; color: white !important; }
 
   /* ── HAMBURGER ── */
   .hamburger {
@@ -261,6 +229,32 @@ nav {
     line-height: 1.65;
     animation: fadeUp 0.5s 0.3s ease both;
   }
+.hero-free {
+  color: red;
+  font-size: 24px;
+}
+
+.hero-free {
+  text-align: center;
+  margin: 0 auto 1rem;
+  color: var(--ochre);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px !important;
+  line-height: 1.4;
+}
+.hero-free-link {
+  text-decoration: none;
+  display: block;
+}
+
+.hero-free-link:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+.figure-card.adhd:hover .figure-svg { color: var(--ochre); }
+.figure-card.dys:hover .figure-svg { color: #4A9CC7; }
+.figure-card.asd:hover .figure-svg { color: #2B7A4B; }
+}
   .hero-btns {
     display: flex;
     gap: 1rem;
@@ -484,7 +478,26 @@ nav {
   .option-btn:hover:not(:disabled) { border-color: var(--ochre); transform: translateX(4px); background: #fffcf5; }
   .option-btn:disabled { cursor: default; }
   .option-btn.dim { opacity: 0.45; }
-  .option-letter { width: 34px; height: 34px; border-radius: 8px; background: 
+  .option-letter {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.option-text {
+  font-size: 0.95rem;
+  color: var(--ink);
+  line-height: 1.4;
+}
 var
   .option-text { font-size: 0.95rem; color: var(--ink); line-height: 1.4; }
   .results-top { margin-top: 2rem; text-align: center; width: 100%; }
@@ -538,19 +551,28 @@ var
   .experience-title { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; color: #faf8f3; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1rem; }
   .experience-title em { font-style: italic; font-family: 'Lora', serif; color: var(--ochre); }
   .experience-sub { font-size: 1rem; color: rgba(255,255,255,0.5); max-width: 420px; margin: 0 auto; line-height: 1.7; }
-  .figures-row { display: flex; gap: clamp(1.5rem, 4vw, 4rem); justify-content: center; align-items: flex-end; flex-wrap: wrap; }
-  .figure-card { display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: transform 0.3s ease; padding: 1rem; border-radius: 20px; border: 2px solid transparent; min-width: 140px; }
+  .figures-row {
+  display: flex;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+  .figure-card { display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: transform 0.3s ease; padding: 1rem; border-radius: 20px; border: 2px solid transparent; min-width: 140px; height: 260px;}
   .figure-card:hover { transform: translateY(-6px); }
   .figure-card.adhd:hover { border-color: rgba(232,168,56,0.4); background: rgba(232,168,56,0.06); }
   .figure-card.dys:hover  { border-color: rgba(74,156,199,0.4); background: rgba(74,156,199,0.06); }
   .figure-card.asd:hover  { border-color: rgba(43,122,75,0.4);  background: rgba(43,122,75,0.06); }
-  .figure-svg-wrap { position: relative; width: 90px; height: 200px; margin-bottom: 1rem; }
+  .figure-svg-wrap { position: relative; width: 130px; height: 160px; margin-bottom: 1rem; display: flex; align-items: flex-start; justify-content: center; }
   .figure-glow { position: absolute; inset: -20px; border-radius: 50%; opacity: 0; transition: opacity 0.4s ease; filter: blur(25px); }
   .figure-card.adhd:hover .figure-glow { background: var(--ochre); opacity: 0.2; }
   .figure-card.dys:hover  .figure-glow { background: #4A9CC7; opacity: 0.18; }
   .figure-card.asd:hover  .figure-glow { background: #2B7A4B; opacity: 0.18; }
-  .figure-svg { width: 100%; height: 100%; position: relative; z-index: 1; }
+  .figure-svg { width: 100%; height: 100%; position: relative; z-index: 1; display: block; }
   .figure-label { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: rgba(255,255,255,0.5); transition: color 0.3s; text-align: center; }
+  .figure-card.adhd .figure-svg { color: var(--ochre); }
+  .figure-card.dys .figure-svg { color: #4A9CC7; }
+  .figure-card.asd .figure-svg { color: #2B7A4B; }  
   .figure-card.adhd:hover .figure-label { color: var(--ochre); }
   .figure-card.dys:hover  .figure-label { color: #4A9CC7; }
   .figure-card.asd:hover  .figure-label { color: #4acc80; }
@@ -611,21 +633,19 @@ var
 <body>
 
 <!-- FIXED NAV -->
-.nav-logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 2rem;
-  line-height: 1;
-  letter-spacing: 0;
-  text-decoration: none;
-  white-space: nowrap;
-  display: inline-block;
-  flex-shrink: 0;
-  margin-right: 2rem;
-}
+<nav>
+  <a href="#hero" class="nav-logo"><span class="logo-un">un</span><span class="logo-main">muddled</span><span class="logo-ext">.world</span></a>
+  <div class="nav-links">
+    <a href="#translator">Jargon Translator</a>
+    <a href="#quiz">Fun Jargon Quiz</a>
+    <a href="#experience-type">Experience Type</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#pricing" class="nav-cta">Get Started</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
-</nav>
+</nav></nav>
 
 <!-- MOBILE NAV DRAWER -->
 <div class="nav-overlay" id="navOverlay"></div>
@@ -640,6 +660,13 @@ var
 <!-- ══ SECTION 1: HERO ══ -->
 <section class="snap-section" id="hero" style="padding-top:0">
   <p class="hero-eyebrow">Plain English for Everyone</p>
+<a href="#experience-type" class="hero-free-link">
+  <div class="hero-free">
+    <div>✔ Free ADHD Assessment</div>
+    <div>✔ Free Dyslexia Assessment</div>
+    <div>✔ Free Autism (ASD) Assessment</div>
+  </div>
+</a>
   <h1>Stop Struggling.<br>Start <em>Understanding.</em></h1>
   <p class="hero-sub">Corporate jargon is a second language nobody taught you. Built for those new to the office, neurodivergent minds, and anyone else who has nodded along pretending they understood.</p>
   <div class="hero-btns">
@@ -754,83 +781,88 @@ var
     <div class="figure-card adhd" onclick="window.location.href='adhd-tips.html'">
       <div class="figure-svg-wrap">
         <div class="figure-glow"></div>
-        <svg class="figure-svg" viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 36 Q18 50 20 75 Q26 80 30 78 Q28 55 30 38Z" fill="#7a4a2a"/>
-          <path d="M58 36 Q62 50 60 75 Q54 80 50 78 Q52 55 50 38Z" fill="#7a4a2a"/>
-          <ellipse cx="40" cy="28" rx="16" ry="18" fill="#f5c5a3" stroke="#d4956e" stroke-width="1"/>
-          <path d="M24 22 Q25 6 40 5 Q55 6 56 22 Q55 12 40 11 Q25 12 24 22Z" fill="#7a4a2a"/>
-          <ellipse cx="24" cy="29" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <ellipse cx="56" cy="29" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <circle cx="34" cy="26" r="2.5" fill="#4a2c10"/>
-          <circle cx="46" cy="26" r="2.5" fill="#4a2c10"/>
-          <circle cx="35" cy="25" r="0.8" fill="white"/>
-          <circle cx="47" cy="25" r="0.8" fill="white"/>
-          <path d="M34 33 Q40 38 46 33" stroke="#c07050" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <rect x="36" y="44" width="8" height="8" rx="2" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <path d="M27 52 Q22 56 16 68 L14 92 L22 93 L25 76 L25 112 L55 112 L55 76 L58 93 L66 92 L64 68 Q58 56 53 52 Q47 50 40 50 Q33 50 27 52Z" fill="#E8A838" stroke="#c4892a" stroke-width="0.8"/>
-          <path d="M13 90 Q9 93 10 98 Q11 102 14 102 Q17 102 18 98 Q19 93 15 90 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <path d="M67 90 Q63 93 64 98 Q65 102 68 102 Q71 102 72 98 Q73 93 69 90 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <path d="M25 112 L23 168 L37 169 L40 142 L43 169 L57 168 L55 112Z" fill="#3a4a6a" stroke="#2a3550" stroke-width="0.8"/>
-          <path d="M18 168 Q18 173 28 174 Q36 174 37 169 L23 168Z" fill="#6b3c1e"/>
-          <path d="M43 169 Q44 174 52 174 Q62 173 62 168 L57 168Z" fill="#6b3c1e"/>
-        </svg>
-      </div>
-      <div class="figure-label">ADHD</div>
-      <div class="figure-sublabel">Attention</div>
+        <svg class="figure-svg" viewBox="30 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M42 40 Q70 12 98 40 L98 95 Q88 88 82 78 Q76 70 70 70 Q64 70 58 78 Q52 88 42 95 Z" fill="#8B4A2F"/>
+      <circle cx="70" cy="55" r="22" fill="#F2C6A0"/>
+      <path d="M48 40 Q56 24 70 22 Q84 24 92 40 Q84 34 70 34 Q56 34 48 40 Z" fill="#8B4A2F"/>
+      <circle cx="48" cy="58" r="4" fill="#F2C6A0"/>
+      <circle cx="92" cy="58" r="4" fill="#F2C6A0"/>
+      <circle cx="62" cy="55" r="2.3" fill="#333"/>
+      <circle cx="78" cy="55" r="2.3" fill="#333"/>
+      <path d="M61 65 Q70 71 79 65" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <rect x="66" y="76" width="8" height="8" rx="2" fill="#F2C6A0"/>
+      <path d="M47 84 Q58 80 70 80 Q82 80 93 84 L90 136 Q80 140 70 140 Q60 140 50 136 Z" fill="currentColor"/>
+      <path d="M47 92 Q40 104 42 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <path d="M93 92 Q100 104 98 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <path d="M42 122 Q41 130 43 136 Q45 139 47 138 Q49 132 47 124 Q45 122 42 122 Z" fill="#F2C6A0"/>
+      <path d="M44 125 Q45 128 45 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+      <path d="M98 122 Q99 130 97 136 Q95 139 93 138 Q91 132 93 124 Q95 122 98 122 Z" fill="#F2C6A0"/>
+      <path d="M96 125 Q95 128 95 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+      <path d="M50 136 Q60 140 70 140 Q80 140 90 136 L87 178 L74 178 L70 150 L66 178 L53 178 Z" fill="#3D4F6E"/>
+      <ellipse cx="59" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+      <ellipse cx="81" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+
+    </svg>
+  </div>
+  <div class="figure-label">ADHD</div>
+  <div class="figure-sublabel">Focus</div>
     </div>
     <div class="figure-card dys" onclick="window.location.href='dyslexia-tips.html'">
       <div class="figure-svg-wrap">
         <div class="figure-glow"></div>
-        <svg class="figure-svg" viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="40" cy="26" rx="15" ry="17" fill="#f5c5a3" stroke="#d4956e" stroke-width="1"/>
-          <path d="M25 20 Q26 5 40 4 Q54 5 55 20 Q52 10 40 9 Q28 10 25 20Z" fill="#6b3c1e"/>
-          <path d="M25 18 Q22 14 26 10 Q28 8 30 12" fill="#6b3c1e"/>
-          <ellipse cx="25" cy="27" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <ellipse cx="55" cy="27" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <circle cx="34" cy="24" r="2.5" fill="#4a2c10"/>
-          <circle cx="46" cy="24" r="2.5" fill="#4a2c10"/>
-          <circle cx="35" cy="23" r="0.8" fill="white"/>
-          <circle cx="47" cy="23" r="0.8" fill="white"/>
-          <path d="M34 31 Q40 36 46 31" stroke="#c07050" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <rect x="36" y="41" width="8" height="8" rx="2" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <path d="M25 49 Q18 54 13 66 L11 90 L20 92 L23 74 L23 110 L57 110 L57 74 L60 92 L69 90 L67 66 Q62 54 55 49 Q48 47 40 47 Q32 47 25 49Z" fill="#4A9CC7" stroke="#2d7aa0" stroke-width="0.8"/>
-          <path d="M10 88 Q6 91 7 96 Q8 100 11 100 Q14 100 15 96 Q16 91 12 88 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <path d="M70 88 Q66 91 67 96 Q68 100 71 100 Q74 100 75 96 Q76 91 72 88 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <path d="M23 110 L21 168 L36 169 L40 142 L44 169 L59 168 L57 110Z" fill="#3a4a6a" stroke="#2a3550" stroke-width="0.8"/>
-          <path d="M16 168 Q15 173 27 174 Q35 174 36 169 L21 168Z" fill="#6b3c1e"/>
-          <path d="M44 169 Q45 174 53 174 Q65 173 64 168 L59 168Z" fill="#6b3c1e"/>
-        </svg>
-      </div>
-      <div class="figure-label">Dyslexia</div>
-      <div class="figure-sublabel">Reading</div>
-    </div>
-    <div class="figure-card asd" onclick="window.location.href='asd-tips.html'">
+        <svg class="figure-svg" viewBox="30 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="70" cy="55" r="22" fill="#F2C6A0"/>
+      <path d="M48 40 Q56 24 70 22 Q84 24 92 40 Q84 34 70 34 Q56 34 48 40 Z" fill="#8B4A2F"/>
+      <circle cx="48" cy="58" r="4" fill="#F2C6A0"/>
+      <circle cx="92" cy="58" r="4" fill="#F2C6A0"/>
+      <circle cx="62" cy="55" r="2.3" fill="#333"/>
+      <circle cx="78" cy="55" r="2.3" fill="#333"/>
+      <path d="M61 65 Q70 71 79 65" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <rect x="66" y="76" width="8" height="8" rx="2" fill="#F2C6A0"/>
+      <path d="M47 84 Q58 80 70 80 Q82 80 93 84 L90 136 Q80 140 70 140 Q60 140 50 136 Z" fill="currentColor"/>
+      <path d="M47 92 Q40 104 42 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"></path> 
+      <path d="M93 92 Q100 104 98 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <path d="M42 122 Q41 130 43 136 Q45 139 47 138 Q49 132 47 124 Q45 122 42 122 Z" fill="#F2C6A0"/>
+      <path d="M44 125 Q45 128 45 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+      <path d="M98 122 Q99 130 97 136 Q95 139 93 138 Q91 132 93 124 Q95 122 98 122 Z" fill="#F2C6A0"/>
+      <path d="M96 125 Q95 128 95 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+      <path d="M50 136 Q60 140 70 140 Q80 140 90 136 L87 178 L74 178 L70 150 L66 178 L53 178 Z" fill="#3D4F6E"/>
+      <ellipse cx="59" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+      <ellipse cx="81" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+
+    </svg>
+  </div>
+  <div class="figure-label">Dyslexia</div>
+  <div class="figure-sublabel">Processing</div>
+</div>
+    <div class="figure-card selected asd" onclick="window.location.href='asd-tips.html'">
       <div class="figure-svg-wrap">
         <div class="figure-glow"></div>
-        <svg class="figure-svg" viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 34 Q20 48 22 68 Q27 72 30 70 Q28 52 30 36Z" fill="#5a3018"/>
-          <path d="M56 34 Q60 48 58 68 Q53 72 50 70 Q52 52 50 36Z" fill="#5a3018"/>
-          <ellipse cx="40" cy="28" rx="16" ry="18" fill="#f5c5a3" stroke="#d4956e" stroke-width="1"/>
-          <path d="M24 22 Q25 7 40 6 Q55 7 56 22 Q54 12 40 11 Q26 12 24 22Z" fill="#5a3018"/>
-          <ellipse cx="24" cy="29" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <ellipse cx="56" cy="29" rx="3" ry="4" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <circle cx="34" cy="26" r="2.5" fill="#4a2c10"/>
-          <circle cx="46" cy="26" r="2.5" fill="#4a2c10"/>
-          <circle cx="35" cy="25" r="0.8" fill="white"/>
-          <circle cx="47" cy="25" r="0.8" fill="white"/>
-          <path d="M34 33 Q40 38 46 33" stroke="#c07050" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <rect x="36" y="44" width="8" height="8" rx="2" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <path d="M27 52 Q22 56 16 68 L14 92 L22 93 L25 76 L25 112 L55 112 L55 76 L58 93 L66 92 L64 68 Q58 56 53 52 Q47 50 40 50 Q33 50 27 52Z" fill="#2B7A4B" stroke="#1d5535" stroke-width="0.8"/>
-          <path d="M13 90 Q9 93 10 98 Q11 102 14 102 Q17 102 18 98 Q19 93 15 90 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <path d="M67 90 Q63 93 64 98 Q65 102 68 102 Q71 102 72 98 Q73 93 69 90 Z" fill="#f5c5a3" stroke="#d4956e" stroke-width="0.8"/>
-          <path d="M25 112 L23 168 L37 169 L40 142 L43 169 L57 168 L55 112Z" fill="#3a4a6a" stroke="#2a3550" stroke-width="0.8"/>
-          <path d="M18 168 Q18 173 28 174 Q36 174 37 169 L23 168Z" fill="#6b3c1e"/>
-          <path d="M43 169 Q44 174 52 174 Q62 173 62 168 L57 168Z" fill="#6b3c1e"/>
-        </svg>
-      </div>
-      <div class="figure-label">ASD</div>
-      <div class="figure-sublabel">Autism Spectrum</div>
-    </div>
+        <svg class="figure-svg" viewBox="30 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          
+      <circle cx="70" cy="55" r="22" fill="#F2C6A0"/>
+      <path d="M48 40 Q56 24 70 22 Q84 24 92 40 Q84 34 70 34 Q56 34 48 40 Z" fill="#8B4A2F"/>
+      <circle cx="48" cy="58" r="4" fill="#F2C6A0"/>
+      <circle cx="92" cy="58" r="4" fill="#F2C6A0"/>
+      <circle cx="62" cy="55" r="2.3" fill="#333"/>
+      <circle cx="78" cy="55" r="2.3" fill="#333"/>
+      <path d="M61 65 Q70 71 79 65" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <rect x="66" y="76" width="8" height="8" rx="2" fill="#F2C6A0"/>
+      <path d="M47 84 Q58 80 70 80 Q82 80 93 84 L90 136 Q80 140 70 140 Q60 140 50 136 Z" fill="currentColor"/>
+      <path d="M47 92 Q40 104 42 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"></path> 
+      <path d="M93 92 Q100 104 98 123" stroke="currentColor"" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <path d="M42 122 Q41 130 43 136 Q45 139 47 138 Q49 132 47 124 Q45 122 42 122 Z" fill="#F2C6A0"/>
+      <path d="M44 125 Q45 128 45 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+      <path d="M98 122 Q99 130 97 136 Q95 139 93 138 Q91 132 93 124 Q95 122 98 122 Z" fill="#F2C6A0"/>
+      <path d="M96 125 Q95 128 95 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+      <path d="M50 136 Q60 140 70 140 Q80 140 90 136 L87 178 L74 178 L70 150 L66 178 L53 178 Z" fill="#3D4F6E"/>
+      <ellipse cx="59" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+      <ellipse cx="81" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+    </svg>
+  </div>
+  <div class="figure-label">ASD</div>
+  <div class="figure-sublabel">Communication</div>
+</div>
   </div>
   <div class="experience-cta-row">
     <a href="#pricing" class="btn-none">None of these</a>

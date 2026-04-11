@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unmuddled FAQ — Business Communication for Neurodivergent Professionals</title>
+    <meta name="description" content="Everything you need to know about Unmuddled: what it is, who it's for, pricing, accessibility, assistive technology eligibility, employer funding, and support.">
+    
+    <!-- Fonts: Instrument Serif (display) + Work Sans (body) — professional, accessible -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind v4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        :root {
+            --color-bg: #f8f7f4;
+            --color-surface: #ffffff;
+            --color-text: #1a1a1a;
+            --color-text-muted: #6b7280;
+            --color-accent: #01696f;
+            --font-display: 'Instrument Serif', Georgia, serif;
+            --font-body: 'Work Sans', -apple-system, sans-serif;
+        }
+        [data-theme="dark"] {
+            --color-bg: #171614;
+            --color-surface: #1e1d1b;
+            --color-text: #e5e4e2;
+            --color-text-muted: #a1a5b0;
+            --color-accent: #4f98a3;
+        }
+        body { 
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        .font-display { font-family: var(--font-display); }
+        .text-accent { color: var(--color-accent); }
+        .bg-surface { background: var(--color-surface); }
+        .text-muted { color: var(--color-text-muted); }
+        .shadow-card { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .dark .shadow-card { box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+        @media (prefers-color-scheme: dark) { :root { --color-bg: #171614; --color-surface: #1e1d1b; --color-text: #e5e4e2; --color-text-muted: #a1a5b0; --color-accent: #4f98a3; } }
+    </style>
+</head>
+<body class="min-h-screen py-12 px-4 md:px-8 lg:px-16">
+    
+    <!-- Skip link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only bg-accent text-white px-4 py-2 rounded-md fixed top-4 left-4 z-50">Skip to main content</a>
+    
+    <div class="max-w-4xl mx-auto">
+        
+        <!-- Header -->
+        <header class="text-center mb-16 md:mb-24">
+            <div class="inline-block p-6 bg-gradient-to-br from-accent to-teal-700 text-white rounded-3xl shadow-2xl mb-8">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mx-auto mb-4">
+                    <path d="M12 2v20M2 12h20"/>
+                    <path d="M4.93 4.93l14.14 14.14M11 4.8v14.4a2.4 2.4 0 0 1-4.8 0V4.8A2.4 2.4 0 0 1 11 4.8z"/>
+                </svg>
+                <h1 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-2">Unmuddled</h1>
+                <p class="text-lg md:text-xl opacity-95 max-w-md mx-auto">Business communication clarity for neurodivergent professionals</p>
+            </div>
+            <p class="text-xl text-muted max-w-2xl mx-auto leading-relaxed">Comprehensive answers for users, employers, grant reviewers, rehabilitation counselors, and assistive technology programs.</p>
+        </header>
+
+        <main id="main-content" class="space-y-12 md:space-y-20">
+            
+            <!-- Theme toggle -->
+            <div class="flex justify-end mb-8">
+                <button id="theme-toggle" class="p-3 rounded-xl bg-surface shadow-card border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300" aria-label="Toggle dark mode">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                </button>
+            </div>
+
+            <!-- 1. Product Overview -->
+            <section class="bg-surface p-8 md:p-12 lg:p-16 rounded-3xl shadow-card">
+                <h2 class="font-display text-3xl md:text-4xl font-semibold mb-6 text-accent">What is Unmuddled?</h2>
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+                    <div>
+                        <p class="text-lg leading-relaxed mb-6">Unmuddled translates business jargon into plain English for neurodivergent professionals who struggle with corporate communication. It processes emails, meetings, documents, and presentations to deliver:</p>
+                        <ul class="space-y-3 text-lg">
+                            <li><strong>Plain English summaries</strong> — Key points without the buzzwords</li>
+                            <li><strong>Jargon translation</strong> — "Synergy" → "working together effectively"</li>
+                            <li><strong>Tone analysis</strong> — Is this urgent? Collaborative? Directive?</li>
+                            <li><strong>Action extraction</strong> — What do I actually need to do?</li>
+                            <li><strong>Meeting context</strong> — Why this matters in the bigger picture</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <blockquote class="border-l-4 border-accent pl-6 italic text-muted mb-6 py-4">
+                            "Finally, a tool that makes business communication accessible without requiring me to decode every email."
+                            <cite class="not-italic block mt-2 text-sm">— ADHD professional, tech industry</cite>
+                        </blockquote>
+                        <div class="bg-gradient-to-r from-accent/5 to-teal-500/5 p-6 rounded-2xl border border-accent/20">
+                            <h3 class="font-semibold text-xl mb-3">Real-time processing</h3>
+                            <p class="mb-2">Paste text, upload docs, or forward emails. Get clarity instantly.</p>
+                            <ul class="space-y-1 text-sm">
+                                <li>• Email inbox integration</li>
+                                <li>• Google/Outlook calendar sync</li>
+                                <li>• Document upload (PDF, DOCX)</li>
+                                <li>• Meeting transcription support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Who it's for -->
+            <section class="bg-surface p-8 md:p-12 lg:p-16 rounded-3xl shadow-card">
+                <h2 class="font-display text-3xl md:text-4xl font-semibold mb-8 text-accent">Who is Unmuddled for?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-8 rounded-2xl border border-gray-200 hover:border-accent/50 transition-colors">
+                        <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </div>
+                        <h3 class="font-semibold text-xl mb-3">Individuals</h3>
+                        <p class="text-muted mb-4">Neurodivergent professionals (ADHD, autism, dyslexia, etc.) who find business communication exhausting or confusing.</p>
+                        <ul class="text-sm space-y-1 text-muted">
+                            <li>• Software engineers in meetings</li>
+                            <li>• Analysts decoding manager emails</li>
+                            <li>• Freelancers navigating client jargon</li>
+                        </ul>
+                    </div>
+                    <div class="text-center p-8 rounded-2xl border border-gray-200 hover:border-accent/50 transition-colors">
+                        <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a4 4 0

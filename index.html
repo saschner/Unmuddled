@@ -588,6 +588,253 @@
   .footer-note { max-width: 600px; text-align: center; margin-top: 3rem; font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
   .faq-link { display: inline-block; margin-top: 0.75rem; color: var(--mud2); font-family: 'Syne', sans-serif; font-style: normal; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; }
   .faq-link:hover { color: var(--ink); }
+/* ===== COZY TRANSLATOR OVERRIDE ===== */
+
+#translator {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #f4efe6 0%, #fbf8f3 100%);
+  padding-bottom: 3rem;
+  overflow: visible;
+}
+
+.translator-header {
+  background: transparent;
+  padding: 1.5rem 1.25rem 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.translator-header .eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ochre);
+  margin-bottom: 0.35rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+}
+
+.translator-header h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.translator-header h2 em {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: var(--ochre);
+}
+
+.translator-header-right {
+  font-size: 0.76rem;
+  color: var(--muted);
+  text-align: right;
+  line-height: 1.6;
+}
+
+.translator-header-right strong {
+  color: var(--ink);
+}
+
+.translator-stack {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.translator-card {
+  background: #f6f0e6;
+  border: 1px solid #e3d7c6;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(68, 48, 48, 0.06);
+}
+
+.t-pane-header {
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid #e3d7c6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #ece2d2;
+}
+
+.t-pane-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+}
+
+.t-pane-label strong {
+  color: var(--ink);
+}
+
+.t-char-count {
+  font-size: 0.7rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.t-textarea {
+  width: 100%;
+  min-height: 180px;
+  background: transparent;
+  border: none;
+  resize: vertical;
+  padding: 1.15rem 1.15rem 1.25rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--ink);
+  outline: none;
+}
+
+.t-textarea::placeholder {
+  color: #aa9b89;
+}
+
+.t-output-body {
+  min-height: 180px;
+  padding: 1.15rem 1.15rem 1.25rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--ink);
+  white-space: pre-wrap;
+  word-break: break-word;
+  background: transparent;
+}
+
+.t-output-body.empty {
+  color: #9c8f80;
+}
+
+.translator-bubble {
+  max-width: 430px;
+  padding: 0.95rem 1.15rem;
+  border-radius: 22px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink);
+  box-shadow: 0 8px 20px rgba(68, 48, 48, 0.08);
+}
+
+.translator-bubble-top {
+  align-self: flex-start;
+  background: #e9decd;
+  border-top-left-radius: 10px;
+}
+
+.translator-bubble-bottom {
+  align-self: flex-end;
+  background: #d9c8ae;
+  border-top-right-radius: 10px;
+}
+
+.translator-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.2rem 0.1rem;
+}
+
+.t-btn,
+.t-btn-outline,
+.t-btn-clear {
+  border-radius: 999px;
+}
+
+.t-status {
+  font-size: 0.76rem;
+  color: var(--muted);
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.t-status.working {
+  color: var(--mud2);
+}
+
+.t-status.done {
+  color: #2d7a4f;
+}
+
+.t-status.error {
+  color: var(--danger);
+}
+
+.t-stats-bar {
+  padding: 0.85rem 1rem;
+  border: 1px solid #e3d7c6;
+  border-radius: 18px;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: #f2eadc;
+  flex-wrap: wrap;
+}
+
+.t-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.t-stat-val {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .translator-header {
+    padding: 1.25rem 1rem 0.6rem;
+  }
+
+  .translator-header-right {
+    text-align: left;
+  }
+
+  .translator-stack {
+    padding: 0.8rem 1rem 0;
+  }
+
+  .translator-bubble {
+    max-width: 100%;
+  }
+
+  .translator-actions {
+    gap: 0.6rem;
+  }
+
+  .t-status {
+    margin-left: 0;
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body>
@@ -646,44 +893,45 @@
   <div class="translator-header">
     <div>
       <div class="eyebrow">Plain English Translator</div>
-      <h2>Paste Jargon. Get <em>CLARITY.</em></h2>
+      <h2>Paste jargon. Get <em>clarity.</em></h2>
     </div>
     <div class="translator-header-right">
       <strong>1,122 jargon terms</strong> loaded &nbsp;·&nbsp; AI-powered verb-tense matching
     </div>
   </div>
-  <div class="translator-body">
-    <div class="t-pane">
+
+  <div class="translator-stack">
+  <div class="translator-card">
       <div class="t-pane-header">
         <span class="t-pane-label"><strong>Input</strong> — paste your text</span>
         <span class="t-char-count" id="charCount">0 chars</span>
       </div>
       <textarea class="t-textarea" id="inputText" placeholder="Paste your business text here..."></textarea>
     </div>
-    <div class="t-pane t-output-pane">
+
+    <div class="translator-actions">
+      <button class="t-btn" id="translateBtn" onclick="doTranslate()">Translate →</button>
+      <button class="t-btn-outline" id="copyBtn" onclick="copyOutput()" style="display:none">Copy Text</button>
+      <button class="t-btn-clear" onclick="clearAll()">Clear</button>
+      <div class="t-status" id="status"></div>
+    </div>
+
+    <div class="translator-card">
       <div class="t-pane-header">
         <span class="t-pane-label"><strong>Output</strong> — plain English</span>
         <span class="t-char-count" id="replaceCount">—</span>
       </div>
-      <div class="t-output-body empty" id="outputBody">Your translated text will appear here.</div>
+      <div class="t-output-body empty" id="outputBody">Your translated text will appear here.
+    </div>
+    </div>
+      <div class="t-stats-bar" id="statsBar" style="display:none">
+      <div class="t-stat">Terms replaced: <span class="t-stat-val" id="statReplaced">0</span></div>
+      <div class="t-stat">Words in: <span class="t-stat-val" id="statWordsIn">0</span></div>
+      <div class="t-stat">Words out: <span class="t-stat-val" id="statWordsOut">0</span></div>
+      <div class="t-stat">Jargon density: <span class="t-stat-val" id="statDensity">0%</span></div>
     </div>
   </div>
-  <div class="t-action-bar">
-    <button class="t-btn" id="translateBtn" onclick="doTranslate()">Translate →</button>
-    <button class="t-btn-outline" id="copyBtn" onclick="copyOutput()" style="display:none">Copy Text</button>
-    <button class="t-btn-clear" onclick="clearAll()">Clear</button>
-    <div class="t-status" id="status"></div>
-  </div>
-  <div class="t-stats-bar" id="statsBar" style="display:none">
-    <div class="t-stat">Terms replaced: <span class="t-stat-val" id="statReplaced">0</span></div>
-    <div class="t-stat">Words in: <span class="t-stat-val" id="statWordsIn">0</span></div>
-    <div class="t-stat">Words out: <span class="t-stat-val" id="statWordsOut">0</span></div>
-    <div class="t-stat">Jargon density: <span class="t-stat-val" id="statDensity">0%</span></div>
-  </div>
-</section>
-
-
-<!-- ══ SECTION 3: QUIZ ══ -->
+</section><!-- ══ SECTION 3: QUIZ ══ -->
 <section class="snap-section" id="quiz">
   <div class="quiz-inner">
     <section class="screen active" id="screen-start">

@@ -7,7 +7,61 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Outfit:wght@300;400&display=block" rel="stylesheet">
-<style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unmuddled Translator</title>
+    <style>
+    /* Add your CSS here */
+    .translation-container {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .translation-bubble {
+      background-color: #f0e4d7;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .translation-bubble:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .input-text {
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .translated-text {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    .translate-button {
+      background-color: #E8A838;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .translate-button:hover {
+      background-color: #f0a22b;
+    }
+  </style>
+  <style>
 @font-face {
   font-family: 'Lora';
   font-style: italic;
@@ -710,7 +764,11 @@ var
     </div>
   </div>
   <div class="translator-body">
-    <div class="t-pane">
+    <div class="translation-container">
+  <div class="translation-bubble top">
+    <p class="input-text">"Let's circle back later."</p>
+  </div>
+  <div class="t-pane">
       <div class="t-pane-header">
         <span class="t-pane-label"><strong>Input</strong> — paste your text</span>
         <span class="t-char-count" id="charCount">0 chars</span>
@@ -737,6 +795,10 @@ var
     <div class="t-stat">Words out: <span class="t-stat-val" id="statWordsOut">0</span></div>
     <div class="t-stat">Jargon density: <span class="t-stat-val" id="statDensity">0%</span></div>
   </div>
+     <div class="translation-bubble bottom">
+    <p class="translated-text">"We will revisit that later."</p>
+  </div>
+</div>
 </section>
 
 <!-- ══ SECTION 3: QUIZ ══ -->

@@ -7,61 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Outfit:wght@300;400&display=block" rel="stylesheet">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unmuddled Translator</title>
-    <style>
-    /* Add your CSS here */
-    .translation-container {
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 80%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .translation-bubble {
-      background-color: #f0e4d7;
-      padding: 15px;
-      border-radius: 15px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease-in-out;
-    }
-
-    .translation-bubble:hover {
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .input-text {
-      font-size: 1.2rem;
-      color: #333;
-    }
-
-    .translated-text {
-      font-size: 1.2rem;
-      color: #666;
-    }
-
-    .translate-button {
-      background-color: #E8A838;
-      color: white;
-      padding: 12px 20px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .translate-button:hover {
-      background-color: #f0a22b;
-    }
-  </style>
-  <style>
+<style>
 @font-face {
   font-family: 'Lora';
   font-style: italic;
@@ -91,8 +37,8 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
   body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
-  /* ── FIXED NAV ── */
-/* ── NAV ── */
+
+  /* ── NAV ── */
   nav {
     background: var(--ink);
     padding: 1.1rem 2.5rem;
@@ -111,13 +57,8 @@
     text-decoration: none;
     letter-spacing: -0.03em;
   }
-.logo-un {
-  color: #d96544;
-}
-
-.logo-ext {
-  color: #d96544;
-}
+  .logo-un { color: #d96544; }
+  .logo-ext { color: #d96544; }
   .nav-links { display: flex; gap: 2rem; align-items: center; }
   .nav-links a {
     color: #d4c4b0;
@@ -283,32 +224,22 @@
     line-height: 1.65;
     animation: fadeUp 0.5s 0.3s ease both;
   }
-.hero-free {
-  color: red;
-  font-size: 24px;
-}
-
-.hero-free {
-  text-align: center;
-  margin: 0 auto 1rem;
-  color: var(--ochre);
-  font-family: 'Outfit', sans-serif;
-  font-size: 14px !important;
-  line-height: 1.4;
-}
-.hero-free-link {
-  text-decoration: none;
-  display: block;
-}
-
-.hero-free-link:hover {
-  opacity: 0.85;
-  cursor: pointer;
-}
-.figure-card.adhd:hover .figure-svg { color: var(--ochre); }
-.figure-card.dys:hover .figure-svg { color: #4A9CC7; }
-.figure-card.asd:hover .figure-svg { color: #2B7A4B; }
-}
+  .hero-free {
+    text-align: center;
+    margin: 0 auto 1rem;
+    color: var(--ochre);
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px !important;
+    line-height: 1.4;
+  }
+  .hero-free-link {
+    text-decoration: none;
+    display: block;
+  }
+  .hero-free-link:hover {
+    opacity: 0.85;
+    cursor: pointer;
+  }
   .hero-btns {
     display: flex;
     gap: 1rem;
@@ -532,27 +463,7 @@
   .option-btn:hover:not(:disabled) { border-color: var(--ochre); transform: translateX(4px); background: #fffcf5; }
   .option-btn:disabled { cursor: default; }
   .option-btn.dim { opacity: 0.45; }
-  .option-letter {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  background: var(--light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--ink);
-  flex-shrink: 0;
-}
-
-.option-text {
-  font-size: 0.95rem;
-  color: var(--ink);
-  line-height: 1.4;
-}
-var
+  .option-letter { width: 34px; height: 34px; border-radius: 8px; background: var(--light); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-size: 0.85rem; font-weight: 800; color: var(--ink); flex-shrink: 0; }
   .option-text { font-size: 0.95rem; color: var(--ink); line-height: 1.4; }
   .results-top { margin-top: 2rem; text-align: center; width: 100%; }
   .score-circle { width: 160px; height: 160px; border-radius: 50%; background: var(--ink); margin: 1.5rem auto; display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 12px 40px rgba(68,48,48,0.25); }
@@ -576,43 +487,36 @@ var
   .share-copied.show { opacity: 1; }
 
   /* ══════════════════════════════
-     SECTION 4 — EXPERIENCE TYPE  
+     SECTION 4 — EXPERIENCE TYPE
   ══════════════════════════════ */
-#experience-type {
-  min-height: 100vh;
-  background: #3b2f1e;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 2rem 3rem;
-  position: relative;
-  overflow: hidden;
-}
-
-#experience-type::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse at 20% 60%, rgba(232,168,56,0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 30%, rgba(74,156,199,0.08) 0%, transparent 45%),
-    radial-gradient(ellipse at 50% 90%, rgba(43,122,75,0.08) 0%, transparent 40%);
-  pointer-events: none;
-}
+  #experience-type {
+    min-height: 100vh;
+    background: #3b2f1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  #experience-type::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 60%, rgba(232,168,56,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 30%, rgba(74,156,199,0.08) 0%, transparent 45%),
+      radial-gradient(ellipse at 50% 90%, rgba(43,122,75,0.08) 0%, transparent 40%);
+    pointer-events: none;
+  }
   .experience-header { text-align: center; margin-bottom: 3rem; position: relative; }
   .experience-eyebrow { font-family: 'Syne', sans-serif; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ochre); margin-bottom: 1rem; }
   .experience-title { font-family: 'Syne', sans-serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; color: #faf8f3; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 1rem; }
   .experience-title em { font-style: italic; font-family: 'Lora', serif; color: var(--ochre); }
   .experience-sub { font-size: 1rem; color: rgba(255,255,255,0.5); max-width: 420px; margin: 0 auto; line-height: 1.7; }
-  .figures-row {
-  display: flex;
-  gap: clamp(1.5rem, 4vw, 4rem);
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-  .figure-card { display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: transform 0.3s ease; padding: 1rem; border-radius: 20px; border: 2px solid transparent; min-width: 140px; height: 260px;}
+  .figures-row { display: flex; gap: clamp(1.5rem, 4vw, 4rem); justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; }
+  .figure-card { display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: transform 0.3s ease; padding: 1rem; border-radius: 20px; border: 2px solid transparent; min-width: 140px; height: 260px; }
   .figure-card:hover { transform: translateY(-6px); }
   .figure-card.adhd:hover { border-color: rgba(232,168,56,0.4); background: rgba(232,168,56,0.06); }
   .figure-card.dys:hover  { border-color: rgba(74,156,199,0.4); background: rgba(74,156,199,0.06); }
@@ -626,7 +530,7 @@ var
   .figure-label { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.1rem; color: rgba(255,255,255,0.5); transition: color 0.3s; text-align: center; }
   .figure-card.adhd .figure-svg { color: var(--ochre); }
   .figure-card.dys .figure-svg { color: #4A9CC7; }
-  .figure-card.asd .figure-svg { color: #2B7A4B; }  
+  .figure-card.asd .figure-svg { color: #2B7A4B; }
   .figure-card.adhd:hover .figure-label { color: var(--ochre); }
   .figure-card.dys:hover  .figure-label { color: #4A9CC7; }
   .figure-card.asd:hover  .figure-label { color: #4acc80; }
@@ -635,25 +539,9 @@ var
   .btn-none { display: inline-block; padding: 0.9rem 2rem; font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: 2px solid rgba(255,255,255,0.15); border-radius: 6px; cursor: pointer; background: transparent; color: rgba(255,255,255,0.4); transition: all 0.2s; text-decoration: none; }
   .btn-none:hover { border-color: rgba(255,255,255,0.4); color: rgba(255,255,255,0.7); }
 
-  /* ══ PRICING ══ */
-.billing-toggle {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.billing-toggle button {
-  padding: 6px 14px;
-  border: 1px solid #e0d4c0;
-  background: white;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-.billing-toggle button.active {
-  background: #E8A838;
-  color: white;
-}
+  /* ══════════════════════════════
+     SECTION 5 — PRICING
+  ══════════════════════════════ */
   #pricing { min-height: 100vh; background: var(--light); border-top: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; padding: 4rem 2rem; }
   .pricing-hero { text-align: center; margin-bottom: 3rem; }
   .pricing-eyebrow { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--mud2); font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 1rem; }
@@ -717,7 +605,7 @@ var
   <button class="hamburger" id="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
-</nav></nav>
+</nav>
 
 <!-- MOBILE NAV DRAWER -->
 <div class="nav-overlay" id="navOverlay"></div>
@@ -733,13 +621,13 @@ var
 <!-- ══ SECTION 1: HERO ══ -->
 <section class="snap-section" id="hero" style="padding-top:0">
   <p class="hero-eyebrow">Plain English for Everyone</p>
-<a href="#experience-type" class="hero-free-link">
-  <div class="hero-free">
-    <div>✔ Free ADHD Assessment</div>
-    <div>✔ Free Dyslexia Assessment</div>
-    <div>✔ Free Autism (ASD) Assessment</div>
-  </div>
-</a>
+  <a href="#experience-type" class="hero-free-link">
+    <div class="hero-free">
+      <div>✔ Free ADHD Assessment</div>
+      <div>✔ Free Dyslexia Assessment</div>
+      <div>✔ Free Autism (ASD) Assessment</div>
+    </div>
+  </a>
   <h1>Stop Struggling.<br>Start <em>Understanding.</em></h1>
   <p class="hero-sub">Corporate jargon is a second language nobody taught you. Built for those new to the office, neurodivergent minds, ESLs, and anyone else who has nodded along pretending they understood.</p>
   <div class="hero-btns">
@@ -751,6 +639,7 @@ var
     <div class="scroll-arrow"></div>
   </a>
 </section>
+
 
 <!-- ══ SECTION 2: TRANSLATOR ══ -->
 <section class="snap-section" id="translator">
@@ -764,16 +653,12 @@ var
     </div>
   </div>
   <div class="translator-body">
-    <div class="translation-container">
-  <div class="translation-bubble top">
-    <p class="input-text">"Let's circle back later."</p>
-  </div>
-  <div class="t-pane">
+    <div class="t-pane">
       <div class="t-pane-header">
         <span class="t-pane-label"><strong>Input</strong> — paste your text</span>
         <span class="t-char-count" id="charCount">0 chars</span>
       </div>
-      <textarea class="t-textarea" id="inputText" placeholder='Paste your business text here...'></textarea>
+      <textarea class="t-textarea" id="inputText" placeholder="Paste your business text here..."></textarea>
     </div>
     <div class="t-pane t-output-pane">
       <div class="t-pane-header">
@@ -795,11 +680,8 @@ var
     <div class="t-stat">Words out: <span class="t-stat-val" id="statWordsOut">0</span></div>
     <div class="t-stat">Jargon density: <span class="t-stat-val" id="statDensity">0%</span></div>
   </div>
-     <div class="translation-bubble bottom">
-    <p class="translated-text">"We will revisit that later."</p>
-  </div>
-</div>
 </section>
+
 
 <!-- ══ SECTION 3: QUIZ ══ -->
 <section class="snap-section" id="quiz">
@@ -817,7 +699,6 @@ var
           <div class="rule"><div class="rule-icon">🏆</div>Get your score — then dare someone to beat it</div>
         </div>
       </div>
-  </div>
       <button class="btn-start" onclick="window.location.href='jargon-quiz.html'">Let's Go →</button>
     </section>
     <section class="screen" id="screen-quiz">
@@ -851,11 +732,12 @@ var
   </div>
 </section>
 
+
 <!-- ══ SECTION 4: WHICH EXPERIENCE ARE YOU HAVING? ══ -->
 <section class="snap-section" id="experience-type">
   <div class="experience-header">
-    <p class="experience-eyebrow"><BR>Self-reflection tool</p>
-    <h1 class="experience-title">Which experience<br>are <EM>YOU</EM> having?</h1>
+    <p class="experience-eyebrow"><br>Self-reflection tool</p>
+    <h1 class="experience-title">Which experience<br>are <em>YOU</em> having?</h1>
     <p class="experience-sub">Select the profile that feels most like you to get your tips and self-assessment quiz.</p>
   </div>
   <div class="figures-row">
@@ -863,209 +745,205 @@ var
       <div class="figure-svg-wrap">
         <div class="figure-glow"></div>
         <svg class="figure-svg" viewBox="30 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <path d="M42 40 Q70 12 98 40 L98 95 Q88 88 82 78 Q76 70 70 70 Q64 70 58 78 Q52 88 42 95 Z" fill="#8B4A2F"/>
-      <circle cx="70" cy="55" r="22" fill="#F2C6A0"/>
-      <path d="M48 40 Q56 24 70 22 Q84 24 92 40 Q84 34 70 34 Q56 34 48 40 Z" fill="#8B4A2F"/>
-      <circle cx="48" cy="58" r="4" fill="#F2C6A0"/>
-      <circle cx="92" cy="58" r="4" fill="#F2C6A0"/>
-      <circle cx="62" cy="55" r="2.3" fill="#333"/>
-      <circle cx="78" cy="55" r="2.3" fill="#333"/>
-      <path d="M61 65 Q70 71 79 65" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <rect x="66" y="76" width="8" height="8" rx="2" fill="#F2C6A0"/>
-      <path d="M47 84 Q58 80 70 80 Q82 80 93 84 L90 136 Q80 140 70 140 Q60 140 50 136 Z" fill="currentColor"/>
-      <path d="M47 92 Q40 104 42 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
-      <path d="M93 92 Q100 104 98 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
-      <path d="M42 122 Q41 130 43 136 Q45 139 47 138 Q49 132 47 124 Q45 122 42 122 Z" fill="#F2C6A0"/>
-      <path d="M44 125 Q45 128 45 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
-      <path d="M98 122 Q99 130 97 136 Q95 139 93 138 Q91 132 93 124 Q95 122 98 122 Z" fill="#F2C6A0"/>
-      <path d="M96 125 Q95 128 95 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
-      <path d="M50 136 Q60 140 70 140 Q80 140 90 136 L87 178 L74 178 L70 150 L66 178 L53 178 Z" fill="#3D4F6E"/>
-      <ellipse cx="59" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
-      <ellipse cx="81" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
-
-    </svg>
-  </div>
-  <div class="figure-label">ADHD</div>
-  <div class="figure-sublabel">Focus</div>
+          <path d="M42 40 Q70 12 98 40 L98 95 Q88 88 82 78 Q76 70 70 70 Q64 70 58 78 Q52 88 42 95 Z" fill="#8B4A2F"/>
+          <circle cx="70" cy="55" r="22" fill="#F2C6A0"/>
+          <path d="M48 40 Q56 24 70 22 Q84 24 92 40 Q84 34 70 34 Q56 34 48 40 Z" fill="#8B4A2F"/>
+          <circle cx="48" cy="58" r="4" fill="#F2C6A0"/>
+          <circle cx="92" cy="58" r="4" fill="#F2C6A0"/>
+          <circle cx="62" cy="55" r="2.3" fill="#333"/>
+          <circle cx="78" cy="55" r="2.3" fill="#333"/>
+          <path d="M61 65 Q70 71 79 65" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <rect x="66" y="76" width="8" height="8" rx="2" fill="#F2C6A0"/>
+          <path d="M47 84 Q58 80 70 80 Q82 80 93 84 L90 136 Q80 140 70 140 Q60 140 50 136 Z" fill="currentColor"/>
+          <path d="M47 92 Q40 104 42 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <path d="M93 92 Q100 104 98 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <path d="M42 122 Q41 130 43 136 Q45 139 47 138 Q49 132 47 124 Q45 122 42 122 Z" fill="#F2C6A0"/>
+          <path d="M44 125 Q45 128 45 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+          <path d="M98 122 Q99 130 97 136 Q95 139 93 138 Q91 132 93 124 Q95 122 98 122 Z" fill="#F2C6A0"/>
+          <path d="M96 125 Q95 128 95 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+          <path d="M50 136 Q60 140 70 140 Q80 140 90 136 L87 178 L74 178 L70 150 L66 178 L53 178 Z" fill="#3D4F6E"/>
+          <ellipse cx="59" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+          <ellipse cx="81" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+        </svg>
+      </div>
+      <div class="figure-label">ADHD</div>
+      <div class="figure-sublabel">Focus</div>
     </div>
     <div class="figure-card dys" onclick="window.location.href='dyslexia-tips.html'">
       <div class="figure-svg-wrap">
         <div class="figure-glow"></div>
         <svg class="figure-svg" viewBox="30 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="70" cy="55" r="22" fill="#F2C6A0"/>
-      <path d="M48 40 Q56 24 70 22 Q84 24 92 40 Q84 34 70 34 Q56 34 48 40 Z" fill="#8B4A2F"/>
-      <circle cx="48" cy="58" r="4" fill="#F2C6A0"/>
-      <circle cx="92" cy="58" r="4" fill="#F2C6A0"/>
-      <circle cx="62" cy="55" r="2.3" fill="#333"/>
-      <circle cx="78" cy="55" r="2.3" fill="#333"/>
-      <path d="M61 65 Q70 71 79 65" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <rect x="66" y="76" width="8" height="8" rx="2" fill="#F2C6A0"/>
-      <path d="M47 84 Q58 80 70 80 Q82 80 93 84 L90 136 Q80 140 70 140 Q60 140 50 136 Z" fill="currentColor"/>
-      <path d="M47 92 Q40 104 42 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"></path> 
-      <path d="M93 92 Q100 104 98 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
-      <path d="M42 122 Q41 130 43 136 Q45 139 47 138 Q49 132 47 124 Q45 122 42 122 Z" fill="#F2C6A0"/>
-      <path d="M44 125 Q45 128 45 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
-      <path d="M98 122 Q99 130 97 136 Q95 139 93 138 Q91 132 93 124 Q95 122 98 122 Z" fill="#F2C6A0"/>
-      <path d="M96 125 Q95 128 95 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
-      <path d="M50 136 Q60 140 70 140 Q80 140 90 136 L87 178 L74 178 L70 150 L66 178 L53 178 Z" fill="#3D4F6E"/>
-      <ellipse cx="59" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
-      <ellipse cx="81" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
-
-    </svg>
-  </div>
-  <div class="figure-label">Dyslexia</div>
-  <div class="figure-sublabel">Processing</div>
-</div>
-    <div class="figure-card selected asd" onclick="window.location.href='asd-tips.html'">
+          <circle cx="70" cy="55" r="22" fill="#F2C6A0"/>
+          <path d="M48 40 Q56 24 70 22 Q84 24 92 40 Q84 34 70 34 Q56 34 48 40 Z" fill="#8B4A2F"/>
+          <circle cx="48" cy="58" r="4" fill="#F2C6A0"/>
+          <circle cx="92" cy="58" r="4" fill="#F2C6A0"/>
+          <circle cx="62" cy="55" r="2.3" fill="#333"/>
+          <circle cx="78" cy="55" r="2.3" fill="#333"/>
+          <path d="M61 65 Q70 71 79 65" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <rect x="66" y="76" width="8" height="8" rx="2" fill="#F2C6A0"/>
+          <path d="M47 84 Q58 80 70 80 Q82 80 93 84 L90 136 Q80 140 70 140 Q60 140 50 136 Z" fill="currentColor"/>
+          <path d="M47 92 Q40 104 42 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <path d="M93 92 Q100 104 98 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <path d="M42 122 Q41 130 43 136 Q45 139 47 138 Q49 132 47 124 Q45 122 42 122 Z" fill="#F2C6A0"/>
+          <path d="M44 125 Q45 128 45 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+          <path d="M98 122 Q99 130 97 136 Q95 139 93 138 Q91 132 93 124 Q95 122 98 122 Z" fill="#F2C6A0"/>
+          <path d="M96 125 Q95 128 95 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+          <path d="M50 136 Q60 140 70 140 Q80 140 90 136 L87 178 L74 178 L70 150 L66 178 L53 178 Z" fill="#3D4F6E"/>
+          <ellipse cx="59" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+          <ellipse cx="81" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+        </svg>
+      </div>
+      <div class="figure-label">Dyslexia</div>
+      <div class="figure-sublabel">Processing</div>
+    </div>
+    <div class="figure-card asd" onclick="window.location.href='asd-tips.html'">
       <div class="figure-svg-wrap">
         <div class="figure-glow"></div>
         <svg class="figure-svg" viewBox="30 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          
-      <circle cx="70" cy="55" r="22" fill="#F2C6A0"/>
-      <path d="M48 40 Q56 24 70 22 Q84 24 92 40 Q84 34 70 34 Q56 34 48 40 Z" fill="#8B4A2F"/>
-      <circle cx="48" cy="58" r="4" fill="#F2C6A0"/>
-      <circle cx="92" cy="58" r="4" fill="#F2C6A0"/>
-      <circle cx="62" cy="55" r="2.3" fill="#333"/>
-      <circle cx="78" cy="55" r="2.3" fill="#333"/>
-      <path d="M61 65 Q70 71 79 65" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <rect x="66" y="76" width="8" height="8" rx="2" fill="#F2C6A0"/>
-      <path d="M47 84 Q58 80 70 80 Q82 80 93 84 L90 136 Q80 140 70 140 Q60 140 50 136 Z" fill="currentColor"/>
-      <path d="M47 92 Q40 104 42 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"></path> 
-      <path d="M93 92 Q100 104 98 123" stroke="currentColor"" stroke-width="10" stroke-linecap="round" fill="none"/>
-      <path d="M42 122 Q41 130 43 136 Q45 139 47 138 Q49 132 47 124 Q45 122 42 122 Z" fill="#F2C6A0"/>
-      <path d="M44 125 Q45 128 45 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
-      <path d="M98 122 Q99 130 97 136 Q95 139 93 138 Q91 132 93 124 Q95 122 98 122 Z" fill="#F2C6A0"/>
-      <path d="M96 125 Q95 128 95 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
-      <path d="M50 136 Q60 140 70 140 Q80 140 90 136 L87 178 L74 178 L70 150 L66 178 L53 178 Z" fill="#3D4F6E"/>
-      <ellipse cx="59" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
-      <ellipse cx="81" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
-    </svg>
-  </div>
-  <div class="figure-label">ASD</div>
-  <div class="figure-sublabel">Communication</div>
-</div>
+          <circle cx="70" cy="55" r="22" fill="#F2C6A0"/>
+          <path d="M48 40 Q56 24 70 22 Q84 24 92 40 Q84 34 70 34 Q56 34 48 40 Z" fill="#8B4A2F"/>
+          <circle cx="48" cy="58" r="4" fill="#F2C6A0"/>
+          <circle cx="92" cy="58" r="4" fill="#F2C6A0"/>
+          <circle cx="62" cy="55" r="2.3" fill="#333"/>
+          <circle cx="78" cy="55" r="2.3" fill="#333"/>
+          <path d="M61 65 Q70 71 79 65" stroke="#333" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <rect x="66" y="76" width="8" height="8" rx="2" fill="#F2C6A0"/>
+          <path d="M47 84 Q58 80 70 80 Q82 80 93 84 L90 136 Q80 140 70 140 Q60 140 50 136 Z" fill="currentColor"/>
+          <path d="M47 92 Q40 104 42 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <path d="M93 92 Q100 104 98 123" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <path d="M42 122 Q41 130 43 136 Q45 139 47 138 Q49 132 47 124 Q45 122 42 122 Z" fill="#F2C6A0"/>
+          <path d="M44 125 Q45 128 45 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+          <path d="M98 122 Q99 130 97 136 Q95 139 93 138 Q91 132 93 124 Q95 122 98 122 Z" fill="#F2C6A0"/>
+          <path d="M96 125 Q95 128 95 131" stroke="#D8A98A" stroke-width="0.6" stroke-linecap="round" fill="none"/>
+          <path d="M50 136 Q60 140 70 140 Q80 140 90 136 L87 178 L74 178 L70 150 L66 178 L53 178 Z" fill="#3D4F6E"/>
+          <ellipse cx="59" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+          <ellipse cx="81" cy="182" rx="10" ry="4.5" fill="#8B4A2F"/>
+        </svg>
+      </div>
+      <div class="figure-label">ASD</div>
+      <div class="figure-sublabel">Communication</div>
+    </div>
   </div>
   <div class="experience-cta-row">
     <a href="#pricing" class="btn-none">None of these</a>
   </div>
 </section>
 
+
 <!-- ══ SECTION 5: PRICING ══ -->
 <section class="snap-section" id="pricing">
   <div class="pricing-hero">
     <p class="pricing-eyebrow">Simple, honest pricing</p>
     <h2>Find your <em>level</em></h2>
-<div class="toggle-wrap">
-  <span class="toggle-label active" id="monthlyLabel">Monthly</span>
-  <div class="toggle-switch" id="billingToggle" onclick="toggleBilling()"></div>
-  <span class="toggle-label" id="annualLabel">Annual</span>
-</div>
+    <div class="toggle-wrap">
+      <span class="toggle-label active" id="monthlyLabel">Monthly</span>
+      <div class="toggle-switch" id="billingToggle" onclick="toggleBilling()"></div>
+      <span class="toggle-label" id="annualLabel">Annual</span>
+    </div>
     <p>Start free. Upgrade when you're ready. No pressure, no jargon.</p>
   </div>
-    <div class="cards-section">
-   <div class="cards-wrap">
-  <div class="card free">
-    <div class="card-num">1</div>
-    <div class="card-body">
-      <div class="card-tier">Tier 1</div>
-      <div class="card-name">Free</div>
-      <div class="card-price">
-        <span class="amount monthly-price">$0</span>
-        <span class="amount annual-price" style="display:none">$0</span>
-        <span class="period monthly-price">/forever</span>
-        <span class="period annual-price" style="display:none">/forever</span>
+  <div class="cards-section">
+    <div class="cards-wrap">
+      <div class="card free">
+        <div class="card-num">1</div>
+        <div class="card-body">
+          <div class="card-tier">Tier 1</div>
+          <div class="card-name">Free</div>
+          <div class="card-price">
+            <span class="amount monthly-price">$0</span>
+            <span class="amount annual-price" style="display:none">$0</span>
+            <span class="period monthly-price">/forever</span>
+            <span class="period annual-price" style="display:none">/forever</span>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">Try it free.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span><span>Fun Jargon Quiz</span></li>
+            <li><span class="check">✓</span><span>Free neurodivergent assessments and tips</span></li>
+            <li><span class="check">✓</span><span>50-word translation limit</span></li>
+            <li><span class="check">✓</span><span>Business jargon glossary</span></li>
+            <li><span class="check">✓</span><span>Abbreviation and idiom lookups</span></li>
+          </ul>
+          <a href="#" class="card-cta">Get Started</a>
+        </div>
       </div>
-      <div class="card-divider"></div>
-      <div class="card-tagline">Try it free.</div>
-      <ul class="card-features">
-        <li><span class="check">✓</span><span>Fun Jargon Quiz</span></li>
-        <li><span class="check">✓</span><span>Free neurodivergent assessments and tips</span></li>
-        <li><span class="check">✓</span><span>50-word translation limit</span></li>
-        <li><span class="check">✓</span><span>Business jargon glossary</span></li>
-        <li><span class="check">✓</span><span>Abbreviation and idiom lookups</span></li>
-      </ul>
-      <a href="#" class="card-cta">Get Started</a>
-    </div>
-  </div>
-
-  <div class="card bronze">
-    <div class="card-num">2</div>
-    <div class="card-body">
-      <div class="card-tier">Tier 2</div>
-      <div class="card-name">Bronze</div>
-      <div class="card-price">
-        <span class="amount monthly-price">$9</span>
-        <span class="amount annual-price" style="display:none">$99</span>
-        <span class="period monthly-price">/month</span>
-        <span class="period annual-price" style="display:none">/year</span>
+      <div class="card bronze">
+        <div class="card-num">2</div>
+        <div class="card-body">
+          <div class="card-tier">Tier 2</div>
+          <div class="card-name">Bronze</div>
+          <div class="card-price">
+            <span class="amount monthly-price">$9</span>
+            <span class="amount annual-price" style="display:none">$99</span>
+            <span class="period monthly-price">/month</span>
+            <span class="period annual-price" style="display:none">/year</span>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">For everyday clarity.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span><span>Everything in Free</span></li>
+            <li><span class="check">✓</span><span>Unlimited jargon translation</span></li>
+            <li><span class="check">✓</span><span>No word limits</span></li>
+            <li><span class="check">✓</span><span>Translation history saved</span></li>
+          </ul>
+          <a href="#" class="card-cta">Choose Bronze</a>
+        </div>
       </div>
-      <div class="card-divider"></div>
-      <div class="card-tagline">For everyday clarity.</div>
-      <ul class="card-features">
-        <li><span class="check">✓</span><span>Everything in Free</span></li>
-        <li><span class="check">✓</span><span>Unlimited jargon translation</span></li>
-        <li><span class="check">✓</span><span>No word limits</span></li>
-        <li><span class="check">✓</span><span>Translation history saved</span></li>
-      </ul>
-      <a href="#" class="card-cta">Choose Bronze</a>
-    </div>
-  </div>
-
-  <div class="card silver">
-    <div class="card-num">3</div>
-    <div class="card-body">
-      <div class="popular-badge">Most Popular</div><BR>
-      <div class="card-tier">Tier 3</div>
-      <div class="card-name">Silver</div>
-      <div class="card-price">
-        <span class="amount monthly-price">$29</span>
-        <span class="amount annual-price" style="display:none">$299</span>
-        <span class="period monthly-price">/month</span>
-        <span class="period annual-price" style="display:none">/year</span>
+      <div class="card silver">
+        <div class="card-num">3</div>
+        <div class="card-body">
+          <div class="popular-badge">Most Popular</div>
+          <div class="card-tier" style="margin-top:1rem">Tier 3</div>
+          <div class="card-name">Silver</div>
+          <div class="card-price">
+            <span class="amount monthly-price">$29</span>
+            <span class="amount annual-price" style="display:none">$299</span>
+            <span class="period monthly-price">/month</span>
+            <span class="period annual-price" style="display:none">/year</span>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">For deeper workflow support.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span><span>Everything in Bronze</span></li>
+            <li><span class="check">✓</span><span>Post-meeting summaries</span></li>
+            <li><span class="check">✓</span><span>Slack integration</span></li>
+            <li><span class="check">✓</span><span>Action item detection</span></li>
+          </ul>
+          <a href="#" class="card-cta">Choose Silver</a>
+        </div>
       </div>
-      <div class="card-divider"></div>
-      <div class="card-tagline">For deeper workflow support.</div>
-      <ul class="card-features">
-        <li><span class="check">✓</span><span>Everything in Bronze</span></li>
-        <li><span class="check">✓</span><span>Post-meeting summaries</span></li>
-        <li><span class="check">✓</span><span>Slack integration</span></li>
-        <li><span class="check">✓</span><span>Action item detection</span></li>
-      </ul>
-      <a href="#" class="card-cta">Choose Silver</a>
-    </div>
-  </div>
-
-  <div class="card gold">
-    <div class="card-num">4</div>
-    <div class="card-body">
-      <div class="card-tier">Tier 4</div>
-      <div class="card-name">Gold</div>
-      <div class="card-price">
-        <span class="amount monthly-price">$59</span>
-        <span class="amount annual-price" style="display:none">$599</span>
-        <span class="period monthly-price">/month</span>
-        <span class="period annual-price" style="display:none">/year</span>
+      <div class="card gold">
+        <div class="card-num">4</div>
+        <div class="card-body">
+          <div class="card-tier">Tier 4</div>
+          <div class="card-name">Gold</div>
+          <div class="card-price">
+            <span class="amount monthly-price">$59</span>
+            <span class="amount annual-price" style="display:none">$599</span>
+            <span class="period monthly-price">/month</span>
+            <span class="period annual-price" style="display:none">/year</span>
+          </div>
+          <div class="card-divider"></div>
+          <div class="card-tagline">For full communication support.</div>
+          <ul class="card-features">
+            <li><span class="check">✓</span><span>Everything in Silver</span></li>
+            <li><span class="check">✓</span><span>AI tone and mood analysis</span></li>
+            <li><span class="check">✓</span><span>Suggested responses</span></li>
+            <li><span class="check">✓</span><span>Notion integration</span></li>
+            <li><span class="check">✓</span><span>CloudScope Gmail visualizer</span></li>
+          </ul>
+          <a href="#" class="card-cta">Choose Gold</a>
+        </div>
       </div>
-      <div class="card-divider"></div>
-      <div class="card-tagline">For full communication support.</div>
-      <ul class="card-features">
-        <li><span class="check">✓</span><span>Everything in Silver</span></li>
-        <li><span class="check">✓</span><span>AI tone and mood analysis</span></li>
-        <li><span class="check">✓</span><span>Suggested responses</span></li>
-        <li><span class="check">✓</span><span>Notion integration</span></li>
-        <li><span class="check">✓</span><span>CloudScope Gmail visualizer</span></li>
-      </ul>
-      <a href="#" class="card-cta">Choose Gold</a>
     </div>
-  </div>
-</div></div>
   </div>
   <p class="footer-note">All plans include a 14-day money-back guarantee. No contracts, cancel anytime.<br>
-    Get in touch to discuss custom enterprise solutions tailored for your business needs.<BR>
-    800-633-6500<BR>
+    Get in touch to discuss custom enterprise solutions tailored for your business needs.<br>
+    800-633-6500<br>
     <a href="#" class="faq-link">Questions? See the FAQ →</a>
   </p>
 </section>
+
 
 <script src="jargon-database.js"></script>
 <script>
@@ -1088,7 +966,7 @@ function closeNav() {
 // ── TRANSLATOR JS ──
 const JARGON_MAP = {};
 const JARGON = window.JARGON;
-JARGON.forEach(item => { JARGON_MAP[item.jargon.toLowerCase()] = item.plain; });
+if (JARGON) JARGON.forEach(item => { JARGON_MAP[item.jargon.toLowerCase()] = item.plain; });
 const SORTED_KEYS = Object.keys(JARGON_MAP).sort((a, b) => b.length - a.length);
 
 const inputEl = document.getElementById('inputText');
@@ -1204,7 +1082,7 @@ function copyOutput() {
 }
 function clearAll() {
   inputEl.value = '';
-  outputEl.innerHTML = 'Your translated text will appear here.\n\nHighlighted words show what was replaced.';
+  outputEl.innerHTML = 'Your translated text will appear here.';
   outputEl.className = 't-output-body empty';
   charCountEl.textContent = '0 chars';
   replaceCountEl.textContent = '—';
@@ -1306,35 +1184,14 @@ function showScreen(id) {
 }
 
 // ── PRICING TOGGLE JS ──
-let isAnnual = false;
-function toggleBilling() {
-  isAnnual = !isAnnual;
-  document.getElementById('toggle-monthly').classList.toggle('active', !isAnnual);
-  document.getElementById('toggle-annual').classList.toggle('active', isAnnual);
-  const period = isAnnual ? 'per year' : 'per month';
-  ['bronze','silver'].forEach(t => {
-    const el = document.getElementById(t+'-period');
-    if (el) el.textContent = period;
-  });
-}
-</script>
-<script>
 let annualBilling = false;
-
 function toggleBilling() {
   annualBilling = !annualBilling;
-
   document.getElementById('billingToggle').classList.toggle('on', annualBilling);
   document.getElementById('monthlyLabel').classList.toggle('active', !annualBilling);
   document.getElementById('annualLabel').classList.toggle('active', annualBilling);
-
-  document.querySelectorAll('.monthly-price').forEach(el => {
-    el.style.display = annualBilling ? 'none' : 'inline';
-  });
-
-  document.querySelectorAll('.annual-price').forEach(el => {
-    el.style.display = annualBilling ? 'inline' : 'none';
-  });
+  document.querySelectorAll('.monthly-price').forEach(el => { el.style.display = annualBilling ? 'none' : 'inline'; });
+  document.querySelectorAll('.annual-price').forEach(el => { el.style.display = annualBilling ? 'inline' : 'none'; });
 }
 </script>
 </body>

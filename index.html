@@ -315,10 +315,13 @@ html, body {
     transition: border-color 0.2s, color 0.2s, transform 0.15s;
   }
   .btn-ghost:hover { border-color: var(--ochre); color: var(--ochre); transform: translateY(-2px); }
-
+}
   /* ══════════════════════════════
      SECTION 2 — TRANSLATOR
   ══════════════════════════════ */
+ .section {
+  scroll-snap-align: start;
+}
   #translator {
     height: 100vh;
     display: flex;
@@ -441,6 +444,9 @@ html, body {
   /* ══════════════════════════════
      SECTION 3 — QUIZ
   ══════════════════════════════ */
+  .section {
+  scroll-snap-align: start;
+}
   #quiz { min-height: 100vh; background: var(--cream); display: flex; flex-direction: column; align-items: center; border-top: 1px solid var(--border); }
   .quiz-inner { width: 100%; max-width: 680px; padding: 3rem 1.5rem 4rem; display: flex; flex-direction: column; align-items: center; }
   .screen { width: 100%; display: none; flex-direction: column; align-items: center; }
@@ -496,6 +502,9 @@ html, body {
   /* ══════════════════════════════
      SECTION 4 — EXPERIENCE TYPE
   ══════════════════════════════ */
+ .section {
+  scroll-snap-align: start;
+}
   #experience-type {
     min-height: 100vh;
     background: #3b2f1e;
@@ -549,6 +558,9 @@ html, body {
   /* ══════════════════════════════
      SECTION 5 — PRICING
   ══════════════════════════════ */
+  .section {
+  scroll-snap-align: start;
+}
   #pricing { min-height: 100vh; background: var(--light); border-top: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; padding: 4rem 2rem; }
   .pricing-hero { text-align: center; margin-bottom: 3rem; }
   .pricing-eyebrow { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--mud2); font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 1rem; }

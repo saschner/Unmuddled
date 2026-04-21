@@ -1983,8 +1983,8 @@ window.JARGON = [
     "plain": "hearing a rumor through gossip"
   },
   {
-    "jargon": "Hear something straight from the horse's mouth",
-    "plain": "hearing information directly from the source"
+    "jargon": "straight from the horse's mouth",
+    "plain": "directly from the source"
   },
   {
     "jargon": "Heavy lifting",

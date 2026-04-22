@@ -908,6 +908,40 @@ html, body {
     width: 100%;
   }
 }
+    /* ===== PRICING CARD STABILITY FIX (non-destructive) ===== */
+
+.cards-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start; /* prevents vertical overlap */
+}
+
+.card {
+  position: relative;
+  padding-top: 34px; /* space for floating circle */
+}
+
+/* Force the circle to float correctly WITHOUT affecting layout */
+.card-num {
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important; /* neutralize any negative margins hiding in your CSS */
+  z-index: 10;
+}
+
+/* Ensure body sits properly under the circle */
+.card-body {
+  position: relative;
+  z-index: 1;
+}
+
+/* Safety: prevent cards from collapsing into each other */
+.cards-wrap > .card {
+  min-height: 100%;
+}
 </style>
 </body>
 </head>

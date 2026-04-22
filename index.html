@@ -57,7 +57,8 @@
     --correct: #27ae60;
     --wrong: #c0392b;
     --correct-bg: #eaf7f0;
-    --wrong-bg: #fdecea;
+    --wrong-bgcards
+    : #fdecea;
     --free-bg: #f5f0e8;
     --bronze-bg: #f0e8d8;
     --silver-bg: #e8ddd0;
@@ -627,7 +628,7 @@ html, body {
   .toggle-switch.on::after { transform: translateX(22px); }
   .save-badge { background: var(--ochre); color: var(--ink); font-family: 'Syne', sans-serif; font-size: 0.65rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 20px; letter-spacing: 0.06em; text-transform: uppercase; }
   .cards-section { width: 100%; max-width: 1100px; }
-  .cards-wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; align-items: start; }
+  .cards-wrap { align-items: stretch; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; align-items: start; }
   @media (max-width: 900px) { .cards-wrap { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 540px) { .cards-wrap { grid-template-columns: 1fr; } }
   .card { display: flex; flex-direction: column; align-items: center; }

@@ -1549,6 +1549,34 @@ function toggleBilling() {
   document.querySelectorAll('.monthly-price').forEach(el => { el.style.display = annualBilling ? 'none' : 'inline'; });
   document.querySelectorAll('.annual-price').forEach(el => { el.style.display = annualBilling ? 'inline' : 'none'; });
 }
+  /* ===== PRICING CARD FIX ===== */
+
+.cards-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.card {
+  position: relative;
+  padding-top: 26px;
+}
+
+.card-num {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  z-index: 10;
+}
+
+.card-body {
+  position: relative;
+  z-index: 1;
+  border-top: none !important; /* remove the duplicate spacing the old rule added */
+}
 </script>
 </body>
 </html>

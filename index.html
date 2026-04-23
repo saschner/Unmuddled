@@ -745,7 +745,6 @@ nav {
 .card-cta:hover { background: var(--ink); color: var(--cream); }
 .card.gold .card-cta { background: var(--ink); border-color: var(--ink); color: var(--cream); }
 .card.gold .card-cta:hover { background: #2a1f1f; }
-
 .footer-note { max-width: 600px; text-align: center; margin-top: 3rem; font-family: 'Lora', serif; font-style: italic; font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
 .faq-link { display: inline-block; margin-top: 0.75rem; color: var(--mud2); font-family: 'Syne', sans-serif; font-style: normal; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; }
 .faq-link:hover { color: var(--ink); }
@@ -1364,9 +1363,9 @@ function toggleBilling() {
   document.getElementById('monthlyLabel').classList.toggle('active', !annualBilling);
   document.getElementById('annualLabel').classList.toggle('active', annualBilling);
   document.querySelectorAll('.monthly-price').forEach(el => { el.style.display = annualBilling ? 'none' : 'inline'; });
-  document.querySelectorAll('.annual-price').forEach(el => { el.style.display = annualBilling ? 'inline' : 'none'; });
+  document.querySelectorAll('.annual-price').forEach(el => { el.style.display = annualBilling ? 'block' : 'none'; });
   document.querySelectorAll('.monthly-btn').forEach(el => { el.style.display = annualBilling ? 'none' : 'inline-block'; });
-  document.querySelectorAll('.annual-btn').forEach(el => { el.style.display = annualBilling ? 'inline-block' : 'none'; });
+  document.querySelectorAll('.annual-btn').forEach(el => { el.style.display = annualBilling ? 'block' : 'none'; });
 }
 </script>
 </body>

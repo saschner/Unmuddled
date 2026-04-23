@@ -1363,6 +1363,8 @@ function toggleBilling() {
   document.getElementById('annualLabel').classList.toggle('active', annualBilling);
   document.querySelectorAll('.monthly-price').forEach(el => { el.style.display = annualBilling ? 'none' : 'inline'; });
   document.querySelectorAll('.annual-price').forEach(el => { el.style.display = annualBilling ? 'inline' : 'none'; });
+  document.querySelectorAll('.monthly-btn').forEach(el => { el.style.display = annualBilling ? 'none' : 'inline-block'; });
+  document.querySelectorAll('.annual-btn').forEach(el => { el.style.display = annualBilling ? 'inline-block' : 'none'; });
 }
 </script>
 </body>

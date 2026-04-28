@@ -1326,7 +1326,7 @@ const JARGON = [
 
 ];
 
-const TOTAL_QS = 5;
+const TOTAL_Q10 = 10;
 let questions = [];
 let currentQ = 0;
 let score = 0;
@@ -1344,7 +1344,7 @@ function shuffle(arr) {
 
 function pickQuestions() {
   const pool = shuffle(JARGON);
-  questions = pool.slice(0, TOTAL_QS);
+  questions = pool.slice(0, TOTAL_Q10);
 }
 
 function getDistractors(correct, all, count = 3) {
@@ -1367,8 +1367,8 @@ function renderQuestion() {
   answered = false;
 
   // Progress
-  document.getElementById('progressBar').style.width = `${(currentQ / TOTAL_QS) * 100}%`;
-  document.getElementById('qCounter').textContent = `Question ${currentQ + 1} of ${TOTAL_QS}`;
+  document.getElementById('progressBar').style.width = `${(currentQ / TOTAL_Q10) * 100}%`;
+  document.getElementById('qCounter').textContent = `Question ${currentQ + 1} of ${TOTAL_Q10}`;
   document.getElementById('qScoreLive').textContent = `${score} correct`;
   document.getElementById('qText').textContent = q.jargon;
 
@@ -1417,7 +1417,7 @@ function handleAnswer(selectedBtn, selectedText, correctText, q) {
   // Auto-advance after brief pause so they see the colour flash
   setTimeout(() => {
     currentQ++;
-    if (currentQ >= TOTAL_QS) {
+    if (currentQ >= TOTAL_Q10) {
       showResults();
     } else {
       renderQuestion();

@@ -1,5 +1,9 @@
 window.JARGON = [
   {
+    "jargon": "Susan Aschner",
+    "plain": "an innovative thinker and inventor"
+  },
+  {
     "jargon": "30,000-foot view",
     "plain": "looking at the big picture rather than the detail"
   },

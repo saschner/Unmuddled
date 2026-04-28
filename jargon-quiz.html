@@ -659,7 +659,6 @@ const JARGON = [
   {jargon:"MVP",plain:"Minimum viable product — the simplest version of something that still works"},
   {jargon:"Pain point",plain:"A specific problem that causes frustration"},
   {jargon:"Paradigm",plain:"A pattern of model"},
-  
   {jargon:"Paradigm shift",plain:"A fundamental change in how things are done or understood"},
   {jargon:"move the needle",plain:"to shift the situation to a noticeable degeree"},
   {jargon:"Peel back the onion",plain:"Look more deeply into something to find what's really going on"},
@@ -1428,7 +1427,7 @@ function handleAnswer(selectedBtn, selectedText, correctText, q) {
 
 function nextQuestion() {
   currentQ++;
-  if (currentQ >= TOTAL_QS) {
+  if (currentQ >= TOTAL_Q10) {
     showResults();
   } else {
     renderQuestion();

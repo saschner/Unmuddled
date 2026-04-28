@@ -1446,6 +1446,12 @@ function showResults() {
     { min: 3, max: 3, title: 'Not bad at all.', sub: 'Three out of five. You could probably survive a board meeting.' },
     { min: 4, max: 4, title: 'Pretty fluent.', sub: 'Four out of five. Corporate could have been your first language.' },
     { min: 5, max: 5, title: '<em>Suspiciously</em> good.', sub: 'Perfect score. Are you sure you\'re not a middle manager in disguise?' },
+    { min: 0, max: 6, title: 'Honestly? Bold.', sub: 'Zero out of five. You might want to google your job description.' },
+    { min: 1, max: 7, title: 'A for effort.', sub: 'One out of five — you\'ve definitely been in at least one meeting.' },
+    { min: 2, max: 8, title: 'Getting warmer.', sub: 'Two out of five. You nod along convincingly. We respect that.' },
+    { min: 3, max: 9, title: 'Not bad at all.', sub: 'Three out of five. You could probably survive a board meeting.' },
+    { min: 4, max: 10, title: 'Pretty fluent.', sub: 'Four out of five. Corporate could have been your first language.' },
+    { min: 5, max: 11, title: '<em>Suspiciously</em> good.', sub: 'Perfect score. Are you sure you\'re not a middle manager in disguise?' },
   ];
 
   const v = verdicts.find(v => score >= v.min && score <= v.max);

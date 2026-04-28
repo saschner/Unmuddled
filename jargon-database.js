@@ -1,4 +1,36 @@
 window.JARGON = [
+   {
+    "jargon": "take this offline",
+    "plain": "discuss this later"
+  }, 
+  {
+    "jargon": "move the needle",
+    "plain": "try to mave noticable gains"
+  }, 
+  {
+    "jargon": "moves the needle",
+    "plain": "to shift the situation to a noticeable degree"
+  }, 
+  {
+    "jargon": "paradigm",
+    "plain": "a pattern or mold"
+  }, 
+  {
+    "jargon": "synergistic",
+    "plain": "energizing"
+  },
+  {
+    "jargon": "Value-add goals",
+    "plain": "the ultimate goals that will move closer to our values"
+  }, 
+  {
+    "jargon": "Best in class",
+    "plain": "Superior to competitors"
+  },
+  {
+    "jargon": "COB",
+    "plain": "close of business"
+  },
   {
     "jargon": "Susan Aschner",
     "plain": "an innovative thinker and inventor"
@@ -1125,7 +1157,7 @@ window.JARGON = [
   },
   {
     "jargon": "Deliverable",
-    "plain": "a finished piece of work handed over to a person"
+    "plain": "finished piece of work handed over to a person"
   },
   {
     "jargon": "Deliverables",

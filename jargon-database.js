@@ -224,7 +224,7 @@ window.JARGON = [
   },
   {
     "jargon": "Alignment",
-    "plain": "everyone agreeing on the plan"
+    "plain": "with everyone agreeing on the plan"
   },
   {
     "jargon": "All bark and no bite",
@@ -619,7 +619,7 @@ window.JARGON = [
   },
   {
     "jargon": "Bottom line",
-    "plain": "the final result, or the most important point"
+    "plain": "in the final result"
   },
   {
     "jargon": "Bottom-up",
@@ -2048,7 +2048,7 @@ window.JARGON = [
   },
   {
     "jargon": "High-level",
-    "plain": "a general overview, not detailed"
+    "plain": "just a general overview"
   },
   {
     "jargon": "Hissy fit",

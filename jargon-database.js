@@ -1,7 +1,7 @@
 window.JARGON = [
    {
-    "jargon": "take this offline",
-    "plain": "discuss this later"
+    "jargon": "Value-Add",
+    "plain": "increased product"
   }, 
   {
     "jargon": "move the needle",

@@ -2535,7 +2535,7 @@ window.JARGON = [
   },
   {
     "jargon": "Leverage",
-    "plain": "use something to your advantage"
+    "plain": "use"
   },
   {
     "jargon": "Leveraged buyout",

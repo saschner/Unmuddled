@@ -220,7 +220,7 @@ window.JARGON = [
   },
   {
     "jargon": "Align",
-    "plain": "agree / get on the same page"
+    "plain": "agree"
   },
   {
     "jargon": "Alignment",

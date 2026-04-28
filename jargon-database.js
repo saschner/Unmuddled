@@ -24,7 +24,7 @@ window.JARGON = [
     "plain": "the ultimate goals that will move closer to our values"
   }, 
   {
-    "jargon": "Best in class",
+    "jargon": "Best-in-class",
     "plain": "Superior to competitors"
   },
   {

@@ -1,5 +1,9 @@
 window.JARGON = [
    {
+    "jargon": "competencies",
+    "plain": "abilities"
+  }, 
+   {
     "jargon": "Value-Add",
     "plain": "increased product"
   }, 

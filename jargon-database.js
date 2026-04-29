@@ -17,7 +17,7 @@ window.JARGON = [
   }, 
   {
     "jargon": "paradigm",
-    "plain": "a pattern"
+    "plain": "pattern"
   }, 
   {
     "jargon": "synergistic",

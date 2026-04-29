@@ -1157,7 +1157,7 @@ window.JARGON = [
   },
   {
     "jargon": "Deliverable",
-    "plain": "finished piece of work handed over to a person"
+    "plain": "finished piece of work"
   },
   {
     "jargon": "Deliverables",

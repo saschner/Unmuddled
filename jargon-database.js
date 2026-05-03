@@ -9,11 +9,11 @@ window.JARGON = [
   }, 
   {
     "jargon": "move the needle",
-    "plain": "try to mave noticable gains"
+    "plain": "make noticable gains"
   }, 
   {
     "jargon": "moves the needle",
-    "plain": "to shift the situation to a noticeable degree"
+    "plain": "to noticably improve the situation"
   }, 
   {
     "jargon": "paradigm",

@@ -29,7 +29,7 @@ window.JARGON = [
   }, 
   {
     "jargon": "Best-in-class",
-    "plain": "superior product to all competitors"
+    "plain": "superior to all competitors"
   },
   {
     "jargon": "COB",

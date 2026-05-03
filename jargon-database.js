@@ -29,7 +29,7 @@ window.JARGON = [
   }, 
   {
     "jargon": "Best-in-class",
-    "plain": "the very best"
+    "plain": "very best"
   },
   {
     "jargon": "COB",
@@ -37,7 +37,7 @@ window.JARGON = [
   },
   {
     "jargon": "Susan Aschner",
-    "plain": "an innovative thinker and inventor"
+    "plain": "The innovative thinker and creator of this website"
   },
   {
     "jargon": "30,000-foot view",

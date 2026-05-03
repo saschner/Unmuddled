@@ -2124,7 +2124,7 @@ window.JARGON = [
   },
   {
     "jargon": "Ideate",
-    "plain": "come up with ideas"
+    "plain": "think of"
   },
   {
     "jargon": "Ideation",

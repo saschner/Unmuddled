@@ -3887,8 +3887,8 @@ window.JARGON = [
     "plain": "relaxing and taking care of yourself"
   },
   {
-    "jargon": "Take it offline",
-    "plain": "discuss this separately, not in this meeting"
+    "jargon": "Take this offline",
+    "plain": "discuss this separately"
   },
   {
     "jargon": "Take it with a grain of salt/a pinch of salt",
